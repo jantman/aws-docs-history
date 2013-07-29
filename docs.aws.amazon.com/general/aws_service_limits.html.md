@@ -4,26 +4,28 @@
 |                                   | oc}[Next                          |
 |                                   | »](docconventions.html){.awstoc}  |
 +-----------------------------------+-----------------------------------+
-| [![Go to the AWS Discussion Forum | Did this page help                |
-| for this                          | you?  [Yes](feedbackyes.html?topi |
-| product.](/web/20130407171953im_/ | c_id=aws_service_limits){.awstoc} |
-| http://docs.aws.amazon.com:80/gen |  | [No](feedbackno.html?topic_id= |
-| eral/latest/gr/images/forum_butto | aws_service_limits){.awstoc} |  [ |
-| n.png "Go to the AWS Discussion F | Tell                              |
-| orum for this product.")](http:// | us about                          |
-| forums.aws.amazon.com/forum.jspa? | it...](https://aws-portal.amazon. |
-| forumID=0)                        | com/gp/aws/html-forms-controller/ |
+|                                   | Did this page help                |
+|                                   | you?  [Yes](feedbackyes.html?topi |
+|                                   | c_id=aws_service_limits){.awstoc} |
+|                                   |  | [No](feedbackno.html?topic_id= |
+|                                   | aws_service_limits){.awstoc} |  [ |
+|                                   | Tell                              |
+|                                   | us about                          |
+|                                   | it...](https://portal.aws.amazon. |
+|                                   | com/gp/aws/html-forms-controller/ |
 |                                   | documentation/aws_doc_feedback_04 |
-|                                   | ?service_name=General%20Reference |
-|                                   | &guide_name=%A0&api_version=1.0&f |
-|                                   | ile_name=aws_service_limits){.aws |
-|                                   | toc}                              |
+|                                   | ?service_name=Regions&guide_name= |
+|                                   | General%20Reference&api_version=1 |
+|                                   | .0&file_name=aws_service_limits){ |
+|                                   | .awstoc}                          |
 +-----------------------------------+-----------------------------------+
 
 AWS Service Limits {#aws-service-limits .topictitle}
 ==================
 
-The following tables provide the default limits for services for an account. Unless otherwise noted, each limit is per region. The limits listed below are only the limits that can be changed. Many services contain limits that cannot be changed. For more information about the limits for a specific service, see the documentation for that service.
+The following tables provide the default limits for AWS services for an AWS account. Unless otherwise noted, each limit is per region. The limits listed below are only the limits that can be changed. Many services contain limits that cannot be changed. For more information about the limits for a specific service, see the documentation for that service.
+
+If your support plan includes AWS Trusted Advisor, you can use it to display your usage and limits for each service in a specific region. For more information, see [AWS Trusted Advisor](http://aws.amazon.com/premiumsupport/trustedadvisor){.ulink}.
 
 You can request an increase for these limits by performing the following steps. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
@@ -49,18 +51,19 @@ You can request an increase for these limits by performing the following steps. 
 -   [IAM Limits](aws_service_limits.html#limits_iam)
 -   [AWS OpsWorks Limits](aws_service_limits.html#limits_opworks)
 -   [Amazon RDS Limits](aws_service_limits.html#limits_rds)
+-   [Amazon Redshift Limits](aws_service_limits.html#limits_redshift)
 -   [Route 53 Limits](aws_service_limits.html#limits_route53)
 -   [Amazon SES Limits](aws_service_limits.html#limits_ses_quota)
 -   [Amazon SimpleDB Limits](aws_service_limits.html#limits_simpledb)
+-   [Amazon Simple Notification Service Limits](aws_service_limits.html#d0e6066)
 -   [Amazon VPC Limits](aws_service_limits.html#limits_vpc)
 
 AWS CloudFormation Limits {#limits_cloudformation .title}
 -------------------------
 
-  Resource           Default Limit
-  ------------------ ---------------
-  Stacks             20
-  Search instances   50
+  Resource   Default Limit
+  ---------- ---------------
+  Stacks     20
 
 Amazon CloudFront Limits {#limits_cloudfront .title}
 ------------------------
@@ -115,13 +118,13 @@ Amazon EBS Limits {#limits_ebs .title}
 Amazon EC2 Limits {#limits_ec2 .title}
 -----------------
 
-  Resource                                                            Default Limit
-  ------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Number of Elastic IP addresses                                      5
-  Throttle the emails that can be sent from your Amazon EC2 account   N/A
-  Number of on-demand instances                                       Varies depending on instance type. For more information, see [How many instances can I run in Amazon EC2](http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
-  Number of Spot Instances                                            100
-  Number of Reserved Instances                                        20 per Availability Zone
+  Resource                                                               Default Limit
+  ---------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Number of Elastic IP addresses                                         5
+  Throttle on the emails that can be sent from your Amazon EC2 account   Throttle applied
+  Number of on-demand instances                                          Varies depending on instance type. For more information, see [How many instances can I run in Amazon EC2](http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
+  Number of Spot Instances                                               100
+  Number of Reserved Instances                                           20 per Availability Zone
 
 ElastiCache Limits {#limits_elasticache .title}
 ------------------
@@ -182,7 +185,15 @@ Amazon RDS Limits {#limits_rds .title}
 
   Resource    Default Limit
   ----------- ---------------
-  Instances   20
+  Instances   40
+
+Amazon Redshift Limits {#limits_redshift .title}
+----------------------
+
+  Resource                  Default Limit
+  ------------------------- ---------------
+  Nodes per cluster         16
+  Total nodes per account   16
 
 Route 53 Limits {#limits_route53 .title}
 ---------------
@@ -219,6 +230,13 @@ Amazon SimpleDB Limits {#limits_simpledb .title}
   ---------- ---------------
   Domains    250
 
+Amazon Simple Notification Service Limits {#d0e6066 .title}
+-----------------------------------------
+
+  Resource   Default Limit
+  ---------- ---------------
+  Topics     100
+
 Amazon VPC Limits {#limits_vpc .title}
 -----------------
 
@@ -240,10 +258,10 @@ Amazon VPC Limits {#limits_vpc .title}
   Number of rules per network ACL                      20               
   Number of BGP advertised routes per VPN connection   100              
 
-![](/web/20130407171953im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
-  --------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![](/web/20130729091324im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+  --------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   [Document Conventions](http://docs.aws.amazon.com/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](docconventions.html){.awstoc}
-  [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                               Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://aws-portal.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=General%20Reference&guide_name=%A0&api_version=1.0&file_name=aws_service_limits){.awstoc}
-  --------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                               Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://portal.aws.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=Regions&guide_name=General%20Reference&api_version=1.0&file_name=aws_service_limits){.awstoc}
+  --------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
