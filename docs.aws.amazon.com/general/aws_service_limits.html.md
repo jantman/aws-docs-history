@@ -2,7 +2,7 @@
 |                                   | [«                                |
 |                                   | Previous](GetTheTools.html){.awst |
 |                                   | oc}[Next                          |
-|                                   | »](docconventions.html){.awstoc}  |
+|                                   | »](api-retries.html){.awstoc}     |
 +-----------------------------------+-----------------------------------+
 |                                   | Did this page help                |
 |                                   | you?  [Yes](feedbackyes.html?topi |
@@ -29,11 +29,13 @@ If your support plan includes AWS Trusted Advisor, you can use it to display you
 
 You can request an increase for these limits by performing the following steps. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-1.  Go to the [Contact Us](http://aws.amazon.com/contact-us/){.ulink} page.
+1.  Go to the [Amazon Web Services Support Center](https://aws.amazon.com/support/){.ulink} and click [Open a new case]{.guilabel}.
 
-2.  Select the appropriate service limit in the [Service Limit increase]{.guilabel} section, and click [Go]{.guilabel}.
+2.  Select [Service Limit Increase]{.guilabel} in the [Regarding]{.guilabel} section.
 
-3.  Fill in all of the necessary fields in the form and click [Submit]{.guilabel}.
+3.  Select the appropriate service limit in the [Limit Type]{.guilabel} section.
+
+4.  Fill in all of the necessary fields in the form and click [Submit Case]{.guilabel}.
 
 **Topics**
 
@@ -44,8 +46,9 @@ You can request an increase for these limits by performing the following steps. 
 -   [Amazon DynamoDB Limits](aws_service_limits.html#limits_dynamodb)
 -   [Amazon EBS Limits](aws_service_limits.html#limits_ebs)
 -   [Amazon EC2 Limits](aws_service_limits.html#limits_ec2)
+-   [Auto Scaling Limits](aws_service_limits.html#limits_autoscaling)
 -   [ElastiCache Limits](aws_service_limits.html#limits_elasticache)
--   [Elastic Beanstalk Limits](aws_service_limits.html#limits_elastic_beanstalk)
+-   [AWS Elastic Beanstalk Limits](aws_service_limits.html#limits_elastic_beanstalk)
 -   [Elastic Load Balancing Limits](aws_service_limits.html#limits_elastic_load_balancer)
 -   [Elastic Transcoder Limits](aws_service_limits.html#limits_elastictranscoder)
 -   [IAM Limits](aws_service_limits.html#limits_iam)
@@ -55,7 +58,7 @@ You can request an increase for these limits by performing the following steps. 
 -   [Route 53 Limits](aws_service_limits.html#limits_route53)
 -   [Amazon SES Limits](aws_service_limits.html#limits_ses_quota)
 -   [Amazon SimpleDB Limits](aws_service_limits.html#limits_simpledb)
--   [Amazon Simple Notification Service Limits](aws_service_limits.html#d0e6066)
+-   [Amazon Simple Notification Service Limits](aws_service_limits.html#limits_sns)
 -   [Amazon VPC Limits](aws_service_limits.html#limits_vpc)
 
 AWS CloudFormation Limits {#limits_cloudformation .title}
@@ -126,6 +129,14 @@ Amazon EC2 Limits {#limits_ec2 .title}
   Number of Spot Instances                                               100
   Number of Reserved Instances                                           20 per Availability Zone
 
+Auto Scaling Limits {#limits_autoscaling .title}
+-------------------
+
+  Resource                          Default Limit
+  --------------------------------- ---------------
+  Number of launch configurations   100
+  Number of Auto Scaling groups     20
+
 ElastiCache Limits {#limits_elasticache .title}
 ------------------
 
@@ -133,8 +144,8 @@ ElastiCache Limits {#limits_elasticache .title}
   ---------- ---------------
   Nodes      20
 
-Elastic Beanstalk Limits {#limits_elastic_beanstalk .title}
-------------------------
+AWS Elastic Beanstalk Limits {#limits_elastic_beanstalk .title}
+----------------------------
 
   Resource       Default Limit
   -------------- ---------------
@@ -156,6 +167,7 @@ Elastic Transcoder Limits {#limits_elastictranscoder .title}
   -------------------------- ---------------
   Pipelines                  4
   Active jobs per pipeline   1,000
+  Outputs per job            30
   User-defined presets       50
 
 IAM Limits {#limits_iam .title}
@@ -183,9 +195,10 @@ AWS OpsWorks Limits {#limits_opworks .title}
 Amazon RDS Limits {#limits_rds .title}
 -----------------
 
-  Resource    Default Limit
-  ----------- ---------------
-  Instances   40
+  Resource                             Default Limit
+  ------------------------------------ ---------------
+  Instances                            40
+  Total storage for all DB instances   10 TB
 
 Amazon Redshift Limits {#limits_redshift .title}
 ----------------------
@@ -230,12 +243,12 @@ Amazon SimpleDB Limits {#limits_simpledb .title}
   ---------- ---------------
   Domains    250
 
-Amazon Simple Notification Service Limits {#d0e6066 .title}
+Amazon Simple Notification Service Limits {#limits_sns .title}
 -----------------------------------------
 
   Resource   Default Limit
   ---------- ---------------
-  Topics     100
+  Topics     3000
 
 Amazon VPC Limits {#limits_vpc .title}
 -----------------
@@ -258,9 +271,9 @@ Amazon VPC Limits {#limits_vpc .title}
   Number of rules per network ACL                      20               
   Number of BGP advertised routes per VPN connection   100              
 
-![](/web/20130729091324im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+![](/web/20130919113229im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
   --------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [Document Conventions](http://docs.aws.amazon.com/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](docconventions.html){.awstoc}
+  [Document Conventions](http://docs.aws.amazon.com/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
   [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                               Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://portal.aws.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=Regions&guide_name=General%20Reference&api_version=1.0&file_name=aws_service_limits){.awstoc}
   --------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
