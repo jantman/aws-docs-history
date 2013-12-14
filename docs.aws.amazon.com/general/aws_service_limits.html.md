@@ -29,13 +29,11 @@ If your support plan includes AWS Trusted Advisor, you can use it to display you
 
 You can request an increase for these limits by performing the following steps. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-1.  Go to the [Amazon Web Services Support Center](https://aws.amazon.com/support/){.ulink} and click [Open a new case]{.guilabel}.
+1.  Go to the [AWS Support Center](https://aws.amazon.com/support/){.ulink} page, sign in, if necessary, and click [Open a new case]{.guilabel}.
 
-2.  Select [Service Limit Increase]{.guilabel} in the [Regarding]{.guilabel} section.
+2.  Under [Regarding]{.guilabel}, select [Service Limit Increase]{.guilabel}.
 
-3.  Select the appropriate service limit in the [Limit Type]{.guilabel} section.
-
-4.  Fill in all of the necessary fields in the form and click [Submit Case]{.guilabel}.
+3.  Under [Limit Type]{.guilabel}, select the type of limit to be increased, then fill in all of the necessary fields in the form and click the button at the bottom of the page for your desired method of contact.
 
 **Topics**
 
@@ -127,7 +125,7 @@ Amazon EC2 Limits {#limits_ec2 .title}
   Throttle on the emails that can be sent from your Amazon EC2 account   Throttle applied
   Number of on-demand instances                                          Varies depending on instance type. For more information, see [How many instances can I run in Amazon EC2](http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
   Number of Spot Instances                                               100
-  Number of Reserved Instances                                           20 per Availability Zone
+  Number of Reserved Instances                                           20 per Availability Zone, per month
 
 Auto Scaling Limits {#limits_autoscaling .title}
 -------------------
@@ -158,7 +156,7 @@ Elastic Load Balancing Limits {#limits_elastic_load_balancer .title}
 
   Resource                   Default Limit
   -------------------------- ---------------
-  Number of load balancers   10
+  Number of load balancers   20
 
 Elastic Transcoder Limits {#limits_elastictranscoder .title}
 -------------------------
@@ -173,14 +171,14 @@ Elastic Transcoder Limits {#limits_elastictranscoder .title}
 IAM Limits {#limits_iam .title}
 ----------
 
-  Resource                     Default Limit
-  ---------------------------- ---------------
-  Users                        5,000
-  Groups                       100
-  Groups per user              10
-  Roles                        250
-  Instance identity profiles   150
-  Server certificates          10
+  Resource              Default Limit
+  --------------------- ---------------
+  Users                 5,000
+  Groups                100
+  Groups per user       10
+  Roles                 250
+  Instance profiles     100
+  Server certificates   10
 
 AWS OpsWorks Limits {#limits_opworks .title}
 -------------------
@@ -271,7 +269,7 @@ Amazon VPC Limits {#limits_vpc .title}
   Number of rules per network ACL                      20               
   Number of BGP advertised routes per VPN connection   100              
 
-![](/web/20130919113229im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+![](/web/20131214021012im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
   --------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   [Document Conventions](http://docs.aws.amazon.com/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
   [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                               Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://portal.aws.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=Regions&guide_name=General%20Reference&api_version=1.0&file_name=aws_service_limits){.awstoc}
