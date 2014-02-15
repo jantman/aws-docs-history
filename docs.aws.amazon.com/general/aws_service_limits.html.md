@@ -41,7 +41,7 @@ You can request an increase for these limits by performing the following steps. 
 -   [Amazon CloudFront Limits](aws_service_limits.html#limits_cloudfront)
 -   [Amazon CloudSearch Limits](aws_service_limits.html#limits_cloudsearch)
 -   [AWS Data Pipeline Limits](aws_service_limits.html#limits_data_pipeline)
--   [Amazon DynamoDB Limits](aws_service_limits.html#limits_dynamodb)
+-   [DynamoDB Limits](aws_service_limits.html#limits_dynamodb)
 -   [Amazon EBS Limits](aws_service_limits.html#limits_ebs)
 -   [Amazon EC2 Limits](aws_service_limits.html#limits_ec2)
 -   [Auto Scaling Limits](aws_service_limits.html#limits_autoscaling)
@@ -50,10 +50,11 @@ You can request an increase for these limits by performing the following steps. 
 -   [Elastic Load Balancing Limits](aws_service_limits.html#limits_elastic_load_balancer)
 -   [Elastic Transcoder Limits](aws_service_limits.html#limits_elastictranscoder)
 -   [IAM Limits](aws_service_limits.html#limits_iam)
+-   [Amazon Kinesis Limits](aws_service_limits.html#limits_kinesis)
 -   [AWS OpsWorks Limits](aws_service_limits.html#limits_opworks)
 -   [Amazon RDS Limits](aws_service_limits.html#limits_rds)
 -   [Amazon Redshift Limits](aws_service_limits.html#limits_redshift)
--   [Route 53 Limits](aws_service_limits.html#limits_route53)
+-   [Amazon Route 53 Limits](aws_service_limits.html#limits_route53)
 -   [Amazon SES Limits](aws_service_limits.html#limits_ses_quota)
 -   [Amazon SimpleDB Limits](aws_service_limits.html#limits_simpledb)
 -   [Amazon Simple Notification Service Limits](aws_service_limits.html#limits_sns)
@@ -95,8 +96,8 @@ AWS Data Pipeline Limits {#limits_data_pipeline .title}
   Objects per pipeline   50
   Active instances       5
 
-Amazon DynamoDB Limits {#limits_dynamodb .title}
-----------------------
+DynamoDB Limits {#limits_dynamodb .title}
+---------------
 
   Resource                                  Default Limit
   ----------------------------------------- ---------------
@@ -124,7 +125,7 @@ Amazon EC2 Limits {#limits_ec2 .title}
   Number of Elastic IP addresses                                         5
   Throttle on the emails that can be sent from your Amazon EC2 account   Throttle applied
   Number of on-demand instances                                          Varies depending on instance type. For more information, see [How many instances can I run in Amazon EC2](http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
-  Number of Spot Instances                                               100
+  Number of Spot Instances                                               Varies depending on instance type. For more information, see [Spot Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html){.ulink}.
   Number of Reserved Instances                                           20 per Availability Zone, per month
 
 Auto Scaling Limits {#limits_autoscaling .title}
@@ -180,6 +181,13 @@ IAM Limits {#limits_iam .title}
   Instance profiles     100
   Server certificates   10
 
+Amazon Kinesis Limits {#limits_kinesis .title}
+---------------------
+
+  Resource                                  Default Limit
+  ----------------------------------------- ---------------
+  Number of shards per account per region   5
+
 AWS OpsWorks Limits {#limits_opworks .title}
 -------------------
 
@@ -206,8 +214,8 @@ Amazon Redshift Limits {#limits_redshift .title}
   Nodes per cluster         16
   Total nodes per account   16
 
-Route 53 Limits {#limits_route53 .title}
----------------
+Amazon Route 53 Limits {#limits_route53 .title}
+----------------------
 
   Resource                               Default Limit
   -------------------------------------- ---------------
@@ -246,7 +254,7 @@ Amazon Simple Notification Service Limits {#limits_sns .title}
 
   Resource   Default Limit
   ---------- ---------------
-  Topics     3000
+  Topics     3,000
 
 Amazon VPC Limits {#limits_vpc .title}
 -----------------
@@ -269,10 +277,10 @@ Amazon VPC Limits {#limits_vpc .title}
   Number of rules per network ACL                      20               
   Number of BGP advertised routes per VPN connection   100              
 
-![](/web/20131214021012im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
-  --------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [Document Conventions](http://docs.aws.amazon.com/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
-  [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                               Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://portal.aws.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=Regions&guide_name=General%20Reference&api_version=1.0&file_name=aws_service_limits){.awstoc}
-  --------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![](/web/20140215102927im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+  ----------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  [Document Conventions](/web/20140215102927/http://docs.aws.amazon.com/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
+  [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                                                   Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://portal.aws.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=Regions&guide_name=General%20Reference&api_version=1.0&file_name=aws_service_limits){.awstoc}
+  ----------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
