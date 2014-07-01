@@ -25,7 +25,7 @@ AWS Service Limits {#aws-service-limits .topictitle}
 
 The following tables provide the default limits for AWS services for an AWS account. Unless otherwise noted, each limit is per region. The limits listed below are only the limits that can be changed. Many services contain limits that cannot be changed. For more information about the limits for a specific service, see the documentation for that service.
 
-If your support plan includes AWS Trusted Advisor, you can use it to display your usage and limits for each service in a specific region. For more information, see [AWS Trusted Advisor](http://aws.amazon.com/premiumsupport/trustedadvisor){.ulink}.
+If your support plan includes Trusted Advisor, you can use it to display your usage and limits for each service in a specific region. For more information, see [Trusted Advisor](https://aws.amazon.com/premiumsupport/trustedadvisor){.ulink}.
 
 You can request an increase for these limits by performing the following steps. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
@@ -37,10 +37,10 @@ You can request an increase for these limits by performing the following steps. 
 
 **Topics**
 
+-   [Amazon AppStream Limits](aws_service_limits.html#limits_appstream)
 -   [AWS CloudFormation Limits](aws_service_limits.html#limits_cloudformation)
 -   [Amazon CloudFront Limits](aws_service_limits.html#limits_cloudfront)
 -   [Amazon CloudSearch Limits](aws_service_limits.html#limits_cloudsearch)
--   [AWS Data Pipeline Limits](aws_service_limits.html#limits_data_pipeline)
 -   [DynamoDB Limits](aws_service_limits.html#limits_dynamodb)
 -   [Amazon EBS Limits](aws_service_limits.html#limits_ebs)
 -   [Amazon EC2 Limits](aws_service_limits.html#limits_ec2)
@@ -59,6 +59,12 @@ You can request an increase for these limits by performing the following steps. 
 -   [Amazon SimpleDB Limits](aws_service_limits.html#limits_simpledb)
 -   [Amazon Simple Notification Service Limits](aws_service_limits.html#limits_sns)
 -   [Amazon VPC Limits](aws_service_limits.html#limits_vpc)
+-   [Amazon WorkSpaces Limits](aws_service_limits.html#limits_workspaces)
+
+Amazon AppStream Limits {#limits_appstream .title}
+-----------------------
+
+An Amazon AppStream account has a default limit of 10 simultaneous sessions per AWS account.
 
 AWS CloudFormation Limits {#limits_cloudformation .title}
 -------------------------
@@ -70,14 +76,18 @@ AWS CloudFormation Limits {#limits_cloudformation .title}
 Amazon CloudFront Limits {#limits_cloudfront .title}
 ------------------------
 
-  Resource                                          Default Limit
-  ------------------------------------------------- ---------------
-  Data transfer rate                                1,000 Mbps
-  Requests per second                               1000
-  Alternate domain names (CNAME) per distribution   10
-  Origins per distribution                          10
-  Cache behaviors per distribution                  10
-  Whitelisted cookies per cache behavior            10
+  Resource                                                                                                                                     Default Limit
+  -------------------------------------------------------------------------------------------------------------------------------------------- ---------------
+  Data transfer rate                                                                                                                           1,000 Mbps
+  Requests per second                                                                                                                          1000
+  Web distributions per AWS account                                                                                                            200
+  RTMP distributions per AWS account                                                                                                           100
+  Alternate domain names (CNAMEs) per distribution                                                                                             100
+  Origins per distribution                                                                                                                     25
+  Cache behaviors per distribution                                                                                                             25
+  Whitelisted headers per cache behavior                                                                                                       10
+  Whitelisted cookies per cache behavior                                                                                                       10
+  SSL certificates per AWS account when serving HTTPS requests using dedicated IP addresses (no limit when serving HTTPS requests using SNI)   0
 
 Amazon CloudSearch Limits {#limits_cloudsearch .title}
 -------------------------
@@ -86,15 +96,6 @@ Amazon CloudSearch Limits {#limits_cloudsearch .title}
   ------------------ ---------------
   Partitions         10
   Search instances   50
-
-AWS Data Pipeline Limits {#limits_data_pipeline .title}
-------------------------
-
-  Resource               Default Limit
-  ---------------------- ---------------
-  Pipelines              20
-  Objects per pipeline   50
-  Active instances       5
 
 DynamoDB Limits {#limits_dynamodb .title}
 ---------------
@@ -105,28 +106,29 @@ DynamoDB Limits {#limits_dynamodb .title}
   Write capacity units (individual table)   10,000
   Read capacity units (account)             20,000
   Write capacity units (account)            20,000
-  Maximum number of tables per region       256
+  Maximum number of tables                  256
 
 Amazon EBS Limits {#limits_ebs .title}
 -----------------
 
-  Resource                                   Default Limit
-  ------------------------------------------ -----------------------------------------------------------------------------------------
-  Number of EBS volumes                      5,000
-  Number of snapshots                        10,000
-  Total volume storage of standard volumes   20 TiB
-  Number of provisioned IOPS                 10,000 (or 20 TiB in total Provisioned IOPS volume storage, whichever is reached first)
+  Resource                                           Default Limit
+  -------------------------------------------------- ---------------
+  Number of EBS volumes                              5,000
+  Number of EBS snapshots                            10,000
+  Total volume storage of standard volumes           20 TiB
+  Total volume storage of provisioned IOPS volumes   20 TiB
+  Total provisioned IOPS                             10,000
 
 Amazon EC2 Limits {#limits_ec2 .title}
 -----------------
 
-  Resource                                                               Default Limit
-  ---------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Number of Elastic IP addresses                                         5
-  Throttle on the emails that can be sent from your Amazon EC2 account   Throttle applied
-  Number of on-demand instances                                          Varies depending on instance type. For more information, see [How many instances can I run in Amazon EC2](http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
-  Number of Spot Instances                                               Varies depending on instance type. For more information, see [Spot Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html){.ulink}.
-  Number of Reserved Instances                                           20 per Availability Zone, per month
+  Resource                                                                                                                                                                 Default Limit
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Number of Elastic IP addresses for EC2-Classic. For information about EC2-VPC, see [Amazon VPC Limits](aws_service_limits.html#limits_vpc "Amazon VPC Limits"){.xref}.   5
+  Throttle on the emails that can be sent from your Amazon EC2 account                                                                                                     Throttle applied
+  Number of on-demand instances                                                                                                                                            Varies depending on instance type. For more information, see [How many instances can I run in Amazon EC2](http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
+  Number of Spot Instances                                                                                                                                                 Varies depending on instance type. For more information, see [Spot Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html){.ulink}.
+  Number of Reserved Instances                                                                                                                                             20 instance reservations per Availability Zone, per month
 
 Auto Scaling Limits {#limits_autoscaling .title}
 -------------------
@@ -164,7 +166,7 @@ Elastic Transcoder Limits {#limits_elastictranscoder .title}
 
   Resource                   Default Limit
   -------------------------- ---------------
-  Pipelines                  4
+  Pipelines per region       4
   Active jobs per pipeline   1,000
   Outputs per job            30
   User-defined presets       50
@@ -179,24 +181,24 @@ IAM Limits {#limits_iam .title}
   Groups per user       10
   Roles                 250
   Instance profiles     100
-  Server certificates   10
+  Server certificates   20
 
 Amazon Kinesis Limits {#limits_kinesis .title}
 ---------------------
 
-  Resource                                  Default Limit
-  ----------------------------------------- ---------------
-  Number of shards per account per region   5
+  Resource                       Default Limit
+  ------------------------------ ---------------
+  Number of shards per account   10
 
 AWS OpsWorks Limits {#limits_opworks .title}
 -------------------
 
   Resource              Default Limit
   --------------------- ---------------
-  Stacks                20
-  Layers per stack      20
-  Instances per stack   20
-  Apps per stack        20
+  Stacks                40
+  Layers per stack      40
+  Instances per stack   40
+  Apps per stack        40
 
 Amazon RDS Limits {#limits_rds .title}
 -----------------
@@ -204,22 +206,32 @@ Amazon RDS Limits {#limits_rds .title}
   Resource                             Default Limit
   ------------------------------------ ---------------
   Instances                            40
-  Total storage for all DB instances   10 TB
+  Reserved Instances                   40
+  Total storage for all DB instances   100 TB
+  Manual Snapshots                     50
+  Parameter Groups                     50
+  Security Groups                      25
+  Subnet Groups                        20
+  Subnets per Subnet Group             20
+  Option Groups                        20
+  Event Subscriptions                  20
+  Read Replicas per Master             5
 
 Amazon Redshift Limits {#limits_redshift .title}
 ----------------------
 
-  Resource                  Default Limit
-  ------------------------- ---------------
-  Nodes per cluster         16
-  Total nodes per account   16
+  Resource                      Default Limit
+  ----------------------------- ---------------
+  Nodes per cluster             16
+  Total nodes per account       16
+  Total snapshots per account   20
 
 Amazon Route 53 Limits {#limits_route53 .title}
 ----------------------
 
   Resource                               Default Limit
   -------------------------------------- ---------------
-  Hosted zones                           100
+  Hosted zones                           500
   Resource record sets per hosted zone   10,000
   Health checks                          50
 
@@ -259,27 +271,37 @@ Amazon Simple Notification Service Limits {#limits_sns .title}
 Amazon VPC Limits {#limits_vpc .title}
 -----------------
 
-  Resource                                             Default Limit   Comments
-  ---------------------------------------------------- --------------- ----------------------------------------------------------------------------------------------
-  Number of VPCs per region                            5                
-  Number of subnets per VPC                            200              
-  Number of Internet gateways per region               5               One per VPC
-  Number of virtual private gateways per region        5               One per VPC
-  Number of customer gateways per region               50               
-  Number of VPN connections per region                 50              10 per virtual private gateway
-  Number of route tables per VPC                       10              Including the main route table
-  Number of entries per route table                    20               
-  Number of Elastic IP addresses per region            5               Amazon EC2 has a separate limit for its Elastic IP addresses per region for each AWS account
-  Number of security groups per VPC                    100              
-  Number of rules per security group                   50               
-  Number of security groups per instance in a VPC      5                
-  Number of network ACLs per VPC                       50               
-  Number of rules per network ACL                      20               
-  Number of BGP advertised routes per VPN connection   100              
+  Resource                                                       Default Limit        Comments
+  -------------------------------------------------------------- -------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Number of VPCs                                                 5                     
+  Number of subnets per VPC                                      200                   
+  Number of Internet gateways                                    5                    You can create as many Internet gateways as your 'VPCs per region' limit. Only one Internet gateway can be attached to a VPC at a time.
+  Number of virtual private gateways                             5                    Only one virtual private gateway can be attached to a VPC at a time.
+  Number of customer gateways                                    50                    
+  Number of VPN connections                                      50                   10 per virtual private gateway.
+  Number of route tables per VPC                                 200                  Including the main route table. You can associate one route table to one or more subnets in a VPC.
+  Number of entries per route table                              50                   This is the limit for the number of non-propagated entries per route table. If this limit is increased, network performance may be impacted.
+  Number of Elastic IP addresses                                 5                    This is the limit for the number of VPC Elastic IPs you can allocate within a region. This is a separate limit from the EC2 Elastic IP address limit.
+  Number of security groups per VPC                              100                  If this limit is increased, network performance may be impacted, depending on the way the security groups are configured.
+  Number of rules per security group                             50                   The multiple of 'rules per security group' and 'security groups per network interface' cannot exceed 250. For example, if you want 100 rules per security group, we’d decrease your number of security groups per network interface to 2.
+  Number of security groups per network interface                5                    The multiple of ‘security groups per network interface’ and ‘rules per security group’ cannot exceed 250. For example, if you want 10 security groups per network interface, we’d decrease your number of rules per security group to 25.
+  Number of network ACLs per VPC                                 200                  You can associate one network ACL to one or more subnets in a VPC. This limit is not the same as the number of rules per network ACL.
+  Number of rules per network ACL                                20                   This is the sum of the number of rules for both ingress and egress rules in a single network ACL. The maximum limit is 40 rules per network ACL.
+  Number of BGP advertised routes per VPN connection             100                  If this limit is increased, network performance may be impacted.
+  Number of active VPC peering connections per VPC               50                   The maximum limit is 125 peering connections per VPC. The number of entries per route table should be increased accordingly; however, network performance may be impacted.
+  Number of outstanding VPC peering connection requests          25                   This is the limit for the number of outstanding VPC peering connection requests that you've requested from your account.
+  Expiry time for an unaccepted VPC peering connection request   1 week (168 hours)    
 
-![](/web/20140215102927im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+Amazon WorkSpaces Limits {#limits_workspaces .title}
+------------------------
+
+  Resource     Default Limit   Comments
+  ------------ --------------- --------------------------------------------------------------------------------------------------------------------
+  WorkSpaces   2               To prevent denial of service attacks, accounts new to the Amazon WorkSpaces service are limited to two WorkSpaces.
+
+![](/web/20140701130513im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
   ----------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [Document Conventions](/web/20140215102927/http://docs.aws.amazon.com/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
+  [Document Conventions](/web/20140701130513/http://docs.aws.amazon.com/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
   [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                                                   Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://portal.aws.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=Regions&guide_name=General%20Reference&api_version=1.0&file_name=aws_service_limits){.awstoc}
   ----------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
