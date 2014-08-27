@@ -38,13 +38,13 @@ You can request an increase for these limits by performing the following steps. 
 **Topics**
 
 -   [Amazon AppStream Limits](aws_service_limits.html#limits_appstream)
+-   [Auto Scaling Limits](aws_service_limits.html#limits_autoscaling)
 -   [AWS CloudFormation Limits](aws_service_limits.html#limits_cloudformation)
 -   [Amazon CloudFront Limits](aws_service_limits.html#limits_cloudfront)
 -   [Amazon CloudSearch Limits](aws_service_limits.html#limits_cloudsearch)
 -   [DynamoDB Limits](aws_service_limits.html#limits_dynamodb)
 -   [Amazon EBS Limits](aws_service_limits.html#limits_ebs)
 -   [Amazon EC2 Limits](aws_service_limits.html#limits_ec2)
--   [Auto Scaling Limits](aws_service_limits.html#limits_autoscaling)
 -   [ElastiCache Limits](aws_service_limits.html#limits_elasticache)
 -   [AWS Elastic Beanstalk Limits](aws_service_limits.html#limits_elastic_beanstalk)
 -   [Elastic Load Balancing Limits](aws_service_limits.html#limits_elastic_load_balancer)
@@ -66,12 +66,25 @@ Amazon AppStream Limits {#limits_appstream .title}
 
 An Amazon AppStream account has a default limit of 10 simultaneous sessions per AWS account.
 
+Auto Scaling Limits {#limits_autoscaling .title}
+-------------------
+
+  Resource                                 Default Limit
+  ---------------------------------------- ---------------
+  Number of launch configurations          100
+  Number of Auto Scaling groups            20
+  Number of Auto Scaling lifecycle hooks   50
+
+For information about additional documented limits, see [Auto Scaling Limits](http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-account-limits.html){.ulink}.
+
 AWS CloudFormation Limits {#limits_cloudformation .title}
 -------------------------
 
   Resource   Default Limit
   ---------- ---------------
   Stacks     20
+
+For information about additional documented limits, see [AWS CloudFormation Limits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html){.ulink}.
 
 Amazon CloudFront Limits {#limits_cloudfront .title}
 ------------------------
@@ -97,6 +110,8 @@ Amazon CloudSearch Limits {#limits_cloudsearch .title}
   Partitions         10
   Search instances   50
 
+For information about additional documented limits, see [Understanding Amazon CloudSearch Limits](http://docs.aws.amazon.com/cloudsearch/latest/developerguide/limits.html){.ulink}.
+
 DynamoDB Limits {#limits_dynamodb .title}
 ---------------
 
@@ -108,35 +123,35 @@ DynamoDB Limits {#limits_dynamodb .title}
   Write capacity units (account)            20,000
   Maximum number of tables                  256
 
+For information about additional documented limits, see [Limits in Amazon DynamoDB](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html){.ulink}.
+
 Amazon EBS Limits {#limits_ebs .title}
 -----------------
 
-  Resource                                           Default Limit
-  -------------------------------------------------- ---------------
-  Number of EBS volumes                              5,000
-  Number of EBS snapshots                            10,000
-  Total volume storage of standard volumes           20 TiB
-  Total volume storage of provisioned IOPS volumes   20 TiB
-  Total provisioned IOPS                             10,000
+  Resource                                                 Default Limit
+  -------------------------------------------------------- ---------------
+  Number of EBS volumes                                    5,000
+  Number of EBS snapshots                                  10,000
+  Total volume storage of General Purpose (SSD) volumes    20 TiB
+  Total volume storage of Provisioned IOPS (SSD) volumes   20 TiB
+  Total volume storage of Magnetic volumes                 20 TiB
+  Total provisioned IOPS                                   40,000
+
+For information about additional documented limits, see [Amazon EC2 Service Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html){.ulink}.
 
 Amazon EC2 Limits {#limits_ec2 .title}
 -----------------
 
   Resource                                                                                                                                                                 Default Limit
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Number of Elastic IP addresses for EC2-Classic. For information about EC2-VPC, see [Amazon VPC Limits](aws_service_limits.html#limits_vpc "Amazon VPC Limits"){.xref}.   5
   Throttle on the emails that can be sent from your Amazon EC2 account                                                                                                     Throttle applied
   Number of on-demand instances                                                                                                                                            Varies depending on instance type. For more information, see [How many instances can I run in Amazon EC2](http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
-  Number of Spot Instances                                                                                                                                                 Varies depending on instance type. For more information, see [Spot Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html){.ulink}.
+  Number of Spot Instance requests                                                                                                                                         5 instance requests per region. New AWS accounts might have lower limits. For more information, see [Spot Request Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html#using-spot-request-limit.html){.ulink}.
+  Bid Price for Spot Instances                                                                                                                                             Four times the On-Demand price. For more information, see [Spot Bid Price Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html#using-spot-bid-limits){.ulink}.
   Number of Reserved Instances                                                                                                                                             20 instance reservations per Availability Zone, per month
 
-Auto Scaling Limits {#limits_autoscaling .title}
--------------------
-
-  Resource                          Default Limit
-  --------------------------------- ---------------
-  Number of launch configurations   100
-  Number of Auto Scaling groups     20
+For information about additional documented limits, see [Amazon EC2 Service Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html){.ulink}.
 
 ElastiCache Limits {#limits_elasticache .title}
 ------------------
@@ -161,6 +176,8 @@ Elastic Load Balancing Limits {#limits_elastic_load_balancer .title}
   -------------------------- ---------------
   Number of load balancers   20
 
+For information about additional documented limits, see [Elastic Load Balancing Limits](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-limits.html){.ulink}.
+
 Elastic Transcoder Limits {#limits_elastictranscoder .title}
 -------------------------
 
@@ -170,6 +187,8 @@ Elastic Transcoder Limits {#limits_elastictranscoder .title}
   Active jobs per pipeline   1,000
   Outputs per job            30
   User-defined presets       50
+
+For information about additional documented limits, see [Limits on Pipelines, Jobs, and Presets](http://docs.aws.amazon.com/elastictranscoder/latest/developerguide/limits.html){.ulink}.
 
 IAM Limits {#limits_iam .title}
 ----------
@@ -183,12 +202,16 @@ IAM Limits {#limits_iam .title}
   Instance profiles     100
   Server certificates   20
 
+For information about additional documented limits, see [Limitations on IAM Entities](http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html){.ulink}.
+
 Amazon Kinesis Limits {#limits_kinesis .title}
 ---------------------
 
   Resource                       Default Limit
   ------------------------------ ---------------
   Number of shards per account   10
+
+For information about additional documented limits, see [Amazon Kinesis Sizes and Limits](http://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html){.ulink}.
 
 AWS OpsWorks Limits {#limits_opworks .title}
 -------------------
@@ -226,6 +249,8 @@ Amazon Redshift Limits {#limits_redshift .title}
   Total nodes per account       16
   Total snapshots per account   20
 
+For information about additional documented limits, see [Limits in Amazon Redshift](http://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html){.ulink}.
+
 Amazon Route 53 Limits {#limits_route53 .title}
 ----------------------
 
@@ -234,6 +259,8 @@ Amazon Route 53 Limits {#limits_route53 .title}
   Hosted zones                           500
   Resource record sets per hosted zone   10,000
   Health checks                          50
+
+For information about additional documented limits, see [Limits on Amazon Route 53 API Requests and Entity Counts](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html){.ulink}.
 
 Amazon SES Limits {#limits_ses_quota .title}
 -----------------
@@ -254,12 +281,16 @@ The following are the default limits for Amazon SES in the production environmen
   Maximum send rate                5 emails per second.
   Recipient address verification   Recipient addresses do not need to be verified.
 
+For information about additional documented limits, see [Limits in Amazon SES](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/limits.html){.ulink}.
+
 Amazon SimpleDB Limits {#limits_simpledb .title}
 ----------------------
 
   Resource   Default Limit
   ---------- ---------------
   Domains    250
+
+For information about additional documented limits, see [Limits](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/SDBLimits.html){.ulink}.
 
 Amazon Simple Notification Service Limits {#limits_sns .title}
 -----------------------------------------
@@ -286,11 +317,13 @@ Amazon VPC Limits {#limits_vpc .title}
   Number of rules per security group                             50                   The multiple of 'rules per security group' and 'security groups per network interface' cannot exceed 250. For example, if you want 100 rules per security group, we’d decrease your number of security groups per network interface to 2.
   Number of security groups per network interface                5                    The multiple of ‘security groups per network interface’ and ‘rules per security group’ cannot exceed 250. For example, if you want 10 security groups per network interface, we’d decrease your number of rules per security group to 25.
   Number of network ACLs per VPC                                 200                  You can associate one network ACL to one or more subnets in a VPC. This limit is not the same as the number of rules per network ACL.
-  Number of rules per network ACL                                20                   This is the sum of the number of rules for both ingress and egress rules in a single network ACL. The maximum limit is 40 rules per network ACL.
+  Number of rules per network ACL                                40                   This is the sum of both ingress and egress rules in a single network ACL, where the limit for ingress rules is 20, and the limit for egress rules is 20.
   Number of BGP advertised routes per VPN connection             100                  If this limit is increased, network performance may be impacted.
   Number of active VPC peering connections per VPC               50                   The maximum limit is 125 peering connections per VPC. The number of entries per route table should be increased accordingly; however, network performance may be impacted.
   Number of outstanding VPC peering connection requests          25                   This is the limit for the number of outstanding VPC peering connection requests that you've requested from your account.
   Expiry time for an unaccepted VPC peering connection request   1 week (168 hours)    
+
+For information about additional documented limits, see [Amazon VPC Limits](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html){.ulink}.
 
 Amazon WorkSpaces Limits {#limits_workspaces .title}
 ------------------------
@@ -299,10 +332,12 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
   ------------ --------------- --------------------------------------------------------------------------------------------------------------------
   WorkSpaces   2               To prevent denial of service attacks, accounts new to the Amazon WorkSpaces service are limited to two WorkSpaces.
 
-![](/web/20140701130513im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
-  ----------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [Document Conventions](/web/20140701130513/http://docs.aws.amazon.com/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
-  [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                                                   Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://portal.aws.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=Regions&guide_name=General%20Reference&api_version=1.0&file_name=aws_service_limits){.awstoc}
-  ----------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink}.
+
+![](/web/20140827214007im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
+  -------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  [Document Conventions](/web/20140827214007/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
+  [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                                                      Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://portal.aws.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=Regions&guide_name=General%20Reference&api_version=1.0&file_name=aws_service_limits){.awstoc}
+  -------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
