@@ -243,11 +243,17 @@ Amazon RDS Limits {#limits_rds .title}
 Amazon Redshift Limits {#limits_redshift .title}
 ----------------------
 
-  Resource                      Default Limit
-  ----------------------------- ---------------
-  Nodes per cluster             16
-  Total nodes per account       16
-  Total snapshots per account   20
+  Resource                   Default Limit
+  -------------------------- ---------------
+  Nodes per cluster          16
+  Nodes                      16
+  Reserved Nodes             16
+  Snapshots                  20
+  Parameter Groups           20
+  Security Groups            20
+  Subnet Groups              20
+  Subnets per Subnet Group   20
+  Event Subscriptions        20
 
 For information about additional documented limits, see [Limits in Amazon Redshift](http://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html){.ulink}.
 
@@ -334,9 +340,9 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink}.
 
-![](/web/20140827214007im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
+![](/web/20140920211842im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
   -------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [Document Conventions](/web/20140827214007/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
+  [Document Conventions](/web/20140920211842/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
   [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                                                      Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://portal.aws.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=Regions&guide_name=General%20Reference&api_version=1.0&file_name=aws_service_limits){.awstoc}
   -------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
