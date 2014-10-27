@@ -42,6 +42,7 @@ You can request an increase for these limits by performing the following steps. 
 -   [AWS CloudFormation Limits](aws_service_limits.html#limits_cloudformation)
 -   [Amazon CloudFront Limits](aws_service_limits.html#limits_cloudfront)
 -   [Amazon CloudSearch Limits](aws_service_limits.html#limits_cloudsearch)
+-   [AWS Directory Service Limits](aws_service_limits.html#limits_ds)
 -   [DynamoDB Limits](aws_service_limits.html#limits_dynamodb)
 -   [Amazon EBS Limits](aws_service_limits.html#limits_ebs)
 -   [Amazon EC2 Limits](aws_service_limits.html#limits_ec2)
@@ -112,6 +113,15 @@ Amazon CloudSearch Limits {#limits_cloudsearch .title}
 
 For information about additional documented limits, see [Understanding Amazon CloudSearch Limits](http://docs.aws.amazon.com/cloudsearch/latest/developerguide/limits.html){.ulink}.
 
+AWS Directory Service Limits {#limits_ds .title}
+----------------------------
+
+  Resource                   Default Limit
+  -------------------------- -----------------
+  Simple AD directories      2
+  AD Connector directories   2
+  Manual snapshots           5 per Simple AD
+
 DynamoDB Limits {#limits_dynamodb .title}
 ---------------
 
@@ -181,12 +191,25 @@ For information about additional documented limits, see [Elastic Load Balancing 
 Elastic Transcoder Limits {#limits_elastictranscoder .title}
 -------------------------
 
-  Resource                   Default Limit
-  -------------------------- ---------------
-  Pipelines per region       4
-  Active jobs per pipeline   1,000
-  Outputs per job            30
-  User-defined presets       50
+  --------------------------------------------------------------------------------------------------------------
+  Resource                                                           Default Limit
+  ------------------------------------------------------------------ -------------------------------------------
+  Pipelines per region                                               4
+
+  User-defined presets                                               50
+
+  Maximum number of jobs processed simultaneously by each pipeline   US East (Northern Virginia) Region – 20
+                                                                     
+                                                                     US West (Northern California) Region – 12
+                                                                     
+                                                                     US West (Oregon) Region – 20
+                                                                     
+                                                                     EU (Ireland) Region – 20
+                                                                     
+                                                                     Asia Pacific (Singapore) Region – 12
+                                                                     
+                                                                     Asia Pacific (Tokyo) Region – 12
+  --------------------------------------------------------------------------------------------------------------
 
 For information about additional documented limits, see [Limits on Pipelines, Jobs, and Presets](http://docs.aws.amazon.com/elastictranscoder/latest/developerguide/limits.html){.ulink}.
 
@@ -309,7 +332,7 @@ Amazon VPC Limits {#limits_vpc .title}
 -----------------
 
   Resource                                                       Default Limit        Comments
-  -------------------------------------------------------------- -------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------- -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   VPCs per region                                                5                    This limit can be increased upon request. The limit for Internet gateways per region is directly correlated to this one. Increasing this limit will increase the limit on Internet gateways per region by the same amount.
   Subnets per VPC                                                200                  This limit can be increased upon request.
   Internet gateways per region                                   5                    This limit is directly correlated with the limit on VPCs per region. You cannot increase this limit individually; the only way to increase this limit is to increase the limit on VPCs per region. Only one Internet gateway can be attached to a VPC at a time.
@@ -322,7 +345,7 @@ Amazon VPC Limits {#limits_vpc .title}
   Elastic IP addresses per region for each AWS account           5                    This is the limit for the number of VPC Elastic IPs you can allocate within a region. This is a separate limit from the EC2 Elastic IP address limit. This limit can be increased upon request.
   Security groups per VPC                                        100                  This limit can be increased upon request; however, network performance may be impacted, depending on the way the security groups are configured.
   Rules per security group                                       50                   This limit can be increased or decreased upon request, however, the multiple of the limit for rules per security group and the limit for security groups per network interface cannot exceed 250. For example, if you want 100 rules per security group, we decrease your number of security groups per network interface to 2.
-  Security groups per network interface                          5                    This limit can be increased or decreased upon request; however, the multiple of of the limit for security groups per network interface and the limit for rules per security group cannot exceed 250. For example, if you want 10 security groups per network interface, we decrease your number of rules per security group to 25.
+  Security groups per network interface                          5                    This limit can be increased or decreased upon request; however, the multiple of the limit for security groups per network interface and the limit for rules per security group cannot exceed 250. For example, if you want 10 security groups per network interface, we decrease your number of rules per security group to 25.
   Network ACLs per VPC                                           200                  You can associate one network ACL to one or more subnets in a VPC. This limit is not the same as the number of rules per network ACL.
   Rules per network ACL                                          20                   This is the one-way limit for a single network ACL, where the limit for ingress rules is 20, and the limit for egress rules is 20.
   BGP Advertised Routes per VPN Connection                       100                  This limit cannot be increased. If you require more than 100 prefixes, advertise a default route.
@@ -341,10 +364,10 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink}.
 
-![](/web/20141013072334im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
-  -------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [Document Conventions](/web/20141013072334/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
-  [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                                                      Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://portal.aws.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=Regions&guide_name=General%20Reference&api_version=1.0&file_name=aws_service_limits){.awstoc}
-  -------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![](/web/20141027131611im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+  ----------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  [Document Conventions](/web/20141027131611/http://docs.aws.amazon.com/general/latest/gr/docconventions.html){.awstoc}   [« Previous](GetTheTools.html){.awstoc}[Next »](api-retries.html){.awstoc}
+  [Terms of Use](http://aws.amazon.com/terms/){.awstoc}                                                                   Did this page help you?  [Yes](feedbackyes.html?topic_id=aws_service_limits){.awstoc} | [No](feedbackno.html?topic_id=aws_service_limits){.awstoc} |  [Tell us about it...](https://portal.aws.amazon.com/gp/aws/html-forms-controller/documentation/aws_doc_feedback_04?service_name=Regions&guide_name=General%20Reference&api_version=1.0&file_name=aws_service_limits){.awstoc}
+  ----------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
