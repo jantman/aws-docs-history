@@ -32,13 +32,14 @@ You can request an increase for these limits by performing the following steps. 
 -   [AWS Elastic Beanstalk Limits](aws_service_limits.html#limits_elastic_beanstalk)
 -   [Elastic Load Balancing Limits](aws_service_limits.html#limits_elastic_load_balancer)
 -   [Elastic Transcoder Limits](aws_service_limits.html#limits_elastictranscoder)
--   [IAM Limits](aws_service_limits.html#limits_iam)
+-   [AWS Identity and Access Management (IAM) Limits](aws_service_limits.html#limits_iam)
 -   [Amazon Kinesis Limits](aws_service_limits.html#limits_kinesis)
 -   [AWS Key Management Service Limits](aws_service_limits.html#limits_kms)
 -   [AWS OpsWorks Limits](aws_service_limits.html#limits_opworks)
 -   [Amazon RDS Limits](aws_service_limits.html#limits_rds)
 -   [Amazon Redshift Limits](aws_service_limits.html#limits_redshift)
 -   [Amazon Route 53 Limits](aws_service_limits.html#limits_route53)
+-   [Amazon S3 Limits](aws_service_limits.html#limits_s3)
 -   [Amazon SES Limits](aws_service_limits.html#limits_ses_quota)
 -   [Amazon SimpleDB Limits](aws_service_limits.html#limits_simpledb)
 -   [Amazon Simple Notification Service Limits](aws_service_limits.html#limits_sns)
@@ -214,19 +215,10 @@ Elastic Transcoder Limits {#limits_elastictranscoder .title}
 
 For information about additional documented limits, see [Limits on Pipelines, Jobs, and Presets](http://docs.aws.amazon.com/elastictranscoder/latest/developerguide/limits.html){.ulink}.
 
-IAM Limits {#limits_iam .title}
-----------
+AWS Identity and Access Management (IAM) Limits {#limits_iam .title}
+-----------------------------------------------
 
-  Resource              Default Limit
-  --------------------- ---------------
-  Users                 5,000
-  Groups                100
-  Groups per user       10
-  Roles                 250
-  Instance profiles     100
-  Server certificates   20
-
-For information about additional documented limits, see [Limitations on IAM Entities](http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html){.ulink}.
+For information about AWS Identity and Access Management (IAM) limits, see [Limitations on IAM Entities](http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html){.ulink} in [*Using IAM*]{.emphasis}.
 
 Amazon Kinesis Limits {#limits_kinesis .title}
 ---------------------
@@ -298,7 +290,7 @@ Amazon Route 53 Limits {#limits_route53 .title}
   Resource                                                        Default Limit
   --------------------------------------------------------------- ---------------
   Hosted zones                                                    500
-  Domains                                                         10
+  Domains                                                         50
   Resource record sets per hosted zone                            10,000
   Reusable delegation sets                                        100
   Hosted zones that can use the same reusable delegation set      100
@@ -306,6 +298,15 @@ Amazon Route 53 Limits {#limits_route53 .title}
   Health checks                                                   50
 
 For information about additional documented limits, see [Limits on Amazon Route 53 API Requests and Entity Counts](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html){.ulink}.
+
+Amazon S3 Limits {#limits_s3 .title}
+----------------
+
+  Resource            Default Limit
+  ------------------- ---------------
+  Number of buckets   100
+
+For information about additional documented limits, see [Bucket Restrictions and Limitations](http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html){.ulink}.
 
 Amazon SES Limits {#limits_ses_quota .title}
 -----------------
@@ -347,27 +348,29 @@ Amazon Simple Notification Service Limits {#limits_sns .title}
 Amazon VPC Limits {#limits_vpc .title}
 -----------------
 
-  Resource                                                          Default Limit        Comments
-  ----------------------------------------------------------------- -------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Number of VPCs per region                                         5                    This limit can be increased upon request. The limit for Internet gateways per region is directly correlated to this one. Increasing this limit will increase the limit on Internet gateways per region by the same amount.
-  Number of subnets per VPC                                         200                  This limit can be increased upon request.
-  Number of Internet gateways per region                            5                    This limit is directly correlated with the limit on VPCs per region. You cannot increase this limit individually; the only way to increase this limit is to increase the limit on VPCs per region. Only one Internet gateway can be attached to a VPC at a time.
-  Number of virtual private gateways per region                     5                    Only one virtual private gateway can be attached to a VPC at a time. This limit can be increased upon request.
-  Number of customer gateways per region                            50                   This limit can be increased upon request.
-  Number of VPN connections per region                              50                   This limit can be increased upon request.
-  Number of VPN connections per VPC (per virtual private gateway)   10                   This limit can be increased upon request.
-  Number of route tables per VPC                                    200                  Including the main route table. You can associate one route table to one or more subnets in a VPC.
-  Number of entries per route table                                 50                   This is the limit for the number of non-propagated entries per route table. This limit can be increased upon request; however, network performance may be impacted.
-  Number of Elastic IP addresses per region for each AWS account    5                    This is the limit for the number of VPC Elastic IPs you can allocate within a region. This is a separate limit from the EC2 Elastic IP address limit. This limit can be increased upon request.
-  Number of security groups per VPC                                 100                  This limit can be increased upon request; however, network performance may be impacted, depending on the way the security groups are configured.
-  Number of rules per security group for EC2-VPC                    50                   This limit can be increased or decreased upon request, however, the multiple of the limit for rules per security group and the limit for security groups per network interface cannot exceed 250. For example, if you want 100 rules per security group, we decrease your number of security groups per network interface to 2.
-  Number of security groups per network interface                   5                    This limit can be increased or decreased upon request; up to a maximum of 16. The multiple of the limit for security groups per network interface and the limit for rules per security group cannot exceed 250. For example, if you want 10 security groups per network interface, we decrease your number of rules per security group to 25.
-  Number of network ACLs per VPC                                    200                  You can associate one network ACL to one or more subnets in a VPC. This limit is not the same as the number of rules per network ACL.
-  Number of rules per network ACL                                   20                   This is the one-way limit for a single network ACL, where the limit for ingress rules is 20, and the limit for egress rules is 20.
-  Number of BGP Advertised Routes per VPN Connection                100                  This limit cannot be increased. If you require more than 100 prefixes, advertise a default route.
-  Number of active VPC peering connections per VPC                  50                   This limit can be increased via special request to AWS Support. The maximum limit is 125 peering connections per VPC. The number of entries per route table should be increased accordingly; however, network performance may be impacted.
-  Number of outstanding VPC peering connection requests             25                   This is the limit for the number of outstanding VPC peering connection requests that you've requested from your account. This limit can be increased via special request to AWS Support.
-  Expiry time for an unaccepted VPC peering connection request      1 week (168 hours)   This limit can be increased via special request to AWS Support.
+  Resource                                                       Default Limit        Comments
+  -------------------------------------------------------------- -------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  VPCs per region                                                5                    This limit can be increased upon request. The limit for Internet gateways per region is directly correlated to this one. Increasing this limit will increase the limit on Internet gateways per region by the same amount.
+  Subnets per VPC                                                200                  This limit can be increased upon request.
+  Internet gateways per region                                   5                    This limit is directly correlated with the limit on VPCs per region. You cannot increase this limit individually; the only way to increase this limit is to increase the limit on VPCs per region. Only one Internet gateway can be attached to a VPC at a time.
+  Virtual private gateways per region                            5                    This limit can be increased upon request; however, only one virtual private gateway can be attached to a VPC at a time.
+  Customer gateways per region                                   50                   This limit can be increased upon request.
+  VPN connections per region                                     50                   This limit can be increased upon request.
+  VPN connections per VPC (per virtual private gateway)          10                   This limit can be increased upon request.
+  Route tables per VPC                                           200                  Including the main route table. You can associate one route table to one or more subnets in a VPC.
+  Entries per route table                                        50                   This is the limit for the number of non-propagated entries per route table. This limit can be increased upon request; however, network performance may be impacted.
+  Elastic IP addresses per region for each AWS account           5                    This is the limit for the number of VPC Elastic IPs you can allocate within a region. This is a separate limit from the EC2 Elastic IP address limit. This limit can be increased upon request.
+  Security groups per VPC                                        100                  This limit can be increased upon request; however, network performance may be impacted, depending on the way the security groups are configured.
+  Rules per security group                                       50                   This limit can be increased or decreased upon request, however, the multiple of the limit for rules per security group and the limit for security groups per network interface cannot exceed 250. For example, if you want 100 rules per security group, we decrease your number of security groups per network interface to 2.
+  Security groups per network interface                          5                    This limit can be increased or decreased upon request; up to a maximum of 16. The multiple of the limit for security groups per network interface and the limit for rules per security group cannot exceed 250. For example, if you want 10 security groups per network interface, we decrease your number of rules per security group to 25.
+  Network interfaces per instance                                -                    This limit varies by instance type. For more information, see [Private IP Addresses Per ENI Per Instance Type](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI){.ulink}.
+  Network interfaces per VPC                                     100                  This limit is calculated by multiplying your On-Demand instance limit by 5. The default limit for On-Demand instances is 20. You can increase the number of network interfaces per VPC by request, or by increasing your On-Demand instance limit.
+  Network ACLs per VPC                                           200                  You can associate one network ACL to one or more subnets in a VPC. This limit is not the same as the number of rules per network ACL.
+  Rules per network ACL                                          20                   This is the one-way limit for a single network ACL, where the limit for ingress rules is 20, and the limit for egress rules is 20.
+  BGP Advertised Routes per VPN Connection                       100                  This limit cannot be increased. If you require more than 100 prefixes, advertise a default route.
+  Active VPC peering connections per VPC                         50                   This limit can be increased via special request to AWS Support. The maximum limit is 125 peering connections per VPC. The number of entries per route table should be increased accordingly; however, network performance may be impacted.
+  Outstanding VPC peering connection requests                    25                   This is the limit for the number of outstanding VPC peering connection requests that you've requested from your account. This limit can be increased via special request to AWS Support.
+  Expiry time for an unaccepted VPC peering connection request   1 week (168 hours)   This limit can be increased via special request to AWS Support.
 
 For information about additional documented limits, see [Amazon VPC Limits](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html){.ulink}.
 
@@ -380,9 +383,9 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink}.
 
-![](/web/20150207064716im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
+![](/web/20150228105914im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
   ----------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------
-  [Document Conventions](/web/20150207064716/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html)   © 2014, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+  [Document Conventions](/web/20150228105914/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html)   © 2015, Amazon Web Services, Inc. or its affiliates. All rights reserved.
   [Terms of Use](http://aws.amazon.com/terms)                                                                       
   ----------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------
 
