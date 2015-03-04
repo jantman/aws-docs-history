@@ -383,9 +383,9 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink}.
 
-![](/web/20150228105914im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
+![](/web/20150304131316im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
   ----------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------
-  [Document Conventions](/web/20150228105914/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html)   © 2015, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+  [Document Conventions](/web/20150304131316/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html)   © 2015, Amazon Web Services, Inc. or its affiliates. All rights reserved.
   [Terms of Use](http://aws.amazon.com/terms)                                                                       
   ----------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------
 
