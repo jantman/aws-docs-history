@@ -6,7 +6,7 @@ AWS Service Limits {#aws-service-limits .topictitle}
 
 The following tables provide the default limits for AWS services for an AWS account. Unless otherwise noted, each limit is per region. The limits listed below are only the limits that can be changed. Many services contain limits that cannot be changed. For more information about the limits for a specific service, see the documentation for that service.
 
-If your support plan includes Trusted Advisor, you can use it to display your usage and limits for each service in a specific region. For more information, see [Trusted Advisor](https://aws.amazon.com/premiumsupport/trustedadvisor/){.ulink}.
+If your support plan includes Trusted Advisor, you can use it to display your usage and limits for each service in a specific region. For more information, see [Trusted Advisor](http://aws.amazon.com/premiumsupport/trustedadvisor/){.ulink}.
 
 You can request an increase for these limits by performing the following steps. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
@@ -85,7 +85,7 @@ Amazon CloudFront Limits {#limits_cloudfront .title}
   Cache behaviors per distribution                                                                                                             25
   Whitelisted headers per cache behavior                                                                                                       10
   Whitelisted cookies per cache behavior                                                                                                       10
-  SSL certificates per AWS account when serving HTTPS requests using dedicated IP addresses (no limit when serving HTTPS requests using SNI)   0
+  SSL certificates per AWS account when serving HTTPS requests using dedicated IP addresses (no limit when serving HTTPS requests using SNI)   2
 
 Amazon CloudSearch Limits {#limits_cloudsearch .title}
 -------------------------
@@ -383,9 +383,9 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink}.
 
-![](/web/20150304131316im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
+![](/web/20150310101701im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
   ----------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------
-  [Document Conventions](/web/20150304131316/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html)   © 2015, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+  [Document Conventions](/web/20150310101701/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html)   © 2015, Amazon Web Services, Inc. or its affiliates. All rights reserved.
   [Terms of Use](http://aws.amazon.com/terms)                                                                       
   ----------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------
 
