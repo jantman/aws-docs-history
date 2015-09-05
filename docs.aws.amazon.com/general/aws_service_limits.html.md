@@ -1,16 +1,17 @@
-  --
-  --
++-----------------------------------------------------------------------+
+|                                                                       |
++-----------------------------------------------------------------------+
 
 AWS Service Limits {#aws-service-limits .topictitle}
 ==================
 
-The following tables provide the default limits for AWS services for an AWS account. Unless otherwise noted, each limit is per region. The limits listed below are only the limits that can be changed. Many services contain limits that cannot be changed. For more information about the limits for a specific service, see the documentation for that service.
+The following tables provide the default limits for AWS services for an AWS account. Unless otherwise noted, each limit is region specific. Many services contain limits that cannot be changed. For more information about the limits for a specific service, see the documentation for that service.
 
 If your support plan includes Trusted Advisor, you can use it to display your usage and limits for each service in a specific region. For more information, see [Trusted Advisor](http://aws.amazon.com/premiumsupport/trustedadvisor/){.ulink}.
 
 You can request an increase for these limits by performing the following steps. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-[]{#d0e9714}
+[]{#d0e9779}
 **To request a limit increase**
 
 1.  Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/){.ulink} page, sign in, if necessary, and then click [Create Case]{.guilabel}.
@@ -33,30 +34,30 @@ You can request an increase for these limits by performing the following steps. 
 -   [AWS CodePipeline Limits](aws_service_limits.html#limits_codepipeline)
 -   [AWS Device Farm Limits](aws_service_limits.html#limits_devicefarm)
 -   [AWS Directory Service Limits](aws_service_limits.html#limits_ds)
--   [DynamoDB Limits](aws_service_limits.html#limits_dynamodb)
--   [Amazon EBS Limits](aws_service_limits.html#limits_ebs)
--   [Amazon EC2 Limits](aws_service_limits.html#limits_ec2)
--   [Amazon ECS Limits](aws_service_limits.html#limits_ecs)
+-   [Amazon DynamoDB Limits](aws_service_limits.html#limits_dynamodb)
+-   [Amazon EC2 Container Service (Amazon ECS) Limits](aws_service_limits.html#limits_ecs)
+-   [AWS Elastic Beanstalk Limits](aws_service_limits.html#limits_elastic_beanstalk)
+-   [Amazon Elastic Block Store (Amazon EBS) Limits](aws_service_limits.html#limits_ebs)
+-   [Amazon Elastic Compute Cloud (Amazon EC2) Limits](aws_service_limits.html#limits_ec2)
 -   [Amazon EC2 Simple Systems Manager Limits](aws_service_limits.html#limits_ssm)
--   [ElastiCache Limits](aws_service_limits.html#limits_elasticache)
--   [Elastic Beanstalk Limits](aws_service_limits.html#limits_elastic_beanstalk)
 -   [Elastic Load Balancing Limits](aws_service_limits.html#limits_elastic_load_balancer)
--   [Elastic Transcoder Limits](aws_service_limits.html#limits_elastictranscoder)
+-   [Amazon Elastic Transcoder Limits](aws_service_limits.html#limits_elastictranscoder)
+-   [Amazon ElastiCache Limits](aws_service_limits.html#limits_elasticache)
 -   [AWS Identity and Access Management (IAM) Limits](aws_service_limits.html#limits_iam)
--   [AWS KMS Limits](aws_service_limits.html#limits_kms)
+-   [AWS Key Management Service (AWS KMS) Limits](aws_service_limits.html#limits_kms)
 -   [Amazon Kinesis Limits](aws_service_limits.html#limits_kinesis)
 -   [AWS Lambda Limits](aws_service_limits.html#limits_lambda)
--   [Amazon Machine Learning Limits](aws_service_limits.html#limits_machinelearning)
+-   [Amazon Machine Learning (Amazon ML) Limits](aws_service_limits.html#limits_machinelearning)
 -   [AWS OpsWorks Limits](aws_service_limits.html#limits_opworks)
--   [Amazon RDS Limits](aws_service_limits.html#limits_rds)
 -   [Amazon Redshift Limits](aws_service_limits.html#limits_redshift)
+-   [Amazon Relational Database Service (Amazon RDS) Limits](aws_service_limits.html#limits_rds)
 -   [Amazon Route 53 Limits](aws_service_limits.html#limits_route53)
--   [Amazon S3 Limits](aws_service_limits.html#limits_s3)
 -   [AWS Service Catalog](aws_service_limits.html#limits_servicecatalog)
--   [Amazon SES Limits](aws_service_limits.html#limits_ses_quota)
--   [Amazon Simple Notification Service Limits](aws_service_limits.html#limits_sns)
+-   [Amazon Simple Email Service (Amazon SES) Limits](aws_service_limits.html#limits_ses_quota)
+-   [Amazon Simple Notification Service (Amazon SNS) Limits](aws_service_limits.html#limits_sns)
+-   [Amazon Simple Storage Service (Amazon S3) Limits](aws_service_limits.html#limits_s3)
 -   [Amazon SimpleDB Limits](aws_service_limits.html#limits_simpledb)
--   [Amazon VPC Limits](aws_service_limits.html#limits_vpc)
+-   [Amazon Virtual Private Cloud (Amazon VPC) Limits](aws_service_limits.html#limits_vpc)
 -   [Amazon WorkSpaces Limits](aws_service_limits.html#limits_workspaces)
 
 Amazon API Gateway Limits {#limits_apigateway .title}
@@ -160,10 +161,10 @@ AWS CodePipeline Limits {#limits_codepipeline .title}
 -----------------------
 
   Resource                                                   Default Limit
-  ---------------------------------------------------------- -----------------------------
+  ---------------------------------------------------------- ------------------------------
   Number of pipelines                                        20
-  Number of stages                                           Minimum of 2, maximum of 10
-  Number of actions                                          Minimum of 1, maximum of 20
+  Number of stages                                           Minimum of 2, maxi­mum of 10
+  Number of actions                                          Minimum of 1, maxi­mum of 20
   Maximum number of revisions running across all pipelines   20
   Maximum size of source artifacts                           500 megabytes (MB)
   Maximum number of times an action can be run per month     1,000 per calendar month
@@ -189,8 +190,8 @@ AWS Directory Service Limits {#limits_ds .title}
   AD Connector directories   10
   Manual snapshots           5 per Simple AD
 
-DynamoDB Limits {#limits_dynamodb .title}
----------------
+Amazon DynamoDB Limits {#limits_dynamodb .title}
+----------------------
 
   Resource                                  Default Limit
   ----------------------------------------- ---------------
@@ -202,39 +203,8 @@ DynamoDB Limits {#limits_dynamodb .title}
 
 For information about additional documented limits, see [Limits in Amazon DynamoDB](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html){.ulink}.
 
-Amazon EBS Limits {#limits_ebs .title}
------------------
-
-  Resource                                                 Default Limit
-  -------------------------------------------------------- ---------------
-  Number of EBS volumes                                    5,000
-  Number of EBS snapshots                                  10,000
-  Total volume storage of General Purpose (SSD) volumes    20 TiB
-  Total volume storage of Provisioned IOPS (SSD) volumes   20 TiB
-  Total volume storage of Magnetic volumes                 20 TiB
-  Total provisioned IOPS                                   40,000
-
-For information about additional documented limits, see [Amazon EC2 Service Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html){.ulink}.
-
-Amazon EC2 Limits {#limits_ec2 .title}
------------------
-
-  Resource                                                               Default Limit
-  ---------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Elastic IP addresses for EC2-Classic                                   5
-  Security groups for EC2-Classic per instance                           500
-  Rules per security group for EC2-Classic                               100
-  Throttle on the emails that can be sent from your Amazon EC2 account   Throttle applied
-  On-demand instances                                                    Limits vary depending on instance type. For more information, see [How many instances can I run in Amazon EC2](http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
-  Spot Instances                                                         Limits vary depending on instance type, region, and account. For more information, see [Spot Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html){.ulink}.
-  Reserved Instances                                                     20 instance reservations per Availability Zone, per month
-
-For information about related limits for EC2-VPC, see [Amazon VPC Limits](aws_service_limits.html#limits_vpc "Amazon VPC Limits"){.xref}.
-
-For information about viewing your current limits, see [Amazon EC2 Service Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html){.ulink}.
-
-Amazon ECS Limits {#limits_ecs .title}
------------------
+Amazon EC2 Container Service (Amazon ECS) Limits {#limits_ecs .title}
+------------------------------------------------
 
   Resource                                                                            Default Limit
   ----------------------------------------------------------------------------------- ----------------------------------
@@ -250,6 +220,47 @@ Amazon ECS Limits {#limits_ecs .title}
   Task definition max containers                                                      10
   Throttle on task definition registration rate                                       1 per second / 60 max per minute
 
+AWS Elastic Beanstalk Limits {#limits_elastic_beanstalk .title}
+----------------------------
+
+  Resource       Default Limit
+  -------------- ---------------
+  Applications   25
+  Versions       500
+  Environments   200
+
+Amazon Elastic Block Store (Amazon EBS) Limits {#limits_ebs .title}
+----------------------------------------------
+
+  Resource                                                 Default Limit
+  -------------------------------------------------------- ---------------
+  Number of EBS volumes                                    5,000
+  Number of EBS snapshots                                  10,000
+  Total volume storage of General Purpose (SSD) volumes    20 TiB
+  Total volume storage of Provisioned IOPS (SSD) volumes   20 TiB
+  Total volume storage of Magnetic volumes                 20 TiB
+  Total provisioned IOPS                                   40,000
+
+For information about additional documented limits, see [Amazon EC2 Service Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html){.ulink}.
+
+Amazon Elastic Compute Cloud (Amazon EC2) Limits {#limits_ec2 .title}
+------------------------------------------------
+
+  Resource                                                               Default Limit
+  ---------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Elastic IP addresses for EC2-Classic                                   5
+  Security groups for EC2-Classic per instance                           500
+  Rules per security group for EC2-Classic                               100
+  Throttle on the emails that can be sent from your Amazon EC2 account   Throttle applied
+  On-demand instances                                                    Limits vary depending on instance type. For more information, see [How many instances can I run in Amazon EC2](http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
+  Spot Instances                                                         Limits vary depending on instance type, region, and account. For more information, see [Spot Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html){.ulink}.
+  Reserved Instances                                                     20 instance reservations per Availability Zone, per month
+  AMI Copies                                                             Destination regions are limited to 50 concurrent AMI copies at a time, with no more than 25 of those coming from a single source region.
+
+For information about related limits for EC2-VPC, see [Amazon Virtual Private Cloud (Amazon VPC) Limits](aws_service_limits.html#limits_vpc "Amazon Virtual Private Cloud (Amazon VPC) Limits"){.xref}.
+
+For information about viewing your current limits, see [Amazon EC2 Service Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html){.ulink}.
+
 Amazon EC2 Simple Systems Manager Limits {#limits_ssm .title}
 ----------------------------------------
 
@@ -258,34 +269,18 @@ Amazon EC2 Simple Systems Manager Limits {#limits_ssm .title}
   Number of documents per account      200
   Number of associations per account   10,000
 
-ElastiCache Limits {#limits_elasticache .title}
-------------------
-
-  Resource   Default Limit
-  ---------- ---------------
-  Nodes      50
-
-Elastic Beanstalk Limits {#limits_elastic_beanstalk .title}
-------------------------
-
-  Resource       Default Limit
-  -------------- ---------------
-  Applications   25
-  Versions       500
-  Environments   200
-
 Elastic Load Balancing Limits {#limits_elastic_load_balancer .title}
 -----------------------------
 
-  Resource                      Default Limit
-  ----------------------------- ---------------
-  Load balancers per region     20
-  Listeners per load balancer   100
+  Resource                      Default Limit   Comments
+  ----------------------------- --------------- -------------------------------------------
+  Load balancers per region     20              This limit can be increased upon request.
+  Listeners per load balancer   100             This limit cannot be increased.
 
 For information about additional documented limits, see [Elastic Load Balancing Limits](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-limits.html){.ulink}.
 
-Elastic Transcoder Limits {#limits_elastictranscoder .title}
--------------------------
+Amazon Elastic Transcoder Limits {#limits_elastictranscoder .title}
+--------------------------------
 
   ---------------------------------------------------------------------------------------------------------
   Resource                                                           Default Limit
@@ -309,21 +304,28 @@ Elastic Transcoder Limits {#limits_elastictranscoder .title}
 
 For information about additional documented limits, see [Limits on Pipelines, Jobs, and Presets](http://docs.aws.amazon.com/elastictranscoder/latest/developerguide/limits.html){.ulink}.
 
+Amazon ElastiCache Limits {#limits_elasticache .title}
+-------------------------
+
+  Resource   Default Limit
+  ---------- ---------------
+  Nodes      50
+
 AWS Identity and Access Management (IAM) Limits {#limits_iam .title}
 -----------------------------------------------
 
-For information about AWS Identity and Access Management (IAM) limits, see [Limitations on IAM Entities](http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html){.ulink} in [*Using IAM*]{.emphasis}.
+For information about AWS Identity and Access Management (IAM) limits, see [Limitations on IAM Entities](http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html){.ulink} in [*IAM User Guide*]{.emphasis}.
 
-AWS KMS Limits {#limits_kms .title}
---------------
+AWS Key Management Service (AWS KMS) Limits {#limits_kms .title}
+-------------------------------------------
 
   Resource                               Default Limit
-  -------------------------------------- ---------------
+  -------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Keys                                   100
   Aliases                                200
   Grants per key                         250
   Grants for a given principal per key   30
-  Requests per second                    100
+  Requests per second                    Varies by API operation; see [Limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html){.ulink} in the [*AWS Key Management Service Developer Guide*]{.emphasis}.
 
 All of the limits in the preceding table apply per region and per AWS account.
 
@@ -349,7 +351,7 @@ For information about additional documented limits, see [Amazon Kinesis Sizes an
 AWS Lambda Limits {#limits_lambda .title}
 -----------------
 
-[]{#d0e10728}
+[]{#d0e10817}
   Resource                          Limit
   --------------------------------- -------
   Concurrent requests per account   100
@@ -358,15 +360,29 @@ AWS Lambda Limits {#limits_lambda .title}
 \
 For information about additional documented limits, see [AWS Lambda Limits](http://docs.aws.amazon.com/lambda/latest/dg/limits.html){.ulink} in the [*AWS Lambda Developer Guide*]{.emphasis}.
 
-Amazon Machine Learning Limits {#limits_machinelearning .title}
-------------------------------
+Amazon Machine Learning (Amazon ML) Limits {#limits_machinelearning .title}
+------------------------------------------
 
-  Resource                                                                            Default Limit
-  ----------------------------------------------------------------------------------- ---------------
-  Number of simultaneous running jobs                                                 5
-  Memory usage for all Amazon ML models with real time endpoints (GB)                 10
-  Real time predictions throughput per Amazon ML model (TPS)                          200
-  Real time predictions throughput for all Amazon ML models in an AWS account (TPS)   10,000
+  Resource                                                               Default Limit
+  ---------------------------------------------------------------------- ---------------
+  Data file size\*                                                       100 GB
+  Batch prediction input size                                            1 TB
+  Batch prediction input (number of records)                             100 million
+  Number of variables in a data file (schema)                            1,000
+  Recipe complexity (number of processed output variables)               10,000
+  Transactions Per Second for each real-time prediction endpoint         200
+  Total Transactions Per Second for all real-time prediction endpoints   10,000
+  Total RAM for all real-time prediction endpoints                       10 GB
+  Number of simultaneous jobs                                            5
+  Longest run time for any job                                           7 days
+  Number of classes for multiclass ML models                             100
+  ML model size                                                          2 GB
+
+Note
+
+The size of your data files is limited to ensure that jobs finish in a timely manner. Jobs that have been running for more than seven days will be automatically terminated, resulting in a FAILED status.
+
+For more information about Amazon ML limits, see [Limits](http://docs.aws.amazon.com/machine-learning/latest/dg/system-limits.html){.ulink} in the [*Amazon Machine Learning Developer Guide*]{.emphasis}.
 
 AWS OpsWorks Limits {#limits_opworks .title}
 -------------------
@@ -377,24 +393,6 @@ AWS OpsWorks Limits {#limits_opworks .title}
   Layers per stack      40
   Instances per stack   40
   Apps per stack        40
-
-Amazon RDS Limits {#limits_rds .title}
------------------
-
-  Resource                             Default Limit
-  ------------------------------------ ---------------
-  Instances                            40
-  Reserved Instances                   40
-  Total storage for all DB instances   100 TB
-  Manual Snapshots                     50
-  Parameter Groups                     50
-  Security Groups                      25
-  VPC Security Groups                  5
-  Subnet Groups                        20
-  Subnets per Subnet Group             20
-  Option Groups                        20
-  Event Subscriptions                  20
-  Read Replicas per Master             5
 
 Amazon Redshift Limits {#limits_redshift .title}
 ----------------------
@@ -413,6 +411,24 @@ Amazon Redshift Limits {#limits_redshift .title}
 
 For information about additional documented limits, see [Limits in Amazon Redshift](http://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html){.ulink}.
 
+Amazon Relational Database Service (Amazon RDS) Limits {#limits_rds .title}
+------------------------------------------------------
+
+  Resource                             Default Limit
+  ------------------------------------ ---------------
+  Instances                            40
+  Reserved Instances                   40
+  Total storage for all DB instances   100 TB
+  Manual Snapshots                     50
+  Parameter Groups                     50
+  Security Groups                      25
+  VPC Security Groups                  5
+  Subnet Groups                        20
+  Subnets per Subnet Group             20
+  Option Groups                        20
+  Event Subscriptions                  20
+  Read Replicas per Master             5
+
 Amazon Route 53 Limits {#limits_route53 .title}
 ----------------------
 
@@ -428,15 +444,6 @@ Amazon Route 53 Limits {#limits_route53 .title}
 
 For information about additional documented limits, see [Limits on Amazon Route 53 API Requests and Entity Counts](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html){.ulink}.
 
-Amazon S3 Limits {#limits_s3 .title}
-----------------
-
-  Resource   Default Limit
-  ---------- -----------------
-  Buckets    100 per account
-
-For information about Amazon S3 limits, see [Bucket Restrictions and Limitations](http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html){.ulink} in the [*Amazon S3 Developer Guide*]{.emphasis}.
-
 AWS Service Catalog {#limits_servicecatalog .title}
 -------------------
 
@@ -450,8 +457,8 @@ AWS Service Catalog {#limits_servicecatalog .title}
   Tags                       3 per product, 3 per portfolio, 10 per stack
   Stacks                     25 per account (AWS CloudFormation limit)
 
-Amazon SES Limits {#limits_ses_quota .title}
------------------
+Amazon Simple Email Service (Amazon SES) Limits {#limits_ses_quota .title}
+-----------------------------------------------
 
 The following are the default limits for Amazon SES in the sandbox environment.
 
@@ -470,12 +477,21 @@ The following are the default limits for Amazon SES in the sandbox environment.
 
 For information about additional documented limits, see [Limits in Amazon SES](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/limits.html){.ulink}.
 
-Amazon Simple Notification Service Limits {#limits_sns .title}
------------------------------------------
+Amazon Simple Notification Service (Amazon SNS) Limits {#limits_sns .title}
+------------------------------------------------------
 
   Resource   Default Limit
   ---------- ---------------
   Topics     3,000
+
+Amazon Simple Storage Service (Amazon S3) Limits {#limits_s3 .title}
+------------------------------------------------
+
+  Resource   Default Limit
+  ---------- -----------------
+  Buckets    100 per account
+
+For information about Amazon S3 limits, see [Bucket Restrictions and Limitations](http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html){.ulink} in the [*Amazon S3 Developer Guide*]{.emphasis}.
 
 Amazon SimpleDB Limits {#limits_simpledb .title}
 ----------------------
@@ -486,8 +502,8 @@ Amazon SimpleDB Limits {#limits_simpledb .title}
 
 For information about additional documented limits, see [Limits](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/SDBLimits.html){.ulink}.
 
-Amazon VPC Limits {#limits_vpc .title}
------------------
+Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc .title}
+------------------------------------------------
 
   Resource                                                                           Default Limit        Comments
   ---------------------------------------------------------------------------------- -------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -521,15 +537,12 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 ------------------------
 
   Resource     Default Limit   Comments
-  ------------ --------------- --------------------------------------------------------------------------------------------------------------------
-  WorkSpaces   2               To prevent denial of service attacks, accounts new to the Amazon WorkSpaces service are limited to two WorkSpaces.
+  ------------ --------------- ---------------------------------------------------------------------------------------------------------------------
+  WorkSpaces   5               To prevent denial of service attacks, accounts new to the Amazon WorkSpaces service are limited to five WorkSpaces.
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink}.
 
-![](/web/20150816183035im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
-  -------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------
-  [Document Conventions](/web/20150816183035/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)   © 2015, Amazon Web Services, Inc. or its affiliates. All rights reserved.
-  [Terms of Use](http://aws.amazon.com/terms)                                                                    
-  -------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------
+![](/web/20150905064328im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+[Document Conventions](/web/20150905064328/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
 
-
+[« Previous](signature-version-2.html){.awstoc}[Next »](aws-ip-ranges.html){.awstoc}
