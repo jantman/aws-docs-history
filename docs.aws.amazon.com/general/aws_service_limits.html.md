@@ -542,7 +542,7 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink}.
 
-![](/web/20150905064328im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
-[Document Conventions](/web/20150905064328/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
+![](/web/20150907203833im_/https://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+[Document Conventions](/web/20150907203833/https://docs.aws.amazon.com/general/latest/gr/docconventions.html)
 
 [« Previous](signature-version-2.html){.awstoc}[Next »](aws-ip-ranges.html){.awstoc}
