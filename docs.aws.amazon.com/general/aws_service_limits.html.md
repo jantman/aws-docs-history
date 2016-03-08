@@ -13,7 +13,7 @@ If your support plan includes Trusted Advisor, you can use it to display your us
 
 You can take the following steps to request an increase for limits. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-[]{#d0e11249}
+[]{#d0e11791}
 **To request a limit increase**
 
 1.  Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/){.ulink} page, sign in, if necessary, and then choose [Create Case]{.guilabel}.
@@ -48,9 +48,12 @@ You can take the following steps to request an increase for limits. These increa
 -   [Elastic Load Balancing Limits](aws_service_limits.html#limits_elastic_load_balancer)
 -   [Amazon Elastic Transcoder Limits](aws_service_limits.html#limits_elastictranscoder)
 -   [Amazon Elasticsearch Service Limits](aws_service_limits.html#limits_es)
+-   [Amazon GameLift Limits](aws_service_limits.html#limits_gamelift)
 -   [AWS Identity and Access Management (IAM) Limits](aws_service_limits.html#limits_iam)
+-   [AWS Import/Export Snowball (Snowball) Limits](aws_service_limits.html#limits_snowball)
 -   [AWS Key Management Service (AWS KMS) Limits](aws_service_limits.html#limits_kms)
--   [Amazon Kinesis Streams Limits](aws_service_limits.html#limits_kinesis)
+-   [Amazon Kinesis Firehose Limits](aws_service_limits.html#limits-akf)
+-   [Amazon Kinesis Streams Limits](aws_service_limits.html#limits-aks)
 -   [AWS Lambda Limits](aws_service_limits.html#limits_lambda)
 -   [Amazon Machine Learning (Amazon ML) Limits](aws_service_limits.html#limits_machinelearning)
 -   [AWS OpsWorks Limits](aws_service_limits.html#limits_opworks)
@@ -70,26 +73,28 @@ You can take the following steps to request an increase for limits. These increa
 Amazon API Gateway Limits {#limits_apigateway .title}
 -------------------------
 
-  --------------------------------------------------------------------
-  Resource                                             Default Limit
-  ---------------------------------------------------- ---------------
-  APIs per account                                     60
+  ------------------------------------------------------------------------
+  Resource                                                 Default Limit
+  -------------------------------------------------------- ---------------
+  APIs per account                                         60
 
-  API keys per account                                 10,000
+  API keys per account                                     10,000
 
-  Client certificates per account                      60
+  Client certificates per account                          60
 
-  Resources per API                                    300
+  Resources per API                                        300
 
-  Stages per API                                       10
+  Stages per API                                           10
 
-  Timeout for both AWS Lambda and HTTP integrations;   10
-  this limit cannot be increased currently             
+  Timeout for both AWS Lambda and HTTP integrations;       10
+  this limit cannot be increased currently                 
 
-  Sustained API requests per account                   500
+  Sustained API requests per account                       500
 
-  Throttled API requests per account                   1000
-  --------------------------------------------------------------------
+  Throttled API requests per account                       1000
+
+  Payload size; this limit cannot be increased currently   10 MB
+  ------------------------------------------------------------------------
 
 For information about additional documented limits, see [Limits in Amazon API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html){.ulink} in the [*API Gateway Developer Guide*]{.emphasis}.
 
@@ -193,7 +198,7 @@ AWS CodeDeploy Limits {#limits_codedeploy .title}
   Number of concurrent deployments under an account                                       10
   Number of hours until a deployment fails if not completed                               8
   Number of hours until an individual deployment lifecycle event fails if not completed   1
-  Number of deployment groups associated with a single application                        10
+  Number of deployment groups associated with a single application                        50
   Number of instances in a single deployment                                              50
 
 For information about additional documented limits, see [Limits in AWS CodeDeploy](http://docs.aws.amazon.com/codedeploy/latest/userguide/limits.html){.ulink} in the [*AWS CodeDeploy User Guide*]{.emphasis}.
@@ -300,6 +305,7 @@ Amazon Elastic Compute Cloud (Amazon EC2) Limits {#limits_ec2 .title}
   Elastic IP addresses for EC2-Classic                                   5
   Security groups for EC2-Classic per instance                           500
   Rules per security group for EC2-Classic                               100
+  Key pairs                                                              5,000
   Throttle on the emails that can be sent from your Amazon EC2 account   Throttle applied
   On-demand instances                                                    Limits vary depending on instance type. For more information, see [How many instances can I run in Amazon EC2](http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
   Spot Instances                                                         Limits vary depending on instance type, region, and account. For more information, see [Spot Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html){.ulink}.
@@ -346,10 +352,12 @@ These limits are global limits per customer account. If you need to exceed these
 Elastic Load Balancing Limits {#limits_elastic_load_balancer .title}
 -----------------------------
 
-  Resource                      Default Limit   Comments
-  ----------------------------- --------------- -------------------------------------------
-  Load balancers per region     20              This limit can be increased upon request.
-  Listeners per load balancer   100             This limit cannot be increased.
+  Resource                                          Default Limit   Comments
+  ------------------------------------------------- --------------- ------------------------------------------
+  Load balancers per region                         20              This limit can be increased upon request
+  Listeners per load balancer                       100             This limit cannot be increased
+  Security groups per load balancer                 5               This limit cannot be increased
+  Subnets per Availability Zone per load balancer   1               This limit cannot be increased
 
 For information about additional documented limits, see [Elastic Load Balancing Limits](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-limits.html){.ulink} in the [*Elastic Load Balancing Developer Guide*]{.emphasis}.
 
@@ -381,17 +389,48 @@ For information about additional documented limits, see [Amazon Elastic Transcod
 Amazon Elasticsearch Service Limits {#limits_es .title}
 -----------------------------------
 
-[]{#d0e12382}
+[]{#d0e12954}
   Resource                                                Default Limit
   ------------------------------------------------------- ---------------
   Maximum number of Elasticsearch instances per cluster   10
 
 \
 
+Amazon GameLift Limits {#limits_gamelift .title}
+----------------------
+
+  ------------------------------------------------------------------------------------------
+  Resource                           Default Limit
+  ---------------------------------- -------------------------------------------------------
+  Aliases                            100
+
+  Fleets                             20
+
+  Builds                             1000
+
+  Total size of builds               100 GB
+
+  Log upload size per game session   200 MB
+
+  On-demand instances                Limits vary depending on instance type;
+                                     20 instances per account, regardless of instance type
+
+  Player sessions per game session   200
+  ------------------------------------------------------------------------------------------
+
+For information about additional documented limits, see [Scaling Amazon Elastic Compute Cloud (Amazon EC2) Instances](http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html){.ulink} in the [*Amazon GameLift Developer Guide*]{.emphasis}.
+
 AWS Identity and Access Management (IAM) Limits {#limits_iam .title}
 -----------------------------------------------
 
 For information about AWS Identity and Access Management (IAM) limits, see [Limitations on IAM Entities](http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html){.ulink} in the [*IAM User Guide*]{.emphasis}.
+
+AWS Import/Export Snowball (Snowball) Limits {#limits_snowball .title}
+--------------------------------------------
+
+  Resource   Default limit   Comments
+  ---------- --------------- ----------------------------------------------------------
+  Snowball   1               If you need to increase this limit, contact AWS Support.
 
 AWS Key Management Service (AWS KMS) Limits {#limits_kms .title}
 -------------------------------------------
@@ -408,27 +447,36 @@ All limits in the preceding table apply per region and per AWS account.
 
 For information about additional documented limits, see [AWS KMS Limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html){.ulink} in the [*AWS Key Management Service Developer Guide*]{.emphasis}.
 
-Amazon Kinesis Streams Limits {#limits_kinesis .title}
+Amazon Kinesis Firehose Limits {#limits-akf .title}
+------------------------------
+
+  Resource                      Default Limit
+  ----------------------------- ---------------
+  Delivery streams per region   20
+
+For information about additional documented limits, see [Amazon Kinesis Firehose Limits](http://docs.aws.amazon.com/firehose/latest/dev/limits.html){.ulink} in the [*Amazon Kinesis Firehose Developer Guide*]{.emphasis}.
+
+Amazon Kinesis Streams Limits {#limits-aks .title}
 -----------------------------
 
-  --------------------------------------------------------
-  Resource             Default Limit
-  -------------------- -----------------------------------
-  Shards per account   US East (N. Virginia) region – 50
-                       
-                       US West (Oregon) region – 50
-                       
-                       EU (Ireland) region – 50
-                       
-                       All other regions – 25
-  --------------------------------------------------------
+  -------------------------------------------------------
+  Resource            Default Limit
+  ------------------- -----------------------------------
+  Shards per region   US East (N. Virginia) region – 50
+                      
+                      US West (Oregon) region – 50
+                      
+                      EU (Ireland) region – 50
+                      
+                      All other supported regions – 25
+  -------------------------------------------------------
 
-For information about additional documented limits, see [Amazon Kinesis Streams Limits](http://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html){.ulink} in the [*Amazon Kinesis Streams Developer Guide*]{.emphasis}.
+For information about additional documented limits, see [Amazon Kinesis Streams Limits](http://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html){.ulink} in the [*Amazon Kinesis Streams Developer Guide*]{.emphasis}.
 
 AWS Lambda Limits {#limits_lambda .title}
 -----------------
 
-[]{#d0e12508}
+[]{#d0e13195}
   Resource                                          Limit
   ------------------------------------------------- -------
   Concurrent requests safety throttle per account   100
@@ -637,7 +685,7 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink} in the [*Amazon WorkSpaces Administration Guide*]{.emphasis}.
 
-![](/web/20160123091221im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
-[Document Conventions](/web/20160123091221/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
+![](/web/20160308192344im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+[Document Conventions](/web/20160308192344/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
 
 [« Previous](signature-version-2.html){.awstoc}[Next »](aws-ip-ranges.html){.awstoc}
