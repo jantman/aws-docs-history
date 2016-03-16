@@ -13,7 +13,7 @@ If your support plan includes Trusted Advisor, you can use it to display your us
 
 You can take the following steps to request an increase for limits. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-[]{#d0e11791}
+[]{#d0e11848}
 **To request a limit increase**
 
 1.  Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/){.ulink} page, sign in, if necessary, and then choose [Create Case]{.guilabel}.
@@ -264,6 +264,7 @@ Amazon EC2 Container Service (Amazon ECS) Limits {#limits_ecs .title}
   ----------------------------------------------------------------------------------- ----------------------------------
   Number of clusters per region, per account                                          1000
   Number of container instances per cluster                                           1000
+  Number of services per cluster                                                      500
   Number of load balancers per service                                                1
   Number of tasks per service                                                         1000
   Number of tasks launched (`count`{.literal}) per [**run-task**]{.command}           10
@@ -389,7 +390,7 @@ For information about additional documented limits, see [Amazon Elastic Transcod
 Amazon Elasticsearch Service Limits {#limits_es .title}
 -----------------------------------
 
-[]{#d0e12954}
+[]{#d0e13016}
   Resource                                                Default Limit
   ------------------------------------------------------- ---------------
   Maximum number of Elasticsearch instances per cluster   10
@@ -476,7 +477,7 @@ For information about additional documented limits, see [Amazon Kinesis Streams 
 AWS Lambda Limits {#limits_lambda .title}
 -----------------
 
-[]{#d0e13195}
+[]{#d0e13257}
   Resource                                          Limit
   ------------------------------------------------- -------
   Concurrent requests safety throttle per account   100
@@ -685,7 +686,9 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink} in the [*Amazon WorkSpaces Administration Guide*]{.emphasis}.
 
-![](/web/20160308192344im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
-[Document Conventions](/web/20160308192344/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
+![](/web/20160316145420im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+[Document Conventions](/web/20160316145420/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
 
 [« Previous](signature-version-2.html){.awstoc}[Next »](aws-ip-ranges.html){.awstoc}
+
+© 2016, Amazon Web Services, Inc. or its affiliates. All rights reserved.
