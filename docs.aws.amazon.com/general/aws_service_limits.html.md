@@ -13,7 +13,7 @@ If your support plan includes Trusted Advisor, you can use it to display your us
 
 You can take the following steps to request an increase for limits. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-[]{#d0e11848}
+[]{#d0e12229}
 **To request a limit increase**
 
 1.  Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/){.ulink} page, sign in, if necessary, and then choose [Create Case]{.guilabel}.
@@ -35,6 +35,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [AWS CodeCommit Limits](aws_service_limits.html#limits_codecommit)
 -   [AWS CodeDeploy Limits](aws_service_limits.html#limits_codedeploy)
 -   [AWS CodePipeline Limits](aws_service_limits.html#limits_codepipeline)
+-   [AWS Database Migration Service Limits](aws_service_limits.html#limits_dms)
 -   [AWS Device Farm Limits](aws_service_limits.html#limits_devicefarm)
 -   [AWS Directory Service Limits](aws_service_limits.html#limits_ds)
 -   [Amazon DynamoDB Limits](aws_service_limits.html#limits_dynamodb)
@@ -217,6 +218,20 @@ AWS CodePipeline Limits {#limits_codepipeline .title}
 
 For information about additional documented limits, see [Limits in AWS CodePipeline](http://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html){.ulink} in the [*AWS CodePipeline User Guide*]{.emphasis}.
 
+AWS Database Migration Service Limits {#limits_dms .title}
+-------------------------------------
+
+  Resource                               Default Limit
+  -------------------------------------- ---------------
+  Replication instances                  20
+  Total amount of storage                6 TB
+  Event subscriptions                    100
+  Replication subnet groups              20
+  Subnets per replication subnet group   20
+  Endpoints                              100
+  Tasks                                  100
+  Endpoints per instance                 100
+
 AWS Device Farm Limits {#limits_devicefarm .title}
 ----------------------
 
@@ -390,7 +405,7 @@ For information about additional documented limits, see [Amazon Elastic Transcod
 Amazon Elasticsearch Service Limits {#limits_es .title}
 -----------------------------------
 
-[]{#d0e13016}
+[]{#d0e13451}
   Resource                                                Default Limit
   ------------------------------------------------------- ---------------
   Maximum number of Elasticsearch instances per cluster   10
@@ -472,12 +487,12 @@ Amazon Kinesis Streams Limits {#limits-aks .title}
                       All other supported regions – 25
   -------------------------------------------------------
 
-For information about additional documented limits, see [Amazon Kinesis Streams Limits](http://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html){.ulink} in the [*Amazon Kinesis Streams Developer Guide*]{.emphasis}.
+For information about additional documented limits, see [Amazon Kinesis Streams Limits](http://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html){.ulink} in the [*Amazon Kinesis Streams Developer Guide*]{.emphasis}.
 
 AWS Lambda Limits {#limits_lambda .title}
 -----------------
 
-[]{#d0e13257}
+[]{#d0e13692}
   Resource                                          Limit
   ------------------------------------------------- -------
   Concurrent requests safety throttle per account   100
@@ -560,7 +575,7 @@ Amazon Route 53 Limits {#limits_route53 .title}
   Resource                                                        Default Limit
   --------------------------------------------------------------- ---------------
   Hosted zones                                                    500
-  Domains                                                         5
+  Domains                                                         50
   Resource record sets per hosted zone                            10,000
   Reusable delegation sets                                        100
   Hosted zones that can use the same reusable delegation set      100
@@ -686,8 +701,8 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink} in the [*Amazon WorkSpaces Administration Guide*]{.emphasis}.
 
-![](/web/20160316145420im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
-[Document Conventions](/web/20160316145420/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
+![](/web/20160408053717im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+[Document Conventions](/web/20160408053717/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
 
 [« Previous](signature-version-2.html){.awstoc}[Next »](aws-ip-ranges.html){.awstoc}
 
