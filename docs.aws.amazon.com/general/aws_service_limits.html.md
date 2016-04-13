@@ -51,7 +51,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Elasticsearch Service Limits](aws_service_limits.html#limits_es)
 -   [Amazon GameLift Limits](aws_service_limits.html#limits_gamelift)
 -   [AWS Identity and Access Management (IAM) Limits](aws_service_limits.html#limits_iam)
--   [AWS Import/Export Snowball (Snowball) Limits](aws_service_limits.html#limits_snowball)
+-   [AWS Snowball (Snowball) Limits](aws_service_limits.html#limits_snowball)
 -   [AWS Key Management Service (AWS KMS) Limits](aws_service_limits.html#limits_kms)
 -   [Amazon Kinesis Firehose Limits](aws_service_limits.html#limits-akf)
 -   [Amazon Kinesis Streams Limits](aws_service_limits.html#limits-aks)
@@ -441,8 +441,8 @@ AWS Identity and Access Management (IAM) Limits {#limits_iam .title}
 
 For information about AWS Identity and Access Management (IAM) limits, see [Limitations on IAM Entities](http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html){.ulink} in the [*IAM User Guide*]{.emphasis}.
 
-AWS Import/Export Snowball (Snowball) Limits {#limits_snowball .title}
---------------------------------------------
+AWS Snowball (Snowball) Limits {#limits_snowball .title}
+------------------------------
 
   Resource   Default limit   Comments
   ---------- --------------- ----------------------------------------------------------
@@ -453,15 +453,15 @@ AWS Key Management Service (AWS KMS) Limits {#limits_kms .title}
 
   Resource                               Default Limit
   -------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Keys                                   100
-  Aliases                                200
-  Grants per key                         250
-  Grants for a given principal per key   30
+  Customer Master Keys (CMKs)            1000
+  Aliases                                1100
+  Grants per CMK                         250
+  Grants for a given principal per CMK   30
   Requests per second                    Varies by API operation; see [Limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html){.ulink} in the [*AWS Key Management Service Developer Guide*]{.emphasis}.
 
 All limits in the preceding table apply per region and per AWS account.
 
-For information about additional documented limits, see [AWS KMS Limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html){.ulink} in the [*AWS Key Management Service Developer Guide*]{.emphasis}.
+For information about additional documented limits, see [Limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html){.ulink} in the [*AWS Key Management Service Developer Guide*]{.emphasis}.
 
 Amazon Kinesis Firehose Limits {#limits-akf .title}
 ------------------------------
@@ -701,8 +701,8 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink} in the [*Amazon WorkSpaces Administration Guide*]{.emphasis}.
 
-![](/web/20160411081930im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
-[Document Conventions](/web/20160411081930/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
+![](/web/20160413223641im_/https://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+[Document Conventions](/web/20160413223641/https://docs.aws.amazon.com/general/latest/gr/docconventions.html)
 
 [« Previous](signature-version-2.html){.awstoc}[Next »](aws-ip-ranges.html){.awstoc}
 
