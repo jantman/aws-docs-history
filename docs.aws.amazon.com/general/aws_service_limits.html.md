@@ -13,7 +13,7 @@ If your support plan includes Trusted Advisor, you can use it to display your us
 
 You can take the following steps to request an increase for limits. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-[]{#d0e13617}
+[]{#d0e14479}
 **To request a limit increase**
 
 1.  Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/){.ulink} page, sign in, if necessary, and then choose [Create Case]{.guilabel}.
@@ -29,7 +29,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon AppStream Limits](aws_service_limits.html#limits_appstream)
 -   [Application Auto Scaling Limits](aws_service_limits.html#limits_as-app)
 -   [Auto Scaling Limits](aws_service_limits.html#limits_autoscaling)
--   [AWS Certificate Manager Limits](aws_service_limits.html#limits_acm)
+-   [AWS Certificate Manager (ACM) Limits](aws_service_limits.html#limits_acm)
 -   [AWS CloudFormation Limits](aws_service_limits.html#limits_cloudformation)
 -   [Amazon CloudFront Limits](aws_service_limits.html#limits_cloudfront)
 -   [AWS CloudHSM Limits](aws_service_limits.html#limits_cloudhsm)
@@ -78,7 +78,6 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Simple Storage Service (Amazon S3) Limits](aws_service_limits.html#limits_s3)
 -   [Amazon Simple Workflow Service (Amazon SWF) Limits](aws_service_limits.html#limits_swf)
 -   [Amazon SimpleDB Limits](aws_service_limits.html#limits_simpledb)
--   [AWS Storage Gateway Limits](aws_service_limits.html#limits_storage_gateway)
 -   [Amazon Virtual Private Cloud (Amazon VPC) Limits](aws_service_limits.html#limits_vpc)
 -   [AWS WAF Limits](aws_service_limits.html#limits_waf)
 -   [Amazon WorkSpaces Limits](aws_service_limits.html#limits_workspaces)
@@ -148,13 +147,14 @@ Auto Scaling Limits {#limits_autoscaling .title}
 
 For information about additional documented limits, see [Auto Scaling Limits](http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html){.ulink} in the [*Auto Scaling User Guide*]{.emphasis}.
 
-AWS Certificate Manager Limits {#limits_acm .title}
-------------------------------
+AWS Certificate Manager (ACM) Limits {#limits_acm .title}
+------------------------------------
 
-  Item                                         Default Limit
-  -------------------------------------------- ---------------
-  Number of ACM Certificates                   100
-  Number of domain names per ACM Certificate   10
+  Item                                                  Default Limit
+  ----------------------------------------------------- ---------------
+  Number of ACM-provided certificates                   100
+  Number of imported certificates                       100
+  Number of domain names per ACM-provided certificate   10
 
 For more information about these limits, see [Limits](http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html){.ulink} in the [*AWS Certificate Manager User Guide*]{.emphasis}.
 
@@ -172,8 +172,8 @@ Amazon CloudFront Limits {#limits_cloudfront .title}
 
   Resource                                                                                                                                 Default Limit
   ---------------------------------------------------------------------------------------------------------------------------------------- ---------------------
-  Data transfer rate per distribution                                                                                                      10 Gbps
-  Requests per second per distribution                                                                                                     15,000
+  Data transfer rate per distribution                                                                                                      40 Gbps
+  Requests per second per distribution                                                                                                     100,000
   Web distributions per account                                                                                                            200
   RTMP distributions per account                                                                                                           100
   Alternate domain names (CNAMEs) per distribution                                                                                         100
@@ -334,12 +334,11 @@ AWS Database Migration Service Limits {#limits_dms .title}
   -------------------------------------- ---------------
   Replication instances                  20
   Total amount of storage                6 TB
-  Event subscriptions                    100
   Replication subnet groups              20
   Subnets per replication subnet group   20
   Endpoints                              100
-  Tasks                                  100
-  Endpoints per instance                 100
+  Tasks                                  200
+  Endpoints per instance                 20
 
 AWS Device Farm Limits {#limits_devicefarm .title}
 ----------------------
@@ -484,13 +483,13 @@ Elastic Load Balancing Limits {#limits_elastic_load_balancer .title}
 
 Elastic Load Balancing supports two types of load balancers: Application load balancers and Classic load balancers.
 
-[]{#d0e15256}
+[]{#d0e16117}
 **Application Load Balancers**
 
   Resource                                                       Default Limit
   -------------------------------------------------------------- -------------------
   Load balancers per region                                      20 [†]{.guilabel}
-  Target groups per region                                       50
+  Target groups per region                                       200
   Listeners per load balancer                                    10
   Targets per load balancer                                      1000
   Subnets per Availability Zone per load balancer                1
@@ -501,7 +500,7 @@ Elastic Load Balancing supports two types of load balancers: Application load ba
   Targets per target group                                       1000
 
 \
-[]{#d0e15321}
+[]{#d0e16182}
 **Classic Load Balancers**
 
   Resource                                          Default Limit
@@ -529,6 +528,8 @@ Amazon Elastic Transcoder Limits {#limits_elastictranscoder .title}
                                                                      US West (N. California) Region – 12
                                                                      
                                                                      US West (Oregon) Region – 20
+                                                                     
+                                                                     Asia Pacific (Mumbai) Region – 12
                                                                      
                                                                      Asia Pacific (Singapore) Region – 12
                                                                      
@@ -633,7 +634,7 @@ AWS IoT Limits {#limits_iot .title}
 
 The following limits apply to the message broker:
 
-[]{#d0e15707}
+[]{#d0e16571}
   ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Topic length limit                                     The topic passed to the message broker when publishing a message cannot exceed 256 bytes encoded in UTF-8.
 
@@ -675,7 +676,7 @@ The following limits apply to the message broker:
 \
 The following limits apply to thing shadows:
 
-[]{#d0e15817}
+[]{#d0e16681}
   ------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Maximum size of a JSON state document                  The maximum size of a JSON state document is 8 KB.
 
@@ -715,7 +716,7 @@ The following limits apply to security and identity:
 
 The following table lists the throttling limits for AWS IoT API:
 
-[]{#d0e15867}
+[]{#d0e16731}
   API                         Transaction per Second
   --------------------------- ------------------------
   AcceptCertificateTransfer   10
@@ -818,7 +819,7 @@ For information about additional documented limits, see [Amazon Kinesis Streams 
 AWS Lambda Limits {#limits_lambda .title}
 -----------------
 
-[]{#d0e16216}
+[]{#d0e17080}
   Resource                                          Limit
   ------------------------------------------------- -------
   Concurrent requests safety throttle per account   100
@@ -953,10 +954,14 @@ For information about additional documented limits, see [Limits in Amazon SES](h
 Amazon Simple Notification Service (Amazon SNS) Limits {#limits_sns .title}
 ------------------------------------------------------
 
-  Resource                                          Default Limit
-  ------------------------------------------------- ---------------
-  Topics per AWS account                            100,000
-  Account Spend Threshold for SMS per AWS Account   10,000 USD
+  Resource                                       Default Limit
+  ---------------------------------------------- ------------------------
+  Topics                                         100,000
+  Account spend threshold for SMS                50 USD
+  Delivery rate for promotional SMS messages     20 messages per second
+  Delivery rate for transactional SMS messages   20 messages per second
+
+If you need to increase any of these limits, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}.
 
 Amazon Simple Queue Service (Amazon SQS) {#limits_sqs .title}
 ----------------------------------------
@@ -985,40 +990,6 @@ Amazon SimpleDB Limits {#limits_simpledb .title}
   Domains    250
 
 For information about additional documented limits, see [Amazon SimpleDB Limits](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/SDBLimits.html){.ulink} in the [*Amazon SimpleDB Developer Guide*]{.emphasis}.
-
-AWS Storage Gateway Limits {#limits_storage_gateway .title}
---------------------------
-
-                                                                     Gateway-Cached Volumes   Gateway-Stored Volumes   Gateway–Virtual Tape Libraries
-  ------------------------------------------------------------------ ------------------------ ------------------------ --------------------------------
-  Maximum size of a volume                                           32 TiB                   16 TiB                   –
-  Maximum number of volumes for a gateway                            32                       32                       –
-  Total size of all volumes for a gateway                            1,024 TiB                512 TiB                  –
-  Minimum size of a virtual tape                                     –                        –                        100 GiB
-  Maximum size of a virtual tape                                     –                        –                        2.5 TiB
-  Maximum number of virtual tapes for a virtual tape library (VTL)   –                        –                        1,500
-  Total size of all tapes in a virtual tape library (VTL)            –                        –                        1 PiB
-  Maximum number of virtual tapes for a virtual tape shelf (VTS)     –                        –                        No limit
-  Total size of all tapes in a virtual tape shelf (VTS)              –                        –                        No limit
-
-Note
-
-If you create a snapshot from a cached volume that is more than 16 TiB in size, you cannot restore it to an Amazon Elastic Block Store (Amazon EBS) volume; however, it can be restored to a Storage Gateway volume. For more information, see [Restoring a Snapshot to an Amazon EBS Volume](http://docs.aws.amazon.com/storagegateway/latest/userguide/RestoringSnapshotEBS.html.html){.ulink}
-
-The following table lists limits for configuration and performance.
-
-                                                                Gateway-Cached Volumes   Gateway-Stored Volumes   Gateway–Virtual Tape Libraries
-  ------------------------------------------------------------- ------------------------ ------------------------ --------------------------------
-  Maximum size of a cache storage                               16 TiB                   –                        16 TiB
-  Total maximum size of all cache storage for a gateway         16 TiB                   –                        16 TiB
-  Maximum size of an upload buffer disk                         2 TiB                    2 TiB                    2 TiB
-  Total maximum size of all upload buffer disks for a gateway   2 TiB                    2 TiB                    2 TiB
-  Maximum upload rate                                           120 MB/s                 120 MB/s                 120 MB/s
-  Maximum download rate                                         20 MB/s                  20 MB/s                  20 MB/s
-
-Note
-
-The maximum upload rate was achieved by using 100 percent sequential write operations and 256 KB I/Os. Depending on your I/O mix and network conditions, the actual rate might be lower.
 
 Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc .title}
 ------------------------------------------------
@@ -1072,8 +1043,8 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink} in the [*Amazon WorkSpaces Administration Guide*]{.emphasis}.
 
-![](/web/20160826010603im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
-[Document Conventions](/web/20160826010603/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
+![](/web/20161028113646im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+[Document Conventions](/web/20161028113646/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
 
 [« Previous](signature-version-2.html){.awstoc}[Next »](aws-ip-ranges.html){.awstoc}
 
