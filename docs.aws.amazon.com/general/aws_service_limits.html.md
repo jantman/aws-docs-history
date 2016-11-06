@@ -13,7 +13,7 @@ If your support plan includes Trusted Advisor, you can use it to display your us
 
 You can take the following steps to request an increase for limits. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-[]{#d0e14479}
+[]{#d0e14525}
 **To request a limit increase**
 
 1.  Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/){.ulink} page, sign in, if necessary, and then choose [Create Case]{.guilabel}.
@@ -232,7 +232,7 @@ Amazon CloudWatch Limits {#limits_cloudwatch .title}
                                                                                                                                                                     You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-amazon-cloudwatch){.ulink}.
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-For information about additional documented limits, see [CloudWatch, CloudWatch Events, and CloudWatch Logs Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html){.ulink} in the [*Amazon CloudWatch Developer Guide*]{.emphasis}.
+For information about additional documented limits, see [CloudWatch, CloudWatch Events, and CloudWatch Logs Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html){.ulink} in the [*Amazon CloudWatch User Guide*]{.emphasis}.
 
 Amazon CloudWatch Events Limits {#limits_cloudwatch_events .title}
 -------------------------------
@@ -245,7 +245,7 @@ Amazon CloudWatch Events Limits {#limits_cloudwatch_events .title}
                              Before requesting a limit increase, examine your rules. You may have multiple rules each matching to very specific events. Consider broadening their scope by using fewer identifiers in your [Events and Event Patterns](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CloudWatchEventsandEventPatterns.html){.ulink}. In addition, a rule can invoke several targets each time it matches an event. Consider adding more targets to your rules.
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-For information about additional documented limits, see [CloudWatch, CloudWatch Events, and CloudWatch Logs Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html){.ulink} in the [*Amazon CloudWatch Developer Guide*]{.emphasis}.
+For information about additional documented limits, see [CloudWatch, CloudWatch Events, and CloudWatch Logs Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html){.ulink} in the [*Amazon CloudWatch User Guide*]{.emphasis}.
 
 Amazon CloudWatch Logs Limits {#limits_cloudwatch_logs .title}
 -----------------------------
@@ -264,7 +264,7 @@ Amazon CloudWatch Logs Limits {#limits_cloudwatch_logs .title}
   [GetLogEvents](http://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_GetLogEvents.html){.ulink}               5 transactions per second (TPS)/account/region   We recommend subscriptions if you are continuously processing new data. If you need historical data, we recommend exporting your data to Amazon S3. This limit can be changed only in special circumstances. If you experience frequent throttling, contact AWS Support.
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-For information about additional documented limits, see [CloudWatch, CloudWatch Events, and CloudWatch Logs Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html){.ulink} in the [*Amazon CloudWatch Developer Guide*]{.emphasis}.
+For information about additional documented limits, see [CloudWatch, CloudWatch Events, and CloudWatch Logs Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html){.ulink} in the [*Amazon CloudWatch User Guide*]{.emphasis}.
 
 AWS CodeCommit Limits {#limits_codecommit .title}
 ---------------------
@@ -483,7 +483,7 @@ Elastic Load Balancing Limits {#limits_elastic_load_balancer .title}
 
 Elastic Load Balancing supports two types of load balancers: Application load balancers and Classic load balancers.
 
-[]{#d0e16117}
+[]{#d0e16163}
 **Application Load Balancers**
 
   Resource                                                       Default Limit
@@ -500,7 +500,7 @@ Elastic Load Balancing supports two types of load balancers: Application load ba
   Targets per target group                                       1000
 
 \
-[]{#d0e16182}
+[]{#d0e16228}
 **Classic Load Balancers**
 
   Resource                                          Default Limit
@@ -634,7 +634,7 @@ AWS IoT Limits {#limits_iot .title}
 
 The following limits apply to the message broker:
 
-[]{#d0e16571}
+[]{#d0e16617}
   ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Topic length limit                                     The topic passed to the message broker when publishing a message cannot exceed 256 bytes encoded in UTF-8.
 
@@ -676,7 +676,7 @@ The following limits apply to the message broker:
 \
 The following limits apply to thing shadows:
 
-[]{#d0e16681}
+[]{#d0e16727}
   ------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Maximum size of a JSON state document                  The maximum size of a JSON state document is 8 KB.
 
@@ -716,7 +716,7 @@ The following limits apply to security and identity:
 
 The following table lists the throttling limits for AWS IoT API:
 
-[]{#d0e16731}
+[]{#d0e16777}
   API                         Transaction per Second
   --------------------------- ------------------------
   AcceptCertificateTransfer   10
@@ -819,7 +819,7 @@ For information about additional documented limits, see [Amazon Kinesis Streams 
 AWS Lambda Limits {#limits_lambda .title}
 -----------------
 
-[]{#d0e17080}
+[]{#d0e17126}
   Resource                                          Limit
   ------------------------------------------------- -------
   Concurrent requests safety throttle per account   100
@@ -1043,8 +1043,8 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink} in the [*Amazon WorkSpaces Administration Guide*]{.emphasis}.
 
-![](/web/20161028113646im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
-[Document Conventions](/web/20161028113646/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
+![](/web/20161106041001im_/https://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+[Document Conventions](/web/20161106041001/https://docs.aws.amazon.com/general/latest/gr/docconventions.html)
 
 [« Previous](signature-version-2.html){.awstoc}[Next »](aws-ip-ranges.html){.awstoc}
 
