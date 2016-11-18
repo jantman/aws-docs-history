@@ -13,7 +13,7 @@ If your support plan includes Trusted Advisor, you can use it to display your us
 
 You can take the following steps to request an increase for limits. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-[]{#d0e14525}
+[]{#d0e14543}
 **To request a limit increase**
 
 1.  Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/){.ulink} page, sign in, if necessary, and then choose [Create Case]{.guilabel}.
@@ -483,7 +483,7 @@ Elastic Load Balancing Limits {#limits_elastic_load_balancer .title}
 
 Elastic Load Balancing supports two types of load balancers: Application load balancers and Classic load balancers.
 
-[]{#d0e16163}
+[]{#d0e16181}
 **Application Load Balancers**
 
   Resource                                                       Default Limit
@@ -500,7 +500,7 @@ Elastic Load Balancing supports two types of load balancers: Application load ba
   Targets per target group                                       1000
 
 \
-[]{#d0e16228}
+[]{#d0e16246}
 **Classic Load Balancers**
 
   Resource                                          Default Limit
@@ -634,7 +634,7 @@ AWS IoT Limits {#limits_iot .title}
 
 The following limits apply to the message broker:
 
-[]{#d0e16617}
+[]{#d0e16635}
   ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Topic length limit                                     The topic passed to the message broker when publishing a message cannot exceed 256 bytes encoded in UTF-8.
 
@@ -676,7 +676,7 @@ The following limits apply to the message broker:
 \
 The following limits apply to thing shadows:
 
-[]{#d0e16727}
+[]{#d0e16745}
   ------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Maximum size of a JSON state document                  The maximum size of a JSON state document is 8 KB.
 
@@ -716,7 +716,7 @@ The following limits apply to security and identity:
 
 The following table lists the throttling limits for AWS IoT API:
 
-[]{#d0e16777}
+[]{#d0e16795}
   API                         Transaction per Second
   --------------------------- ------------------------
   AcceptCertificateTransfer   10
@@ -819,7 +819,7 @@ For information about additional documented limits, see [Amazon Kinesis Streams 
 AWS Lambda Limits {#limits_lambda .title}
 -----------------
 
-[]{#d0e17126}
+[]{#d0e17144}
   Resource                                          Limit
   ------------------------------------------------- -------
   Concurrent requests safety throttle per account   100
@@ -922,13 +922,13 @@ AWS Service Catalog Limits {#limits_servicecatalog .title}
 --------------------------
 
   Resource                   Default Limit
-  -------------------------- ----------------------------------------------
+  -------------------------- --------------------------------------------------------------
   Portfolios                 25 per account
   Users, groups, and roles   25 per portfolio
   Products                   25 per portfolio, 25 total per account
   Product versions           50 per product
   Constraints                25 per product per portfolio
-  Tags                       3 per product, 3 per portfolio, 10 per stack
+  Tags                       20 per product, 20 per portfolio, 50 per provisioned product
   Stacks                     200 (AWS CloudFormation limit)
 
 Amazon Simple Email Service (Amazon SES) Limits {#limits_ses_quota .title}
@@ -1043,8 +1043,8 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink} in the [*Amazon WorkSpaces Administration Guide*]{.emphasis}.
 
-![](/web/20161106041001im_/https://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
-[Document Conventions](/web/20161106041001/https://docs.aws.amazon.com/general/latest/gr/docconventions.html)
+![](/web/20161118233945im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
+[Document Conventions](/web/20161118233945/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html)
 
 [« Previous](signature-version-2.html){.awstoc}[Next »](aws-ip-ranges.html){.awstoc}
 
