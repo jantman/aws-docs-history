@@ -9,11 +9,11 @@ AWS Service Limits {#aws-service-limits .topictitle}
 
 The following tables provide the default limits for AWS services for an AWS account. Unless otherwise noted, each limit is region specific. Many services contain limits that cannot be changed. For more information about the limits for a specific service, see the documentation for that service.
 
-If your support plan includes Trusted Advisor, you can use it to display your usage and limits for each service in a specific region. For more information, see [Trusted Advisor](http://aws.amazon.com/premiumsupport/trustedadvisor/){.ulink}.
+If your support plan includes Trusted Advisor, you can use it to display your usage and limits for each service in a specific region. For more information, see [Trusted Advisor](https://aws.amazon.com/premiumsupport/trustedadvisor/){.ulink}.
 
 You can take the following steps to request an increase for limits. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-[]{#d0e14543}
+[]{#d0e16344}
 **To request a limit increase**
 
 1.  Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/){.ulink} page, sign in, if necessary, and then choose [Create Case]{.guilabel}.
@@ -27,8 +27,11 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon API Gateway Limits](aws_service_limits.html#limits_apigateway)
 -   [AWS Application Discovery Service Limits](aws_service_limits.html#limits_appdiscserve)
 -   [Amazon AppStream Limits](aws_service_limits.html#limits_appstream)
+-   [Amazon AppStream 2.0 Limits](aws_service_limits.html#limits_appstream2)
 -   [Application Auto Scaling Limits](aws_service_limits.html#limits_as-app)
+-   [Athena Limits](aws_service_limits.html#d0e26287)
 -   [Auto Scaling Limits](aws_service_limits.html#limits_autoscaling)
+-   [AWS Batch Limits](aws_service_limits.html#limits_batch)
 -   [AWS Certificate Manager (ACM) Limits](aws_service_limits.html#limits_acm)
 -   [AWS CloudFormation Limits](aws_service_limits.html#limits_cloudformation)
 -   [Amazon CloudFront Limits](aws_service_limits.html#limits_cloudfront)
@@ -37,9 +40,11 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon CloudWatch Limits](aws_service_limits.html#limits_cloudwatch)
 -   [Amazon CloudWatch Events Limits](aws_service_limits.html#limits_cloudwatch_events)
 -   [Amazon CloudWatch Logs Limits](aws_service_limits.html#limits_cloudwatch_logs)
+-   [AWS CodeBuild Limits](aws_service_limits.html#limits_codebuild)
 -   [AWS CodeCommit Limits](aws_service_limits.html#limits_codecommit)
 -   [AWS CodeDeploy Limits](aws_service_limits.html#limits_codedeploy)
 -   [AWS CodePipeline Limits](aws_service_limits.html#limits_codepipeline)
+-   [AWS Config Limits](aws_service_limits.html#limits_config)
 -   [AWS Data Pipeline Limits](aws_service_limits.html#limits_datapipeline)
 -   [AWS Database Migration Service Limits](aws_service_limits.html#limits_dms)
 -   [AWS Device Farm Limits](aws_service_limits.html#limits_devicefarm)
@@ -48,7 +53,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon DynamoDB Limits](aws_service_limits.html#limits_dynamodb)
 -   [Amazon EC2 Container Registry (Amazon ECR) Limits](aws_service_limits.html#limits_ecr)
 -   [Amazon EC2 Container Service (Amazon ECS) Limits](aws_service_limits.html#limits_ecs)
--   [Amazon EC2 Simple Systems Manager Limits](aws_service_limits.html#limits_ssm)
+-   [Amazon EC2 Systems Manager Limits](aws_service_limits.html#limits_ssm)
 -   [AWS Elastic Beanstalk Limits](aws_service_limits.html#limits_elastic_beanstalk)
 -   [Amazon Elastic Block Store (Amazon EBS) Limits](aws_service_limits.html#limits_ebs)
 -   [Amazon Elastic Compute Cloud (Amazon EC2) Limits](aws_service_limits.html#limits_ec2)
@@ -66,12 +71,17 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Kinesis Firehose Limits](aws_service_limits.html#limits-akf)
 -   [Amazon Kinesis Streams Limits](aws_service_limits.html#limits-aks)
 -   [AWS Lambda Limits](aws_service_limits.html#limits_lambda)
+-   [Amazon Lightsail Limits](aws_service_limits.html#limits_lightsail)
 -   [Amazon Machine Learning (Amazon ML) Limits](aws_service_limits.html#limits_machinelearning)
--   [AWS OpsWorks Limits](aws_service_limits.html#limits_opworks)
+-   [AWS OpsWorks for Chef Automate Limits](aws_service_limits.html#limits_opworks)
+-   [AWS OpsWorks Stacks Limits](aws_service_limits.html#d0e31031)
+-   [Amazon Polly Limits](aws_service_limits.html#limits_polly)
+-   [Amazon Pinpoint Limits](aws_service_limits.html#limits_pinpoint)
 -   [Amazon Redshift Limits](aws_service_limits.html#limits_redshift)
 -   [Amazon Relational Database Service (Amazon RDS) Limits](aws_service_limits.html#limits_rds)
 -   [Amazon Route 53 Limits](aws_service_limits.html#limits_route53)
 -   [AWS Service Catalog Limits](aws_service_limits.html#limits_servicecatalog)
+-   [AWS Shield Advanced Limits](aws_service_limits.html#limits_shield)
 -   [Amazon Simple Email Service (Amazon SES) Limits](aws_service_limits.html#limits_ses_quota)
 -   [Amazon Simple Notification Service (Amazon SNS) Limits](aws_service_limits.html#limits_sns)
 -   [Amazon Simple Queue Service (Amazon SQS)](aws_service_limits.html#limits_sqs)
@@ -92,11 +102,13 @@ The following limits apply to configuring and running an API in Amazon API Gatew
   Throttle rate per account         1000 request per second (rps) with a burst limit of 2000 rps.
   APIs per account                  60
   API keys per account              500
-  Usage plans per account           300
   Custom authorizers per API        10
   Client certificates per account   60
+  Documentation parts per account   2000
   Resources per API                 300
   Stages per API                    10
+  Usage plans per account           300
+  Usage plans per API key           10
 
 For information about additional documented limits, see [Limits in Amazon API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html){.ulink} in the [*API Gateway Developer Guide*]{.emphasis}.
 
@@ -121,6 +133,22 @@ An Amazon AppStream account has a service limit of up to five concurrent streami
 
 For more information, see [Amazon AppStream Application Lifecycle](http://docs.aws.amazon.com/appstream/latest/developerguide/appstream-application-lifecycle.html){.ulink} in the [*Amazon AppStream Developer Guide*]{.emphasis}.
 
+Amazon AppStream 2.0 Limits {#limits_appstream2 .title}
+---------------------------
+
+[]{#d0e16513}
+**Default Limits Per Region**
+
+  Resource              Default Limit
+  --------------------- ---------------
+  Stacks                5 per account
+  Fleets                5 per account
+  Streaming Instances   5 per account
+  Images                5 per account
+  Users                 5 per account
+
+\
+
 Application Auto Scaling Limits {#limits_as-app .title}
 -------------------------------
 
@@ -129,6 +157,17 @@ Application Auto Scaling Limits {#limits_as-app .title}
   Scalable targets                       500
   Scaling policies per scalable target   50
   Step adjustments per scaling policy    20
+
+Athena Limits {#d0e26287 .title}
+-------------
+
+  Resource                         Default Limit
+  -------------------------------- ---------------
+  Number of concurrent queries     5
+  Query timeout                    30 minutes
+  Number of databases              100
+  Number of tables per database    100
+  Number of partitions per table   20,000
 
 Auto Scaling Limits {#limits_autoscaling .title}
 -------------------
@@ -146,6 +185,17 @@ Auto Scaling Limits {#limits_autoscaling .title}
   Step adjustments per scaling policy        20
 
 For information about additional documented limits, see [Auto Scaling Limits](http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html){.ulink} in the [*Auto Scaling User Guide*]{.emphasis}.
+
+AWS Batch Limits {#limits_batch .title}
+----------------
+
+  Item                                                   Default Limit
+  ------------------------------------------------------ ---------------
+  Maximum number of compute environments                 10
+  Maximum number of job queues                           5
+  Maximum number of compute environments per job queue   3
+
+For more information about these limits, see [Service Limits](http://docs.aws.amazon.com/batch/latest/userguide/service_limits.html){.ulink} in the [*AWS Batch User Guide*]{.emphasis}.
 
 AWS Certificate Manager (ACM) Limits {#limits_acm .title}
 ------------------------------------
@@ -266,6 +316,16 @@ Amazon CloudWatch Logs Limits {#limits_cloudwatch_logs .title}
 
 For information about additional documented limits, see [CloudWatch, CloudWatch Events, and CloudWatch Logs Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html){.ulink} in the [*Amazon CloudWatch User Guide*]{.emphasis}.
 
+AWS CodeBuild Limits {#limits_codebuild .title}
+--------------------
+
+  Resource                                      Default Limit
+  --------------------------------------------- ---------------
+  Maximum number of build projects              1,000
+  Maximum number of concurrent running builds   20
+
+For information about additional documented limits, see [Limits for AWS CodeBuild](http://docs.aws.amazon.com/codebuild/latest/userguide/limits.html){.ulink} in the [*AWS CodeBuild User Guide*]{.emphasis}.
+
 AWS CodeCommit Limits {#limits_codecommit .title}
 ---------------------
 
@@ -305,6 +365,13 @@ AWS CodePipeline Limits {#limits_codepipeline .title}
 It may take up to two weeks to process requests for a limit increase.
 
 For information about additional documented limits, see [Limits in AWS CodePipeline](http://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html){.ulink} in the [*AWS CodePipeline User Guide*]{.emphasis}.
+
+AWS Config Limits {#limits_config .title}
+-----------------
+
+  Resource                                                Default Limit   Notes
+  ------------------------------------------------------- --------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Number of AWS Config rules per region in your account   50              You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-config-service){.ulink}.
 
 AWS Data Pipeline Limits {#limits_datapipeline .title}
 ------------------------
@@ -363,11 +430,13 @@ AWS Direct Connect Limits {#limits_directconnect .title}
 AWS Directory Service Limits {#limits_ds .title}
 ----------------------------
 
-  Resource                   Default Limit
-  -------------------------- -----------------
-  Simple AD directories      10
-  AD Connector directories   10
-  Manual snapshots           5 per Simple AD
+  Resource                                                                                Default Limit
+  --------------------------------------------------------------------------------------- --------------------
+  AD Connector directories                                                                10
+  AWS Directory Service for Microsoft Active Directory (Enterprise Edition) directories   10
+  Simple AD directories                                                                   10
+  Manual snapshots                                                                        5 per Microsoft AD
+  Manual snapshots                                                                        5 per Simple AD
 
 Amazon DynamoDB Limits {#limits_dynamodb .title}
 ----------------------
@@ -413,12 +482,12 @@ Amazon EC2 Container Service (Amazon ECS) Limits {#limits_ecs .title}
 
 For information about additional documented limits, see [Amazon ECS Service Limits](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_limits.html){.ulink} in the [*Amazon EC2 Container Service Developer Guide*]{.emphasis}.
 
-Amazon EC2 Simple Systems Manager Limits {#limits_ssm .title}
-----------------------------------------
+Amazon EC2 Systems Manager Limits {#limits_ssm .title}
+---------------------------------
 
   Resource                        Default Limit   Comment
-  ------------------------------- --------------- -----------------------------------------------------------------------------------------
-  Managed instances               1000            Each AWS account can register/activate a maximum of 1000 managed instances in a region.
+  ------------------------------- --------------- ----------------------------------------------------------------------------------------
+  Managed instances               500             Each AWS account can register/activate a maximum of 500 managed instances in a region.
   SSM documents                   200             Each AWS account can create a maximum of 200 documents.
   Privately shared SSM document   20              A single SSM document can be shared with a maximum of 20 AWS accounts.
   Publicly shared SSM document    5               Each AWS account can publicly share a maximum of five documents.
@@ -453,13 +522,13 @@ Amazon Elastic Compute Cloud (Amazon EC2) Limits {#limits_ec2 .title}
 ------------------------------------------------
 
   Resource                                                               Default Limit
-  ---------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Elastic IP addresses for EC2-Classic                                   5
   Security groups for EC2-Classic per instance                           500
   Rules per security group for EC2-Classic                               100
   Key pairs                                                              5,000
   Throttle on the emails that can be sent from your Amazon EC2 account   Throttle applied
-  On-Demand instances                                                    Limits vary depending on instance type. For more information, see [How many instances can I run in Amazon EC2](http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
+  On-Demand instances                                                    Limits vary depending on instance type. For more information, see [How many instances can I run in Amazon EC2](https://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2){.ulink}.
   Spot Instances                                                         Limits vary depending on instance type, region, and account. For more information, see [Spot Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html){.ulink}.
   Reserved Instances                                                     20 instance reservations per Availability Zone, per month.
   Dedicated Hosts                                                        Up to 2 Dedicated Hosts per instance family, per region can be allocated.
@@ -483,7 +552,7 @@ Elastic Load Balancing Limits {#limits_elastic_load_balancer .title}
 
 Elastic Load Balancing supports two types of load balancers: Application load balancers and Classic load balancers.
 
-[]{#d0e16181}
+[]{#d0e18184}
 **Application Load Balancers**
 
   Resource                                                       Default Limit
@@ -500,7 +569,7 @@ Elastic Load Balancing supports two types of load balancers: Application load ba
   Targets per target group                                       1000
 
 \
-[]{#d0e16246}
+[]{#d0e18249}
 **Classic Load Balancers**
 
   Resource                                          Default Limit
@@ -549,7 +618,7 @@ Amazon ElastiCache Limits {#limits_elasticache .title}
 
   Resource                                 Default Limit   Description
   ---------------------------------------- --------------- --------------------------------------------------------------------------------------------------------------------------------
-  Nodes per region                         50              The maximum number of nodes across all clusters in a region.
+  Nodes per region                         100             The maximum number of nodes across all clusters in a region.
   Nodes per cluster (Memcached)            20              The maximum number of nodes in an individual Memcached cluster.
   Nodes per cluster (Redis)                1               The maximum number of nodes in an individual Redis cluster.
   Clusters per replication group (Redis)   6               The maximum number of clusters in a Redis replication group. One is the read/write primary. All others are read only replicas.
@@ -558,7 +627,7 @@ Amazon ElastiCache Limits {#limits_elasticache .title}
   Subnet groups per region                 50              The maximum number of subnet groups you can create in a region.
   Subnets per subnet group                 20              The maximum number of subnets you can define for a subnet group.
 
-These limits are global limits per customer account. If you need to exceed these limits, make your request using the [ElastiCache Node request form](http://aws.amazon.com/contact-us/elasticache-node-limit-request/){.ulink}.
+These limits are global limits per customer account. If you need to exceed these limits, make your request using the [ElastiCache Node request form](https://aws.amazon.com/contact-us/elasticache-node-limit-request/){.ulink}.
 
 Amazon Elasticsearch Service Limits {#limits_es .title}
 -----------------------------------
@@ -634,7 +703,7 @@ AWS IoT Limits {#limits_iot .title}
 
 The following limits apply to the message broker:
 
-[]{#d0e16635}
+[]{#d0e18639}
   ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Topic length limit                                     The topic passed to the message broker when publishing a message cannot exceed 256 bytes encoded in UTF-8.
 
@@ -676,7 +745,7 @@ The following limits apply to the message broker:
 \
 The following limits apply to thing shadows:
 
-[]{#d0e16745}
+[]{#d0e18749}
   ------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Maximum size of a JSON state document                  The maximum size of a JSON state document is 8 KB.
 
@@ -716,7 +785,7 @@ The following limits apply to security and identity:
 
 The following table lists the throttling limits for AWS IoT API:
 
-[]{#d0e16795}
+[]{#d0e18799}
   API                         Transaction per Second
   --------------------------- ------------------------
   AcceptCertificateTransfer   10
@@ -819,13 +888,23 @@ For information about additional documented limits, see [Amazon Kinesis Streams 
 AWS Lambda Limits {#limits_lambda .title}
 -----------------
 
-[]{#d0e17144}
+[]{#d0e19148}
   Resource                                          Limit
   ------------------------------------------------- -------
   Concurrent requests safety throttle per account   100
 
 \
 For information about additional documented limits, see [AWS Lambda Limits](http://docs.aws.amazon.com/lambda/latest/dg/limits.html){.ulink} in the [*AWS Lambda Developer Guide*]{.emphasis}.
+
+Amazon Lightsail Limits {#limits_lightsail .title}
+-----------------------
+
+  Resource                             Default Limit                                Comment
+  ------------------------------------ -------------------------------------------- ---------------------------------
+  Number of instances                  20 per account                               This limit cannot be increased.
+  Number of elastic IP addresses       5 per account                                This limit cannot be increased.
+  Number of parallel SSH connections   3 x the number of instances in the account   This limit cannot be increased.
+  Number of hosted zones               3 per account                                This limit cannot be increased.
 
 Amazon Machine Learning (Amazon ML) Limits {#limits_machinelearning .title}
 ------------------------------------------
@@ -851,8 +930,17 @@ The size of your data files is limited to ensure that jobs finish in a timely ma
 
 For information about additional documented limits, see [Amazon ML Limits](http://docs.aws.amazon.com/machine-learning/latest/dg/system-limits.html){.ulink} in the [*Amazon Machine Learning Developer Guide*]{.emphasis}.
 
-AWS OpsWorks Limits {#limits_opworks .title}
--------------------
+AWS OpsWorks for Chef Automate Limits {#limits_opworks .title}
+-------------------------------------
+
+  Resource                                     Default Limit
+  -------------------------------------------- ---------------
+  Chef servers                                 5
+  User-initiated (manual) backup generations   10
+  Automated (scheduled) backup generations     30
+
+AWS OpsWorks Stacks Limits {#d0e31031 .title}
+--------------------------
 
   Resource              Default Limit
   --------------------- ---------------
@@ -860,6 +948,53 @@ AWS OpsWorks Limits {#limits_opworks .title}
   Layers per stack      40
   Instances per stack   40
   Apps per stack        40
+
+Amazon Polly Limits {#limits_polly .title}
+-------------------
+
+-   Throttle rate per IP address: 20 requests per second (rps) with a burst limit of 40 rps.
+
+-   Throttle rate per account: 10 requests per second (rps) with a burst limit of 20 rps.
+
+-   Throttle rate per operation:
+
+    []{#d0e19379}
+      ---------------------------------------------------------------------------------------------
+      Operation                   Limit
+      --------------------------- -----------------------------------------------------------------
+      [**Lexicon**]{.bold}         
+
+      `DeleteLexicon`{.code}      Any 2 requests per second (rps) from these operations combined.
+                                  
+      `PutLexicon`{.code}         Maximum allowed burst of 4 rps.
+                                  
+      `GetLexicon`{.code}         
+                                  
+      `ListLexicons`{.code}       
+
+      [**Speech**]{.bold}         
+
+      `DescribeVoices`{.code}     10 rps with a burst limit of 20 rps
+
+      `SynthesizeSpeech`{.code}   10 rps with a burst limit of 20 rps
+      ---------------------------------------------------------------------------------------------
+
+    \
+
+Amazon Pinpoint Limits {#limits_pinpoint .title}
+----------------------
+
+  Resource                                      Default Limit
+  --------------------------------------------- ---------------
+  Active campaigns per account                  100
+  Apps per account                              100
+  Concurrent endpoint import jobs per account   2
+  Custom event types per app                    1500
+  Endpoint custom attributes per app            40
+  Endpoints per mobile app user                 10
+  Message sends per campaign activity           100 million
+  Segments per app                              200
+  Total file size per endpoint import job       1 GB
 
 Amazon Redshift Limits {#limits_redshift .title}
 ----------------------
@@ -931,6 +1066,11 @@ AWS Service Catalog Limits {#limits_servicecatalog .title}
   Tags                       20 per product, 20 per portfolio, 50 per provisioned product
   Stacks                     200 (AWS CloudFormation limit)
 
+AWS Shield Advanced Limits {#limits_shield .title}
+--------------------------
+
+AWS Shield Advanced offers advanced monitoring and protection for up to 100 CloudFront distributions, Amazon Route 53 hosted zones or Elastic Load Balancing resources combined.
+
 Amazon Simple Email Service (Amazon SES) Limits {#limits_ses_quota .title}
 -----------------------------------------------
 
@@ -957,7 +1097,7 @@ Amazon Simple Notification Service (Amazon SNS) Limits {#limits_sns .title}
   Resource                                       Default Limit
   ---------------------------------------------- ------------------------
   Topics                                         100,000
-  Account spend threshold for SMS                50 USD
+  Account spend threshold for SMS                1.00 USD
   Delivery rate for promotional SMS messages     20 messages per second
   Delivery rate for transactional SMS messages   20 messages per second
 
@@ -966,7 +1106,7 @@ If you need to increase any of these limits, [submit a request](https://console.
 Amazon Simple Queue Service (Amazon SQS) {#limits_sqs .title}
 ----------------------------------------
 
-For information about additional documented limits, see [Limits, Restrictions](http://aws.amazon.com/sqs/faqs/#Limits,_Restrictions){.ulink} in the Amazon SQS FAQs and [Amazon SQS Limits](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-limits.html){.ulink} in the [*Amazon Simple Queue Service Developer Guide*]{.emphasis}.
+For information about additional documented limits, see [Limits, Restrictions](https://aws.amazon.com/sqs/faqs/#Limits,_Restrictions){.ulink} in the Amazon SQS FAQs and [Amazon SQS Limits](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-limits.html){.ulink} in the [*Amazon Simple Queue Service Developer Guide*]{.emphasis}.
 
 Amazon Simple Storage Service (Amazon S3) Limits {#limits_s3 .title}
 ------------------------------------------------
@@ -994,32 +1134,61 @@ For information about additional documented limits, see [Amazon SimpleDB Limits]
 Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc .title}
 ------------------------------------------------
 
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Resource                                                                           Default limit        Comments
-  ---------------------------------------------------------------------------------- -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------- -------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   VPCs per region                                                                    5                    The limit for Internet gateways per region is directly correlated to this one. Increasing this limit will increase the limit on Internet gateways per region by the same amount. If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}.
+
   Subnets per VPC                                                                    200                  If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}.
+
   Internet gateways per region                                                       5                    This limit is directly correlated with the limit on VPCs per region. You cannot increase this limit individually; the only way to increase this limit is to increase the limit on VPCs per region. Only one Internet gateway can be attached to a VPC at a time.
+
+  Egress-only Internet gateways per region                                           5                    This limit is directly correlated with the limit on VPCs per region. You cannot increase this limit individually; the only way to increase this limit is to increase the limit on VPCs per region. Only one egress-only Internet gateway can be attached to a VPC at a time.
+
   Virtual private gateways per region                                                5                    If you need to increase this limit, contact AWS Support; however, only one virtual private gateway can be attached to a VPC at a time.
+
   Customer gateways per region                                                       50                   If you need to increase this limit, contact AWS Support.
+
   VPN connections per region                                                         50                   If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}.
+
   VPN connections per VPC (per virtual private gateway)                              10                   If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}.
+
   Route tables per VPC                                                               200                  Including the main route table. You can associate one route table to one or more subnets in a VPC.
-  Routes per route table (non-propagated routes)                                     50                   This is the limit for the number of non-propagated entries per route table. You can [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink} for an increase of up to a maximum of 100; however, network performance may be impacted.
+
+  Routes per route table (non-propagated routes)                                     50                   This is the limit for the number of non-propagated entries per route table. You can [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink} for an increase of up to a maximum of 100; however, network performance may be impacted. This limit is enforced separately for IPv4 routes and IPv6 routes (50 each, and a maximum of 100 each).
+
   BGP advertised routes per route table (propagated routes)                          100                  You can have up to 100 propagated routes per route table; however, the total number of propagated and non-propagated entries per route table cannot exceed 100. For example, if you have 50 non-propagated entries (the default limit for this type of entry), you can only have 50 propagated entries. This limit cannot be increased. If you require more than 100 prefixes, advertise a default route.
+
   Elastic IP addresses per region for each AWS account                               5                    This is the limit for the number of VPC Elastic IP addresses you can allocate within a region. This is a separate limit from the Amazon EC2 Elastic IP address limit. If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}.
+
   Security groups per VPC                                                            500                  If you need to increase this limit, you can [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}.
-  Inbound or outbound rules per security group                                       50                   You can have 50 inbound and 50 outbound rules per security group (giving a total of 100 combined inbound and outbound rules). If you need to increase or decrease this limit, you can contact AWS Support — a limit change applies to both inbound and outbound rules. However, the multiple of the limit for inbound or outbound rules per security group and the limit for security groups per network interface cannot exceed 250. For example, if you want to increase the limit to 100, we decrease your number of security groups per network interface to 2.
+
+  Inbound or outbound rules per security group                                       50                   You can have 50 inbound and 50 outbound rules per security group (giving a total of 100 combined inbound and outbound rules). If you need to increase or decrease this limit, you can contact AWS Support — a limit change applies to both inbound and outbound rules. However, the multiple of the limit for inbound or outbound rules per security group and the limit for security groups per network interface cannot exceed 250. For example, if you want to increase the limit to 100, we decrease your number of security groups per network interface to 2. This limit includes both IPv4 and IPv6 rules.
+
   Security groups per network interface                                              5                    If you need to increase or decrease this limit, you can contact AWS Support. The maximum is 16. The multiple of the limit for security groups per network interface and the limit for rules per security group cannot exceed 250. For example, if you want 10 security groups per network interface, we decrease your number of rules per security group to 25.
-  Network interfaces per instance                                                    -                    This limit varies by instance type. For more information, see [Private IP Addresses Per ENI Per Instance Type](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI){.ulink}.
+
+  Network interfaces per instance                                                    -                    This limit varies by instance type. For more information, see [IP Addresses Per ENI Per Instance Type](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI){.ulink}.
+
   Network interfaces per region                                                      350                  This limit is the greater of either the default limit (350) or your On-Demand instance limit multiplied by 5. The default limit for On-Demand instances is 20. If your On-Demand instance limit is below 70, the default limit of 350 applies. You can increase the number of network interfaces per region by contacting AWS Support, or by increasing your On-Demand instance limit.
+
   Network ACLs per VPC                                                               200                  You can associate one network ACL to one or more subnets in a VPC. This limit is not the same as the number of rules per network ACL.
-  Rules per network ACL                                                              20                   This is the one-way limit for a single network ACL, where the limit for ingress rules is 20, and the limit for egress rules is 20. This limit can be increased upon request up to a maximum if 40; however, network performance may be impacted due to the increased workload to process the additional rules.
+
+  Rules per network ACL                                                              20                   This is the one-way limit for a single network ACL, where the limit for ingress rules is 20, and the limit for egress rules is 20. This limit includes both IPv4 and IPv6 rules, and includes the default deny rules (rule number 32767 for IPv4 and 32768 for IPv6, or an asterisk \* in the Amazon VPC console).
+                                                                                                          
+                                                                                                          This limit can be increased upon request up to a maximum if 40; however, network performance may be impacted due to the increased workload to process the additional rules.
+
   Active VPC peering connections per VPC                                             50                   If you need to increase this limit, contact AWS Support . The maximum limit is 125 peering connections per VPC. The number of entries per route table should be increased accordingly; however, network performance may be impacted.
+
   Outstanding VPC peering connection requests                                        25                   This is the limit for the number of outstanding VPC peering connection requests that you've requested from your account. If you need to increase this limit, contact AWS Support.
+
   Expiry time for an unaccepted VPC peering connection request                       1 week (168 hours)   If you need to increase this limit, contact AWS Support.
+
   VPC endpoints per region                                                           20                   If you need to increase this limit, contact AWS Support. The maximum limit is 255 endpoints per VPC, regardless of your endpoint limit per region.
+
   Flow logs per single network interface, single subnet, or single VPC in a region   2                    You can effectively have 6 flow logs per network interface if you create 2 flow logs for the subnet, and 2 flow logs for the VPC in which your network interface resides. This limit cannot be increased.
+
   NAT gateways per Availability Zone                                                 5                    If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}. A NAT gateway in the `pending`{.code}, `active`{.code}, or `deleting`{.code} state counts against your limit.
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 For information about additional documented limits, see [Amazon VPC Limits](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html){.ulink} in the [*Amazon VPC User Guide*]{.emphasis}.
 
@@ -1027,10 +1196,13 @@ AWS WAF Limits {#limits_waf .title}
 --------------
 
   Resource                 Default Limit
-  ------------------------ ---------------
+  ------------------------ --------------------
   Web ACLs per account     10
   Rules per account        50
   Conditions per account   50
+  Requests per Second      10,000 per web ACL
+
+These limits are the same for all regions in which AWS WAF is available. Each region is subject to these limits individually. That is, the limits are not cumulative across regions.
 
 For information about additional documented limits, see [AWS WAF Limits](http://docs.aws.amazon.com/waf/latest/developerguide/limits.html){.ulink} in the [*AWS WAF Developer Guide*]{.emphasis}.
 
@@ -1043,8 +1215,8 @@ Amazon WorkSpaces Limits {#limits_workspaces .title}
 
 For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink} in the [*Amazon WorkSpaces Administration Guide*]{.emphasis}.
 
-![](/web/20161118233945im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
-[Document Conventions](/web/20161118233945/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html)
+![](/web/20161217172444im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
+[Document Conventions](/web/20161217172444/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html)
 
 [« Previous](signature-version-2.html){.awstoc}[Next »](aws-ip-ranges.html){.awstoc}
 
