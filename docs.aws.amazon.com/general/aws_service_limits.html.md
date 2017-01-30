@@ -13,7 +13,7 @@ If your support plan includes Trusted Advisor, you can use it to display your us
 
 You can take the following steps to request an increase for limits. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-[]{#d0e16344}
+[]{#d0e16745}
 **To request a limit increase**
 
 1.  Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/){.ulink} page, sign in, if necessary, and then choose [Create Case]{.guilabel}.
@@ -29,7 +29,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon AppStream Limits](aws_service_limits.html#limits_appstream)
 -   [Amazon AppStream 2.0 Limits](aws_service_limits.html#limits_appstream2)
 -   [Application Auto Scaling Limits](aws_service_limits.html#limits_as-app)
--   [Athena Limits](aws_service_limits.html#d0e26287)
+-   [Athena Limits](aws_service_limits.html#d0e26945)
 -   [Auto Scaling Limits](aws_service_limits.html#limits_autoscaling)
 -   [AWS Batch Limits](aws_service_limits.html#limits_batch)
 -   [AWS Certificate Manager (ACM) Limits](aws_service_limits.html#limits_acm)
@@ -74,7 +74,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Lightsail Limits](aws_service_limits.html#limits_lightsail)
 -   [Amazon Machine Learning (Amazon ML) Limits](aws_service_limits.html#limits_machinelearning)
 -   [AWS OpsWorks for Chef Automate Limits](aws_service_limits.html#limits_opworks)
--   [AWS OpsWorks Stacks Limits](aws_service_limits.html#d0e31031)
+-   [AWS OpsWorks Stacks Limits](aws_service_limits.html#d0e32186)
 -   [Amazon Polly Limits](aws_service_limits.html#limits_polly)
 -   [Amazon Pinpoint Limits](aws_service_limits.html#limits_pinpoint)
 -   [Amazon Redshift Limits](aws_service_limits.html#limits_redshift)
@@ -104,11 +104,13 @@ The following limits apply to configuring and running an API in Amazon API Gatew
   API keys per account              500
   Custom authorizers per API        10
   Client certificates per account   60
-  Documentation parts per account   2000
+  Documentation parts per API       2000
   Resources per API                 300
   Stages per API                    10
   Usage plans per account           300
   Usage plans per API key           10
+
+All of the per API limits can only be increased on specific APIs.
 
 For information about additional documented limits, see [Limits in Amazon API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html){.ulink} in the [*API Gateway Developer Guide*]{.emphasis}.
 
@@ -136,15 +138,16 @@ For more information, see [Amazon AppStream Application Lifecycle](http://docs.a
 Amazon AppStream 2.0 Limits {#limits_appstream2 .title}
 ---------------------------
 
-[]{#d0e16513}
+[]{#d0e16916}
 **Default Limits Per Region**
 
   Resource              Default Limit
   --------------------- ---------------
   Stacks                5 per account
   Fleets                5 per account
-  Streaming Instances   5 per account
+  Streaming instances   5 per account
   Images                5 per account
+  Image builders        5 per account
   Users                 5 per account
 
 \
@@ -158,7 +161,7 @@ Application Auto Scaling Limits {#limits_as-app .title}
   Scaling policies per scalable target   50
   Step adjustments per scaling policy    20
 
-Athena Limits {#d0e26287 .title}
+Athena Limits {#d0e26945 .title}
 -------------
 
   Resource                         Default Limit
@@ -424,7 +427,7 @@ AWS Direct Connect Limits {#limits_directconnect .title}
   Resource                                                       Default Limit   Comment
   -------------------------------------------------------------- --------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Virtual interfaces per AWS Direct Connect connection           50              If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-direct-connect){.ulink}.
-  Active AWS Direct Connect connections per region per account   50              If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-direct-connect){.ulink}.
+  Active AWS Direct Connect connections per region per account   10              If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-direct-connect){.ulink}.
   Routes per Border Gateway Protocol (BGP) session               100             This limit cannot be increased.
 
 AWS Directory Service Limits {#limits_ds .title}
@@ -437,6 +440,8 @@ AWS Directory Service Limits {#limits_ds .title}
   Simple AD directories                                                                   10
   Manual snapshots                                                                        5 per Microsoft AD
   Manual snapshots                                                                        5 per Simple AD
+
+For information about additional documented limits, including limits on Amazon Cloud Directory, see [AWS Directory Service Limits](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/limits.html){.ulink} in the [*AWS Directory Service Admin Guide*]{.emphasis}.
 
 Amazon DynamoDB Limits {#limits_dynamodb .title}
 ----------------------
@@ -485,13 +490,146 @@ For information about additional documented limits, see [Amazon ECS Service Limi
 Amazon EC2 Systems Manager Limits {#limits_ssm .title}
 ---------------------------------
 
-  Resource                        Default Limit   Comment
-  ------------------------------- --------------- ----------------------------------------------------------------------------------------
-  Managed instances               500             Each AWS account can register/activate a maximum of 500 managed instances in a region.
-  SSM documents                   200             Each AWS account can create a maximum of 200 documents.
-  Privately shared SSM document   20              A single SSM document can be shared with a maximum of 20 AWS accounts.
-  Publicly shared SSM document    5               Each AWS account can publicly share a maximum of five documents.
-  Associations                    10,000          Each SSM document can be associated with a maximum of 10,000 instances.
+Resource
+Default Limit
+ 
+Managed instances
+500
+
+Each AWS account can register/activate a maximum of 500 managed instances in a region.
+
+ 
+Systems Manager documents
+200
+
+Each AWS account can create a maximum of 200 documents.
+
+ 
+Privately shared Systems Manager document
+20
+
+A single Systems Manager document can be shared with a maximum of 20 AWS accounts.
+
+ 
+Publicly shared Systems Manager document
+5
+
+Each AWS account can publicly share a maximum of five documents.
+
+ 
+Document associations
+10,000
+
+Each Systems Manager document can be associated with a maximum of 10,000 instances.
+
+ 
+Inventory data collected per instance per call
+
+1 MB
+
+This maximum adequately supports most inventory collection scenarios. When this limit is reached, no new inventory data will be collected for the instance. Inventory data previously collected is stored until the expiration.
+
+ 
+Inventory data collected per instance per day
+
+5 MB
+
+When this limit is reached, no new inventory data will be collected for the instance. Inventory data previously collected is stored until the expiration.
+
+ 
+Custom Inventory Types
+
+20
+
+You can add up to 20 custom inventory types.
+
+ 
+Custom Inventory Type Size
+
+4 KB
+
+This is the maximum size of the type, not the inventory collected.
+
+ 
+Custom Inventory Type Attributes
+
+50
+
+This is the maximum number of attributes within the custom inventory type.
+
+ 
+Inventory data expiration
+
+30 days
+
+If you terminate an instance, inventory data for that instance is deleted immediately. For running instances, inventory data older than 30 days is deleted. If you need to store inventory data longer than 30 days, you can use AWS Config to record history or periodically query and upload the data to an Amazon S3 bucket. For more information, see, [Recording Amazon EC2 managed instance inventory](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#recording-managed-instance-inventory){.ulink} in the [*AWS Config Developer Guide*]{.emphasis}.
+
+ 
+Maintenance Windows per account
+
+50
+
+ 
+Tasks per Maintenance Window
+
+20
+
+ 
+Targets per Maintenance Window
+
+50
+
+ 
+Instance IDs per target
+
+50
+
+ 
+Targets per task
+
+10
+
+ 
+Concurrent executions of a single Maintenance Window
+
+1
+
+ 
+Concurrent executions of Maintenance Windows
+
+5
+
+ 
+Maintenance Window execution history retention
+
+30 days
+
+ 
+Maximum number of parameters per account
+
+100
+
+ 
+Max size for parameter value
+
+1024 characters
+
+ 
+Max history for a parameter
+
+100 past values
+
+ 
+Patch baselines per account
+
+25
+
+ 
+Patch groups per patch baseline
+
+25
+
+ 
 
 AWS Elastic Beanstalk Limits {#limits_elastic_beanstalk .title}
 ----------------------------
@@ -552,7 +690,7 @@ Elastic Load Balancing Limits {#limits_elastic_load_balancer .title}
 
 Elastic Load Balancing supports two types of load balancers: Application load balancers and Classic load balancers.
 
-[]{#d0e18184}
+[]{#d0e18836}
 **Application Load Balancers**
 
   Resource                                                       Default Limit
@@ -569,7 +707,7 @@ Elastic Load Balancing supports two types of load balancers: Application load ba
   Targets per target group                                       1000
 
 \
-[]{#d0e18249}
+[]{#d0e18901}
 **Classic Load Balancers**
 
   Resource                                          Default Limit
@@ -701,61 +839,58 @@ For more information, see the [Amazon Inspector User Guide](https://docs.aws.ama
 AWS IoT Limits {#limits_iot .title}
 --------------
 
-The following limits apply to the message broker:
+### Message Broker Limits {#messge-broker-limits .title}
 
-[]{#d0e18639}
-  ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Topic length limit                                     The topic passed to the message broker when publishing a message cannot exceed 256 bytes encoded in UTF-8.
+[]{#d0e19292}
+  ------------------------------------------------------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Client ID size                                         128 bytes of UTF-8 encoded characters.
 
-  Restricted topic prefix                                Topics beginning with '\$' are considered reserved and are not supported for publishing and subscribing except when working with the Thing Shadows service.
-
-  Maximum number of slashes in topic and topic filter    A topic provided while publishing a message or a topic filter provided while subscribing can have no more than eight forward slashes (/).
-
-  Client ID size limit                                   128 bytes encoded in UTF-8.
-
-  Restricted client ID prefix                            '\$' is reserved for internally generated client IDs.
-
-  Message size limit                                     The payload for every publish message is limited to 128 KB. The AWS IoT service will reject messages larger than this size.
-
-  Throughput per connection                              AWS IoT limits the ingress and egress rate on each client connection to 512 KB/s. Data sent or received at a higher rate will be throttled to this throughput.
-
-  Maximum subscriptions per subscribe call               A single subscribe call is limited to request a maximum of eight subscriptions.
-
-  Subscriptions per session                              The message broker limits each client session to subscribe to up to 50 subscriptions. A subscribe request that pushes the total number of subscriptions past 50 will result in the connection being disconnected.
-
-  Connection inactivity (keep-alive) limits              By default, an MQTT client connection is disconnected after 30 minutes of inactivity. When the client sends a PUBLISH, SUBSCRIBE, PING, or PUBACK message, the inactivity timer is reset.
+  Connection inactivity (keep-alive interval)            By default, an MQTT client connection is disconnected after 30 minutes of inactivity. When the client sends a PUBLISH, SUBSCRIBE, PING, or PUBACK message, the inactivity timer is reset.
                                                          
-                                                         A client can request a shorter keep-alive interval by specifying a keep-alive value between 5-1,200 seconds in the MQTT CONNECT message sent to the server. If a keep-alive value is specified, the server will disconnect the client if it does not receive a PUBLISH, SUBSCRIBE, PINGREQ, or PUBACK message within a period 1.5 times the requested interval. The keep-alive timer starts after the sender sends a CONNACK.
+                                                         A client can request a shorter keep-alive interval by specifying a value between 5-1,200 seconds in the MQTT CONNECT message sent to the server. If a keep-alive value is specified, the server will disconnect the client if it does not receive a PUBLISH, SUBSCRIBE, PINGREQ, or PUBACK message within a period 1.5 times the requested interval. The keep-alive timer starts after the sender sends a CONNACK.
                                                          
                                                          If a client sends a keep-alive value of zero, the default keep-alive behavior will remain in place.
                                                          
                                                          If a client request a keep-alive shorter than 5 seconds, the server will treat the client as though it requested a keep-alive interval of 5 seconds.
                                                          
-                                                         The keep-alive timer begins immediately after the server returns a CONNACK to the client. There may be a brief delay between the client's sending of a CONNECT message and the start of keep-alive behavior.
+                                                         The keep-alive timer begins immediately after the server returns a CONNACK to the client. There might be a brief delay between the client's sending of a CONNECT message and the start of keep-alive behavior.
 
-  Maximum inbound unacknowledged messages                The message broker allows 100 in-flight unacknowledged messages (limit is across all messages requiring ACK). When this limit is reached, no new messages will be accepted until an ACK is returned by the server.
+  Maximum number of slashes in topic and topic filter    A topic provided while publishing a message or a topic filter provided while subscribing can have no more than 7 forward slashes (/).
 
-  Maximum outbound unacknowledged messages               The message broker only allows 100 in-flight unacknowledged messages (limit is across all messages requiring ACK). When this limit is reached, no new messages will be sent to the client until the client acknowledges the in-flight messages.
+  Maximum inbound unacknowledged messages                The message broker allows 100 in-progress unacknowledged messages per client. (This limit is applied across all messages that require ACK.) When this limit is reached, no new messages will be accepted from this client until an ACK is returned by the server.
 
-  Maximum retry interval for delivering QoS 1 messages   If a connected client is unable to receive an ACK on a QoS 1 message for one hour, the message broker will drop the message. The client may be unable to receive the message if it has 100 in-flight messages, it is being throttled due to large payloads, or other errors.
+  Maximum outbound unacknowledged messages               The message broker allows only 100 in-progress unacknowledged messages per client.(This limit is applied across all messages that require ACK.) When this limit is reached, no new messages will be sent to the client until the client acknowledges the in-progress messages.
 
-  WebSocket connection duration                          WebSocket connections are limited to 24 hours. If the limit is exceeded, the WebSocket connection will automatically be closed when an attempt is made to send a message by the client or server. If you need to maintain an active WebSocket connection for longer than 5 minutes, simply close and re-open the WebSocket connection from the client side before the 5 minutes elapses.
-  ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Maximum retry interval for delivering QoS 1 messages   If a connected client is unable to receive an ACK on a QoS 1 message for one hour, the message broker will drop the message. The client might be unable to receive the message if it has 100 in-flight messages, it is being throttled due to large payloads, or other errors.
+
+  Maximum subscriptions per subscribe call               A single SUBSCRIBE call is limited to request a maximum of eight subscriptions.
+
+  Message size                                           The payload for every PUBLISH message is limited to 128 KB. The AWS IoT service will reject messages larger than this size.
+
+  Restricted client ID prefix                            '\$' is reserved for internally generated client IDs.
+
+  Restricted topic prefix                                Topics beginning with '\$' are considered reserved and are not supported for publishing and subscribing except when working with the Thing Shadows service.
+
+  Subscriptions per session                              The message broker limits each client session to subscribe to up to 50 subscriptions. A SUBSCRIBE request that pushes the total number of subscriptions past 50 will result in the connection being disconnected.
+
+  Thing name size                                        128 bytes of UTF-8 encoded characters. This limit applies for both the thing registry and Thing Shadow services.
+
+  Throughput per connection                              AWS IoT limits the ingress and egress rate on each client connection to 512 KB/s. Data sent or received at a higher rate will be throttled to this throughput.
+
+  Topic size                                             The topic passed to the message broker when publishing a message cannot exceed 256 bytes of UTF-8 encoded characters.
+
+  WebSocket connection duration                          WebSocket connections are limited to 24 hours. If the limit is exceeded, the WebSocket connection will automatically be closed when an attempt is made to send a message by the client or server. If you need to maintain an active WebSocket connection for longer than 24 hours, simply close and reopen the WebSocket connection from the client side before the time limit elapses.
+                                                         
+                                                         AWS IoT supports keep-alive values specified in MQTT CONNECT messages. When a client specifies a keep-alive value, the client tells the server to disconnect the client and transmit any last-will message associated with the MQTT session if the server does not receive a message (PUBLISH, SUBSCRIBE, PUBACK, PINGREQ) within 1.5 times the keep-alive period. AWS IoT supports keep-alive values between 5 seconds and 20 minutes. If a client requests no keep-alive (that is, sets the field to 0 in the MQTT CONNECT message), the server will set the keep-alive value to 20 minutes, which corresponds to the maximum idle time supported by AWS IoT of 30 minutes. Most MQTT clients (including the AWS SDK clients) support keep-alive values by sending a PINGREQ if the keep-alive period expires without the transmission of any other message by the client.
+  ------------------------------------------------------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \
-The following limits apply to thing shadows:
 
-[]{#d0e18749}
+### Device Shadow Limits {#device-shadow-limits .title}
+
+[]{#d0e19421}
   ------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Maximum size of a JSON state document                  The maximum size of a JSON state document is 8 KB.
-
-  Maximum number of JSON objects per AWS account         There is no limit on the number of JSON objects per AWS account.
-
-  Shadow lifetime                                        A thing shadow is deleted by AWS IoT if it has not been updated or retrieved in more than 1 year.
-
-  Maximum number of in-flight, unacknowledged messages   The Thing Shadows service supports up to 10 in-flight unacknowledged messages. When this limit is reached, all new shadow requests will be rejected with a 429 error code.
-
-  Maximum depth of JSON device state documents           The maximum number of levels in the "desired" or "reported" section of the JSON device state document is 5. For example:
+  Maximum depth of JSON device state documents           The maximum number of levels in the `desired`{.code} or `reported`{.code} section of the JSON device state document is 5. For example:
                                                          ``` {.programlisting}
                                                          "desired": {
                                                              "one": {
@@ -770,53 +905,75 @@ The following limits apply to thing shadows:
                                                              }
                                                          }
                                                          ```
+
+  Maximum number of in-flight, unacknowledged messages   The Thing Shadows service supports up to 10 in-flight unacknowledged messages. When this limit is reached, all new shadow requests will be rejected with a 429 error code.
+
+  Maximum number of JSON objects per AWS account         There is no limit on the number of JSON objects per AWS account.
+
+  Maximum size of a JSON state document                  8 KB.
+
+  Maximum size of a thing name                           128 bytes of UTF-8 encoded characters.
+
+  Shadow lifetime                                        A thing shadow is deleted by AWS IoT if it has not been updated or retrieved in more than one year.
   ------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \
-The following limits apply to security and identity:
 
--   You can attach up to 10 policies to an AWS IoT certificate.
+### Security and Identity Limits {#security-limits .title}
 
--   You can keep up to 5 versions of a named policy.
+[]{#d0e19468}
+  --------------------------------------------------------------------------------------------- -----------------------------------------
+  Maximum number of policies that can be attached to a certificate or Amazon Cognito identity   10
+  Maximum number of named policy versions                                                       5
+  Maximum policy document size                                                                  2048 characters (excluding white space)
+  Maximum number of device certificates that can be registered per second                       15
+  --------------------------------------------------------------------------------------------- -----------------------------------------
 
--   Policy document size is limited to 2048 characters (excluding white space).
+\
 
 ### Throttling Limits {#throttling-limits .title}
 
-The following table lists the throttling limits for AWS IoT API:
-
-[]{#d0e18799}
+[]{#d0e19497}
   API                         Transaction per Second
   --------------------------- ------------------------
   AcceptCertificateTransfer   10
+  AttachPrincipalPolicy       15
   AttachThingPrincipal        15
   CancelCertificateTransfer   10
   CreateCertificateFromCsr    15
   CreatePolicy                10
   CreatePolicyVersion         10
   CreateThing                 15
+  CreateThingType             15
   DeleteCertificate           10
   DeleteCACertificate         10
   DeletePolicy                10
   DeletePolicyVersion         10
-  DeleteThing                 10
+  DeleteThing                 15
+  DeleteThingType             15
+  DeprecateThingType          15
   DescribeCertificate         10
   DescribeCACertificate       10
   DescribeThing               10
-  DetachThingPrincipal        10
+  DescribeThingType           10
+  DetachThingPrincipal        15
   DetachPrincipalPolicy       15
   DeleteRegistrationCode      10
   GetPolicy                   10
   GetPolicyVersion            15
   GetRegistrationCode         10
+  ListCACertificates          10
   ListCertificates            10
   ListCertificatesByCA        10
+  ListOutgoingCertificates    10
   ListPolicies                10
+  ListPolicyPrincipals        10
   ListPolicyVersions          10
   ListPrincipalPolicies       15
   ListPrincipalThings         10
   ListThings                  10
   ListThingPrincipals         10
+  ListThingTypes              10
   RegisterCertificate         10
   RegisterCACertificate       10
   RejectCertificateTransfer   10
@@ -830,9 +987,14 @@ The following table lists the throttling limits for AWS IoT API:
 
 ### AWS IoT Rules Engine Limits {#rules-limits .title}
 
-The following limit applies to the AWS IoT rules engine
+[]{#d0e19742}
+  ----------------------------------------- -------------------------------------------------------------------
+  Maximum number of rules per AWS account   1000
+  Actions per rule                          A maximum of 10 actions can be defined per rule.
+  Rule size                                 Up to 256 KB of UTF-8 encoded characters (including white space).
+  ----------------------------------------- -------------------------------------------------------------------
 
--   There is a limit of 1000 rules per AWS account.
+\
 
 AWS Key Management Service (AWS KMS) Limits {#limits_kms .title}
 -------------------------------------------
@@ -888,7 +1050,7 @@ For information about additional documented limits, see [Amazon Kinesis Streams 
 AWS Lambda Limits {#limits_lambda .title}
 -----------------
 
-[]{#d0e19148}
+[]{#d0e19906}
   Resource                                          Limit
   ------------------------------------------------- -------
   Concurrent requests safety throttle per account   100
@@ -939,7 +1101,7 @@ AWS OpsWorks for Chef Automate Limits {#limits_opworks .title}
   User-initiated (manual) backup generations   10
   Automated (scheduled) backup generations     30
 
-AWS OpsWorks Stacks Limits {#d0e31031 .title}
+AWS OpsWorks Stacks Limits {#d0e32186 .title}
 --------------------------
 
   Resource              Default Limit
@@ -958,7 +1120,9 @@ Amazon Polly Limits {#limits_polly .title}
 
 -   Throttle rate per operation:
 
-    []{#d0e19379}
+    []{#d0e20137}
+    **Throttle Rate per Operation**
+
       ---------------------------------------------------------------------------------------------
       Operation                   Limit
       --------------------------- -----------------------------------------------------------------
@@ -1022,7 +1186,7 @@ Amazon Relational Database Service (Amazon RDS) Limits {#limits_rds .title}
   Cluster parameter groups                   50
   DB Instances                               40
   Event subscriptions                        20
-  Manual snapshots                           50
+  Manual snapshots                           100
   Manual cluster snapshots                   50
   Option groups                              20
   Parameter groups                           50
@@ -1031,7 +1195,7 @@ Amazon Relational Database Service (Amazon RDS) Limits {#limits_rds .title}
   Rules per security group                   20
   Security groups                            25
   Security groups (VPC)                      5
-  Subnet groups                              20
+  Subnet groups                              50
   Subnets per subnet group                   20
   Tags per resource                          50
   Total storage for all DB instances         100 TB
@@ -1134,9 +1298,9 @@ For information about additional documented limits, see [Amazon SimpleDB Limits]
 Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc .title}
 ------------------------------------------------
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Resource                                                                           Default limit        Comments
-  ---------------------------------------------------------------------------------- -------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------- -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   VPCs per region                                                                    5                    The limit for Internet gateways per region is directly correlated to this one. Increasing this limit will increase the limit on Internet gateways per region by the same amount. If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}.
 
   Subnets per VPC                                                                    200                  If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}.
@@ -1163,7 +1327,9 @@ Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc .title}
 
   Security groups per VPC                                                            500                  If you need to increase this limit, you can [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}.
 
-  Inbound or outbound rules per security group                                       50                   You can have 50 inbound and 50 outbound rules per security group (giving a total of 100 combined inbound and outbound rules). If you need to increase or decrease this limit, you can contact AWS Support — a limit change applies to both inbound and outbound rules. However, the multiple of the limit for inbound or outbound rules per security group and the limit for security groups per network interface cannot exceed 250. For example, if you want to increase the limit to 100, we decrease your number of security groups per network interface to 2. This limit includes both IPv4 and IPv6 rules.
+  Inbound or outbound rules per security group                                       50                   You can have 50 inbound and 50 outbound rules per security group (giving a total of 100 combined inbound and outbound rules). If you need to increase or decrease this limit, you can contact AWS Support — a limit change applies to both inbound and outbound rules. However, the multiple of the limit for inbound or outbound rules per security group and the limit for security groups per network interface cannot exceed 250. For example, if you want to increase the limit to 100, we decrease your number of security groups per network interface to 2.
+                                                                                                          
+                                                                                                          This limit is enforced separately for IPv4 rules and IPv6 rules. A rule that references a security group counts as one rule for IPv4 and one rule for IPv6.
 
   Security groups per network interface                                              5                    If you need to increase or decrease this limit, you can contact AWS Support. The maximum is 16. The multiple of the limit for security groups per network interface and the limit for rules per security group cannot exceed 250. For example, if you want 10 security groups per network interface, we decrease your number of rules per security group to 25.
 
@@ -1188,7 +1354,7 @@ Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc .title}
   Flow logs per single network interface, single subnet, or single VPC in a region   2                    You can effectively have 6 flow logs per network interface if you create 2 flow logs for the subnet, and 2 flow logs for the VPC in which your network interface resides. This limit cannot be increased.
 
   NAT gateways per Availability Zone                                                 5                    If you need to increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc){.ulink}. A NAT gateway in the `pending`{.code}, `active`{.code}, or `deleting`{.code} state counts against your limit.
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 For information about additional documented limits, see [Amazon VPC Limits](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html){.ulink} in the [*Amazon VPC User Guide*]{.emphasis}.
 
@@ -1209,15 +1375,14 @@ For information about additional documented limits, see [AWS WAF Limits](http://
 Amazon WorkSpaces Limits {#limits_workspaces .title}
 ------------------------
 
-  Resource     Default Limit   Comments
-  ------------ --------------- ---------------------------------------------------------------------------------------------------------------------
-  WorkSpaces   5               To prevent denial of service attacks, accounts new to the Amazon WorkSpaces service are limited to five WorkSpaces.
+  Resource     Default Limit
+  ------------ ---------------
+  WorkSpaces   1
+  Images       5
 
-For information about additional documented limits, see [Amazon WorkSpaces Limits](http://docs.aws.amazon.com/workspaces/latest/adminguide/wsp_limits.html){.ulink} in the [*Amazon WorkSpaces Administration Guide*]{.emphasis}.
-
-![](/web/20161217172444im_/http://docs.aws.amazon.com:80/general/latest/gr/images/expanderarrow.png)
-[Document Conventions](/web/20161217172444/http://docs.aws.amazon.com:80/general/latest/gr/docconventions.html)
+![](/web/20170130114142im_/http://docs.aws.amazon.com/general/latest/gr/images/expanderarrow.png)
+[Document Conventions](/web/20170130114142/http://docs.aws.amazon.com/general/latest/gr/docconventions.html)
 
 [« Previous](signature-version-2.html){.awstoc}[Next »](aws-ip-ranges.html){.awstoc}
 
-© 2016, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+© 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved.
