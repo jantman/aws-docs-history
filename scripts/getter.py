@@ -6,6 +6,7 @@ import argparse
 import logging
 import requests
 import re
+import subprocess
 from datetime import datetime
 from git import Repo
 from requests.utils import parse_header_links
@@ -80,7 +81,8 @@ class AwsGetter(object):
                 continue
             with open(path, 'w') as fh:
                 fh.write(content)
-            self._repo.index.add([path])
+            mdpath = self._pandoc(path)
+            self._repo.index.add([path, mdpath])
         if not self._repo.is_dirty():
             logger.info('No changes to commit.')
             return
@@ -126,13 +128,31 @@ class AwsGetter(object):
         content = self._archive_link_re.sub('http', content)
         with open(path, 'w') as fh:
             fh.write(content)
-        self._repo.index.add([path])
+        mdpath = self._pandoc(path)
+        self._repo.index.add([path, mdpath])
         c = self._repo.index.commit(
             'archive.org memento from %s - %s' % (dt, url),
             author_date=format_datetime(dt),
             commit_date=format_datetime(dt)
         )
         logger.debug('Committed: %s', c)
+
+    def _pandoc(self, fpath):
+        outpath = fpath + '.md'
+        cmd = [
+            'pandoc',
+            '-f', 'html',
+            '-t', 'markdown',
+            '-o', outpath,
+            '--normalize',
+            '--wrap=none',
+            fpath
+        ]
+        logger.debug('Running: %s', cmd)
+        rcode = subprocess.call(cmd)
+        if rcode != 0:
+            raise RuntimeError('Command exited %d: %s' % (rcode, cmd))
+        return outpath
 
     def _clean_html(self, src, url):
         doc = lxml.html.fromstring(src)
