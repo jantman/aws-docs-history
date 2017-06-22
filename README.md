@@ -20,6 +20,10 @@ For information on changes to the AWS APIs themselves, the
 [JSON API descriptions from botocore](https://github.com/boto/botocore/tree/develop/botocore/data)
 are probably the best source of information.
 
+### Contents
+
+* [http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html](http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) - [html](docs.aws.amazon.com/general/aws_service_limits.html) [markdown](docs.aws.amazon.com/general/aws_service_limits.html.md)
+
 ## Internals
 
 To retrieve history for new URLs:
