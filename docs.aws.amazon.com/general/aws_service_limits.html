@@ -3,44 +3,55 @@
                      <table summary="Breadcrumbs">
                         <tr>
                            <td>
-                              <div class="breadcrumb"><a href="http://aws.amazon.com/documentation">AWS Documentation</a> » <a href="index.html">General Reference</a> » <span class="breadcrumb">AWS Service Limits</span></div>
+                              <div class="breadcrumb"><a href="http://aws.amazon.com/documentation">AWS Documentation</a> Â» <a href="index.html">General Reference</a> Â» <span class="breadcrumb">AWS Service Limits</span></div>
                            </td>
                         </tr>
                      </table>
                      <div></div>
                      <h1 class="topictitle" id="aws_service_limits">AWS Service Limits</h1>
                      <p>The following tables provide the default limits for AWS services for an AWS account.
-                        Unless otherwise noted, each limit is region-specific. Many services contain limits that cannot
-                        be changed. For more information about the limits for a specific service, see the documentation
+                        Unless otherwise noted, each limit is region-specific. Many services contain limits
+                        that cannot
+                        be changed. For more information about the limits for a specific service, see the
+                        documentation
                         for that service.
                      </p>
-                     <p>If your support plan includes Trusted Advisor, you can use it to display your usage and limits for
-                        each service in a specific region. For more information, see <a href="https://aws.amazon.com/premiumsupport/trustedadvisor/" target="_blank">Trusted Advisor</a>.
+                     <p><a href="https://aws.amazon.com/premiumsupport/trustedadvisor/" target="_blank">AWS Trusted Advisor</a> offers a Service Limits check (in
+                        the Performance category) that displays your usage and limits for some aspects of
+                        some services.
+                        For more information, see <a href="https://aws.amazon.com/premiumsupport/ta-faqs/#service-limits-check-questions" target="_blank">Service
+                           Limits Check Questions</a> in the Trusted Advisor FAQs.
                      </p>
-                     <p>You can take the following steps to request an increase for limits. These increases are not
-                        granted immediately, so it may take a couple of days for your increase to become
-                        effective.
+                     <p>You can take the following steps to request an increase for limits. These increases
+                        are not
+                        granted immediately, so it may take a couple of days for your increase to become effective.
                      </p>
                      <p class="title"><b>To request a limit increase</b></p>
                      <ol>
                         <li>
                            
-                           <p>Open the <a href="https://console.aws.amazon.com/support/home#/" target="_blank">AWS Support Center</a> page, sign in,
-                              if necessary, and then choose <b>Create Case</b>.
+                           <p>Open the <a href="https://console.aws.amazon.com/support/home#/" target="_blank">AWS Support Center</a> page, sign in
+                              if necessary, and choose <b>Create Case</b>.
                            </p>
                            
                         </li>
                         <li>
                            
-                           <p>Under <b>Regarding</b>, choose <b>Service Limit
-                                 Increase</b>.
+                           <p>For <b>Regarding</b>, choose <b>Service Limit Increase</b>.
                            </p>
                            
                         </li>
                         <li>
                            
-                           <p>Under <b>Limit Type</b>, choose the type of limit to increase, fill in the
-                              necessary fields in the form, and then choose your preferred method of contact.
+                           <p>Complete <b>Limit Type</b>, <b>Use Case Description</b>, and
+                              <b>Contact method</b>. If this request is urgent, choose <b>Phone</b> 
+                              as the method of contact instead of <b>Web</b>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Choose <b>Submit</b>. 
                            </p>
                            
                         </li>
@@ -53,7 +64,7 @@
                            <li><a href="#limits_appstream">Amazon AppStream Limits</a></li>
                            <li><a href="#limits_appstream2">Amazon AppStream 2.0 Limits</a></li>
                            <li><a href="#limits_as-app">Application Auto Scaling Limits</a></li>
-                           <li><a href="#w1ab1c17c25">Amazon Athena Limits</a></li>
+                           <li><a href="#w2ab1c17c25">Amazon Athena Limits</a></li>
                            <li><a href="#limits_autoscaling">Auto Scaling Limits</a></li>
                            <li><a href="#limits_batch">AWS Batch Limits</a></li>
                            <li><a href="#limits_acm">AWS Certificate Manager (ACM) Limits</a></li>
@@ -69,10 +80,10 @@
                            <li><a href="#limits_codecommit">AWS CodeCommit Limits</a></li>
                            <li><a href="#limits_codedeploy">AWS CodeDeploy Limits</a></li>
                            <li><a href="#limits_codepipeline">AWS CodePipeline Limits</a></li>
-                           <li><a href="#limits_cognito_user_pools">Amazon Cognito Your User Pools Limits</a></li>
+                           <li><a href="#limits_cognito_user_pools">Amazon Cognito User Pools Limits</a></li>
                            <li><a href="#limits_cognito_federated_identities">Amazon Cognito Federated Identities Limits</a></li>
-                           <li><a href="#limits_amazon_connect">Amazon Connect Limits</a></li>
                            <li><a href="#limits_cognito_sync">Amazon Cognito Sync Limits</a></li>
+                           <li><a href="#limits_amazon_connect">Amazon Connect Limits</a></li>
                            <li><a href="#limits_config">AWS Config Limits</a></li>
                            <li><a href="#limits_datapipeline">AWS Data Pipeline Limits</a></li>
                            <li><a href="#limits_dms">AWS Database Migration Service Limits</a></li>
@@ -92,6 +103,7 @@
                            <li><a href="#limits_elasticache">Amazon ElastiCache Limits</a></li>
                            <li><a href="#limits_es">Amazon Elasticsearch Service Limits</a></li>
                            <li><a href="#limits_gamelift">Amazon GameLift Limits</a></li>
+                           <li><a href="#limits_greengrass">AWS Greengrass Limits</a></li>
                            <li><a href="#limits_iam">AWS Identity and Access Management (IAM) Limits</a></li>
                            <li><a href="#limits-import-export">AWS Import/Export Limits</a></li>
                            <li><a href="#limits_inspector">Amazon Inspector Limits</a></li>
@@ -103,13 +115,13 @@
                            <li><a href="#limits_lightsail">Amazon Lightsail Limits</a></li>
                            <li><a href="#limits_machinelearning">Amazon Machine Learning (Amazon ML) Limits</a></li>
                            <li><a href="#limits_opworks">AWS OpsWorks for Chef Automate Limits</a></li>
-                           <li><a href="#w1ab1c17d127">AWS OpsWorks Stacks Limits</a></li>
-                           <li><a href="#w1ab1c17d129">AWS Organizations Limits</a></li>
+                           <li><a href="#w2ab1c17d129">AWS OpsWorks Stacks Limits</a></li>
+                           <li><a href="#w2ab1c17d131">AWS Organizations Limits</a></li>
                            <li><a href="#limits_polly">Amazon Polly Limits</a></li>
                            <li><a href="#limits_pinpoint">Amazon Pinpoint Limits</a></li>
                            <li><a href="#limits_redshift">Amazon Redshift Limits</a></li>
                            <li><a href="#limits_rds">Amazon Relational Database Service (Amazon RDS) Limits</a></li>
-                           <li><a href="#limits_route53">Amazon Route 53 Limits</a></li>
+                           <li><a href="#limits_route53">Amazon RouteÂ 53 Limits</a></li>
                            <li><a href="#limits_server_migration">AWS Server Migration Service
                                  Limits</a></li>
                            <li><a href="#limits_servicecatalog">AWS Service Catalog Limits</a></li>
@@ -131,16 +143,15 @@
                      <h2 id="limits_apigateway">Amazon API Gateway Limits</h2>
                      
                      
-                     <p>The following limits apply to configuring and running an API in Amazon API Gateway and can be
+                     <p>The following limits apply to configuring and running an API in Amazon API Gateway
+                        and can be
                         increased upon request to optimize performances of a deployed API in Amazon API Gateway.
                      </p>
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c13b4">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c13b4">
                               
                               <tr>
                                  
@@ -151,12 +162,14 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
                                  <td>Throttle rate per account</td>
                                  
-                                 <td>1000 request per second (rps) with a burst limit of 2000 rps.</td>
+                                 <td>10000 request per second (rps) with an additional burst capacity provided by the
+                                    <a href="https://en.wikipedia.org/wiki/Token_bucket" target="_blank">token bucket
+                                       algorithm</a>, using a maximum bucket capacity of 5000 requests.
+                                 </td>
                                  
                               </tr>
                               
@@ -232,26 +245,23 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
                      <p>All of the per API limits can only be increased on specific APIs.</p>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html" target="_blank">Limits in Amazon API Gateway</a> in the
+                     <p><a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html" target="_blank">Limits in Amazon API Gateway</a> in the
                         <em>API Gateway Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits_appdiscserve">AWS Application Discovery Service Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c15b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c15b2">
                               
                               <tr>
                                  
@@ -260,7 +270,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -295,7 +304,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -308,29 +316,31 @@
                         <p>This information applies only to an older version of Amazon AppStream.</p>
                      </div>
                      
-                     <p> An Amazon AppStream account has a service limit of up to five concurrent streaming sessions: 
-                        </p><div class="itemizedlist">
-                           
-                           
-                           
-                           <ul class="itemizedlist" type="disc">
-                              <li class="listitem">
-                                 
-                                 <p>Up to two concurrent streaming application deployments using the interactive
-                                    wizard.
-                                 </p>
-                                 
-                              </li>
-                              <li class="listitem">
-                                 
-                                 <p>Up to three streaming applications in the <b>Building</b>,
-                                    <b>Active</b>, or <b>Error</b> states.
-                                 </p>
-                                 
-                              </li>
-                           </ul>
-                        </div>
+                     <p> An Amazon AppStream account has a service limit of up to five concurrent streaming
+                        sessions:
+                     </p>
                      
+                     <div class="itemizedlist">
+                        
+                        
+                        
+                        <ul class="itemizedlist" type="disc">
+                           <li class="listitem">
+                              
+                              <p>Up to two concurrent streaming application deployments using the interactive
+                                 wizard.
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>Up to three streaming applications in the <b>Building</b>,
+                                 <b>Active</b>, or <b>Error</b> states.
+                              </p>
+                              
+                           </li>
+                        </ul>
+                     </div>
                      
                      <p>For more information, see <a href="http://docs.aws.amazon.com/appstream/latest/developerguide/appstream-application-lifecycle.html" target="_blank">Amazon AppStream Application Lifecycle</a> in the <em>Amazon AppStream Developer Guide</em>.
                      </p>
@@ -346,10 +356,7 @@
                      <div class="table">
                         <p class="title"><b>Default Limits Per Region</b></p>
                         <div class="table-contents">
-                           <table id="w28aac17c19b4">
-                              
-                              
-                              
+                           <table id="w107aac17c19b4">
                               
                               <tr>
                                  
@@ -358,7 +365,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -409,7 +415,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -417,12 +422,10 @@
                      <h2 id="limits_as-app">Application Auto Scaling Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c21b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c21b2">
                               
                               <tr>
                                  
@@ -431,7 +434,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -458,21 +460,18 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
                      
-                     <h2 id="w1ab1c17c25">Amazon Athena Limits</h2>
+                     <h2 id="w2ab1c17c25">Amazon Athena Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c23b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c23b2">
                               
                               <tr>
                                  
@@ -481,7 +480,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -524,7 +522,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -533,12 +530,10 @@
                      <h2 id="limits_autoscaling">Auto Scaling Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c25b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c25b2">
                               
                               <tr>
                                  
@@ -547,7 +542,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -622,22 +616,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html" target="_blank">Auto Scaling Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html" target="_blank">Auto Scaling Limits</a> in the
                         <em>Auto Scaling User Guide</em>.
                      </p>
                      
                      <h2 id="limits_batch">AWS Batch Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c27b2">
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c27b2">
                               
                               <tr>
                                  
@@ -646,7 +639,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -673,7 +665,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -685,10 +676,10 @@
                      <h2 id="limits_acm">AWS Certificate Manager (ACM) Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c29b2">
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c29b2">
                               
                               <tr>
                                  
@@ -697,7 +688,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -724,7 +714,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -735,12 +724,10 @@
                      <h2 id="limits_cloudformation">AWS CloudFormation Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c31b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c31b2">
                               
                               <tr>
                                  
@@ -749,7 +736,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -760,24 +746,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html" target="_blank">AWS CloudFormation Limits</a> in
+                     <p><a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html" target="_blank">AWS CloudFormation Limits</a> in
                         the <em>AWS CloudFormation User Guide</em>.
                      </p>
                      
                      <h2 id="limits_cloudfront">Amazon CloudFront Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c33b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c33b2">
                               
                               <tr>
                                  
@@ -786,7 +769,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -875,7 +857,7 @@
                                  
                                  <td>Custom headers that you can have Amazon CloudFront forward to the origin</td>
                                  
-                                 <td>10 name–value pairs</td>
+                                 <td>10 nameâvalue pairs</td>
                                  
                               </tr>
                               
@@ -886,7 +868,8 @@
                                  </td>
                                  
                                  <td>
-                                    <p>For more information, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/QueryStringParameters.html" target="_blank">Configuring CloudFront to Cache Based on Query String Parameters</a> in the
+                                    <p>For more information, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/QueryStringParameters.html" target="_blank">Configuring CloudFront to Cache Based on
+                                          Query String Parameters</a> in the
                                        <em>Amazon CloudFront Developer Guide</em>.
                                     </p>
                                  </td>
@@ -900,30 +883,28 @@
                                  </td>
                                  
                                  <td>
-                                    <p>For more information, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout" target="_blank">Request Timeout</a> in the <em>Amazon CloudFront Developer Guide</em>.
+                                    <p>For more information, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout" target="_blank">Request Timeout</a> in the
+                                       <em>Amazon CloudFront Developer Guide</em>.
                                     </p>
                                  </td>
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html" target="_blank">Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html" target="_blank">Limits</a> in the
                         <em>Amazon CloudFront Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits_cloudhsm">AWS CloudHSM Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c35b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c35b2">
                               
                               <tr>
                                  
@@ -932,7 +913,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -959,7 +939,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -967,12 +946,10 @@
                      <h2 id="limits_cloudsearch">Amazon CloudSearch Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c37b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c37b2">
                               
                               <tr>
                                  
@@ -981,7 +958,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -1000,12 +976,11 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/limits.html" target="_blank">Understanding Amazon CloudSearch Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/limits.html" target="_blank">Understanding Amazon CloudSearch Limits</a> in the
                         <em>Amazon CloudSearch Developer Guide</em>. 
                      </p>
                      
@@ -1015,11 +990,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17c39b2">
-                              
-                              
-                              
-                              
+                           <table id="w107aac17c39b2">
                               
                               <tr>
                                  
@@ -1030,7 +1001,6 @@
                                  <th>Comments</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -1049,7 +1019,7 @@
                                     
                                     <p>Get, describe, and list APIs</p>
                                     
-                                 </td>    
+                                 </td>
                                  
                                  <td>
                                     <p>10 transactions per second (TPS)</p>
@@ -1079,8 +1049,8 @@
                                  </td>
                                  
                                  <td>
-                                    <p>The maximum number of operation requests you can make per second without being
-                                       throttled.
+                                    <p>The maximum number of operation requests you can make per second without
+                                       being throttled.
                                     </p>
                                     
                                     <p>This limit cannot be increased.</p>
@@ -1089,7 +1059,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -1097,13 +1066,10 @@
                      <h2 id="limits_cloudwatch">Amazon CloudWatch Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c41b2">
-                              
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c41b2">
                               
                               <tr>
                                  
@@ -1114,7 +1080,6 @@
                                  <th>Comments</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -1257,25 +1222,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html" target="_blank">CloudWatch Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html" target="_blank">CloudWatch Limits</a> in the
                         <em>Amazon CloudWatch User Guide</em>.
                      </p>
                      
                      <h2 id="limits_cloudwatch_events">Amazon CloudWatch Events Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c43b2">
-                              
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c43b2">
                               
                               <tr>
                                  
@@ -1286,7 +1247,6 @@
                                  <th>Comments</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -1320,25 +1280,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/cloudwatch_limits_cwe.html" target="_blank"> CloudWatch Events Limits</a> in
+                     <p><a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/cloudwatch_limits_cwe.html" target="_blank"> CloudWatch Events Limits</a> in
                         the <em>Amazon CloudWatch Events User Guide</em>.
                      </p>
                      
                      <h2 id="limits_cloudwatch_logs">Amazon CloudWatch Logs Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c45b2">
-                              
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c45b2">
                               
                               <tr>
                                  
@@ -1351,7 +1307,6 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
                                  <td>
@@ -1362,7 +1317,7 @@
                                  
                                  <td>
                                     
-                                    <p>500 log groups/account/region</p>
+                                    <p>5000 log groups/account/region</p>
                                     
                                  </td>
                                  
@@ -1445,7 +1400,8 @@
                                  <td>
                                     
                                     <p>We recommend subscriptions if you are continuously processing new data. If you
-                                       need historical data, we recommend exporting your data to Amazon S3. This limit can be
+                                       need historical data, we recommend exporting your data to Amazon S3. This limit can
+                                       be
                                        changed only in special circumstances. If you experience frequent throttling,
                                        contact AWS Support.
                                     </p>
@@ -1454,24 +1410,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/cloudwatch_limits_cwl.html" target="_blank">CloudWatch Logs Limits</a> in
+                     <p><a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/cloudwatch_limits_cwl.html" target="_blank">CloudWatch Logs Limits</a> in
                         the <em>Amazon CloudWatch Logs User Guide</em>.
                      </p>
                      
                      <h2 id="limits_codebuild">AWS CodeBuild Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c47b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c47b2">
                               
                               <tr>
                                  
@@ -1480,7 +1433,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -1499,24 +1451,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see  <a href="http://docs.aws.amazon.com/codebuild/latest/userguide/limits.html" target="_blank">Limits
+                     <p> <a href="http://docs.aws.amazon.com/codebuild/latest/userguide/limits.html" target="_blank">Limits
                            for AWS CodeBuild</a> in the <em>AWS CodeBuild User Guide</em>.
                      </p>
                      
                      <h2 id="limits_codecommit">AWS CodeCommit Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c49b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c49b2">
                               
                               <tr>
                                  
@@ -1525,7 +1474,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -1536,24 +1484,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/codecommit/latest/userguide/limits.html" target="_blank">Limits in AWS CodeCommit</a> in the
+                     <p><a href="http://docs.aws.amazon.com/codecommit/latest/userguide/limits.html" target="_blank">Limits in AWS CodeCommit</a> in the
                         <em>AWS CodeCommit User Guide</em>. 
                      </p>
                      
                      <h2 id="limits_codedeploy">AWS CodeDeploy Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c51b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c51b2">
                               
                               <tr>
                                  
@@ -1564,18 +1509,19 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
-                                 <td>Number of applications under an account in a single region</td>
+                                 <td>Maximum number of applications associated with an AWS account in a single
+                                    region
+                                 </td>
                                  
-                                 <td>40</td>
+                                 <td>100</td>
                                  
                               </tr>
                               
                               <tr>
                                  
-                                 <td>Number of concurrent deployments under an account</td>
+                                 <td>Maxium number of concurrent deployments associated with an AWS account</td>
                                  
                                  <td>10</td>
                                  
@@ -1583,38 +1529,43 @@
                               
                               <tr>
                                  
-                                 <td>Number of deployment groups associated with a single application</td>
+                                 <td>Maximum number of deployment groups associated with a single application</td>
                                  
-                                 <td>50</td>
+                                 <td>100</td>
                                  
                               </tr>
                               
                               <tr>
                                  
-                                 <td>Number of instances in a single deployment</td>
+                                 <td>Maximum number of instances in a single deployment</td>
                                  
-                                 <td>50</td>
+                                 <td>500</td>
                                  
                               </tr>
                               
+                              <tr>
+                                 
+                                 <td>Maximum number of event notification triggers in a deployment group</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
                               
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/codedeploy/latest/userguide/limits.html" target="_blank">Limits in AWS CodeDeploy</a> in the
+                     <p><a href="http://docs.aws.amazon.com/codedeploy/latest/userguide/limits.html" target="_blank">Limits in AWS CodeDeploy</a> in the
                         <em>AWS CodeDeploy User Guide</em>.
                      </p>
                      
                      <h2 id="limits_codepipeline">AWS CodePipeline Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c53b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c53b2">
                               
                               <tr>
                                  
@@ -1625,18 +1576,23 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
                                  <td>
                                     
-                                    <p>Number of pipelines per region in an AWS account</p>
+                                    <p>Maximum number of pipelines per region in an AWS account</p>
                                     
                                  </td>
                                  
                                  <td>
                                     
-                                    <p>20</p>
+                                    <p>US East (N. Virginia) (us-east-1): 40</p>
+                                    
+                                    <p>US West (Oregon) (us-west-2): 60</p>
+                                    
+                                    <p>EU (Ireland) (eu-west-1): 60</p>
+                                    
+                                    <p>All other supported regions: 20</p>
                                     
                                  </td>
                                  
@@ -1652,7 +1608,7 @@
                                  
                                  <td>
                                     
-                                    <p>Minimum of 2, maxi­mum of 10</p>
+                                    <p>Minimum of 2, maxiÂ­mum of 10</p>
                                     
                                  </td>
                                  
@@ -1668,7 +1624,7 @@
                                  
                                  <td>
                                     
-                                    <p>Minimum of 1, maxi­mum of 20</p>
+                                    <p>Minimum of 1, maxiÂ­mum of 20</p>
                                     
                                  </td>
                                  
@@ -1756,26 +1712,23 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
                      <p>It may take up to two weeks to process requests for a limit increase.</p>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html" target="_blank">Limits in AWS CodePipeline</a> in the
+                     <p><a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html" target="_blank">Limits in AWS CodePipeline</a> in the
                         <em>AWS CodePipeline User Guide</em>.
                      </p>
                      
-                     <h2 id="limits_cognito_user_pools">Amazon Cognito Your User Pools Limits</h2>
+                     <h2 id="limits_cognito_user_pools">Amazon Cognito User Pools Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c55b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c55b2">
                               
                               <tr>
                                  
@@ -1784,7 +1737,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -1811,6 +1763,13 @@
                                  
                               </tr>
                               
+                              <tr>
+                                 
+                                 <td>Maximum number of identity providers per user pool</td>
+                                 
+                                 <td>25</td>
+                                 
+                              </tr>
                               
                            </table>
                         </div>
@@ -1823,12 +1782,10 @@
                      <h2 id="limits_cognito_federated_identities">Amazon Cognito Federated Identities Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c57b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c57b2">
                               
                               <tr>
                                  
@@ -1839,7 +1796,6 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
                                  <td>Maximum number of identity pools per account</td>
@@ -1848,6 +1804,54 @@
                                  
                               </tr>
                               
+                           </table>
+                        </div>
+                     </div>
+                     
+                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/cognito/latest/developerguide/limits.html" target="_blank">Limits in Amazon Cognito</a> in the <em>Amazon Cognito Developer
+                           Guide</em>.
+                     </p>
+                     
+                     <h2 id="limits_cognito_sync">Amazon Cognito Sync Limits</h2>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c59b2">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Default Limit</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of datasets per identity</td>
+                                 
+                                 <td>20</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of records per dataset</td>
+                                 
+                                 <td>1024</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum size of a single dataset</td>
+                                 
+                                 <td>1 MB</td>
+                                 
+                              </tr>
                               
                            </table>
                         </div>
@@ -1861,11 +1865,9 @@
                      
                      
                      <div class="table">
+                        <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17c59b2">
-                              
-                              
-                              
+                           <table id="w107aac17c61b2">
                               
                               <tr>
                                  
@@ -1874,7 +1876,6 @@
                                  <th>Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -1893,18 +1894,15 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
                      
                      <div class="table">
+                        <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17c59b4">
-                              
-                              
-                              
+                           <table id="w107aac17c61b4">
                               
                               <tr>
                                  
@@ -1913,7 +1911,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -2188,77 +2185,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html#amazon-connect-servicelimits" target="_blank">Service Limits</a> in the <em>Amazon Connect Administrator Guide</em>.
-                     </p>
-                     
-                     <h2 id="limits_cognito_sync">Amazon Cognito Sync Limits</h2>
-                     
-                     
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c61b2">
-                              
-                              
-                              
-                              
-                              <tr>
-                                 
-                                 <th>Resource</th>
-                                 
-                                 <th>Default Limit</th>
-                                 
-                              </tr>
-                              
-                              
-                              
-                              <tr>
-                                 
-                                 <td>Maximum number of datasets per identity</td>
-                                 
-                                 <td>20</td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Maximum number of records per dataset</td>
-                                 
-                                 <td>1024</td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Maximum size of a single dataset</td>
-                                 
-                                 <td>1 MB</td>
-                                 
-                              </tr>
-                              
-                              
-                           </table>
-                        </div>
-                     </div>
-                     
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/cognito/latest/developerguide/limits.html" target="_blank">Limits in Amazon Cognito</a> in the <em>Amazon Cognito Developer
-                           Guide</em>.
+                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html#amazon-connect-servicelimits" target="_blank">Service
+                           Limits</a> in the <em>Amazon Connect Administrator Guide</em>.
                      </p>
                      
                      <h2 id="limits_config">AWS Config Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c63b2">
-                              
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c63b2">
                               
                               <tr>
                                  
@@ -2269,7 +2210,6 @@
                                  <th>Notes</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -2289,7 +2229,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -2297,13 +2236,10 @@
                      <h2 id="limits_datapipeline">AWS Data Pipeline Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c65b2">
-                              
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c65b2">
                               
                               <tr>
                                  
@@ -2314,7 +2250,6 @@
                                  <th>Adjustable</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -2447,7 +2382,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -2459,12 +2393,10 @@
                      <h2 id="limits_dms">AWS Database Migration Service Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c67b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c67b2">
                               
                               <tr>
                                  
@@ -2473,7 +2405,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -2533,7 +2464,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -2541,13 +2471,10 @@
                      <h2 id="limits_devicefarm">AWS Device Farm Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c69b2">
-                              
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c69b2">
                               
                               <tr>
                                  
@@ -2558,7 +2485,6 @@
                                  <th>Comments</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -2651,7 +2577,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -2659,13 +2584,10 @@
                      <h2 id="limits_directconnect">AWS Direct Connect Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c71b2">
-                              
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c71b2">
                               
                               <tr>
                                  
@@ -2678,16 +2600,13 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
                                  <td>Virtual interfaces per AWS Direct Connect connection</td>
                                  
                                  <td>50</td>
                                  
-                                 <td>To increase this limit, <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-direct-connect" target="_blank">submit a
-                                       request</a>.
-                                 </td>
+                                 <td>This limit cannot be increased.</td>
                                  
                               </tr>
                               
@@ -2751,7 +2670,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -2759,12 +2677,10 @@
                      <h2 id="limits_ds">AWS Directory Service Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c73b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c73b2">
                               
                               <tr>
                                  
@@ -2773,7 +2689,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -2816,7 +2731,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -2829,12 +2743,10 @@
                      <h2 id="limits_dynamodb">Amazon DynamoDB Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c75b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c75b2">
                               
                               <tr>
                                  
@@ -2843,7 +2755,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -2898,24 +2809,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html" target="_blank">Limits in Amazon DynamoDB</a> in the
+                     <p><a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html" target="_blank">Limits in Amazon DynamoDB</a> in the
                         <em>Amazon DynamoDB Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits_ecr">Amazon EC2 Container Registry (Amazon ECR) Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c77b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c77b2">
                               
                               <tr>
                                  
@@ -2924,7 +2832,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -2943,7 +2850,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -2955,12 +2861,10 @@
                      <h2 id="limits_ecs">Amazon EC2 Container Service (Amazon ECS) Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c79b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c79b2">
                               
                               <tr>
                                  
@@ -2969,7 +2873,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -2996,7 +2899,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -3008,13 +2910,10 @@
                      <h2 id="limits_ssm">Amazon EC2 Systems Manager Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c81b2">
-                              
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c81b2">
                               
                               <tr>
                                  
@@ -3024,7 +2923,6 @@
                                  
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -3212,7 +3110,8 @@
                                     <p>30 days</p>
                                     
                                     <p>If you terminate an instance, inventory data for that instance is deleted
-                                       immediately. For running instances, inventory data older than 30 days is deleted. If
+                                       immediately. For running instances, inventory data older than 30 days is deleted.
+                                       If
                                        you need to store inventory data longer than 30 days, you can use AWS Config to record
                                        history or periodically query and upload the data to an Amazon S3 bucket. For more
                                        information, see, <a href="http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#recording-managed-instance-inventory" target="_blank">Recording Amazon EC2 managed instance inventory</a> in the
@@ -3445,7 +3344,6 @@
                               </tr>
                               
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -3455,12 +3353,10 @@
                      <h2 id="limits_elastic_beanstalk">AWS Elastic Beanstalk Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c83b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c83b2">
                               
                               <tr>
                                  
@@ -3469,7 +3365,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -3496,7 +3391,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -3504,12 +3398,10 @@
                      <h2 id="limits_ebs">Amazon Elastic Block Store (Amazon EBS) Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c85b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c85b2">
                               
                               <tr>
                                  
@@ -3518,7 +3410,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -3586,28 +3477,25 @@
                                  
                                  <td>Total provisioned IOPS</td>
                                  
-                                 <td>40,000 </td>
+                                 <td>40,000Â </td>
                                  
                               </tr>
-                              
                               
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html" target="_blank">Amazon EC2 Service
+                     <p><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html" target="_blank">Amazon EC2 Service
                            Limits</a> in the <em>Amazon EC2 User Guide for Linux Instances</em>.
                      </p>
                      
                      <h2 id="limits_ec2">Amazon Elastic Compute Cloud (Amazon EC2) Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c87b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c87b2">
                               
                               <tr>
                                  
@@ -3616,7 +3504,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -3684,7 +3571,9 @@
                                  
                                  <td>Reserved Instances</td>
                                  
-                                 <td>20 instance reservations per Availability Zone, per month.</td>
+                                 <td>20 Reserved Instances per Availability Zone, per month, plus 20 regional Reserved
+                                    Instances.
+                                 </td>
                                  
                               </tr>
                               
@@ -3708,7 +3597,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -3723,12 +3611,10 @@
                      <h2 id="limits_elasticfilesystem">Amazon Elastic File System Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c91b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c91b2">
                               
                               <tr>
                                  
@@ -3737,7 +3623,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -3748,29 +3633,26 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/efs/latest/ug//limits.html" target="_blank">Amazon EFS Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/efs/latest/ug//limits.html" target="_blank">Amazon EFS Limits</a> in the
                         <em>Amazon Elastic File System User Guide</em>.
                      </p>
                      
                      <h2 id="limits_elastic_load_balancer">Elastic Load Balancing Limits</h2>
                      
                      
-                     <p>Elastic Load Balancing supports two types of load balancers: Application Load Balancers and Classic Load
+                     <p>Elastic Load Balancing supports two types of load balancers: Application Load Balancers
+                        and Classic Load
                         Balancers.
                      </p>
                      
                      <div class="table">
                         <p class="title"><b>Application Load Balancers</b></p>
                         <div class="table-contents">
-                           <table id="w28aac17c93b4">
-                              
-                              
-                              
+                           <table id="w107aac17c93b4">
                               
                               <tr>
                                  
@@ -3781,12 +3663,11 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
                                  <td>Load balancers per region</td>
                                  
-                                 <td>20 <b>†</b></td>
+                                 <td>20 <b>â </b></td>
                                  
                               </tr>
                               
@@ -3834,7 +3715,7 @@
                                  
                                  <td>Rules per load balancer (not counting default rules)</td>
                                  
-                                 <td>75</td>
+                                 <td>100</td>
                                  
                               </tr>
                               
@@ -3862,7 +3743,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -3870,10 +3750,7 @@
                      <div class="table">
                         <p class="title"><b>Classic Load Balancers</b></p>
                         <div class="table-contents">
-                           <table id="w28aac17c93b6">
-                              
-                              
-                              
+                           <table id="w107aac17c93b6">
                               
                               <tr>
                                  
@@ -3884,12 +3761,11 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
                                  <td>Load balancers per region</td>
                                  
-                                 <td>20 <b>†</b></td>
+                                 <td>20 <b>â </b></td>
                                  
                               </tr>
                               
@@ -3917,24 +3793,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p><b>†</b> This limit includes both your Application LoadBalancers and
+                     <p><b>â </b> This limit includes both your Application LoadBalancers and
                         your Classic Load Balancers. This limit can be increased upon request.
                      </p>
                      
                      <h2 id="limits_elastictranscoder">Amazon Elastic Transcoder Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c95b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c95b2">
                               
                               <tr>
                                  
@@ -3943,7 +3816,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -3968,26 +3840,25 @@
                                  
                                  <td>
                                     
-                                    <p>US East (N. Virginia) Region – 20</p>
+                                    <p>US East (N. Virginia) Region â 20</p>
                                     
-                                    <p>US West (N. California) Region – 12</p>
+                                    <p>US West (N. California) Region â 12</p>
                                     
-                                    <p>US West (Oregon) Region – 20</p>
+                                    <p>US West (Oregon) Region â 20</p>
                                     
-                                    <p>Asia Pacific (Mumbai) Region – 12</p>
+                                    <p>Asia Pacific (Mumbai) Region â 12</p>
                                     
-                                    <p>Asia Pacific (Singapore) Region – 12</p>
+                                    <p>Asia Pacific (Singapore) Region â 12</p>
                                     
-                                    <p>Asia Pacific (Sydney) Region – 12</p>
+                                    <p>Asia Pacific (Sydney) Region â 12</p>
                                     
-                                    <p>Asia Pacific (Tokyo) Region – 12</p>
+                                    <p>Asia Pacific (Tokyo) Region â 12</p>
                                     
-                                    <p>EU (Ireland) Region – 20</p>
+                                    <p>EU (Ireland) Region â 20</p>
                                     
                                  </td>
                                  
                               </tr>
-                              
                               
                            </table>
                         </div>
@@ -3995,25 +3866,21 @@
                      
                      <p>It may take up to two weeks to process requests for a limit increase.</p>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/elastictranscoder/latest/developerguide/limits.html" target="_blank">Amazon Elastic Transcoder</a> limits in the
+                     <p><a href="http://docs.aws.amazon.com/elastictranscoder/latest/developerguide/limits.html" target="_blank">Amazon Elastic Transcoder</a> limits in the
                         <em>Amazon Elastic Transcoder Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits_elasticache">Amazon ElastiCache Limits</h2>
                      
                      
-                     <p>For information on ElastiCache terminology, 
-                        see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/WhatIs.Components.html" target="_blank">ElastiCache Components and Features</a>.
+                     <p>For information on ElastiCache terminology, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/WhatIs.Components.html" target="_blank">ElastiCache
+                           Components and Features</a>.
                      </p>
                      
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17c97b4">
-                              
-                              
-                              
-                              
+                           <table id="w107aac17c97b4">
                               
                               <tr>
                                  
@@ -4026,15 +3893,15 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
-                                 <td>Nodes per region</td>
+                                 <td>NodesÂ perÂ region</td>
                                  
                                  <td align="right">100</td>
                                  
                                  <td>The maximum number of nodes across all clusters in a region. This limit applies
-                                    to both your reserved and nonreserved nodes within the given region. You can have up
+                                    to both your reserved and nonreserved nodes within the given region. You can have
+                                    up
                                     to 100 reserved nodes and 100 nonreserved nodes in the same region.
                                  </td>
                                  
@@ -4042,7 +3909,7 @@
                               
                               <tr>
                                  
-                                 <td>Nodes per cluster (Memcached)</td>
+                                 <td>NodesÂ perÂ clusterÂ (Memcached)</td>
                                  
                                  <td align="right">20</td>
                                  
@@ -4052,7 +3919,7 @@
                               
                               <tr>
                                  
-                                 <td>Nodes per shard (Redis)</td>
+                                 <td>NodesÂ perÂ shardÂ (Redis)</td>
                                  
                                  <td align="right">6</td>
                                  
@@ -4064,7 +3931,7 @@
                               
                               <tr>
                                  
-                                 <td>Shards per Cluster (Redis cluster mode disabled)</td>
+                                 <td>ShardsÂ perÂ Cluster (RedisÂ clusterÂ modeÂ disabled)</td>
                                  
                                  <td align="right">1</td>
                                  
@@ -4076,7 +3943,7 @@
                               
                               <tr>
                                  
-                                 <td>Shards per Cluster (Redis cluster mode enabled)</td>
+                                 <td>ShardsÂ perÂ Cluster (RedisÂ clusterÂ modeÂ enabled)</td>
                                  
                                  <td align="right">15</td>
                                  
@@ -4088,7 +3955,7 @@
                               
                               <tr>
                                  
-                                 <td>Parameter groups per region</td>
+                                 <td>ParameterÂ groups per region</td>
                                  
                                  <td align="right">20</td>
                                  
@@ -4098,7 +3965,7 @@
                               
                               <tr>
                                  
-                                 <td>Security groups per region</td>
+                                 <td>SecurityÂ groups per region</td>
                                  
                                  <td align="right">50</td>
                                  
@@ -4108,7 +3975,7 @@
                               
                               <tr>
                                  
-                                 <td>Subnet groups per region</td>
+                                 <td>SubnetÂ groups per region</td>
                                  
                                  <td align="right">50</td>
                                  
@@ -4126,24 +3993,22 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>These limits are global limits per customer account. To exceed these limits, make your
+                     <p>These limits are global limits per customer account. To exceed these limits, make
+                        your
                         request using the <a href="https://aws.amazon.com/contact-us/elasticache-node-limit-request/" target="_blank">ElastiCache Node request form</a>.
                      </p>
                      
                      <h2 id="limits_es">Amazon Elasticsearch Service Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17c99b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17c99b2">
                               
                               <tr>
                                  
@@ -4152,7 +4017,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -4170,7 +4034,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -4178,12 +4041,10 @@
                      <h2 id="limits_gamelift">Amazon GameLift Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d101b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d101b2">
                               
                               <tr>
                                  
@@ -4192,7 +4053,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -4269,24 +4129,263 @@
                                  
                               </tr>
                               
+                           </table>
+                        </div>
+                     </div>
+                     
+                     <p><a href="http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html" target="_blank">Scaling Amazon Elastic Compute Cloud (Amazon EC2)
+                           Instances</a> in the <em>Amazon GameLift Developer Guide</em>.
+                     </p>
+                     
+                     <h2 id="limits_greengrass">AWS Greengrass Limits</h2>
+                     
+                     
+                     <h3 id="gg_cloud_limits">AWS Greengrass Cloud API Limits</h3>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d103b2b2">
+                              
+                              <tr>
+                                 
+                                 <th>Description</th>
+                                 
+                                 <th>Limit</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of AWS IoT devices in a group.</td>
+                                 
+                                 <td>200</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of Lambda functions in a group.</td>
+                                 
+                                 <td>200</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of transactions per second (TPS) on the AWS Greengrass
+                                    API.
+                                 </td>
+                                 
+                                 <td>30</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of subscriptions per AWS Greengrass group.</td>
+                                 
+                                 <td>1000</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of subscriptions that specify <code class="code">Cloud</code> as the source
+                                    per AWS Greengrass group.
+                                 </td>
+                                 
+                                 <td>50</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum length of a Core thing name.</td>
+                                 
+                                 <td>124 bytes of UTF-8 encoded characters.</td>
+                                 
+                              </tr>
                               
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html" target="_blank">Scaling Amazon Elastic Compute Cloud (Amazon EC2)
-                           Instances</a> in the <em>Amazon GameLift Developer Guide</em>.
+                     
+                     <h3 id="gg_core_limits">AWS Greengrass core Limits</h3>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d103b4b2">
+                              
+                              <tr>
+                                 
+                                 <th>Description</th>
+                                 
+                                 <th>Limit</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of routing table entries that specify "Cloud" as the
+                                    source.
+                                 </td>
+                                 
+                                 <td>50 (matches AWS IoT subscription limit)</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum size of messages sent by an AWS IoT device.</td>
+                                 
+                                 <td>128 KB (matches AWS IoT message size limit)</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum message queue size in the Greengrass core router.</td>
+                                 
+                                 <td>2.5 MB</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maxium length of a topic string</td>
+                                 
+                                 <td>256 bytes of UTF-8 encoded characters.</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of forward slashes '/' in a topic or topic filter.</td>
+                                 
+                                 <td>7</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Minimum disk space needed to run the Greengrass core software</td>
+                                 
+                                 <td>128 MB</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Minimum RAM to run the Greengrass core software</td>
+                                 
+                                 <td>128 MB</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Automatic IP detection should not be used when:</td>
+                                 
+                                 <td>
+                                    <div class="itemizedlist">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       <ul class="itemizedlist" type="disc">
+                                          <li class="listitem">
+                                             
+                                             <p>IP address changes are frequent.</p>
+                                             
+                                          </li>
+                                          <li class="listitem">
+                                             
+                                             <p>Interruption of the Greengrass core service is unacceptable.</p>
+                                             
+                                          </li>
+                                          <li class="listitem">
+                                             
+                                             <p>The Greengrass core is multi-homed or Greengrass devices cannot reliably
+                                                determine which IP address to use.
+                                             </p>
+                                             
+                                          </li>
+                                          <li class="listitem">
+                                             
+                                             <p>Reporting of Greengrass core IP addresses to the cloud may raise security
+                                                concerns.
+                                             </p>
+                                             
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     <p>The Greengrass core software provides a service to automatically detect the IP
+                        address(es) of your Greengrass core devices. It sends this information to the AWS
+                        Greengrass
+                        cloud service and allows AWS IoT devices to download the IP address of the Greengrass
+                        core
+                        they need to connect to. This feature should not be used in the following
+                        circumstances:
                      </p>
+                     
+                     <div class="itemizedlist">
+                        
+                        
+                        
+                        
+                        
+                        <ul class="itemizedlist" type="disc">
+                           <li class="listitem">
+                              
+                              <p>The IP address of a Greengrass core device changes frequently.</p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>The Greengrass core device must always be available to AWS IoT devices in it's
+                                 group.
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>The Greengrass core has multiple IP addresses and an AWS IoT device is unable to
+                                 reliably determine which address to use.
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>Sending IP addresses to the cloud raises security concerns.</p>
+                              
+                           </li>
+                        </ul>
+                     </div>
+                     
                      
                      <h2 id="limits_iam">AWS Identity and Access Management (IAM) Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d103b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d105b2">
                               
                               <tr>
                                  
@@ -4295,7 +4394,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -4338,12 +4436,11 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html" target="_blank">Limitations on IAM
+                     <p><a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html" target="_blank">Limitations on IAM
                            Entities and Objects</a> in the <em>IAM User Guide</em>.
                      </p>
                      
@@ -4353,13 +4450,10 @@
                      <h3 id="limits_snowball">AWS Snowball (Snowball)</h3>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d105b2b2">
-                              
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d107b2b2">
                               
                               <tr>
                                  
@@ -4370,7 +4464,6 @@
                                  <th>Comments</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -4387,7 +4480,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -4396,12 +4488,10 @@
                      <h2 id="limits_inspector">Amazon Inspector Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d107b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d109b2">
                               
                               <tr>
                                  
@@ -4410,7 +4500,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -4445,7 +4534,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -4456,16 +4544,77 @@
                      <h2 id="limits_iot">AWS IoT Limits</h2>
                      
                      
+                     <h3 id="thing-limits">Thing Limits</h3>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d111b2b2">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Limit</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Thing name size</td>
+                                 
+                                 <td>128 bytes of UTF-8 encoded characters. This limit applies for both the thing
+                                    registry and Thing Shadow services.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of thing attributes for a thing with a thing type</td>
+                                 
+                                 <td>50</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of thing attribute for a thing without a thing type</td>
+                                 
+                                 <td>3</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Number of thing types that can be associated with a thing</td>
+                                 
+                                 <td>1</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of thing types in an AWS account</td>
+                                 
+                                 <td>Unlimited</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
                      <h3 id="message-broker-limits">Message Broker Limits</h3>
                      
                      
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17d109b2b2">
-                              
-                              
-                              
+                           <table id="w107aac17d111b4b2">
                               
                               <tr>
                                  
@@ -4703,15 +4852,6 @@
                                  
                               </tr>
                               
-                              <tr>
-                                 
-                                 <td>Thing name size</td>
-                                 
-                                 <td>128 bytes of UTF-8 encoded characters. This limit applies for both the thing
-                                    registry and Thing Shadow services.
-                                 </td>
-                                 
-                              </tr>
                               
                               <tr>
                                  
@@ -4769,7 +4909,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -4781,10 +4920,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17d109b4b2">
-                              
-                              
-                              
+                           <table id="w107aac17d111b6b2">
                               
                               <tr>
                                  
@@ -4846,12 +4982,12 @@
                                  
                                  <td>Shadow lifetime</td>
                                  
-                                 <td>A thing shadow is deleted by AWS IoT if it has not been updated or retrieved in
-                                    more than one year.
+                                 <td>A thing shadow is deleted by AWS IoT up to six months after the creating account
+                                    is deleted or per customer request. For operational purposes, AWS IoT service backups
+                                    are kept for 6 months
                                  </td>
                                  
                               </tr>
-                              
                               
                            </table>
                         </div>
@@ -4864,10 +5000,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17d109b6b2">
-                              
-                              
-                              
+                           <table id="w107aac17d111b8b2">
                               
                               <tr>
                                  
@@ -4913,7 +5046,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -4925,10 +5057,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17d109b8b2">
-                              
-                              
-                              
+                           <table id="w107aac17d111c10b2">
                               
                               <tr>
                                  
@@ -4937,7 +5066,6 @@
                                  <th>Transaction per Second</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -5308,7 +5436,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -5320,10 +5447,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17d109c10b2">
-                              
-                              
-                              
+                           <table id="w107aac17d111c12b2">
                               
                               <tr>
                                  
@@ -5349,7 +5473,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -5359,9 +5482,9 @@
                      
                      
                      <div class="table">
+                        <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17d111b2">
-                              
+                           <table id="w107aac17d113b2">
                               
                               <tr>
                                  
@@ -5370,7 +5493,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -5415,26 +5537,23 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
                      <p>All limits in the preceding table apply per region and per AWS account.</p>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html" target="_blank">Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html" target="_blank">Limits</a> in the
                         <em>AWS Key Management Service Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits-akf">Amazon Kinesis Firehose Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d113b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d115b2">
                               
                               <tr>
                                  
@@ -5443,7 +5562,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -5460,7 +5578,7 @@
                               
                               <tr>
                                  
-                                 <td>Delivery stream capacity †</td>
+                                 <td>Delivery stream capacity â </td>
                                  
                                  <td>
                                     
@@ -5474,29 +5592,27 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>† The three capacity limits scale proportionally. For example, if you increase the
-                        throughput limit to 10MB/second, the other limits increase to 4,000 transactions/second and
+                     <p>â  The three capacity limits scale proportionally. For example, if you increase the
+                        throughput limit to 10MB/second, the other limits increase to 4,000 transactions/second
+                        and
                         10,000 records/second.
                      </p>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/firehose/latest/dev/limits.html" target="_blank">Amazon Kinesis Firehose Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/firehose/latest/dev/limits.html" target="_blank">Amazon Kinesis Firehose Limits</a> in the
                         <em>Amazon Kinesis Firehose Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits-aks">Amazon Kinesis Streams Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d115b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d117b2">
                               
                               <tr>
                                  
@@ -5507,31 +5623,29 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
                                  <td>Shards per region</td>
                                  
                                  <td>
                                     
-                                    <p>US East (N. Virginia) Region – 50</p>
+                                    <p>US East (N. Virginia) Region â 500</p>
                                     
-                                    <p>US West (Oregon) Region – 50</p>
+                                    <p>US West (Oregon) Region â 500</p>
                                     
-                                    <p>EU (Ireland) Region – 50</p>
+                                    <p>EU (Ireland) Region â 500</p>
                                     
-                                    <p>All other supported regions – 25</p>
+                                    <p>All other supported regions â 200</p>
                                     
                                  </td>
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html" target="_blank">Amazon Kinesis Streams
+                     <p><a href="http://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html" target="_blank">Amazon Kinesis Streams
                            Limits</a> in the <em>Amazon Kinesis Streams Developer Guide</em>.
                      </p>
                      
@@ -5541,10 +5655,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17d117b2">
-                              
-                              
-                              
+                           <table id="w107aac17d119b2">
                               
                               <tr>
                                  
@@ -5555,7 +5666,6 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
                                  <td>Concurrent requests safety throttle per account</td>
@@ -5564,25 +5674,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/limits.html" target="_blank">AWS Lambda Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/lambda/latest/dg/limits.html" target="_blank">AWS Lambda Limits</a> in the
                         <em>AWS Lambda Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits_lightsail">Amazon Lightsail Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d119b2">
-                              
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d121b2">
                               
                               <tr>
                                  
@@ -5593,7 +5699,6 @@
                                  <th>Comment</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -5636,7 +5741,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -5644,12 +5748,10 @@
                      <h2 id="limits_machinelearning">Amazon Machine Learning (Amazon ML) Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d121b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d123b2">
                               
                               <tr>
                                  
@@ -5658,7 +5760,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -5757,7 +5858,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -5765,24 +5865,23 @@
                      <div class="aws-note">
                         <p class="aws-note">Note</p>
                         <p>The size of your data files is limited to ensure that jobs finish in a timely manner.
-                           Jobs that have been running for more than seven days are automatically terminated, resulting
+                           Jobs that have been running for more than seven days are automatically terminated,
+                           resulting
                            in a FAILED status.
                         </p>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/machine-learning/latest/dg/system-limits.html" target="_blank">Amazon ML Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/machine-learning/latest/dg/system-limits.html" target="_blank">Amazon ML Limits</a> in the
                         <em>Amazon Machine Learning Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits_opworks">AWS OpsWorks for Chef Automate Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d123b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d125b2">
                               
                               <tr>
                                  
@@ -5791,7 +5890,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -5818,20 +5916,17 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <h2 id="w1ab1c17d127">AWS OpsWorks Stacks Limits</h2>
+                     <h2 id="w2ab1c17d129">AWS OpsWorks Stacks Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d125b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d127b2">
                               
                               <tr>
                                  
@@ -5840,7 +5935,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -5875,20 +5969,17 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <h2 id="w1ab1c17d129">AWS Organizations Limits</h2>
+                     <h2 id="w2ab1c17d131">AWS Organizations Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d127b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d129b2">
                               
                               <tr>
                                  
@@ -5899,12 +5990,11 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
                                  <td>Accounts per organization</td>
                                  
-                                 <td>20</td>
+                                 <td>Varies. Contact Customer Support.</td>
                                  
                               </tr>
                               
@@ -5916,12 +6006,11 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html" target="_blank">Limits of AWS Organizations</a>
+                     <p><a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html" target="_blank">Limits of AWS Organizations</a>
                         in the <em>AWS Organizations User Guide</em>.
                      </p>
                      
@@ -5948,10 +6037,7 @@
                               <div class="table">
                                  <p class="title"><b>Throttle Rate per Operation</b></p>
                                  <div class="table-contents">
-                                    <table id="w28aac17d129b2b3b3">
-                                       
-                                       
-                                       
+                                    <table id="w107aac17d131b2b3b3">
                                        
                                        <tr>
                                           
@@ -5969,7 +6055,6 @@
                                           </th>
                                           
                                        </tr>
-                                       
                                        
                                        
                                        <tr>
@@ -6053,7 +6138,6 @@
                                           
                                        </tr>
                                        
-                                       
                                     </table>
                                  </div>
                               </div>
@@ -6065,12 +6149,10 @@
                      <h2 id="limits_pinpoint">Amazon Pinpoint Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d131b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d133b2">
                               
                               <tr>
                                  
@@ -6079,7 +6161,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -6154,7 +6235,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -6162,12 +6242,10 @@
                      <h2 id="limits_redshift">Amazon Redshift Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d133b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d135b2">
                               
                               <tr>
                                  
@@ -6176,7 +6254,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -6251,24 +6328,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html" target="_blank">Limits in Amazon Redshift </a>
+                     <p><a href="http://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html" target="_blank">Limits in Amazon Redshift </a>
                         in the <em>Amazon Redshift Cluster Management Guide</em>.
                      </p>
                      
                      <h2 id="limits_rds">Amazon Relational Database Service (Amazon RDS) Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d135b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d137b2">
                               
                               <tr>
                                  
@@ -6277,7 +6351,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -6416,20 +6489,17 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <h2 id="limits_route53">Amazon Route 53 Limits</h2>
+                     <h2 id="limits_route53">Amazon RouteÂ 53 Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d137b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d139b2">
                               
                               <tr>
                                  
@@ -6438,7 +6508,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -6513,13 +6582,12 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html" target="_blank">Amazon Route 53 Limits</a> in the
-                        <em>Amazon Route 53 Developer Guide</em>.
+                     <p><a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html" target="_blank">Amazon RouteÂ 53 Limits</a> in the
+                        <em>Amazon RouteÂ 53 Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits_server_migration">AWS Server Migration Service
@@ -6528,12 +6596,10 @@
                      
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d139b4">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d141b4">
                               
                               <tr>
                                  
@@ -6542,7 +6608,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -6568,7 +6633,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -6576,12 +6640,10 @@
                      <h2 id="limits_servicecatalog">AWS Service Catalog Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d141b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d143b2">
                               
                               <tr>
                                  
@@ -6590,7 +6652,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -6649,7 +6710,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -6658,7 +6718,7 @@
                      
                      
                      <p>AWS Shield Advanced offers advanced monitoring and protection for up to 100 CloudFront
-                        distributions, Amazon Route 53 hosted zones or Elastic Load Balancing resources combined.
+                        distributions, Amazon RouteÂ 53 hosted zones or Elastic Load Balancing resources combined.
                      </p>
                      
                      <h2 id="limits_ses_quota">Amazon Simple Email Service (Amazon SES) Limits</h2>
@@ -6666,12 +6726,10 @@
                      
                      <p>The following are the default limits for Amazon SES in the sandbox environment.</p>
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d145b4">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d147b4">
                               
                               <tr>
                                  
@@ -6680,7 +6738,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -6714,24 +6771,21 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/limits.html" target="_blank">Limits in Amazon SES</a> in the
+                     <p><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/limits.html" target="_blank">Limits in Amazon SES</a> in the
                         <em>Amazon Simple Email Service Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits_sns">Amazon Simple Notification Service (Amazon SNS) Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d147b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d149b2">
                               
                               <tr>
                                  
@@ -6740,7 +6794,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -6775,7 +6828,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -6787,12 +6839,10 @@
                      <h3 id="limits_sns_api_throttles">Amazon SNS API Throttling Limits</h3>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d147b6b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d149b6b2">
                               
                               <tr>
                                  
@@ -6801,7 +6851,6 @@
                                  <th>Transaction per Second</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -6860,7 +6909,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -6869,7 +6917,7 @@
                      <h2 id="limits_sqs">Amazon Simple Queue Service (Amazon SQS)</h2>
                      
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-limits.html" target="_blank">Amazon SQS Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-limits.html" target="_blank">Amazon SQS Limits</a> in the
                         <em>Amazon Simple Queue Service Developer Guide</em> and the "Limits and Restrictions" section of
                         the <a href="https://aws.amazon.com/sqs/faqs/" target="_blank">Amazon SQS FAQs</a>.
                      </p>
@@ -6877,12 +6925,10 @@
                      <h2 id="limits_s3">Amazon Simple Storage Service (Amazon S3) Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d151b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d153b2">
                               
                               <tr>
                                  
@@ -6891,7 +6937,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -6902,31 +6947,28 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html" target="_blank">Amazon S3</a> limits in the
+                     <p><a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html" target="_blank">Amazon S3</a> limits in the
                         <em><em>Amazon Simple Storage Service Developer Guide</em></em>.
                      </p>
                      
                      <h2 id="limits_swf">Amazon Simple Workflow Service (Amazon SWF) Limits</h2>
                      
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-limits.html" target="_blank">Amazon SWF Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-limits.html" target="_blank">Amazon SWF Limits</a> in the
                         <em>Amazon Simple Workflow Service Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits_simpledb">Amazon SimpleDB Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d155b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d157b2">
                               
                               <tr>
                                  
@@ -6937,7 +6979,6 @@
                               </tr>
                               
                               
-                              
                               <tr>
                                  
                                  <td>Domains</td>
@@ -6946,38 +6987,35 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/SDBLimits.html" target="_blank">Amazon SimpleDB Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/SDBLimits.html" target="_blank">Amazon SimpleDB Limits</a> in the
                         <em>Amazon SimpleDB Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits-step-functions">AWS Step Functions Limits</h2>
                      
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/step-functions/latest/dg/limits.html" target="_blank">AWS Step Functions Limits</a> in the
-                        <em>Amazon SimpleDB Developer Guide</em>.
+                     <p><a href="http://docs.aws.amazon.com/step-functions/latest/dg/limits.html" target="_blank">AWS Step Functions Limits</a> in the
+                        <em>AWS Step Functions Developer Guide</em>.
                      </p>
                      
                      <h2 id="limits-storage-gateway">AWS Storage Gateway Limits</h2>
                      
                      
-                     <p>For information about additional documented limits, see  <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/resource-gateway-limits.html" target="_blank">AWS Storage Gateway Limits</a> in the   <em>AWS Storage Gateway User Guide</em>.
+                     <p> <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/resource-gateway-limits.html" target="_blank">AWS Storage Gateway
+                           Limits</a> in the <em>AWS Storage Gateway User Guide</em>.
                      </p>
                      
                      <h2 id="limits_vpc">Amazon Virtual Private Cloud (Amazon VPC) Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d161b2">
-                              
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d163b2">
                               
                               <tr>
                                  
@@ -6988,7 +7026,6 @@
                                  <th>Comments</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -7075,7 +7112,8 @@
                                  
                                  <td>This limit is directly correlated with the limit on VPCs per region. You cannot
                                     increase this limit individually; the only way to increase this limit is to increase
-                                    the limit on VPCs per region. Only one egress-only Internet gateway can be attached to
+                                    the limit on VPCs per region. Only one egress-only Internet gateway can be attached
+                                    to
                                     a VPC at a time.
                                  </td>
                                  
@@ -7314,7 +7352,7 @@
                                     
                                     <p>You can have 50 inbound and 50 outbound rules per security group (giving a total
                                        of 100 combined inbound and outbound rules). To increase or decrease this limit, you
-                                       can contact AWS Support — a limit change applies to both inbound and outbound
+                                       can contact AWS Support â a limit change applies to both inbound and outbound
                                        rules. However, the multiple of the limit for inbound or outbound rules per security
                                        group and the limit for security groups per network interface cannot exceed 250. For
                                        example, if you increase the limit to 100, we decrease your number of security
@@ -7587,12 +7625,11 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html" target="_blank">Amazon VPC Limits</a> in the
+                     <p><a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html" target="_blank">Amazon VPC Limits</a> in the
                         <em>Amazon VPC User Guide</em>.
                      </p>
                      
@@ -7603,12 +7640,10 @@
                      </p>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d163b4">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d165b4">
                               
                               <tr>
                                  
@@ -7617,7 +7652,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -7667,24 +7701,22 @@
                               </tr>
                               
                               
-                              
                            </table>
                         </div>
                      </div>
                      
-                     <p>*This limit applies only to AWS WAF on an Application Load Balancer. Requests per Second (RPS) limits for AWS WAF
+                     <p>*This limit applies only to AWS WAF on an Application Load Balancer. Requests per
+                        Second (RPS) limits for AWS WAF
                         on CloudFront are the same as the RPS limits support by CloudFront described in <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html" target="_blank">the CloudFront developer guide</a>.
                      </p>
                      
                      <p>The following limits on AWS WAF entities can't be changed.</p>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d163c10">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d165c10">
                               
                               <tr>
                                  
@@ -7693,7 +7725,6 @@
                                  <th>Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -7810,13 +7841,13 @@
                               </tr>
                               
                               
-                              
                            </table>
                         </div>
                      </div>
                      
                      
-                     <p>These limits are the same for all regions in which AWS WAF is available. Each region is
+                     <p>These limits are the same for all regions in which AWS WAF is available. Each region
+                        is
                         subject to these limits individually. That is, the limits are not cumulative across
                         regions.
                      </p>
@@ -7830,10 +7861,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w28aac17d165b4">
-                              
-                              
-                              
+                           <table id="w107aac17d167b4">
                               
                               <tr>
                                  
@@ -7842,7 +7870,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -7910,7 +7937,6 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
@@ -7919,12 +7945,10 @@
                      <h2 id="limits_workspaces">Amazon WorkSpaces Limits</h2>
                      
                      
-                     <div class="informaltable">
-                        <div class="informaltable-contents">
-                           <table id="w28aac17d167b2">
-                              
-                              
-                              
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w107aac17d169b2">
                               
                               <tr>
                                  
@@ -7933,7 +7957,6 @@
                                  <th>Default Limit</th>
                                  
                               </tr>
-                              
                               
                               
                               <tr>
@@ -7960,16 +7983,15 @@
                                  
                               </tr>
                               
-                              
                            </table>
                         </div>
                      </div>
                      
                   </div>
                   <div id="main-col-footer">
-                     <div id="doc-conventions"><a target="_top" href="/web/20170503212856/http://docs.aws.amazon.com/general/latest/gr/docconventions.html">Document Conventions</a></div>
-                     <div id="next"><a class="awstoc" accesskey="p" href="signature-version-2.html">« Previous </a><a class="awstoc" accesskey="n" href="aws-ip-ranges.html">Next »</a></div>
-                     <div id="copyright-main-footer">© 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved.</div>
+                     <div id="doc-conventions"><a target="_top" href="/general/latest/gr/docconventions.html">Document Conventions</a></div>
+                     <div id="next"><a class="awstoc" accesskey="p" href="signature-version-2.html">Â« Previous </a><a class="awstoc" accesskey="n" href="aws-ip-ranges.html">Next Â»</a></div>
+                     <div id="copyright-main-footer">Â© 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved.</div>
                   </div>
                </div>
             
