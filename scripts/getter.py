@@ -142,7 +142,7 @@ class AwsGetter(object):
         cmd = [
             'pandoc',
             '-f', 'html',
-            '-t', 'markdown',
+            '-t', 'markdown-raw_html-native_divs-native_spans',
             '-o', outpath,
             '--normalize',
             '--wrap=none',
