@@ -1239,7 +1239,7 @@ AWS Identity and Access Management (IAM) Limits {#limits_iam}
   --------------------- ---------------
   Groups per account    100
   Instance profiles     100
-  Roles                 250
+  Roles                 500
   Server certificates   20
   Users                 5000
 
