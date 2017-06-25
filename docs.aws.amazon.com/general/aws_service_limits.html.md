@@ -351,7 +351,7 @@ Amazon CloudWatch Limits {#limits_cloudwatch}
 +-----------------------+-----------------------+-----------------------+
 | Resource              | Default Limit         | Comments              |
 +=======================+=======================+=======================+
-| [DescribeAlarms](http | 3 transactions per    | The maximum number of |
+| [DescribeAlarms](http | 9 transactions per    | The maximum number of |
 | ://docs.aws.amazon.co | second (TPS)          | operation requests    |
 | m/AmazonCloudWatch/la |                       | you can make per      |
 | test/APIReference/API |                       | second without being  |
