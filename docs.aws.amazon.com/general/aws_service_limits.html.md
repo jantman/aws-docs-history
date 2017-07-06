@@ -12,7 +12,7 @@ The following tables provide the default limits for AWS services for an AWS acco
 
 You can take the following steps to request an increase for limits. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-**To request a limit increase**
+**To request a limit increaseq**
 
 1.  Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/) page, sign in if necessary, and choose **Create Case**.
 
@@ -1056,7 +1056,7 @@ Elastic Load Balancing supports two types of load balancers: Application Load Ba
   Security groups per load balancer                 5
   Subnets per Availability Zone per load balancer   1
 
-**â€ ** This limit includes both your Application LoadBalancers and your Classic Load Balancers. This limit can be increased upon request.
+**â€ ** This limit includes both your Application Load Balancers and your Classic Load Balancers. This limit can be increased upon request.
 
 Amazon Elastic Transcoder Limits {#limits_elastictranscoder}
 --------------------------------
@@ -2423,6 +2423,10 @@ The following limits apply to Amazon WorkMail.
 +-----------------------------------+-----------------------------------+
 | Number of domains per             | 100                               |
 | organization                      | This is a hard limit and cannot   |
+|                                   | be changed.                       |
++-----------------------------------+-----------------------------------+
+| Number of sender patterns in      | 250                               |
+| email flow rules per organization | This is a hard limit and cannot   |
 |                                   | be changed.                       |
 +-----------------------------------+-----------------------------------+
 | Number of aliases per user        | 100                               |
