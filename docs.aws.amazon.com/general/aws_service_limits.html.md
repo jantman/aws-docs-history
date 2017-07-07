@@ -432,7 +432,7 @@ Amazon CloudWatch Limits {#limits_cloudwatch}
 |                       |                       | zon-cloudwatch).      |
 +-----------------------+-----------------------+-----------------------+
 
-[CloudWatch Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html) in the *Amazon CloudWatch User Guide*.
+For more information about these and other CloudWatch limits, see [CloudWatch Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html) in the *Amazon CloudWatch User Guide*.
 
 Amazon CloudWatch Events Limits {#limits_cloudwatch_events}
 -------------------------------
@@ -475,8 +475,18 @@ Amazon CloudWatch Events Limits {#limits_cloudwatch_events}
 |                       |                       | targets to your       |
 |                       |                       | rules.                |
 +-----------------------+-----------------------+-----------------------+
+| [PutEvents](http://do | 360 entries/request   | You can [request a    |
+| cs.aws.amazon.com/Ama | and 10                | limit                 |
+| zonCloudWatchEvents/l | requests/second. Each | increase](https://con |
+| atest/APIReference/AP | request can be up to  | sole.aws.amazon.com/s |
+| I_PutEvents.html)     | 256 KB in size.       | upport/home#/case/cre |
+|                       |                       | ate?issueType=service |
+|                       |                       | -limit-increase&limit |
+|                       |                       | Type=service-code-clo |
+|                       |                       | udwatch-events).      |
++-----------------------+-----------------------+-----------------------+
 
-[CloudWatch Events Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/cloudwatch_limits_cwe.html) in the *Amazon CloudWatch Events User Guide*.
+For more information about these and other CloudWatch Events limits, see [CloudWatch Events Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/cloudwatch_limits_cwe.html) in the *Amazon CloudWatch Events User Guide*.
 
 Amazon CloudWatch Logs Limits {#limits_cloudwatch_logs}
 -----------------------------
@@ -538,7 +548,7 @@ Amazon CloudWatch Logs Limits {#limits_cloudwatch_logs}
 |                       |                       | AWS Support.          |
 +-----------------------+-----------------------+-----------------------+
 
-[CloudWatch Logs Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/cloudwatch_limits_cwl.html) in the *Amazon CloudWatch Logs User Guide*.
+For more information about these and other CloudWatch Logs limits, see [CloudWatch Logs Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/cloudwatch_limits_cwl.html) in the *Amazon CloudWatch Logs User Guide*.
 
 AWS CodeBuild Limits {#limits_codebuild}
 --------------------
