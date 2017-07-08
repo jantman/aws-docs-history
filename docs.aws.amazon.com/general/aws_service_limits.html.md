@@ -12,7 +12,7 @@ The following tables provide the default limits for AWS services for an AWS acco
 
 You can take the following steps to request an increase for limits. These increases are not granted immediately, so it may take a couple of days for your increase to become effective.
 
-**To request a limit increaseq**
+**To request a limit increase**
 
 1.  Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/) page, sign in if necessary, and choose **Create Case**.
 
@@ -29,7 +29,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon AppStream Limits](#limits_appstream)
 -   [Amazon AppStream 2.0 Limits](#limits_appstream2)
 -   [Application Auto Scaling Limits](#limits_as-app)
--   [Amazon Athena Limits](#w2ab1c17c25)
+-   [Amazon Athena Limits](#amazon-athena-limits)
 -   [Auto Scaling Limits](#limits_autoscaling)
 -   [AWS Batch Limits](#limits_batch)
 -   [AWS Certificate Manager (ACM) Limits](#limits_acm)
@@ -80,8 +80,8 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Lightsail Limits](#limits_lightsail)
 -   [Amazon Machine Learning (Amazon ML) Limits](#limits_machinelearning)
 -   [AWS OpsWorks for Chef Automate Limits](#limits_opworks)
--   [AWS OpsWorks Stacks Limits](#w2ab1c17d129)
--   [AWS Organizations Limits](#w2ab1c17d131)
+-   [AWS OpsWorks Stacks Limits](#aws-opsworks-stacks-limits)
+-   [AWS Organizations Limits](#aws-organizations-limits)
 -   [Amazon Polly Limits](#limits_polly)
 -   [Amazon Pinpoint Limits](#limits_pinpoint)
 -   [Amazon Redshift Limits](#limits_redshift)
@@ -123,7 +123,7 @@ The following limits apply to configuring and running an API in Amazon API Gatew
 
 All of the per API limits can only be increased on specific APIs.
 
-[Limits in Amazon API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html) in the *API Gateway Developer Guide*.
+For more information about these limits, see [Limits in Amazon API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html) in the *API Gateway Developer Guide*.
 
 AWS Application Discovery Service Limits {#limits_appdiscserve}
 ----------------------------------------
@@ -177,7 +177,7 @@ Application Auto Scaling Limits {#limits_as-app}
   Scaling policies per scalable target   50
   Step adjustments per scaling policy    20
 
-Amazon Athena Limits {#w2ab1c17c25}
+Amazon Athena Limits
 --------------------
 
   Resource                         Default Limit
@@ -203,7 +203,7 @@ Auto Scaling Limits {#limits_autoscaling}
   Target groups per Auto Scaling group       50
   Step adjustments per scaling policy        20
 
-[Auto Scaling Limits](http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html) in the *Auto Scaling User Guide*.
+For more information about these limits, see [Auto Scaling Limits](http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html) in the *Auto Scaling User Guide*.
 
 AWS Batch Limits {#limits_batch}
 ----------------
@@ -234,7 +234,7 @@ AWS CloudFormation Limits {#limits_cloudformation}
   ---------- ---------------
   Stacks     200
 
-[AWS CloudFormation Limits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html) in the *AWS CloudFormation User Guide*.
+For more information about these limits, see [AWS CloudFormation Limits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html) in the *AWS CloudFormation User Guide*.
 
 Amazon CloudFront Limits {#limits_cloudfront}
 ------------------------
@@ -296,7 +296,7 @@ Amazon CloudFront Limits {#limits_cloudfront}
 |                                   | Developer Guide*.                 |
 +-----------------------------------+-----------------------------------+
 
-[Limits](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html) in the *Amazon CloudFront Developer Guide*.
+For more information about these limits, see [Limits](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html) in the *Amazon CloudFront Developer Guide*.
 
 AWS CloudHSM Limits {#limits_cloudhsm}
 -------------------
@@ -315,7 +315,7 @@ Amazon CloudSearch Limits {#limits_cloudsearch}
   Partitions         10
   Search instances   50
 
-[Understanding Amazon CloudSearch Limits](http://docs.aws.amazon.com/cloudsearch/latest/developerguide/limits.html) in the *Amazon CloudSearch Developer Guide*.
+For more information about these limits, see [Understanding Amazon CloudSearch Limits](http://docs.aws.amazon.com/cloudsearch/latest/developerguide/limits.html) in the *Amazon CloudSearch Developer Guide*.
 
 AWS CloudTrail Limits {#limits_cloudtrail}
 ---------------------
@@ -475,15 +475,31 @@ Amazon CloudWatch Events Limits {#limits_cloudwatch_events}
 |                       |                       | targets to your       |
 |                       |                       | rules.                |
 +-----------------------+-----------------------+-----------------------+
-| [PutEvents](http://do | 360 entries/request   | You can [request a    |
-| cs.aws.amazon.com/Ama | and 10                | limit                 |
-| zonCloudWatchEvents/l | requests/second. Each | increase](https://con |
-| atest/APIReference/AP | request can be up to  | sole.aws.amazon.com/s |
-| I_PutEvents.html)     | 256 KB in size.       | upport/home#/case/cre |
+| [PutEvents](http://do | 10 entries per        | You can [request a    |
+| cs.aws.amazon.com/Ama | request and 360       | limit                 |
+| zonCloudWatchEvents/l | requests per second.  | increase](https://con |
+| atest/APIReference/AP | Each request can be   | sole.aws.amazon.com/s |
+| I_PutEvents.html)     | up to 256 KB in size. | upport/home#/case/cre |
 |                       |                       | ate?issueType=service |
 |                       |                       | -limit-increase&limit |
 |                       |                       | Type=service-code-clo |
 |                       |                       | udwatch-events).      |
++-----------------------+-----------------------+-----------------------+
+| Invocations           | 750 per second (after | You can [request a    |
+|                       | 750 invocations, the  | limit                 |
+|                       | invocations are       | increase](https://con |
+|                       | throttled; that is,   | sole.aws.amazon.com/s |
+|                       | they still happen but | upport/home#/case/cre |
+|                       | they are delayed). If | ate?issueType=service |
+|                       | the invocation of a   | -limit-increase&limit |
+|                       | target fails due to a | Type=service-code-clo |
+|                       | problem with the      | udwatch-events).      |
+|                       | target service,       |                       |
+|                       | account throttling,   |                       |
+|                       | etc., new attempts    |                       |
+|                       | are made for up to 24 |                       |
+|                       | hours for a specific  |                       |
+|                       | invocation.           |                       |
 +-----------------------+-----------------------+-----------------------+
 
 For more information about these and other CloudWatch Events limits, see [CloudWatch Events Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/cloudwatch_limits_cwe.html) in the *Amazon CloudWatch Events User Guide*.
@@ -558,7 +574,7 @@ AWS CodeBuild Limits {#limits_codebuild}
   Maximum number of build projects              1,000
   Maximum number of concurrent running builds   20
 
-[Limits for AWS CodeBuild](http://docs.aws.amazon.com/codebuild/latest/userguide/limits.html) in the *AWS CodeBuild User Guide*.
+For more information about these limits, see [Limits for AWS CodeBuild](http://docs.aws.amazon.com/codebuild/latest/userguide/limits.html) in the *AWS CodeBuild User Guide*.
 
 AWS CodeCommit Limits {#limits_codecommit}
 ---------------------
@@ -567,7 +583,7 @@ AWS CodeCommit Limits {#limits_codecommit}
   ------------------------ -----------------------
   Number of repositories   1,000 per AWS account
 
-[Limits in AWS CodeCommit](http://docs.aws.amazon.com/codecommit/latest/userguide/limits.html) in the *AWS CodeCommit User Guide*.
+For more information about these limits, see [Limits in AWS CodeCommit](http://docs.aws.amazon.com/codecommit/latest/userguide/limits.html) in the *AWS CodeCommit User Guide*.
 
 AWS CodeDeploy Limits {#limits_codedeploy}
 ---------------------
@@ -575,12 +591,12 @@ AWS CodeDeploy Limits {#limits_codedeploy}
   Resource                                                                           Default Limit
   ---------------------------------------------------------------------------------- ---------------
   Maximum number of applications associated with an AWS account in a single region   100
-  Maxium number of concurrent deployments associated with an AWS account             10
+  Maximum number of concurrent deployments associated with an AWS account            10
   Maximum number of deployment groups associated with a single application           100
   Maximum number of instances in a single deployment                                 500
   Maximum number of event notification triggers in a deployment group                10
 
-[Limits in AWS CodeDeploy](http://docs.aws.amazon.com/codedeploy/latest/userguide/limits.html) in the *AWS CodeDeploy User Guide*.
+For more information about these limits, see [Limits in AWS CodeDeploy](http://docs.aws.amazon.com/codedeploy/latest/userguide/limits.html) in the *AWS CodeDeploy User Guide*.
 
 AWS CodePipeline Limits {#limits_codepipeline}
 -----------------------
@@ -622,7 +638,7 @@ AWS CodePipeline Limits {#limits_codepipeline}
 
 It may take up to two weeks to process requests for a limit increase.
 
-[Limits in AWS CodePipeline](http://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html) in the *AWS CodePipeline User Guide*.
+For more information about these limits, see [Limits in AWS CodePipeline](http://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html) in the *AWS CodePipeline User Guide*.
 
 Amazon Cognito User Pools Limits {#limits_cognito_user_pools}
 --------------------------------
@@ -660,54 +676,47 @@ Amazon Connect Limits {#limits_amazon_connect}
 ---------------------
 
 +-----------------------------------+-----------------------------------+
-| Configuration area (per AWS       | Limit                             |
-| account)                          |                                   |
+| Item                              | Default limit                     |
 +===================================+===================================+
-| Maximum Amazon Connect instances  | 3                                 |
+| Amazon Connect instances per      | 3                                 |
+| account                           |                                   |
 +-----------------------------------+-----------------------------------+
-
+| Users per instance                | 500                               |
 +-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Maximum users                     | 500                               |
+| Phone numbers per instance        | 10                                |
 +-----------------------------------+-----------------------------------+
-| Maximum phone numbers             | 10                                |
+| Queues per instance               | 50                                |
 +-----------------------------------+-----------------------------------+
-| Maximum queues                    | 50                                |
+| Queues per routing profile        | 50                                |
 +-----------------------------------+-----------------------------------+
-| Maximum queues per routing        | 50                                |
-| profile                           |                                   |
+| Routing profiles per instance     | 100                               |
 +-----------------------------------+-----------------------------------+
-| Maximum routing profiles          | 100                               |
+| Hours of operation per instance   | 100                               |
 +-----------------------------------+-----------------------------------+
-| Maximum hours of operation        | 100                               |
+| Quick connects per instance       | 100                               |
 +-----------------------------------+-----------------------------------+
-| Maximum transfer destinations     | 100                               |
+| Prompts per instance              | 500                               |
 +-----------------------------------+-----------------------------------+
-| Maximum prompts                   | 500                               |
+| Agent status per instance         | 50                                |
 +-----------------------------------+-----------------------------------+
-| Maximum agent status              | 50                                |
+| Security profiles per instance    | 100                               |
 +-----------------------------------+-----------------------------------+
-| Maximum security profiles         | 100                               |
+| Contact flows per instance        | 100                               |
 +-----------------------------------+-----------------------------------+
-| Maximum contact flows             | 100                               |
+| Groups per level                  | 50                                |
 +-----------------------------------+-----------------------------------+
-| Maximum groups per level          | 50                                |
+| Reports per instance              | 500                               |
 +-----------------------------------+-----------------------------------+
-| Maximum reports                   | 500                               |
+| Scheduled reports per instance    | 50                                |
 +-----------------------------------+-----------------------------------+
-| Maximum scheduled reports         | 50                                |
+| Active calls per instance         | 100                               |
 +-----------------------------------+-----------------------------------+
-| Maximum active calls              | 100                               |
-+-----------------------------------+-----------------------------------+
-| Maximum sustained incoming call   | 1                                 |
-| rate per second                   |                                   |
+| Sustained incoming call rate per  | 1                                 |
+| second                            |                                   |
 +-----------------------------------+-----------------------------------+
 | Dialable outbound destination     | US                                |
 | countries                         |                                   |
 +-----------------------------------+-----------------------------------+
-
-For information about additional documented limits, see [Service Limits](http://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html#amazon-connect-servicelimits) in the *Amazon Connect Administrator Guide*.
 
 AWS Config Limits {#limits_config}
 -----------------
@@ -834,7 +843,7 @@ Amazon DynamoDB Limits {#limits_dynamodb}
 | Maximum number of tables          | 256                               |
 +-----------------------------------+-----------------------------------+
 
-[Limits in Amazon DynamoDB](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*.
+For more information about these limits, see [Limits in Amazon DynamoDB](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*.
 
 Amazon EC2 Container Registry (Amazon ECR) Limits {#limits_ecr}
 -------------------------------------------------
@@ -1006,7 +1015,7 @@ Amazon Elastic Block Store (Amazon EBS) Limits {#limits_ebs}
   Total volume storage of Magnetic volumes                              20 TiB
   Total provisioned IOPS                                                40,000Â 
 
-[Amazon EC2 Service Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html) in the *Amazon EC2 User Guide for Linux Instances*.
+For more information about these limits, see [Amazon EC2 Service Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html) in the *Amazon EC2 User Guide for Linux Instances*.
 
 Amazon Elastic Compute Cloud (Amazon EC2) Limits {#limits_ec2}
 ------------------------------------------------
@@ -1035,7 +1044,7 @@ Amazon Elastic File System Limits {#limits_elasticfilesystem}
   ---------------------------------- ----------------------------------
   Total throughput per file system   3 GB/s for all connected clients
 
-[Amazon EFS Limits](http://docs.aws.amazon.com/efs/latest/ug//limits.html) in the *Amazon Elastic File System User Guide*.
+For more information about these limits, see [Amazon EFS Limits](http://docs.aws.amazon.com/efs/latest/ug//limits.html) in the *Amazon Elastic File System User Guide*.
 
 Elastic Load Balancing Limits {#limits_elastic_load_balancer}
 -----------------------------
@@ -1103,7 +1112,7 @@ Amazon Elastic Transcoder Limits {#limits_elastictranscoder}
 
 It may take up to two weeks to process requests for a limit increase.
 
-[Amazon Elastic Transcoder](http://docs.aws.amazon.com/elastictranscoder/latest/developerguide/limits.html) limits in the *Amazon Elastic Transcoder Developer Guide*.
+For more information about these limits, see [Amazon Elastic Transcoder](http://docs.aws.amazon.com/elastictranscoder/latest/developerguide/limits.html) limits in the *Amazon Elastic Transcoder Developer Guide*.
 
 Amazon ElastiCache Limits {#limits_elasticache}
 -------------------------
@@ -1171,7 +1180,7 @@ Amazon GameLift Limits {#limits_gamelift}
 | Player sessions per game session  | 200                               |
 +-----------------------------------+-----------------------------------+
 
-[Scaling Amazon Elastic Compute Cloud (Amazon EC2) Instances](http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html) in the *Amazon GameLift Developer Guide*.
+For more information about these limits, see [Scaling Amazon Elastic Compute Cloud (Amazon EC2) Instances](http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html) in the *Amazon GameLift Developer Guide*.
 
 AWS Greengrass Limits {#limits_greengrass}
 ---------------------
@@ -1202,7 +1211,7 @@ AWS Greengrass Limits {#limits_greengrass}
 | Maximum message queue size in the | 2.5 MB                            |
 | Greengrass core router.           |                                   |
 +-----------------------------------+-----------------------------------+
-| Maxium length of a topic string   | 256 bytes of UTF-8 encoded        |
+| Maximum length of a topic string  | 256 bytes of UTF-8 encoded        |
 |                                   | characters.                       |
 +-----------------------------------+-----------------------------------+
 | Maximum number of forward slashes | 7                                 |
@@ -1253,7 +1262,7 @@ AWS Identity and Access Management (IAM) Limits {#limits_iam}
   Server certificates   20
   Users                 5000
 
-[Limitations on IAM Entities and Objects](http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*.
+For more information about these limits, see [Limitations on IAM Entities and Objects](http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*.
 
 AWS Import/Export Limits {#limits-import-export}
 ------------------------
@@ -1652,7 +1661,7 @@ AWS Key Management Service (AWS KMS) Limits {#limits_kms}
 
 All limits in the preceding table apply per region and per AWS account.
 
-[Limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html) in the *AWS Key Management Service Developer Guide*.
+For more information about these limits, see [Limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html) in the *AWS Key Management Service Developer Guide*.
 
 Amazon Kinesis Firehose Limits {#limits-akf}
 ------------------------------
@@ -1671,7 +1680,7 @@ Amazon Kinesis Firehose Limits {#limits-akf}
 
 â€  The three capacity limits scale proportionally. For example, if you increase the throughput limit to 10MB/second, the other limits increase to 4,000 transactions/second and 10,000 records/second.
 
-[Amazon Kinesis Firehose Limits](http://docs.aws.amazon.com/firehose/latest/dev/limits.html) in the *Amazon Kinesis Firehose Developer Guide*.
+For more information about these limits, see [Amazon Kinesis Firehose Limits](http://docs.aws.amazon.com/firehose/latest/dev/limits.html) in the *Amazon Kinesis Firehose Developer Guide*.
 
 Amazon Kinesis Streams Limits {#limits-aks}
 -----------------------------
@@ -1690,16 +1699,16 @@ Amazon Kinesis Streams Limits {#limits-aks}
 |                                   | 200                               |
 +-----------------------------------+-----------------------------------+
 
-[Amazon Kinesis Streams Limits](http://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html) in the *Amazon Kinesis Streams Developer Guide*.
+For more information about these limits, see [Amazon Kinesis Streams Limits](http://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html) in the *Amazon Kinesis Streams Developer Guide*.
 
 AWS Lambda Limits {#limits_lambda}
 -----------------
 
-  Resource                                          Limit
-  ------------------------------------------------- -------
-  Concurrent requests safety throttle per account   100
+  Resource                Limit
+  ----------------------- -------
+  Concurrent executions   1000
 
-[AWS Lambda Limits](http://docs.aws.amazon.com/lambda/latest/dg/limits.html) in the *AWS Lambda Developer Guide*.
+For more information about these limits, see [AWS Lambda Limits](http://docs.aws.amazon.com/lambda/latest/dg/limits.html) in the *AWS Lambda Developer Guide*.
 
 Amazon Lightsail Limits {#limits_lightsail}
 -----------------------
@@ -1733,7 +1742,7 @@ Note
 
 The size of your data files is limited to ensure that jobs finish in a timely manner. Jobs that have been running for more than seven days are automatically terminated, resulting in a FAILED status.
 
-[Amazon ML Limits](http://docs.aws.amazon.com/machine-learning/latest/dg/system-limits.html) in the *Amazon Machine Learning Developer Guide*.
+For more information about these limits, see [Amazon ML Limits](http://docs.aws.amazon.com/machine-learning/latest/dg/system-limits.html) in the *Amazon Machine Learning Developer Guide*.
 
 AWS OpsWorks for Chef Automate Limits {#limits_opworks}
 -------------------------------------
@@ -1744,7 +1753,7 @@ AWS OpsWorks for Chef Automate Limits {#limits_opworks}
   User-initiated (manual) backup generations   10
   Automated (scheduled) backup generations     30
 
-AWS OpsWorks Stacks Limits {#w2ab1c17d129}
+AWS OpsWorks Stacks Limits
 --------------------------
 
   Resource              Default Limit
@@ -1754,7 +1763,7 @@ AWS OpsWorks Stacks Limits {#w2ab1c17d129}
   Instances per stack   40
   Apps per stack        40
 
-AWS Organizations Limits {#w2ab1c17d131}
+AWS Organizations Limits
 ------------------------
 
   Resource                    Default Limit
@@ -1762,7 +1771,7 @@ AWS Organizations Limits {#w2ab1c17d131}
   Accounts per organization   Varies. Contact Customer Support.
   Invitations sent per day    20
 
-[Limits of AWS Organizations](http://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html) in the *AWS Organizations User Guide*.
+For more information about these limits, see [Limits of AWS Organizations](http://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html) in the *AWS Organizations User Guide*.
 
 Amazon Polly Limits {#limits_polly}
 -------------------
@@ -1825,7 +1834,7 @@ Amazon Redshift Limits {#limits_redshift}
   Subnets per Subnet Group   20
   Event Subscriptions        20
 
-[Limits in Amazon Redshift](http://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html) in the *Amazon Redshift Cluster Management Guide*.
+For more information about these limits, see [Limits in Amazon Redshift](http://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html) in the *Amazon Redshift Cluster Management Guide*.
 
 Amazon Relational Database Service (Amazon RDS) Limits {#limits_rds}
 ------------------------------------------------------
@@ -1865,7 +1874,7 @@ Amazon RouteÂ 53 Limits {#limits_route53}
   Traffic policies                                                50
   Policy records                                                  5
 
-[Amazon RouteÂ 53 Limits](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html) in the *Amazon RouteÂ 53 Developer Guide*.
+For more information about these limits, see [Amazon RouteÂ 53 Limits](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html) in the *Amazon RouteÂ 53 Developer Guide*.
 
 AWS Server Migration Service Limits {#limits_server_migration}
 -----------------------------------
@@ -1923,7 +1932,7 @@ The following are the default limits for Amazon SES in the sandbox environment.
 |                                   | verified.                         |
 +-----------------------------------+-----------------------------------+
 
-[Limits in Amazon SES](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/limits.html) in the *Amazon Simple Email Service Developer Guide*.
+For more information about these limits, see [Limits in Amazon SES](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/limits.html) in the *Amazon Simple Email Service Developer Guide*.
 
 Amazon Simple Notification Service (Amazon SNS) Limits {#limits_sns}
 ------------------------------------------------------
@@ -1952,7 +1961,7 @@ To increase any of these limits, [submit a request](https://console.aws.amazon.c
 Amazon Simple Queue Service (Amazon SQS) {#limits_sqs}
 ----------------------------------------
 
-[Amazon SQS Limits](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-limits.html) in the *Amazon Simple Queue Service Developer Guide* and the "Limits and Restrictions" section of the [Amazon SQS FAQs](https://aws.amazon.com/sqs/faqs/).
+For more information about these limits, see [Amazon SQS Limits](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-limits.html) in the *Amazon Simple Queue Service Developer Guide* and the "Limits and Restrictions" section of the [Amazon SQS FAQs](https://aws.amazon.com/sqs/faqs/).
 
 Amazon Simple Storage Service (Amazon S3) Limits {#limits_s3}
 ------------------------------------------------
@@ -1961,12 +1970,12 @@ Amazon Simple Storage Service (Amazon S3) Limits {#limits_s3}
   ---------- -----------------
   Buckets    100 per account
 
-[Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) limits in the **Amazon Simple Storage Service Developer Guide**.
+For more information about these limits, see [Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) limits in the **Amazon Simple Storage Service Developer Guide**.
 
 Amazon Simple Workflow Service (Amazon SWF) Limits {#limits_swf}
 --------------------------------------------------
 
-[Amazon SWF Limits](http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-limits.html) in the *Amazon Simple Workflow Service Developer Guide*.
+For more information about these limits, see [Amazon SWF Limits](http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-limits.html) in the *Amazon Simple Workflow Service Developer Guide*.
 
 Amazon SimpleDB Limits {#limits_simpledb}
 ----------------------
@@ -1975,17 +1984,17 @@ Amazon SimpleDB Limits {#limits_simpledb}
   ---------- ---------------
   Domains    250
 
-[Amazon SimpleDB Limits](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/SDBLimits.html) in the *Amazon SimpleDB Developer Guide*.
+For more information about these limits, see [Amazon SimpleDB Limits](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/SDBLimits.html) in the *Amazon SimpleDB Developer Guide*.
 
 AWS Step Functions Limits {#limits-step-functions}
 -------------------------
 
-[AWS Step Functions Limits](http://docs.aws.amazon.com/step-functions/latest/dg/limits.html) in the *AWS Step Functions Developer Guide*.
+For more information about these limits, see [AWS Step Functions Limits](http://docs.aws.amazon.com/step-functions/latest/dg/limits.html) in the *AWS Step Functions Developer Guide*.
 
 AWS Storage Gateway Limits {#limits-storage-gateway}
 --------------------------
 
-[AWS Storage Gateway Limits](http://docs.aws.amazon.com/storagegateway/latest/userguide/resource-gateway-limits.html) in the *AWS Storage Gateway User Guide*.
+For more information about these limits, see [AWS Storage Gateway Limits](http://docs.aws.amazon.com/storagegateway/latest/userguide/resource-gateway-limits.html) in the *AWS Storage Gateway User Guide*.
 
 Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc}
 ------------------------------------------------
@@ -2344,7 +2353,7 @@ Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc}
 |                       |                       | your limit.           |
 +-----------------------+-----------------------+-----------------------+
 
-[Amazon VPC Limits](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html) in the *Amazon VPC User Guide*.
+For more information about these limits, see [Amazon VPC Limits](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html) in the *Amazon VPC User Guide*.
 
 AWS WAF Limits {#limits_waf}
 --------------
@@ -2400,7 +2409,7 @@ The following limits on AWS WAF entities can't be changed.
 | specified value                   |                                   |
 +-----------------------------------+-----------------------------------+
 | In string match conditions, the   | 50                                |
-| number of bytes in the value tfor |                                   |
+| number of bytes in the value for  |                                   |
 | which AWS WAF should search       |                                   |
 +-----------------------------------+-----------------------------------+
 
