@@ -1085,6 +1085,30 @@
                                  
                                  <td>
                                     
+                                    <p>Alarms</p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>10 per month per customer for free. 5000 per region per account.</p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>For the 5000 per region per account limit, you can <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-amazon-cloudwatch" target="_blank">request
+                                          a limit increase</a>.
+                                    </p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
                                     <p><a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeAlarms.html" target="_blank">DescribeAlarms</a></p>
                                     
                                  </td>
@@ -1252,6 +1276,31 @@
                                  
                                  <td>
                                     
+                                    <p>Invocations</p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>750 per second (after 750 invocations, the invocations are throttled; 
+                                       that is, they still happen but they are delayed). If the invocation of a target 
+                                       fails due to a problem with the target service, account throttling, etc., new 
+                                       attempts are made for up to 24 hours for a specific invocation. 
+                                    </p>
+                                 </td>
+                                 
+                                 <td>
+                                    <p>You can <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-cloudwatch-events" target="_blank">request a limit increase</a>.
+                                    </p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
                                     <p>Rules</p>
                                     
                                  </td>
@@ -1302,30 +1351,6 @@
                                  
                               </tr>
                               
-                              <tr>
-                                 
-                                 <td>
-                                    
-                                    <p>Invocations</p>
-                                    
-                                 </td>
-                                 
-                                 <td>
-                                    
-                                    <p>750 per second (after 750 invocations, the invocations are throttled; 
-                                       that is, they still happen but they are delayed). If the invocation of a target 
-                                       fails due to a problem with the target service, account throttling, etc., new 
-                                       attempts are made for up to 24 hours for a specific invocation. 
-                                    </p>
-                                 </td>
-                                 
-                                 <td>
-                                    <p>You can <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-cloudwatch-events" target="_blank">request a limit increase</a>.
-                                    </p>
-                                    
-                                 </td>
-                                 
-                              </tr>
                               
                            </table>
                         </div>
@@ -1456,6 +1481,38 @@
                                  </td>
                                  
                               </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p><a href="http://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutLogEvents.html" target="_blank">PutLogEvents</a></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    
+                                    <p>1500 transactions per second per account per region. </p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>You can <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-cloudwatch-logs" target="_blank">request a
+                                          limit increase</a>.
+                                    </p>
+                                    
+                                    <p>The maximum batch size of a PutLogEvents request is 1MB.</p>
+                                    
+                                    <p>5 requests per second per log stream. Additional requests are throttled. This limit
+                                       cannot be changed.
+                                    </p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
                               
                            </table>
                         </div>
@@ -3699,7 +3756,7 @@
                                  
                                  <td>Target groups per region</td>
                                  
-                                 <td>200</td>
+                                 <td>3000</td>
                                  
                               </tr>
                               
@@ -3707,7 +3764,7 @@
                                  
                                  <td>Listeners per load balancer</td>
                                  
-                                 <td>10</td>
+                                 <td>50</td>
                                  
                               </tr>
                               

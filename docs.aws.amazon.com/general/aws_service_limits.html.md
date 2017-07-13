@@ -351,6 +351,18 @@ Amazon CloudWatch Limits {#limits_cloudwatch}
 +-----------------------+-----------------------+-----------------------+
 | Resource              | Default Limit         | Comments              |
 +=======================+=======================+=======================+
+| Alarms                | 10 per month per      | For the 5000 per      |
+|                       | customer for free.    | region per account    |
+|                       | 5000 per region per   | limit, you can        |
+|                       | account.              | [request a limit      |
+|                       |                       | increase](https://con |
+|                       |                       | sole.aws.amazon.com/s |
+|                       |                       | upport/home#/case/cre |
+|                       |                       | ate?issueType=service |
+|                       |                       | -limit-increase&limit |
+|                       |                       | Type=service-code-ama |
+|                       |                       | zon-cloudwatch).      |
++-----------------------+-----------------------+-----------------------+
 | [DescribeAlarms](http | 9 transactions per    | The maximum number of |
 | ://docs.aws.amazon.co | second (TPS)          | operation requests    |
 | m/AmazonCloudWatch/la |                       | you can make per      |
@@ -440,6 +452,22 @@ Amazon CloudWatch Events Limits {#limits_cloudwatch_events}
 +-----------------------+-----------------------+-----------------------+
 | Resource              | Default Limit         | Comments              |
 +=======================+=======================+=======================+
+| Invocations           | 750 per second (after | You can [request a    |
+|                       | 750 invocations, the  | limit                 |
+|                       | invocations are       | increase](https://con |
+|                       | throttled; that is,   | sole.aws.amazon.com/s |
+|                       | they still happen but | upport/home#/case/cre |
+|                       | they are delayed). If | ate?issueType=service |
+|                       | the invocation of a   | -limit-increase&limit |
+|                       | target fails due to a | Type=service-code-clo |
+|                       | problem with the      | udwatch-events).      |
+|                       | target service,       |                       |
+|                       | account throttling,   |                       |
+|                       | etc., new attempts    |                       |
+|                       | are made for up to 24 |                       |
+|                       | hours for a specific  |                       |
+|                       | invocation.           |                       |
++-----------------------+-----------------------+-----------------------+
 | Rules                 | 100 per region per    | You can [request a    |
 |                       | account               | limit                 |
 |                       |                       | increase](https://con |
@@ -484,22 +512,6 @@ Amazon CloudWatch Events Limits {#limits_cloudwatch_events}
 |                       |                       | -limit-increase&limit |
 |                       |                       | Type=service-code-clo |
 |                       |                       | udwatch-events).      |
-+-----------------------+-----------------------+-----------------------+
-| Invocations           | 750 per second (after | You can [request a    |
-|                       | 750 invocations, the  | limit                 |
-|                       | invocations are       | increase](https://con |
-|                       | throttled; that is,   | sole.aws.amazon.com/s |
-|                       | they still happen but | upport/home#/case/cre |
-|                       | they are delayed). If | ate?issueType=service |
-|                       | the invocation of a   | -limit-increase&limit |
-|                       | target fails due to a | Type=service-code-clo |
-|                       | problem with the      | udwatch-events).      |
-|                       | target service,       |                       |
-|                       | account throttling,   |                       |
-|                       | etc., new attempts    |                       |
-|                       | are made for up to 24 |                       |
-|                       | hours for a specific  |                       |
-|                       | invocation.           |                       |
 +-----------------------+-----------------------+-----------------------+
 
 For more information about these and other CloudWatch Events limits, see [CloudWatch Events Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/cloudwatch_limits_cwe.html) in the *Amazon CloudWatch Events User Guide*.
@@ -562,6 +574,28 @@ Amazon CloudWatch Logs Limits {#limits_cloudwatch_logs}
 |                       |                       | experience frequent   |
 |                       |                       | throttling, contact   |
 |                       |                       | AWS Support.          |
++-----------------------+-----------------------+-----------------------+
+| [PutLogEvents](http:/ | 1500 transactions per | You can [request a    |
+| /docs.aws.amazon.com/ | second per account    | limit                 |
+| AmazonCloudWatchLogs/ | per region.           | increase](https://con |
+| latest/APIReference/A |                       | sole.aws.amazon.com/s |
+| PI_PutLogEvents.html) |                       | upport/home#/case/cre |
+|                       |                       | ate?issueType=service |
+|                       |                       | -limit-increase&limit |
+|                       |                       | Type=service-code-clo |
+|                       |                       | udwatch-logs).        |
+|                       |                       |                       |
+|                       |                       | The maximum batch     |
+|                       |                       | size of a             |
+|                       |                       | PutLogEvents request  |
+|                       |                       | is 1MB.               |
+|                       |                       |                       |
+|                       |                       | 5 requests per second |
+|                       |                       | per log stream.       |
+|                       |                       | Additional requests   |
+|                       |                       | are throttled. This   |
+|                       |                       | limit cannot be       |
+|                       |                       | changed.              |
 +-----------------------+-----------------------+-----------------------+
 
 For more information about these and other CloudWatch Logs limits, see [CloudWatch Logs Limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/cloudwatch_limits_cwl.html) in the *Amazon CloudWatch Logs User Guide*.
@@ -1056,8 +1090,8 @@ Elastic Load Balancing supports two types of load balancers: Application Load Ba
   Resource                                                       Default Limit
   -------------------------------------------------------------- ---------------
   Load balancers per region                                      20 **â€ **
-  Target groups per region                                       200
-  Listeners per load balancer                                    10
+  Target groups per region                                       3000
+  Listeners per load balancer                                    50
   Targets per load balancer                                      1000
   Subnets per Availability Zone per load balancer                1
   Security groups per load balancer                              5
