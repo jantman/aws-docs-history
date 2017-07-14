@@ -666,9 +666,6 @@ AWS CodePipeline Limits {#limits_codepipeline}
 +-----------------------------------+-----------------------------------+
 | Maximum size of source artifacts  | 500 megabytes (MB)                |
 +-----------------------------------+-----------------------------------+
-| Maximum number of times an action | 1,000 per calendar month          |
-| can be run per month              |                                   |
-+-----------------------------------+-----------------------------------+
 
 It may take up to two weeks to process requests for a limit increase.
 
@@ -1014,7 +1011,7 @@ Amazon EC2 Systems Manager Limits {#limits_ssm}
 | Maintenance Window execution      | 30 days                           |
 | history retention                 |                                   |
 +-----------------------------------+-----------------------------------+
-| Maximum number of parameters per  | 1000                              |
+| Maximum number of parameters per  | 10,000                            |
 | account                           |                                   |
 +-----------------------------------+-----------------------------------+
 | Max size for parameter value      | 4096 characters                   |
@@ -1055,7 +1052,7 @@ Amazon Elastic Compute Cloud (Amazon EC2) Limits {#limits_ec2}
 ------------------------------------------------
 
   Resource                                                               Default Limit
-  ---------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Elastic IP addresses for EC2-Classic                                   5
   Security groups for EC2-Classic per instance                           500
   Rules per security group for EC2-Classic                               100
@@ -1063,7 +1060,7 @@ Amazon Elastic Compute Cloud (Amazon EC2) Limits {#limits_ec2}
   Throttle on the emails that can be sent from your Amazon EC2 account   Throttle applied
   On-Demand Instances                                                    Limits vary depending on instance type. For more information, see [How many instances can I run in Amazon EC2](https://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2).
   Spot Instances                                                         Limits vary depending on instance type, region, and account. For more information, see [Spot Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html).
-  Reserved Instances                                                     20 Reserved Instances per Availability Zone, per month, plus 20 regional Reserved Instances.
+  Reserved Instances                                                     20 Reserved Instances per Availability Zone, per month, plus 20 regional Reserved Instances. For more information, see [Reserved Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html#ri-limits).
   Dedicated Hosts                                                        Up to two Dedicated Hosts per instance family, per region can be allocated.
   AMI Copies                                                             Destination regions are limited to 50 concurrent AMI copies at a time, with no more than 25 of those coming from a single source region.
 
