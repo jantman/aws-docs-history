@@ -1877,7 +1877,7 @@ Amazon Relational Database Service (Amazon RDS) Limits {#limits_rds}
   DB Instances                               40
   Event subscriptions                        20
   Manual snapshots                           100
-  Manual cluster snapshots                   50
+  Manual cluster snapshots                   100
   Option groups                              20
   Parameter groups                           50
   Read replicas per master                   5
