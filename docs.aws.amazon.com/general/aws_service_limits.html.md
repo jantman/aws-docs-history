@@ -504,7 +504,7 @@ Amazon CloudWatch Events Limits {#limits_cloudwatch_events}
 |                       |                       | rules.                |
 +-----------------------+-----------------------+-----------------------+
 | [PutEvents](http://do | 10 entries per        | You can [request a    |
-| cs.aws.amazon.com/Ama | request and 360       | limit                 |
+| cs.aws.amazon.com/Ama | request and 400       | limit                 |
 | zonCloudWatchEvents/l | requests per second.  | increase](https://con |
 | atest/APIReference/AP | Each request can be   | sole.aws.amazon.com/s |
 | I_PutEvents.html)     | up to 256 KB in size. | upport/home#/case/cre |
@@ -1285,13 +1285,13 @@ The Greengrass core software provides a service to automatically detect the IP a
 AWS Identity and Access Management (IAM) Limits {#limits_iam}
 -----------------------------------------------
 
-  Resource              Default Limit
-  --------------------- ---------------
-  Groups per account    100
-  Instance profiles     100
-  Roles                 500
-  Server certificates   20
-  Users                 5000
+  Resource                          Default Limit
+  --------------------------------- ---------------
+  Groups per account                100
+  Instance profiles per account     500
+  Roles per account                 500
+  Server certificates per account   20
+  Users per account                 5000
 
 For more information about these limits, see [Limitations on IAM Entities and Objects](http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*.
 
