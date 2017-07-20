@@ -6841,13 +6841,13 @@
                         <em>Amazon Simple Email Service Developer Guide</em>.
                      </p>
                      
-                     <h2 id="limits_sns">Amazon Simple Notification Service (Amazon SNS) Limits</h2>
                      
+                     <h2 id="limits_sns">Amazon Simple Notification Service (Amazon SNS) Limits</h2>
                      
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w107aac16d149b2">
+                           <table id="w107aac16d149b3">
                               
                               <tr>
                                  
@@ -6862,7 +6862,23 @@
                                  
                                  <td>Topics</td>
                                  
-                                 <td>100,000</td>
+                                 <td>100,000 per account</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Subscriptions</td>
+                                 
+                                 <td>12,500,000 per topic</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Pending subscriptions</td>
+                                 
+                                 <td>5,000 per account</td>
                                  
                               </tr>
                               
@@ -6870,7 +6886,7 @@
                                  
                                  <td>Account spend threshold for SMS</td>
                                  
-                                 <td>1.00 USD</td>
+                                 <td>1.00 USD per account</td>
                                  
                               </tr>
                               
@@ -6894,23 +6910,23 @@
                         </div>
                      </div>
                      
-                     <p>To increase any of these limits, <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-vpc" target="_blank">submit a
-                           request</a>.
+                     <p>To increase any of the limits above, submit an
+                        <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-sns" target="_blank">SNS Limit Increase case</a>.
                      </p>
                      
-                     <h3 id="limits_sns_api_throttles">Amazon SNS API Throttling Limits</h3>
                      
+                     <h3 id="limits_sns_api_throttles">Amazon SNS API Throttling Limits</h3>
                      
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w107aac16d149b6b2">
+                           <table id="w107aac16d149b7b3">
                               
                               <tr>
                                  
                                  <th>API</th>
                                  
-                                 <th>Transaction per Second</th>
+                                 <th>Transactions per Second</th>
                                  
                               </tr>
                               
@@ -6974,6 +6990,8 @@
                            </table>
                         </div>
                      </div>
+                     
+                     <p>The Amazon SNS API throttling limits cannot be increased.</p>
                      
                      
                      <h2 id="limits_sqs">Amazon Simple Queue Service (Amazon SQS)</h2>

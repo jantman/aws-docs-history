@@ -1970,17 +1970,19 @@ Amazon Simple Notification Service (Amazon SNS) Limits {#limits_sns}
 
   Resource                                       Default Limit
   ---------------------------------------------- ------------------------
-  Topics                                         100,000
-  Account spend threshold for SMS                1.00 USD
+  Topics                                         100,000 per account
+  Subscriptions                                  12,500,000 per topic
+  Pending subscriptions                          5,000 per account
+  Account spend threshold for SMS                1.00 USD per account
   Delivery rate for promotional SMS messages     20 messages per second
   Delivery rate for transactional SMS messages   20 messages per second
 
-To increase any of these limits, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-vpc).
+To increase any of the limits above, submit an [SNS Limit Increase case](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-sns).
 
 ### Amazon SNS API Throttling Limits {#limits_sns_api_throttles}
 
-  API                                  Transaction per Second
-  ------------------------------------ ------------------------
+  API                                  Transactions per Second
+  ------------------------------------ -------------------------
   ListEndpointsByPlatformApplication   30
   ListTopics                           30
   ListPlatformApplications             15
@@ -1988,6 +1990,8 @@ To increase any of these limits, [submit a request](https://console.aws.amazon.c
   ListSubscriptionsByTopic             30
   Subscribe                            100
   Unsubscribe                          100
+
+The Amazon SNS API throttling limits cannot be increased.
 
 Amazon Simple Queue Service (Amazon SQS) {#limits_sqs}
 ----------------------------------------
