@@ -1071,9 +1071,29 @@ For information about viewing your current limits, see [Amazon EC2 Service Limit
 Amazon Elastic File System Limits {#limits_elasticfilesystem}
 ---------------------------------
 
-  Resource                           Default Limit
-  ---------------------------------- ----------------------------------
-  Total throughput per file system   3 GB/s for all connected clients
+Following are the limits for Amazon EFS that can be increased by contacting AWS Support.
+
++-----------------------------------+-----------------------------------+
+| Resource                          | Default Limit                     |
++===================================+===================================+
+| Number of file systems per        | 10                                |
+| customer account per AWS region   |                                   |
++-----------------------------------+-----------------------------------+
+| Total throughput per file system  | US East (Ohio) Region â€“ 3 GB/s  |
+| for all connected clients         |                                   |
+|                                   | US East (N. Virginia) Region â€“  |
+|                                   | 3 GB/s                            |
+|                                   |                                   |
+|                                   | US West (Oregon) Region â€“ 3     |
+|                                   | GB/s                              |
+|                                   |                                   |
+|                                   | EU (Frankfurt) Region â€“ 1 GB/s  |
+|                                   |                                   |
+|                                   | EU (Ireland) Region â€“ 3 GB/s    |
+|                                   |                                   |
+|                                   | Asia Pacific (Sydney) Region â€“  |
+|                                   | 3 GB/s                            |
++-----------------------------------+-----------------------------------+
 
 For more information about these limits, see [Amazon EFS Limits](http://docs.aws.amazon.com/efs/latest/ug//limits.html) in the *Amazon Elastic File System User Guide*.
 
