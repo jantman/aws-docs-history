@@ -108,18 +108,18 @@ Amazon API Gateway Limits {#limits_apigateway}
 
 The following limits apply to configuring and running an API in Amazon API Gateway and can be increased upon request to optimize performances of a deployed API in Amazon API Gateway.
 
-  Resource or Operation             Default Limit
-  --------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Throttle rate per account         10000 request per second (rps) with an additional burst capacity provided by the [token bucket algorithm](https://en.wikipedia.org/wiki/Token_bucket), using a maximum bucket capacity of 5000 requests.
-  APIs per account                  60
-  API keys per account              500
-  Custom authorizers per API        10
-  Client certificates per account   60
-  Documentation parts per API       2000
-  Resources per API                 300
-  Stages per API                    10
-  Usage plans per account           300
-  Usage plans per API key           10
+  Resource or Operation                                  Default Limit
+  ------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Throttle rate per account                              10000 request per second (rps) with an additional burst capacity provided by the [token bucket algorithm](https://en.wikipedia.org/wiki/Token_bucket), using a maximum bucket capacity of 5000 requests.
+  APIs (or [RestApi](resource/rest-api/)s) per account   60
+  API keys per account                                   500
+  Custom authorizers per API                             10
+  Client certificates per account                        60
+  Documentation parts per API                            2000
+  Resources per API                                      300
+  Stages per API                                         10
+  Usage plans per account                                300
+  Usage plans per API key                                10
 
 All of the per API limits can only be increased on specific APIs.
 
@@ -160,13 +160,15 @@ This information applies only to the latest version, Amazon AppStream 2.0.
 **Default Limits Per Region**
 
   Resource              Default Limit
-  --------------------- ---------------
+  --------------------- -----------------------
   Stacks                5 per account
   Fleets                5 per account
-  Streaming instances   5 per account
+  Streaming instances   5 per account **â€ **
   Images                5 per account
-  Image builders        5 per account
+  Image builders        5 per account **â€ **
   Users                 5 per account
+
+**â€ ** This limit does not apply to **Graphics Desktop** and **Graphics Pro** instance families, which have a default limit of 0 (zero). To request an increase to this or any other limit for your account, see the instructions at the top of this topic. For more information about instance families, see [AppStream 2.0 Instance Families](http://docs.aws.amazon.com/appstream2/latest/developerguide/instance-types.html) in the *Amazon AppStream 2.0 Developer Guide*.
 
 Application Auto Scaling Limits {#limits_as-app}
 -------------------------------
@@ -230,9 +232,11 @@ For more information about these limits, see [Limits](http://docs.aws.amazon.com
 AWS CloudFormation Limits {#limits_cloudformation}
 -------------------------
 
-  Resource   Default Limit
-  ---------- ---------------
-  Stacks     200
+  Resource                        Default Limit
+  ------------------------------- ---------------
+  Stacks                          200
+  Stack sets                      20
+  Stack instances per stack set   50
 
 For more information about these limits, see [AWS CloudFormation Limits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html) in the *AWS CloudFormation User Guide*.
 
