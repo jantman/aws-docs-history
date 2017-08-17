@@ -1236,6 +1236,8 @@ Amazon GameLift Limits {#limits_gamelift}
 +-----------------------------------+-----------------------------------+
 | Player sessions per game session  | 200                               |
 +-----------------------------------+-----------------------------------+
+| Matchmakers per account           | 100                               |
++-----------------------------------+-----------------------------------+
 
 For more information about these limits, see [Scaling Amazon Elastic Compute Cloud (Amazon EC2) Instances](http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html) in the *Amazon GameLift Developer Guide*.
 
