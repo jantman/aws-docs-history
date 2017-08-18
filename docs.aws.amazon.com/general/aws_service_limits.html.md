@@ -1313,13 +1313,32 @@ The Greengrass core software provides a service to automatically detect the IP a
 AWS Identity and Access Management (IAM) Limits {#limits_iam}
 -----------------------------------------------
 
-  Resource                          Default Limit
-  --------------------------------- ---------------
-  Groups per account                100
-  Instance profiles per account     500
-  Roles per account                 500
-  Server certificates per account   20
-  Users per account                 5000
++-----------------------------------+-----------------------------------+
+| Resource                          | Default Limit                     |
++===================================+===================================+
+| Customer managed policies in an   | 1500                              |
+| AWS account                       |                                   |
++-----------------------------------+-----------------------------------+
+| Groups in an AWS account          | 100                               |
++-----------------------------------+-----------------------------------+
+| Roles in an AWS account           | 500                               |
++-----------------------------------+-----------------------------------+
+| Users in an AWS account           | 5000 (If you need to add a large  |
+|                                   | number of users, consider using   |
+|                                   | [temporary security               |
+|                                   | credentials](http://docs.aws.amaz |
+|                                   | on.com/IAM/latest/UserGuide/%20id |
+|                                   | _credentials_temp.html%20).)      |
++-----------------------------------+-----------------------------------+
+| Virtual MFA devices (assigned or  | Equal to the user quota for the   |
+| unassigned) in an AWS account     | account                           |
++-----------------------------------+-----------------------------------+
+| Instance profiles in an AWS       | 500                               |
+| account                           |                                   |
++-----------------------------------+-----------------------------------+
+| Server certificates stored in an  | 20                                |
+| AWS account                       |                                   |
++-----------------------------------+-----------------------------------+
 
 For more information about these limits, see [Limitations on IAM Entities and Objects](http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*.
 
