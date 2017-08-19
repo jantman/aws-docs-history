@@ -35,7 +35,8 @@ You can take the following steps to request an increase for limits. These increa
 -   [AWS Certificate Manager (ACM) Limits](#limits_acm)
 -   [AWS CloudFormation Limits](#limits_cloudformation)
 -   [Amazon CloudFront Limits](#limits_cloudfront)
--   [AWS CloudHSM Limits](#limits_cloudhsm)
+-   [AWS CloudHSM Limits](#limits-cloudhsm)
+-   [AWS CloudHSM Classic Limits](#limits-cloudhsm-classic)
 -   [Amazon CloudSearch Limits](#limits_cloudsearch)
 -   [AWS CloudTrail Limits](#limits_cloudtrail)
 -   [Amazon CloudWatch Limits](#limits_cloudwatch)
@@ -302,14 +303,25 @@ Amazon CloudFront Limits {#limits_cloudfront}
 
 For more information about these limits, see [Limits](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html) in the *Amazon CloudFront Developer Guide*.
 
-AWS CloudHSM Limits {#limits_cloudhsm}
+AWS CloudHSM Limits {#limits-cloudhsm}
 -------------------
+
+  Resource   Default Limit
+  ---------- ---------------
+  Clusters   4
+  HSMs       6
+
+For more information about these limits, see [Limits](http://docs.aws.amazon.com/cloudhsm/latest/userguide/limits.html) in the *AWS CloudHSM User Guide*.
+
+AWS CloudHSM Classic Limits {#limits-cloudhsm-classic}
+---------------------------
 
   Resource                             Default Limit
   ------------------------------------ ---------------
   HSM appliances                       3
   High-availability partition groups   20
-  Clients                              800
+
+For more information about these limits, see [Limits](http://docs.aws.amazon.com/cloudhsm/classic/userguide/limits.html) in the *AWS CloudHSM Classic User Guide*.
 
 Amazon CloudSearch Limits {#limits_cloudsearch}
 -------------------------
