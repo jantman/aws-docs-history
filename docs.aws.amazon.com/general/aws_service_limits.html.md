@@ -1331,9 +1331,9 @@ AWS Identity and Access Management (IAM) Limits {#limits_iam}
 | Customer managed policies in an   | 1500                              |
 | AWS account                       |                                   |
 +-----------------------------------+-----------------------------------+
-| Groups in an AWS account          | 100                               |
+| Groups in an AWS account          | 300                               |
 +-----------------------------------+-----------------------------------+
-| Roles in an AWS account           | 500                               |
+| Roles in an AWS account           | 1000                              |
 +-----------------------------------+-----------------------------------+
 | Users in an AWS account           | 5000 (If you need to add a large  |
 |                                   | number of users, consider using   |
