@@ -2512,40 +2512,7 @@ These limits are the same for all regions in which AWS WAF is available. Each re
 Amazon WorkMail Limits {#limits_workmail}
 ----------------------
 
-The following limits apply to Amazon WorkMail.
-
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Organizations per region          | 5                                 |
-+-----------------------------------+-----------------------------------+
-| Users per organization            | 1,000                             |
-+-----------------------------------+-----------------------------------+
-| Messages sent per user per day    | 1,000 messages, regardless of     |
-|                                   | destination.                      |
-+-----------------------------------+-----------------------------------+
-| Recipients addressed per user per | Users can send emails to a        |
-| day                               | maximum of 10,000 recipients      |
-|                                   | external to the organization, and |
-|                                   | a maximum of 500,000 recipients   |
-|                                   | internal to the organization.     |
-+-----------------------------------+-----------------------------------+
-| Number of recipients per message  | 500                               |
-|                                   | This is a hard limit and cannot   |
-|                                   | be changed.                       |
-+-----------------------------------+-----------------------------------+
-| Number of domains per             | 100                               |
-| organization                      | This is a hard limit and cannot   |
-|                                   | be changed.                       |
-+-----------------------------------+-----------------------------------+
-| Number of sender patterns in      | 250                               |
-| email flow rules per organization | This is a hard limit and cannot   |
-|                                   | be changed.                       |
-+-----------------------------------+-----------------------------------+
-| Number of aliases per user        | 100                               |
-|                                   | This is a hard limit and cannot   |
-|                                   | be changed.                       |
-+-----------------------------------+-----------------------------------+
+For more information about these limits, see [Amazon WorkMail Limits](http://docs.aws.amazon.com/workmail/latest/adminguide/what_is.html).
 
 Amazon WorkSpaces Limits {#limits_workspaces}
 ------------------------
