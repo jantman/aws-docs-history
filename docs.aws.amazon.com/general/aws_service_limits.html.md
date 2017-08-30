@@ -2125,6 +2125,20 @@ Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc}
 |                       |                       | ype=service-code-vpc) |
 |                       |                       | .                     |
 +-----------------------+-----------------------+-----------------------+
+| IPv4 CIDR blocks per  | 5                     | This limit is made up |
+| VPC                   |                       | of the primary CIDR   |
+|                       |                       | block plus 4          |
+|                       |                       | secondary CIDR        |
+|                       |                       | blocks. To increase   |
+|                       |                       | this limit, [submit a |
+|                       |                       | request](https://cons |
+|                       |                       | ole.aws.amazon.com/su |
+|                       |                       | pport/home#/case/crea |
+|                       |                       | te?issueType=service- |
+|                       |                       | limit-increase&limitT |
+|                       |                       | ype=service-code-vpc) |
+|                       |                       | .                     |
++-----------------------+-----------------------+-----------------------+
 | Internet gateways per | 5                     | This limit is         |
 | region                |                       | directly correlated   |
 |                       |                       | with the limit on     |
