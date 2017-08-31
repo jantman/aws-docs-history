@@ -69,6 +69,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon ElastiCache Limits](#limits_elasticache)
 -   [Amazon Elasticsearch Service Limits](#limits_es)
 -   [Amazon GameLift Limits](#limits_gamelift)
+-   [AWS Glue Limits](#limits_glue)
 -   [AWS Greengrass Limits](#limits_greengrass)
 -   [AWS Identity and Access Management (IAM) Limits](#limits_iam)
 -   [AWS Import/Export Limits](#limits-import-export)
@@ -103,6 +104,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [AWS WAF Limits](#limits_waf)
 -   [Amazon WorkMail Limits](#limits_workmail)
 -   [Amazon WorkSpaces Limits](#limits_workspaces)
+-   [AWS X-Ray Limits](#limits_xray)
 
 Amazon API Gateway Limits {#limits_apigateway}
 -------------------------
@@ -921,11 +923,11 @@ Amazon EC2 Systems Manager Limits {#limits_ssm}
 +-----------------------------------+-----------------------------------+
 | Resource                          | Default Limit                     |
 +===================================+===================================+
-| Managed instances                 | 500                               |
+| Managed instances                 | 1,000                             |
 |                                   |                                   |
 |                                   | Each AWS account can              |
 |                                   | register/activate a maximum of    |
-|                                   | 500 managed instances in a        |
+|                                   | 1,000 managed instances in a      |
 |                                   | region.                           |
 +-----------------------------------+-----------------------------------+
 | Systems Manager documents         | 200                               |
@@ -946,11 +948,17 @@ Amazon EC2 Systems Manager Limits {#limits_ssm}
 |                                   | share a maximum of five           |
 |                                   | documents.                        |
 +-----------------------------------+-----------------------------------+
-| Document associations             | 10,000                            |
+| State Manager associations        | 10,000                            |
 |                                   |                                   |
 |                                   | Each Systems Manager document can |
 |                                   | be associated with a maximum of   |
 |                                   | 10,000 instances.                 |
++-----------------------------------+-----------------------------------+
+| State Manager association         | 1,000                             |
+| versions                          |                                   |
+|                                   | You can created a maximum of      |
+|                                   | 1,000 versions of a State Manager |
+|                                   | association.                      |
 +-----------------------------------+-----------------------------------+
 | Inventory data collected per      | 1 MB                              |
 | instance per call                 |                                   |
@@ -1252,6 +1260,23 @@ Amazon GameLift Limits {#limits_gamelift}
 +-----------------------------------+-----------------------------------+
 
 For more information about these limits, see [Scaling Amazon Elastic Compute Cloud (Amazon EC2) Instances](http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html) in the *Amazon GameLift Developer Guide*.
+
+AWS Glue Limits {#limits_glue}
+---------------
+
+  Resource                                                  Default Limit
+  --------------------------------------------------------- ---------------
+  Number of databases per account                           100
+  Number of tables per database                             1000
+  Number of partitions per table                            20,000
+  Number of crawlers per account                            10
+  Number of jobs per account                                25
+  Number of triggers per account                            25
+  Number of concurrent job runs per account                 30
+  Number of jobs per trigger                                10
+  Number of development endpoints per account               2
+  Maximum DPUs used by a development endpoint at one time   5
+  Maximum DPUs used by a role at one time                   100
 
 AWS Greengrass Limits {#limits_greengrass}
 ---------------------
@@ -2536,6 +2561,19 @@ Amazon WorkSpaces Limits {#limits_workspaces}
   WorkSpaces            1
   Graphics WorkSpaces   0
   Images                5
+
+AWS X-Ray Limits {#limits_xray}
+----------------
+
++-----------------------------------+-----------------------------------+
+| Resource                          | Default Limit                     |
++===================================+===================================+
+| Trace and service graph retention | 30 days                           |
++-----------------------------------+-----------------------------------+
+| Segment document size             | 64kB                              |
++-----------------------------------+-----------------------------------+
+| Indexed annotations per trace     | 50                                |
++-----------------------------------+-----------------------------------+
 
 [Document Conventions](/general/latest/gr/docconventions.html)
 

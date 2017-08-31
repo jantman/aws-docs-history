@@ -108,6 +108,7 @@
                            <li><a href="#limits_elasticache">Amazon ElastiCache Limits</a></li>
                            <li><a href="#limits_es">Amazon Elasticsearch Service Limits</a></li>
                            <li><a href="#limits_gamelift">Amazon GameLift Limits</a></li>
+                           <li><a href="#limits_glue">AWS Glue Limits</a></li>
                            <li><a href="#limits_greengrass">AWS Greengrass Limits</a></li>
                            <li><a href="#limits_iam">AWS Identity and Access Management (IAM) Limits</a></li>
                            <li><a href="#limits-import-export">AWS Import/Export Limits</a></li>
@@ -142,6 +143,7 @@
                            <li><a href="#limits_waf">AWS WAF Limits</a></li>
                            <li><a href="#limits_workmail">Amazon WorkMail Limits</a></li>
                            <li><a href="#limits_workspaces">Amazon WorkSpaces Limits</a></li>
+                           <li><a href="#limits_xray">AWS X-Ray Limits</a></li>
                         </ul>
                      </div>
                      
@@ -3113,8 +3115,8 @@
                                  <td>Managed instances </td>
                                  
                                  <td>
-                                    <p>500</p>
-                                    <p>Each AWS account can register/activate a maximum of 500
+                                    <p>1,000</p>
+                                    <p>Each AWS account can register/activate a maximum of 1,000
                                        managed instances in a region.
                                     </p>
                                  </td>
@@ -3166,7 +3168,7 @@
                               
                               <tr>
                                  
-                                 <td>Document associations</td>
+                                 <td>State Manager associations</td>
                                  
                                  <td>
                                     <p>10,000</p>
@@ -3174,6 +3176,19 @@
                                     <p>Each Systems Manager document can be associated with a maximum of 10,000
                                        instances.
                                     </p>
+                                 </td>
+                                 
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>State Manager association versions</td>
+                                 
+                                 <td>
+                                    <p>1,000</p>
+                                    
+                                    <p>You can created a maximum of 1,000 versions of a State Manager association.</p>
                                  </td>
                                  
                                  
@@ -4364,6 +4379,116 @@
                      </p>
                      
                      
+                     <h2 id="limits_glue">AWS Glue Limits</h2>
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w108aac16d105b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Default Limit</th>
+                                 
+                              </tr>
+                              
+                              		   
+                              <tr>
+                                 
+                                 <td>Number of databases per account</td>
+                                 
+                                 <td>100</td>
+                                 
+                              </tr>
+                              		   
+                              <tr>
+                                 
+                                 <td>Number of tables per database</td>
+                                 
+                                 <td>1000</td>
+                                 
+                              </tr>
+                              		   
+                              <tr>
+                                 
+                                 <td>Number of partitions per table</td>
+                                 
+                                 <td>20,000</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Number of crawlers per account</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Number of jobs per account</td>
+                                 
+                                 <td>25</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Number of triggers per account</td>
+                                 
+                                 <td>25</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Number of concurrent job runs per account</td>
+                                 
+                                 <td>30</td>
+                                 
+                              </tr>
+                              		   
+                              <tr>
+                                 
+                                 <td>Number of jobs per trigger</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Number of development endpoints per account</td>
+                                 
+                                 <td>2</td>
+                                 
+                              </tr>
+                              		    
+                              <tr>
+                                 
+                                 <td>Maximum DPUs used by a development endpoint at one time</td>
+                                 
+                                 <td>5</td>
+                                 
+                              </tr>
+                              		   
+                              <tr>
+                                 
+                                 <td>Maximum DPUs used by a role at one time</td>
+                                 
+                                 <td>100</td>
+                                 
+                              </tr>
+                              		   		   
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
                      <h2 id="limits_greengrass">AWS Greengrass Limits</h2>
                      
                      
@@ -4374,7 +4499,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d105b3b3">
+                           <table id="w108aac16d107b3b3">
                               
                               <tr>
                                  
@@ -4449,7 +4574,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d105b5b3">
+                           <table id="w108aac16d107b5b3">
                               
                               <tr>
                                  
@@ -4614,7 +4739,7 @@
                      
                      <div class="table">
                         <div class="table-contents">
-                           <table id="w108aac16d107b3">
+                           <table id="w108aac16d109b3">
                               
                               <tr>
                                  
@@ -4703,7 +4828,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d109b3b3">
+                           <table id="w108aac16d111b3b3">
                               
                               <tr>
                                  
@@ -4742,7 +4867,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d111b3">
+                           <table id="w108aac16d113b3">
                               
                               <tr>
                                  
@@ -4803,7 +4928,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d113b3b3">
+                           <table id="w108aac16d115b3b3">
                               
                               <tr>
                                  
@@ -4868,7 +4993,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d113b5b3">
+                           <table id="w108aac16d115b5b3">
                               
                               <tr>
                                  
@@ -5175,7 +5300,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d113b7b3">
+                           <table id="w108aac16d115b7b3">
                               
                               <tr>
                                  
@@ -5256,7 +5381,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d113b9b3">
+                           <table id="w108aac16d115b9b3">
                               
                               <tr>
                                  
@@ -5314,7 +5439,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d113c11b3">
+                           <table id="w108aac16d115c11b3">
                               
                               <tr>
                                  
@@ -5705,7 +5830,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d113c13b3">
+                           <table id="w108aac16d115c13b3">
                               
                               <tr>
                                  
@@ -5743,7 +5868,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d115b3">
+                           <table id="w108aac16d117b3">
                               
                               <tr>
                                  
@@ -5812,7 +5937,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d117b3">
+                           <table id="w108aac16d119b3">
                               
                               <tr>
                                  
@@ -5871,7 +5996,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d119b3">
+                           <table id="w108aac16d121b3">
                               
                               <tr>
                                  
@@ -5915,7 +6040,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d121b3">
+                           <table id="w108aac16d123b3">
                               
                               <tr>
                                  
@@ -5948,7 +6073,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d123b3">
+                           <table id="w108aac16d125b3">
                               
                               <tr>
                                  
@@ -6012,7 +6137,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d125b3">
+                           <table id="w108aac16d127b3">
                               
                               <tr>
                                  
@@ -6142,7 +6267,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d127b3">
+                           <table id="w108aac16d129b3">
                               
                               <tr>
                                  
@@ -6188,7 +6313,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d129b3">
+                           <table id="w108aac16d131b3">
                               
                               <tr>
                                  
@@ -6242,7 +6367,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d131b3">
+                           <table id="w108aac16d133b3">
                               
                               <tr>
                                  
@@ -6301,7 +6426,7 @@
                               <div class="table">
                                  <p class="title"><b>Throttle Rate per Operation</b></p>
                                  <div class="table-contents">
-                                    <table id="w108aac16d133b3b3b3">
+                                    <table id="w108aac16d135b3b3b3">
                                        
                                        <tr>
                                           
@@ -6417,7 +6542,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d135b3">
+                           <table id="w108aac16d137b3">
                               
                               <tr>
                                  
@@ -6511,7 +6636,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d137b3">
+                           <table id="w108aac16d139b3">
                               
                               <tr>
                                  
@@ -6609,7 +6734,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d139b3">
+                           <table id="w108aac16d141b3">
                               
                               <tr>
                                  
@@ -6767,7 +6892,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d141b3">
+                           <table id="w108aac16d143b3">
                               
                               <tr>
                                  
@@ -6863,7 +6988,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d143b3">
+                           <table id="w108aac16d145b3">
                               
                               <tr>
                                  
@@ -6908,7 +7033,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d145b3">
+                           <table id="w108aac16d147b3">
                               
                               <tr>
                                  
@@ -6997,7 +7122,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d149b5">
+                           <table id="w108aac16d151b5">
                               
                               <tr>
                                  
@@ -7053,7 +7178,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d151b3">
+                           <table id="w108aac16d153b3">
                               
                               <tr>
                                  
@@ -7126,7 +7251,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d151b7b3">
+                           <table id="w108aac16d153b7b3">
                               
                               <tr>
                                  
@@ -7216,7 +7341,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d155b3">
+                           <table id="w108aac16d157b3">
                               
                               <tr>
                                  
@@ -7257,7 +7382,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d159b3">
+                           <table id="w108aac16d161b3">
                               
                               <tr>
                                  
@@ -7305,7 +7430,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d165b3">
+                           <table id="w108aac16d167b3">
                               
                               <tr>
                                  
@@ -7959,7 +8084,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d167b5">
+                           <table id="w108aac16d169b5">
                               
                               <tr>
                                  
@@ -8032,7 +8157,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d167c11">
+                           <table id="w108aac16d169c11">
                               
                               <tr>
                                  
@@ -8185,7 +8310,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w108aac16d171b3">
+                           <table id="w108aac16d173b3">
                               
                               <tr>
                                  
@@ -8217,6 +8342,67 @@
                                  <td>Images</td>
                                  
                                  <td>5</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     <h2 id="limits_xray">AWS X-Ray Limits</h2>
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w108aac16d175b3">
+                              
+                              <tr>
+                                 
+                                 <th>
+                                    <p>Resource</p>
+                                 </th>
+                                 
+                                 <th>
+                                    <p>Default Limit</p>
+                                 </th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Trace and service graph retention</p>
+                                 </td>
+                                 
+                                 <td>
+                                    <p>30 days</p>
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Segment document size</p>
+                                 </td>
+                                 
+                                 <td>
+                                    <p>64kB</p>
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Indexed annotations per trace</p>
+                                 </td>
+                                 
+                                 <td>
+                                    <p>50</p>
+                                 </td>
                                  
                               </tr>
                               
