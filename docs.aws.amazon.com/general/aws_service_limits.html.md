@@ -111,18 +111,18 @@ Amazon API Gateway Limits {#limits_apigateway}
 
 The following limits apply to configuring and running an API in Amazon API Gateway and can be increased upon request to optimize performances of a deployed API in Amazon API Gateway.
 
-  Resource or Operation                                  Default Limit
-  ------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Throttle rate per account                              10000 request per second (rps) with an additional burst capacity provided by the [token bucket algorithm](https://en.wikipedia.org/wiki/Token_bucket), using a maximum bucket capacity of 5000 requests.
-  APIs (or [RestApi](resource/rest-api/)s) per account   60
-  API keys per account                                   500
-  Custom authorizers per API                             10
-  Client certificates per account                        60
-  Documentation parts per API                            2000
-  Resources per API                                      300
-  Stages per API                                         10
-  Usage plans per account                                300
-  Usage plans per API key                                10
+  Resource or Operation             Default Limit
+  --------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Throttle rate per account         10000 request per second (rps) with an additional burst capacity provided by the [token bucket algorithm](https://en.wikipedia.org/wiki/Token_bucket), using a maximum bucket capacity of 5000 requests.
+  APIs (or RestApis) per account    60
+  API keys per account              500
+  Custom authorizers per API        10
+  Client certificates per account   60
+  Documentation parts per API       2000
+  Resources per API                 300
+  Stages per API                    10
+  Usage plans per account           300
+  Usage plans per API key           10
 
 All of the per API limits can only be increased on specific APIs.
 
@@ -1245,21 +1245,27 @@ Amazon GameLift Limits {#limits_gamelift}
 +-----------------------------------+-----------------------------------+
 | Log upload size per game session  | 200 MB                            |
 +-----------------------------------+-----------------------------------+
-| On-demand instances               | Limits vary depending on instance |
-|                                   | type;                             |
-|                                   | 20 instances per account,         |
-|                                   | regardless of instance type       |
-+-----------------------------------+-----------------------------------+
-| Server processes per instance     | 1 with GameLift SDK v2.x          |
+| On-demand instances               | Per instance type: limits vary.   |
 |                                   |                                   |
-|                                   | 50 with GameLift SDK v3.x and up  |
+|                                   | Per account: 20 instances max,    |
+|                                   | regardless of instance type.      |
+|                                   |                                   |
+|                                   | For more information, see         |
+|                                   | [Scaling Amazon Elastic Compute   |
+|                                   | Cloud (Amazon EC2)                |
+|                                   | Instances](http://docs.aws.amazon |
+|                                   | .com/gamelift/latest/developergui |
+|                                   | de/gamelift-ec2-instances.html)   |
+|                                   | for Amazon GameLift.              |
++-----------------------------------+-----------------------------------+
+| Server processes per instance     | GameLift SDK v2.x: 1              |
+|                                   |                                   |
+|                                   | GameLift SDK v3.x and up: 50      |
 +-----------------------------------+-----------------------------------+
 | Player sessions per game session  | 200                               |
 +-----------------------------------+-----------------------------------+
 | Matchmakers per account           | 100                               |
 +-----------------------------------+-----------------------------------+
-
-For more information about these limits, see [Scaling Amazon Elastic Compute Cloud (Amazon EC2) Instances](http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html) in the *Amazon GameLift Developer Guide*.
 
 AWS Glue Limits {#limits_glue}
 ---------------
