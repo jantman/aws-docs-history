@@ -1266,6 +1266,16 @@ Amazon GameLift Limits {#limits_gamelift}
 +-----------------------------------+-----------------------------------+
 | Matchmakers per account           | 100                               |
 +-----------------------------------+-----------------------------------+
+| VPC peering connections           | For limits on active and pending  |
+|                                   | VPC peering connections, see      |
+|                                   | [Amazon Virtual Private Cloud     |
+|                                   | (Amazon VPC)                      |
+|                                   | Limits](aws_service_limits.html#l |
+|                                   | imits_vpc).                       |
+|                                   | The expiry time for an Amazon     |
+|                                   | GameLift VPC peering              |
+|                                   | authorization is 24 hours.        |
++-----------------------------------+-----------------------------------+
 
 AWS Glue Limits {#limits_glue}
 ---------------
