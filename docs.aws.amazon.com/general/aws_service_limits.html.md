@@ -160,18 +160,20 @@ Important
 
 This information applies only to the latest version, Amazon AppStream 2.0.
 
-**Default Limits Per Region**
+**Default Limits Per Region Per Account**
 
   Resource              Default Limit
-  --------------------- -----------------------
-  Stacks                5 per account
-  Fleets                5 per account
-  Streaming instances   5 per account **â€ **
-  Images                5 per account
-  Image builders        5 per account **â€ **
-  Users                 5 per account
+  --------------------- ---------------
+  Stacks                5
+  Fleets                5
+  Streaming instances   5 **\***
+  Images                5
+  Image builders        5 **â€ **
+  Users                 5
 
-**â€ ** This limit does not apply to **Graphics Desktop** and **Graphics Pro** instance families, which have a default limit of 0 (zero). To request an increase to this or any other limit for your account, see the instructions at the top of this topic. For more information about instance families, see [AppStream 2.0 Instance Families](http://docs.aws.amazon.com/appstream2/latest/developerguide/instance-types.html) in the *Amazon AppStream 2.0 Developer Guide*.
+**\*** This is the total limit across all instance families. Certain instance families have additional limits. For the Graphics Desktop and Graphics Pro instance families, the default limit is 0. For the Graphics Design instance family, the default limit is 2.
+
+**â€ ** This is the total limit across all instance families. Certain instance families have additional limits. For the Graphics Desktop and Graphics Pro instance families, the default limit is 0. For the Graphics Design instance family, the default limit is 1.
 
 Application Auto Scaling Limits {#limits_as-app}
 -------------------------------
