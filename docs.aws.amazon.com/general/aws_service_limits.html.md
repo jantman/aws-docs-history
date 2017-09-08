@@ -731,7 +731,7 @@ Amazon Connect Limits {#limits_amazon_connect}
 +-----------------------------------+-----------------------------------+
 | Item                              | Default limit                     |
 +===================================+===================================+
-| Amazon Connect instances per      | 3                                 |
+| Amazon Connect instances per      | 10                                |
 | account                           |                                   |
 +-----------------------------------+-----------------------------------+
 | Users per instance                | 500                               |
@@ -766,9 +766,6 @@ Amazon Connect Limits {#limits_amazon_connect}
 +-----------------------------------+-----------------------------------+
 | Sustained incoming call rate per  | 1                                 |
 | second                            |                                   |
-+-----------------------------------+-----------------------------------+
-| Dialable outbound destination     | US                                |
-| countries                         |                                   |
 +-----------------------------------+-----------------------------------+
 
 AWS Config Limits {#limits_config}
@@ -1128,7 +1125,7 @@ For more information about these limits, see [Amazon EFS Limits](http://docs.aws
 Elastic Load Balancing Limits {#limits_elastic_load_balancer}
 -----------------------------
 
-Elastic Load Balancing supports two types of load balancers: Application Load Balancers and Classic Load Balancers.
+Elastic Load Balancing supports three types of load balancers: Application Load Balancers, Network Load Balancers, and Classic Load Balancers.
 
 **Application Load Balancers**
 
@@ -1144,6 +1141,21 @@ Elastic Load Balancing supports two types of load balancers: Application Load Ba
   Number of times a target can be registered per load balancer   100
   Load balancers per target group                                1
   Targets per target group                                       1000
+
+**â€ ** This limit includes both your Application Load Balancers and your Classic Load Balancers. This limit can be increased upon request.
+
+**Network Load Balancers**
+
+  Resource                                          Default Limit
+  ------------------------------------------------- ---------------
+  Network Load Balancers per region                 20
+  Target groups per region                          3000 **\***
+  Listeners per load balancer                       50
+  Subnets per Availability Zone per load balancer   1
+  Targets per load balancer per Availability Zone   200
+  Load balancers per target group                   1
+
+**\*** This limit is shared by target groups for your Application Load Balancers and Network Load Balancers.
 
 **Classic Load Balancers**
 

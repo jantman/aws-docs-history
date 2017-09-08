@@ -2088,7 +2088,7 @@
                                  
                                  <td>
                                     
-                                    <p>3</p>
+                                    <p>10</p>
                                     
                                  </td>
                                  
@@ -2345,22 +2345,6 @@
                                  <td>
                                     
                                     <p>1</p>
-                                    
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>
-                                    
-                                    <p>Dialable outbound destination countries</p>
-                                    
-                                 </td>
-                                 
-                                 <td>
-                                    
-                                    <p>US</p>
                                     
                                  </td>
                                  
@@ -3876,9 +3860,9 @@
                      <h2 id="limits_elastic_load_balancer">Elastic Load Balancing Limits</h2>
                      
                      
-                     <p>Elastic Load Balancing supports two types of load balancers: Application Load Balancers
-                        and Classic Load
-                        Balancers.
+                     <p>Elastic Load Balancing supports three types of load balancers: Application Load Balancers,
+                        Network Load Balancers, 
+                        and Classic Load Balancers.
                      </p>
                      
                      <div class="table">
@@ -3979,10 +3963,84 @@
                         </div>
                      </div>
                      
+                     <p><b>â </b> This limit includes both your Application Load Balancers and
+                        your Classic Load Balancers. This limit can be increased upon request.
+                     </p>
+                     
+                     <div class="table">
+                        <p class="title"><b>Network Load Balancers</b></p>
+                        <div class="table-contents">
+                           <table id="w108aac16c95b9">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Default Limit</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Network Load Balancers per region</td>
+                                 
+                                 <td>20</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Target groups per region</td>
+                                 
+                                 <td>3000 <b>*</b></td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Listeners per load balancer</td>
+                                 
+                                 <td>50</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Subnets per Availability Zone per load balancer</td>
+                                 
+                                 <td>1</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Targets per load balancer per Availability Zone</td>
+                                 
+                                 <td>200</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Load balancers per target group</td>
+                                 
+                                 <td>1</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     <p><b>*</b> This limit is shared by target groups for your Application Load Balancers and Network
+                        Load Balancers.
+                     </p>
+                     
                      <div class="table">
                         <p class="title"><b>Classic Load Balancers</b></p>
                         <div class="table-contents">
-                           <table id="w108aac16c95b7">
+                           <table id="w108aac16c95c13">
                               
                               <tr>
                                  
