@@ -143,7 +143,7 @@ Amazon AppStream Limits {#limits_appstream}
 
 Important
 
-This information applies only to an older version of Amazon AppStream.
+This information applies only to the older version of Amazon AppStream.
 
 An Amazon AppStream account has a service limit of up to five concurrent streaming sessions:
 
@@ -155,10 +155,6 @@ For more information, see [Amazon AppStream Application Lifecycle](http://docs.a
 
 Amazon AppStream 2.0 Limits {#limits_appstream2}
 ---------------------------
-
-Important
-
-This information applies only to the latest version, Amazon AppStream 2.0.
 
 **Default Limits Per Region Per Account**
 
@@ -1394,8 +1390,8 @@ AWS Identity and Access Management (IAM) Limits {#limits_iam}
 |                                   | number of users, consider using   |
 |                                   | [temporary security               |
 |                                   | credentials](http://docs.aws.amaz |
-|                                   | on.com/IAM/latest/UserGuide/%20id |
-|                                   | _credentials_temp.html%20).)      |
+|                                   | on.com/IAM/latest/UserGuide/id_cr |
+|                                   | edentials_temp.html).)            |
 +-----------------------------------+-----------------------------------+
 | Virtual MFA devices (assigned or  | Equal to the user quota for the   |
 | unassigned) in an AWS account     | account                           |
