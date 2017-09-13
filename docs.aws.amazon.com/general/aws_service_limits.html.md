@@ -1396,7 +1396,7 @@ AWS Identity and Access Management (IAM) Limits {#limits_iam}
 | Virtual MFA devices (assigned or  | Equal to the user quota for the   |
 | unassigned) in an AWS account     | account                           |
 +-----------------------------------+-----------------------------------+
-| Instance profiles in an AWS       | 500                               |
+| Instance profiles in an AWS       | 1000                              |
 | account                           |                                   |
 +-----------------------------------+-----------------------------------+
 | Server certificates stored in an  | 20                                |
