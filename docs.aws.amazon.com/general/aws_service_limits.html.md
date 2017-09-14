@@ -78,6 +78,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [AWS Key Management Service (AWS KMS) Limits](#limits_kms)
 -   [Amazon Kinesis Firehose Limits](#limits-akf)
 -   [Amazon Kinesis Streams Limits](#limits-aks)
+-   [Amazon Kinesis Analytics Limits](#limits-aka)
 -   [AWS Lambda Limits](#limits_lambda)
 -   [Amazon Lightsail Limits](#limits_lightsail)
 -   [Amazon Machine Learning (Amazon ML) Limits](#limits_machinelearning)
@@ -1842,6 +1843,22 @@ Amazon Kinesis Streams Limits {#limits-aks}
 
 For more information about these limits, see [Amazon Kinesis Streams Limits](http://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html) in the *Amazon Kinesis Streams Developer Guide*.
 
+Amazon Kinesis Analytics Limits {#limits-aka}
+-------------------------------
+
++-----------------------------------+-----------------------------------+
+| Resource                          | Default Limit                     |
++===================================+===================================+
+| Kinesis Processing Units (KPUs)   | US East (N. Virginia) Region â€“  |
+|                                   | 8                                 |
+|                                   |                                   |
+|                                   | US West (Oregon) Region â€“ 8     |
+|                                   |                                   |
+|                                   | EU (Ireland) Region â€“ 8         |
++-----------------------------------+-----------------------------------+
+
+For more information about these limits, see [Limits](http://docs.aws.amazon.com/kinesisanalytics/latest/dev/limits.html) in the *Amazon Kinesis Analytics Developer Guide*.
+
 AWS Lambda Limits {#limits_lambda}
 -----------------
 
@@ -2189,6 +2206,9 @@ Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc}
 |                       |                       | limit-increase&limitT |
 |                       |                       | ype=service-code-vpc) |
 |                       |                       | .                     |
++-----------------------+-----------------------+-----------------------+
+| IPv6 CIDR blocks per  | 1                     | This limit cannot be  |
+| VPC                   |                       | increased.            |
 +-----------------------+-----------------------+-----------------------+
 | Internet gateways per | 5                     | This limit is         |
 | region                |                       | directly correlated   |
