@@ -2340,6 +2340,13 @@ Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc}
 |                       |                       | limit-increase&limitT |
 |                       |                       | ype=service-code-vpc) |
 |                       |                       | .                     |
+|                       |                       |                       |
+|                       |                       | The multiple of the   |
+|                       |                       | number of VPCs in the |
+|                       |                       | region and the number |
+|                       |                       | of security groups    |
+|                       |                       | per VPC cannot exceed |
+|                       |                       | 5000.                 |
 +-----------------------+-----------------------+-----------------------+
 | Inbound or outbound   | 50                    | You can have 50       |
 | rules per security    |                       | inbound and 50        |
