@@ -1057,16 +1057,40 @@ AWS Elastic Beanstalk Limits {#limits_elastic_beanstalk}
 Amazon Elastic Block Store (Amazon EBS) Limits {#limits_ebs}
 ----------------------------------------------
 
-  Resource                                                              Default Limit
-  --------------------------------------------------------------------- ---------------
-  Number of EBS volumes                                                 5,000
-  Number of EBS snapshots                                               10,000
-  Total volume storage of General Purpose SSD (`gp2`{.code}) volumes    20 TiB
-  Total volume storage of Provisioned IOPS SSD (`io1`{.code}) volumes   20 TiB
-  Total volume storage of Throughput Optimized HDD (`st1`{.code})       20 TiB
-  Total volume storage of Cold HDD (`sc1`{.code})                       20 TiB
-  Total volume storage of Magnetic volumes                              20 TiB
-  Total provisioned IOPS                                                40,000Â 
++-----------------------------------+-----------------------------------+
+| Resource                          | Default Limit                     |
++===================================+===================================+
+| Number of EBS volumes             | 5,000                             |
++-----------------------------------+-----------------------------------+
+| Number of EBS snapshots           | 10,000                            |
++-----------------------------------+-----------------------------------+
+| Concurrent snapshots allowed for  | 5 for `io1`{.code}, `gp2`{.code}, |
+| a single volume                   | `magnetic`{.code}; 1 for          |
+|                                   | `st1`{.code}, `sc1`{.code}        |
++-----------------------------------+-----------------------------------+
+| Concurrent snapshot copy requests | 5                                 |
+| to a single destination region    |                                   |
++-----------------------------------+-----------------------------------+
+| Total volume storage of General   | 20 TiB                            |
+| Purpose SSD (`gp2`{.code})        |                                   |
+| volumes                           |                                   |
++-----------------------------------+-----------------------------------+
+| Total volume storage of           | 20 TiB                            |
+| Provisioned IOPS SSD              |                                   |
+| (`io1`{.code}) volumes            |                                   |
++-----------------------------------+-----------------------------------+
+| Total volume storage of           | 20 TiB                            |
+| Throughput Optimized HDD          |                                   |
+| (`st1`{.code})                    |                                   |
++-----------------------------------+-----------------------------------+
+| Total volume storage of Cold HDD  | 20 TiB                            |
+| (`sc1`{.code})                    |                                   |
++-----------------------------------+-----------------------------------+
+| Total volume storage of Magnetic  | 20 TiB                            |
+| volumes                           |                                   |
++-----------------------------------+-----------------------------------+
+| Total provisioned IOPS            | 40,000Â                           |
++-----------------------------------+-----------------------------------+
 
 For more information about these limits, see [Amazon EC2 Service Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html) in the *Amazon EC2 User Guide for Linux Instances*.
 
