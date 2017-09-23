@@ -540,7 +540,7 @@ Amazon CloudWatch Logs Limits {#limits_cloudwatch_logs}
 | Resource              | Default Limit         | Comments              |
 +=======================+=======================+=======================+
 | [CreateLogGroup](http | 5000 log              | If you exceed your    |
-| ://docs.aws.amazon.co | groups/account/region | log group limit, you  |
+| ://docs.aws.amazon.co | groups/account/Region | log group limit, you  |
 | m/AmazonCloudWatchLog |                       | get a                 |
 | s/latest/APIReference |                       | `ResourceLimitExceede |
 | /API_CreateLogGroup.h |                       | d`{.code}             |
@@ -558,7 +558,7 @@ Amazon CloudWatch Logs Limits {#limits_cloudwatch_logs}
 +-----------------------+-----------------------+-----------------------+
 | [DescribeLogStreams]( | 5 transactions per    | If you experience     |
 | http://docs.aws.amazo | second                | frequent throttling,  |
-| n.com/AmazonCloudWatc | (TPS)/account/region  | you can [request a    |
+| n.com/AmazonCloudWatc | (TPS)/account/Region  | you can [request a    |
 | hLogs/latest/APIRefer |                       | limit                 |
 | ence/API_DescribeLogS |                       | increase](https://con |
 | treams.html)          |                       | sole.aws.amazon.com/s |
@@ -578,7 +578,7 @@ Amazon CloudWatch Logs Limits {#limits_cloudwatch_logs}
 +-----------------------+-----------------------+-----------------------+
 | [GetLogEvents](http:/ | 10 transactions per   | We recommend          |
 | /docs.aws.amazon.com/ | second                | subscriptions if you  |
-| AmazonCloudWatchLogs/ | (TPS)/account/region  | are continuously      |
+| AmazonCloudWatchLogs/ | (TPS)/account/Region  | are continuously      |
 | latest/APIReference/A |                       | processing new data.  |
 | PI_GetLogEvents.html) |                       | If you need           |
 |                       |                       | historical data, we   |
@@ -594,22 +594,22 @@ Amazon CloudWatch Logs Limits {#limits_cloudwatch_logs}
 +-----------------------+-----------------------+-----------------------+
 | [PutLogEvents](http:/ | 1500 transactions per | You can [request a    |
 | /docs.aws.amazon.com/ | second per account    | limit                 |
-| AmazonCloudWatchLogs/ | per region.           | increase](https://con |
-| latest/APIReference/A |                       | sole.aws.amazon.com/s |
-| PI_PutLogEvents.html) |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-clo |
-|                       |                       | udwatch-logs).        |
-|                       |                       |                       |
-|                       |                       | The maximum batch     |
-|                       |                       | size of a             |
-|                       |                       | PutLogEvents request  |
-|                       |                       | is 1MB.               |
-|                       |                       |                       |
-|                       |                       | 5 requests per second |
-|                       |                       | per log stream.       |
-|                       |                       | Additional requests   |
+| AmazonCloudWatchLogs/ | per Region, except    | increase](https://con |
+| latest/APIReference/A | for the following     | sole.aws.amazon.com/s |
+| PI_PutLogEvents.html) | Regions where the     | upport/home#/case/cre |
+|                       | limit is 800          | ate?issueType=service |
+|                       | transactions per      | -limit-increase&limit |
+|                       | second per account    | Type=service-code-clo |
+|                       | per Region:           | udwatch-logs).        |
+|                       | ap-south-1,           |                       |
+|                       | ap-northeast-1,       | The maximum batch     |
+|                       | ap-northeast-2,       | size of a             |
+|                       | ap-southeast-1,       | PutLogEvents request  |
+|                       | ap-southeast-2,       | is 1MB.               |
+|                       | eu-central-1,         |                       |
+|                       | eu-west-2, sa-east-1, | 5 requests per second |
+|                       | us-east-2, and        | per log stream.       |
+|                       | us-west-1.            | Additional requests   |
 |                       |                       | are throttled. This   |
 |                       |                       | limit cannot be       |
 |                       |                       | changed.              |
@@ -760,9 +760,6 @@ Amazon Connect Limits {#limits_amazon_connect}
 | Scheduled reports per instance    | 50                                |
 +-----------------------------------+-----------------------------------+
 | Active calls per instance         | 100                               |
-+-----------------------------------+-----------------------------------+
-| Sustained incoming call rate per  | 1                                 |
-| second                            |                                   |
 +-----------------------------------+-----------------------------------+
 
 AWS Config Limits {#limits_config}
