@@ -1987,7 +1987,7 @@ Amazon Pinpoint Limits {#limits_pinpoint}
 ----------------------
 
   Resource                                      Default Limit
-  --------------------------------------------- ---------------
+  --------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------
   Active campaigns per account                  100
   Apps per account                              100
   Concurrent endpoint import jobs per account   2
@@ -1997,6 +1997,14 @@ Amazon Pinpoint Limits {#limits_pinpoint}
   Message sends per campaign activity           100 million
   Segments per app                              200
   Total file size per endpoint import job       1 GB
+  SMS sending rate                              20 messages per second.
+  Email sending quota                           200 emails per 24 hour period for accounts in the sandbox environment.
+  Email sending rate                            1 email per second for accounts in the sandbox environment.
+  Email recipient addresses                     Accounts in the sandbox environment may only send email to recipients whose email addresses or domains have been verified.
+
+For more information about verifying email addresses and domains, see [Email Address or Domain Verification](http://docs.aws.amazon.com/pinpoint/latest/userguide/channels-email-manage-verify.html) in the *Amazon Pinpoint User Guide*.
+
+For information about moving out of the email sandbox environment, see [Requesting Production Access for Email](http://docs.aws.amazon.com/pinpoint/latest/userguide/channels-email-setup-production-access.html) in the *Amazon Pinpoint User Guide*.
 
 Amazon Redshift Limits {#limits_redshift}
 ----------------------
