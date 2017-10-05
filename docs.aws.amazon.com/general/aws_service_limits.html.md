@@ -184,13 +184,12 @@ Application Auto Scaling Limits {#limits_as-app}
 Amazon Athena Limits
 --------------------
 
-  Resource                         Default Limit
-  -------------------------------- ---------------
-  Number of concurrent queries     5
-  Query timeout                    30 minutes
-  Number of databases              100
-  Number of tables per database    100
-  Number of partitions per table   20,000
+  Resource                       Default Limit
+  ------------------------------ ---------------
+  Number of concurrent queries   5
+  Query timeout                  30 minutes
+
+For information about limits for databases, tables, and partitions, see [AWS Glue Limits](aws_service_limits.html#limits_glue).
 
 Auto Scaling Limits {#limits_autoscaling}
 -------------------
