@@ -901,11 +901,12 @@ For information about additional documented limits, see [Amazon ECR Service Limi
 Amazon EC2 Container Service (Amazon ECS) Limits {#limits_ecs}
 ------------------------------------------------
 
-  Resource                                    Default Limit
-  ------------------------------------------- ---------------
-  Number of clusters per region per account   1000
-  Number of container instances per cluster   1000
-  Number of services per cluster              500
+  Resource                                          Default Limit
+  ------------------------------------------------- ---------------
+  Number of clusters per region per account         1000
+  Number of container instances per cluster         1000
+  Number of services per cluster                    500
+  Number of tasks per service (the desired count)   1000
 
 For information about additional documented limits, see [Amazon ECS Service Limits](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_limits.html) in the *Amazon EC2 Container Service Developer Guide*.
 
@@ -1146,18 +1147,19 @@ Elastic Load Balancing supports three types of load balancers: Application Load 
 
 **Application Load Balancers**
 
-  Resource                                                       Default Limit
-  -------------------------------------------------------------- ---------------
-  Load balancers per region                                      20 **â€ **
-  Target groups per region                                       3000
-  Listeners per load balancer                                    50
-  Targets per load balancer                                      1000
-  Subnets per Availability Zone per load balancer                1
-  Security groups per load balancer                              5
-  Rules per load balancer (not counting default rules)           100
-  Number of times a target can be registered per load balancer   100
-  Load balancers per target group                                1
-  Targets per target group                                       1000
+  Resource                                                             Default Limit
+  -------------------------------------------------------------------- ---------------
+  Load balancers per region                                            20 **â€ **
+  Target groups per region                                             3000
+  Listeners per load balancer                                          50
+  Targets per load balancer                                            1000
+  Subnets per Availability Zone per load balancer                      1
+  Security groups per load balancer                                    5
+  Rules per load balancer (not counting default rules)                 100
+  Certificates per load balancer (not counting default certificates)   25
+  Number of times a target can be registered per load balancer         100
+  Load balancers per target group                                      1
+  Targets per target group                                             1000
 
 **â€ ** This limit includes both your Application Load Balancers and your Classic Load Balancers. This limit can be increased upon request.
 
