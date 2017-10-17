@@ -2625,8 +2625,14 @@ The following limits on AWS WAF entities can't be changed.
 | specified value                   |                                   |
 +-----------------------------------+-----------------------------------+
 | In string match conditions, the   | 50                                |
-| number of bytes in the value for  |                                   |
-| which AWS WAF should search       |                                   |
+| number of characters in the value |                                   |
+| that you want AWS WAF to search   |                                   |
+| for                               |                                   |
++-----------------------------------+-----------------------------------+
+| In regex match conditions, the    | 70                                |
+| number of characters in the       |                                   |
+| pattern that you want AWS WAF to  |                                   |
+| search for                        |                                   |
 +-----------------------------------+-----------------------------------+
 
 These limits are the same for all regions in which AWS WAF is available. Each region is subject to these limits individually. That is, the limits are not cumulative across regions.
