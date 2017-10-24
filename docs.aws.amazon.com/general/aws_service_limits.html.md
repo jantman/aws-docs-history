@@ -1803,6 +1803,7 @@ AWS IoT Limits {#limits_iot}
   UpdateCertificate           10
   UpdateCACertificate         10
   UpdateThing                 10
+  UpdateThingShadow           10
 
 ### AWS IoT Rules Engine Limits {#rules-limits}
 
