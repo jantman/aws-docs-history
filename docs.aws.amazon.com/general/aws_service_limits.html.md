@@ -88,6 +88,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Polly Limits](#limits_polly)
 -   [Amazon Pinpoint Limits](#limits_pinpoint)
 -   [Amazon Redshift Limits](#limits_redshift)
+-   [Amazon Rekognition Limits](#limits-rekognition)
 -   [Amazon Relational Database Service (Amazon RDS) Limits](#limits_rds)
 -   [Amazon RouteÂ 53 Limits](#limits_route53)
 -   [AWS Server Migration Service Limits](#limits_server_migration)
@@ -1322,6 +1323,7 @@ AWS Glue Limits {#limits_glue}
   Number of jobs per account                                25
   Number of triggers per account                            25
   Number of concurrent job runs per account                 30
+  Number of concurrent job runs per job                     3
   Number of jobs per trigger                                10
   Number of development endpoints per account               2
   Maximum DPUs used by a development endpoint at one time   5
@@ -2024,6 +2026,11 @@ Amazon Redshift Limits {#limits_redshift}
   Event Subscriptions        20
 
 For more information about these limits, see [Limits in Amazon Redshift](http://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html) in the *Amazon Redshift Cluster Management Guide*.
+
+Amazon Rekognition Limits {#limits-rekognition}
+-------------------------
+
+Amazon Rekognition does not have service limits that you can change. For information about Amazon Rekognition service limits, see [Amazon Rekognition Limits](http://docs.aws.amazon.com/rekognition/latest/dg/limits.html).
 
 Amazon Relational Database Service (Amazon RDS) Limits {#limits_rds}
 ------------------------------------------------------
