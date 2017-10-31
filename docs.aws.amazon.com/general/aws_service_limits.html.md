@@ -113,18 +113,18 @@ Amazon API Gateway Limits {#limits_apigateway}
 
 The following limits apply to configuring and running an API in Amazon API Gateway and can be increased upon request to optimize performances of a deployed API in Amazon API Gateway.
 
-  Resource or Operation             Default Limit
-  --------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Throttle rate per account         10000 request per second (rps) with an additional burst capacity provided by the [token bucket algorithm](https://en.wikipedia.org/wiki/Token_bucket), using a maximum bucket capacity of 5000 requests.
-  APIs (or RestApis) per account    60
-  API keys per account              500
-  Custom authorizers per API        10
-  Client certificates per account   60
-  Documentation parts per API       2000
-  Resources per API                 300
-  Stages per API                    10
-  Usage plans per account           300
-  Usage plans per API key           10
+  Resource or Operation                        Default Limit
+  -------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Throttle rate per account per region         10000 request per second (rps) with an additional burst capacity provided by the [token bucket algorithm](https://en.wikipedia.org/wiki/Token_bucket), using a maximum bucket capacity of 5000 requests.
+  APIs (or RestApis) per account per region    60
+  API keys per account per region              500
+  Custom authorizers per API                   10
+  Client certificates per account per region   60
+  Documentation parts per API                  2000
+  Resources per API                            300
+  Stages per API                               10
+  Usage plans per account per region           300
+  Usage plans per API key                      10
 
 All of the per API limits can only be increased on specific APIs.
 
