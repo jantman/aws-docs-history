@@ -917,12 +917,34 @@ Amazon EC2 Systems Manager Limits {#limits_ssm}
 +-----------------------------------+-----------------------------------+
 | Resource                          | Default Limit                     |
 +===================================+===================================+
-| Managed instances                 | 1,000                             |
+| On-premises managed instances     | Each AWS account can activate a   |
+| registered through Amazon EC2     | maximum of 1,000 on-premises      |
+| activation                        | instances in a region for use     |
+|                                   | with Amazon EC2 Systems Manager.  |
 |                                   |                                   |
-|                                   | Each AWS account can              |
-|                                   | register/activate a maximum of    |
-|                                   | 1,000 managed instances in a      |
-|                                   | region.                           |
+|                                   | For more information about        |
+|                                   | activating on-premises instances  |
+|                                   | for use in your hybrid            |
+|                                   | environment, see [Create a        |
+|                                   | Managed-Instance                  |
+|                                   | Activation](http://docs.aws.amazo |
+|                                   | n.com/systems-manager/latest/user |
+|                                   | guide/systems-manager-managedinst |
+|                                   | ances.html#sysman-managed-instanc |
+|                                   | e-activation)                     |
+|                                   | in the *[Amazon EC2 Systems       |
+|                                   | Manager User                      |
+|                                   | Guide](http://docs.aws.amazon.com |
+|                                   | /systems-manager/latest/userguide |
+|                                   | /)*.                              |
+|                                   |                                   |
+|                                   | Note                              |
+|                                   |                                   |
+|                                   | Activation limits apply only to   |
+|                                   | the on-premises instances you add |
+|                                   | to your hybrid environment, and   |
+|                                   | not to registered Amazon EC2      |
+|                                   | instances.                        |
 +-----------------------------------+-----------------------------------+
 | Systems Manager documents         | 200                               |
 |                                   |                                   |
