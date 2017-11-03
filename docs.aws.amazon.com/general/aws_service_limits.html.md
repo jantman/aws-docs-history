@@ -337,30 +337,7 @@ For more information about these limits, see [Understanding Amazon CloudSearch L
 AWS CloudTrail Limits {#limits_cloudtrail}
 ---------------------
 
-+-----------------------+-----------------------+-----------------------+
-| Resource              | Default Limit         | Comments              |
-+=======================+=======================+=======================+
-| Trails per region     | 5                     | This limit cannot be  |
-|                       |                       | increased.            |
-+-----------------------+-----------------------+-----------------------+
-| Get, describe, and    | 10 transactions per   | The maximum number of |
-| list APIs             | second (TPS)          | operation requests    |
-|                       |                       | you can make per      |
-|                       |                       | second without being  |
-|                       |                       | throttled.            |
-|                       |                       |                       |
-|                       |                       | This limit cannot be  |
-|                       |                       | increased.            |
-+-----------------------+-----------------------+-----------------------+
-| All other APIs        | 1 transaction per     | The maximum number of |
-|                       | second (TPS)          | operation requests    |
-|                       |                       | you can make per      |
-|                       |                       | second without being  |
-|                       |                       | throttled.            |
-|                       |                       |                       |
-|                       |                       | This limit cannot be  |
-|                       |                       | increased.            |
-+-----------------------+-----------------------+-----------------------+
+CloudTrail has no increaseable limits. For more information, see [Limits in AWS CloudTrail](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html).
 
 Amazon CloudWatch Limits {#limits_cloudwatch}
 ------------------------
