@@ -238,7 +238,7 @@ AWS CloudFormation Limits {#limits_cloudformation}
   ------------------------------- ---------------
   Stacks                          200
   Stack sets                      20
-  Stack instances per stack set   50
+  Stack instances per stack set   500
 
 For more information about these limits, see [AWS CloudFormation Limits](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html) in the *AWS CloudFormation User Guide*.
 
