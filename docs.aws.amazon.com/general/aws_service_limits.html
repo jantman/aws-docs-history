@@ -6130,6 +6130,216 @@
                      <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/limits.html" target="_blank">AWS Lambda Limits</a> in the <em>AWS Lambda Developer Guide</em>.
                      </p>
                      
+                     <p>AWS Lambda will dynamically scale capacity in response to increased traffic, subject
+                        to your account's <a href="http://docs.aws.amazon.com/lambda/latest/dg/concurrent-execution-safety-limit" target="_blank">Concurrent Execution Safety Limit</a>. 
+                        To handle any burst in traffic, Lambda will immediately increase your concurrently
+                        executing functions by a predetermined amount, dependent on which
+                        region it's executed (see table below).
+                     </p>
+                     <p> If the default <b>Immediate Concurrency Increase</b> value, as noted in the table below, is not sufficient to accommodate the traffic
+                        surge,
+                        Lambda will continue to increase the number of concurrent function executions by 500
+                        per minute until your account safety limit has been reached or the number of concurrently
+                        executing functions is sufficient to successfully process the increased load.
+                     </p>
+                     
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w110aac16d125c10">
+                              
+                              <tr>
+                                 
+                                 <th>Region</th>
+                                 
+                                 <th>Immediate Concurrency Increase (function executions)</th>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Asia Pacific (Tokyo)</td>
+                                 
+                                 <td>1000</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Asia Pacific (Seoul)</td>
+                                 
+                                 <td>500</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Asia Pacific (Mumbai)</td>
+                                 
+                                 <td>500</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Asia Pacific (Singapore)</td>
+                                 
+                                 <td>500</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Asia Pacific (Sydney)</td>
+                                 
+                                 <td>500</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Canada (Central)</td>
+                                 
+                                 <td>500</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>EU (Frankfurt)</td>
+                                 
+                                 <td>1000</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>EU (London)</td>
+                                 
+                                 <td>500</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>EU (Ireland)</td>
+                                 
+                                 <td>3000</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>AWS GovCloud (US)</td>
+                                 
+                                 <td>500</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              
+                              
+                              
+                              <tr>
+                                 
+                                 <td>US East (Ohio)</td>
+                                 
+                                 <td>500</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>US West (N. California)</td>
+                                 
+                                 <td>500</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>US West (Oregon)</td>
+                                 
+                                 <td>3000</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>US East (N. Virginia)</td>
+                                 
+                                 <td>3000</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>South America (SÃ£o Paulo)</td>
+                                 
+                                 <td>500</td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>AWS GovCloud (US) </td>
+                                 
+                                 <td>500 </td>
+                                 
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
                      
                      <h2 id="limits_lightsail">Amazon Lightsail Limits</h2>
                      
