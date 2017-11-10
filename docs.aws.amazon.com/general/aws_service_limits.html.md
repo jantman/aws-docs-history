@@ -1892,29 +1892,6 @@ AWS Lambda Limits {#limits_lambda}
 
 For more information about these limits, see [AWS Lambda Limits](http://docs.aws.amazon.com/lambda/latest/dg/limits.html) in the *AWS Lambda Developer Guide*.
 
-AWS Lambda will dynamically scale capacity in response to increased traffic, subject to your account's [Concurrent Execution Safety Limit](http://docs.aws.amazon.com/lambda/latest/dg/concurrent-execution-safety-limit). To handle any burst in traffic, Lambda will immediately increase your concurrently executing functions by a predetermined amount, dependent on which region it's executed (see table below).
-
-If the default **Immediate Concurrency Increase** value, as noted in the table below, is not sufficient to accommodate the traffic surge, Lambda will continue to increase the number of concurrent function executions by 500 per minute until your account safety limit has been reached or the number of concurrently executing functions is sufficient to successfully process the increased load.
-
-  Region                       Immediate Concurrency Increase (function executions)
-  ---------------------------- ------------------------------------------------------
-  Asia Pacific (Tokyo)         1000
-  Asia Pacific (Seoul)         500
-  Asia Pacific (Mumbai)        500
-  Asia Pacific (Singapore)     500
-  Asia Pacific (Sydney)        500
-  Canada (Central)             500
-  EU (Frankfurt)               1000
-  EU (London)                  500
-  EU (Ireland)                 3000
-  AWS GovCloud (US)            500
-  US East (Ohio)               500
-  US West (N. California)      500
-  US West (Oregon)             3000
-  US East (N. Virginia)        3000
-  South America (SÃ£o Paulo)   500
-  AWS GovCloud (US)            500
-
 Amazon Lightsail Limits {#limits_lightsail}
 -----------------------
 
