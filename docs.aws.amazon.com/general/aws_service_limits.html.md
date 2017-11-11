@@ -103,6 +103,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [AWS Step Functions Limits](#limits-step-functions)
 -   [AWS Storage Gateway Limits](#limits-storage-gateway)
 -   [Amazon Virtual Private Cloud (Amazon VPC) Limits](#limits_vpc)
+-   [Amazon VPC DNS Limits](#limits-vpc-dns)
 -   [AWS WAF Limits](#limits_waf)
 -   [Amazon WorkMail Limits](#limits_workmail)
 -   [Amazon WorkSpaces Limits](#limits_workspaces)
@@ -2577,6 +2578,11 @@ Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc}
 +-----------------------+-----------------------+-----------------------+
 
 For more information about these limits, see [Amazon VPC Limits](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html) in the *Amazon VPC User Guide*.
+
+Amazon VPC DNS Limits {#limits-vpc-dns}
+---------------------
+
+For more information about these limits, see [DNS Limits](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-dns-limits) in the *Amazon VPC User Guide*.
 
 AWS WAF Limits {#limits_waf}
 --------------
