@@ -833,14 +833,7 @@ AWS Device Farm Limits {#limits_devicefarm}
 AWS Direct Connect Limits {#limits_directconnect}
 -------------------------
 
-  Resource                                                                          Default Limit   Comment
-  --------------------------------------------------------------------------------- --------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Virtual interfaces per AWS Direct Connect connection                              50              This limit cannot be increased.
-  Active AWS Direct Connect connections per region per account                      10              To increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-direct-connect).
-  Routes per Border Gateway Protocol (BGP) session on a private virtual interface   100             This limit cannot be increased.
-  Routes per Border Gateway Protocol (BGP) session on a public virtual interface    1,000           This limit cannot be increased.
-  Connections per link aggregation group (LAG)                                      4               To increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-direct-connect).
-  Link aggregation groups (LAGs) per region                                         10              To increase this limit, [submit a request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-direct-connect).
+For more information about these limits, see [AWS Direct Connect Limits](http://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html#directconnect_limits) in the *AWS Direct Connect User Guide*.
 
 AWS Directory Service Limits {#limits_ds}
 ----------------------------
