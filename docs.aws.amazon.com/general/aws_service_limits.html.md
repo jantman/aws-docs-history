@@ -82,7 +82,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [AWS Lambda Limits](#limits_lambda)
 -   [Amazon Lightsail Limits](#limits_lightsail)
 -   [Amazon Machine Learning (Amazon ML) Limits](#limits_machinelearning)
--   [AWS OpsWorks for Chef Automate Limits](#limits_opworks)
+-   [AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits](#limits_opworks)
 -   [AWS OpsWorks Stacks Limits](#aws-opsworks-stacks-limits)
 -   [AWS Organizations Limits](#aws-organizations-limits)
 -   [Amazon Polly Limits](#limits_polly)
@@ -1959,12 +1959,12 @@ The size of your data files is limited to ensure that jobs finish in a timely ma
 
 For more information about these limits, see [Amazon ML Limits](http://docs.aws.amazon.com/machine-learning/latest/dg/system-limits.html) in the *Amazon Machine Learning Developer Guide*.
 
-AWS OpsWorks for Chef Automate Limits {#limits_opworks}
--------------------------------------
+AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits {#limits_opworks}
+----------------------------------------------------------------------------
 
   Resource                                     Default Limit
   -------------------------------------------- ---------------
-  Chef servers                                 5
+  Chef or Puppet servers                       5
   User-initiated (manual) backup generations   10
   Automated (scheduled) backup generations     30
 
