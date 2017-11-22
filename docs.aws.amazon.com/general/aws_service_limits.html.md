@@ -57,8 +57,8 @@ You can take the following steps to request an increase for limits. These increa
 -   [AWS Direct Connect Limits](#limits_directconnect)
 -   [AWS Directory Service Limits](#limits_ds)
 -   [Amazon DynamoDB Limits](#limits_dynamodb)
--   [Amazon EC2 Container Registry (Amazon ECR) Limits](#limits_ecr)
--   [Amazon EC2 Container Service (Amazon ECS) Limits](#limits_ecs)
+-   [Amazon Elastic Container Registry (Amazon ECR) Limits](#limits_ecr)
+-   [Amazon Elastic Container Service (Amazon ECS) Limits](#limits_ecs)
 -   [Amazon EC2 Systems Manager Limits](#limits_ssm)
 -   [AWS Elastic Beanstalk Limits](#limits_elastic_beanstalk)
 -   [Amazon Elastic Block Store (Amazon EBS) Limits](#limits_ebs)
@@ -875,18 +875,18 @@ Amazon DynamoDB Limits {#limits_dynamodb}
 
 For more information about these limits, see [Limits in Amazon DynamoDB](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*.
 
-Amazon EC2 Container Registry (Amazon ECR) Limits {#limits_ecr}
--------------------------------------------------
+Amazon Elastic Container Registry (Amazon ECR) Limits {#limits_ecr}
+-----------------------------------------------------
 
   Resource                                     Default Limit
   -------------------------------------------- ---------------
   Maximum number of repositories per account   1,000
   Maximum number of images per repository      1,000
 
-For information about additional documented limits, see [Amazon ECR Service Limits](http://docs.aws.amazon.com/AmazonECR/latest/userguide/service_limits.html) in the *Amazon EC2 Container Registry User Guide*.
+For information about additional documented limits, see [Amazon ECR Service Limits](http://docs.aws.amazon.com/AmazonECR/latest/userguide/service_limits.html) in the *Amazon Elastic Container Registry User Guide*.
 
-Amazon EC2 Container Service (Amazon ECS) Limits {#limits_ecs}
-------------------------------------------------
+Amazon Elastic Container Service (Amazon ECS) Limits {#limits_ecs}
+----------------------------------------------------
 
   Resource                                          Default Limit
   ------------------------------------------------- ---------------
@@ -895,7 +895,7 @@ Amazon EC2 Container Service (Amazon ECS) Limits {#limits_ecs}
   Number of services per cluster                    500
   Number of tasks per service (the desired count)   1000
 
-For information about additional documented limits, see [Amazon ECS Service Limits](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_limits.html) in the *Amazon EC2 Container Service Developer Guide*.
+For information about additional documented limits, see [Amazon ECS Service Limits](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_limits.html) in the *Amazon Elastic Container Service Developer Guide*.
 
 Amazon EC2 Systems Manager Limits {#limits_ssm}
 ---------------------------------
