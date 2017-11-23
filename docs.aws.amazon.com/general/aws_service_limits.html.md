@@ -2173,6 +2173,7 @@ Amazon Simple Notification Service (Amazon SNS) Limits {#limits_sns}
   Account spend threshold for SMS                1.00 USD per account
   Delivery rate for promotional SMS messages     20 messages per second
   Delivery rate for transactional SMS messages   20 messages per second
+  Message filter policies                        100 per account
 
 To increase any of the limits above, submit an [SNS Limit Increase case](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-sns).
 
