@@ -121,6 +121,11 @@
                            <li><a href="#limits_lambda">AWS Lambda Limits</a></li>
                            <li><a href="#limits_lightsail">Amazon Lightsail Limits</a></li>
                            <li><a href="#limits_machinelearning">Amazon Machine Learning (Amazon ML) Limits</a></li>
+                           <li><a href="#limits_mediaconvert">AWS Elemental MediaConvert Limits</a></li>
+                           <li><a href="#limits_medialive">AWS Elemental MediaLive Limits</a></li>
+                           <li><a href="#limits_mediapackage">AWS Elemental MediaPackage Limits</a></li>
+                           <li><a href="#limits_mediastore">AWS Elemental MediaStore Limits</a></li>
+                           <li><a href="#limits_mediatailor">AWS Elemental MediaTailor Limits</a></li>
                            <li><a href="#limits_opworks">AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits</a></li>
                            <li><a href="#aws-opsworks-stacks-limits">AWS OpsWorks Stacks Limits</a></li>
                            <li><a href="#aws-organizations-limits">AWS Organizations Limits</a></li>
@@ -6471,13 +6476,258 @@
                      </p>
                      
                      
-                     <h2 id="limits_opworks">AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits</h2>
+                     <h2 id="limits_mediaconvert">AWS Elemental MediaConvert Limits</h2>
                      
                      
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
                            <table id="w111aac16d131b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Default Limit</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Number of queues</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Concurrent jobs processed across all queues</td>
+                                 
+                                 <td>100</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Concurrent jobs processed from a queue</td>
+                                 
+                                 <td>100 divided by number of queues</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Number of custom output presets</td>
+                                 
+                                 <td>100</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Number of custom output job templates</td>
+                                 
+                                 <td>100 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>DescribeEndpoints API calling rate per second</td>
+                                 
+                                 <td>0.01667 TPS (Once per 60 seconds, burst zero)</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Aggregate API calling rate per second for job, queue, preset and template </td>
+                                 
+                                 <td>2 TPS (2 per second, burst 100)]</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     <h2 id="limits_medialive">AWS Elemental MediaLive Limits</h2>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w111aac16d133b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Default Limit</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Maximum inputs</td>
+                                 
+                                 <td>5</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum input security groups</td>
+                                 
+                                 <td>5</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum channels</td>
+                                 
+                                 <td>5</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     <h2 id="limits_mediapackage">AWS Elemental MediaPackage Limits</h2>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w111aac16d135b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Default Limit</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Maximum channels per account</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum endpoints per channel</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     <h2 id="limits_mediastore">AWS Elemental MediaStore Limits</h2>
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w111aac16d137b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Default Limit</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Containers</td>
+                                 
+                                 <td>100</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     <p>For information about
+                        AWS Elemental MediaStore limits, including limits that can't be increased, see <a href="http://docs.aws.amazon.com/mediastore/latest/ug/limits.html" target="_blank">Limits</a> in the
+                        <em>AWS Elemental MediaStore User Guide</em>.
+                     </p>
+                     
+                     
+                     <h2 id="limits_mediatailor">AWS Elemental MediaTailor Limits</h2>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w111aac16d139b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Default Limit</th>
+                                 
+                                 <th>Comment</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Transactions</td>
+                                 
+                                 <td>3,000 concurrent transactions per second across all request types (such as
+                                    manifest requests and tracking requests for client-side reporting).
+                                 </td>
+                                 
+                                 <td>This is an account-level limit.
+                                    <p>Your transactions per second are largely
+                                       dependent on how often the player requests updated manifests. For example, a player
+                                       with eight second segments might update the manifest every eight seconds. The
+                                       player, then, generates 0.125 transactions per second.
+                                    </p>
+                                 </td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     <p>For more information about AWS Elemental MediaTailor limits, including limits that
+                        can't
+                        be increased, see <a href="http://docs.aws.amazon.com/mediatailor/latest/ug/limits.html" target="_blank">Limits</a>
+                        in the <em>AWS Elemental MediaTailor User Guide</em>.
+                     </p>
+                     
+                     
+                     <h2 id="limits_opworks">AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits</h2>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w111aac16d141b3">
                               
                               <tr>
                                  
@@ -6523,7 +6773,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d133b3">
+                           <table id="w111aac16d143b3">
                               
                               <tr>
                                  
@@ -6577,7 +6827,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d135b3">
+                           <table id="w111aac16d145b3">
                               
                               <tr>
                                  
@@ -6636,7 +6886,7 @@
                               <div class="table">
                                  <p class="title"><b>Throttle Rate per Operation</b></p>
                                  <div class="table-contents">
-                                    <table id="w111aac16d137b3b3b3">
+                                    <table id="w111aac16d147b3b3b3">
                                        
                                        <tr>
                                           
@@ -6752,7 +7002,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d139b3">
+                           <table id="w111aac16d149b3">
                               
                               <tr>
                                  
@@ -6888,7 +7138,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d141b3">
+                           <table id="w111aac16d151b3">
                               
                               <tr>
                                  
@@ -6995,7 +7245,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d145b3">
+                           <table id="w111aac16d155b3">
                               
                               <tr>
                                  
@@ -7153,7 +7403,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d147b3">
+                           <table id="w111aac16d157b3">
                               
                               <tr>
                                  
@@ -7249,7 +7499,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d149b3">
+                           <table id="w111aac16d159b3">
                               
                               <tr>
                                  
@@ -7294,7 +7544,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d151b3">
+                           <table id="w111aac16d161b3">
                               
                               <tr>
                                  
@@ -7384,7 +7634,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d155b5">
+                           <table id="w111aac16d165b5">
                               
                               <tr>
                                  
@@ -7440,7 +7690,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d157b3">
+                           <table id="w111aac16d167b3">
                               
                               <tr>
                                  
@@ -7521,7 +7771,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d157b7b3">
+                           <table id="w111aac16d167b7b3">
                               
                               <tr>
                                  
@@ -7611,7 +7861,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d161b3">
+                           <table id="w111aac16d171b3">
                               
                               <tr>
                                  
@@ -7652,7 +7902,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d165b3">
+                           <table id="w111aac16d175b3">
                               
                               <tr>
                                  
@@ -7700,7 +7950,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d171b3">
+                           <table id="w111aac16d181b3">
                               
                               <tr>
                                  
@@ -8386,7 +8636,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d175b5">
+                           <table id="w111aac16d185b5">
                               
                               <tr>
                                  
@@ -8460,7 +8710,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d175c11">
+                           <table id="w111aac16d185c11">
                               
                               <tr>
                                  
@@ -8628,7 +8878,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d179b3">
+                           <table id="w111aac16d189b3">
                               
                               <tr>
                                  
@@ -8673,7 +8923,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w111aac16d181b3">
+                           <table id="w111aac16d191b3">
                               
                               <tr>
                                  

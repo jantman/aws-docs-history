@@ -82,6 +82,11 @@ You can take the following steps to request an increase for limits. These increa
 -   [AWS Lambda Limits](#limits_lambda)
 -   [Amazon Lightsail Limits](#limits_lightsail)
 -   [Amazon Machine Learning (Amazon ML) Limits](#limits_machinelearning)
+-   [AWS Elemental MediaConvert Limits](#limits_mediaconvert)
+-   [AWS Elemental MediaLive Limits](#limits_medialive)
+-   [AWS Elemental MediaPackage Limits](#limits_mediapackage)
+-   [AWS Elemental MediaStore Limits](#limits_mediastore)
+-   [AWS Elemental MediaTailor Limits](#limits_mediatailor)
 -   [AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits](#limits_opworks)
 -   [AWS OpsWorks Stacks Limits](#aws-opsworks-stacks-limits)
 -   [AWS Organizations Limits](#aws-organizations-limits)
@@ -1958,6 +1963,72 @@ Note
 The size of your data files is limited to ensure that jobs finish in a timely manner. Jobs that have been running for more than seven days are automatically terminated, resulting in a FAILED status.
 
 For more information about these limits, see [Amazon ML Limits](http://docs.aws.amazon.com/machine-learning/latest/dg/system-limits.html) in the *Amazon Machine Learning Developer Guide*.
+
+AWS Elemental MediaConvert Limits {#limits_mediaconvert}
+---------------------------------
+
+  Resource                                                                    Default Limit
+  --------------------------------------------------------------------------- -----------------------------------------------
+  Number of queues                                                            10
+  Concurrent jobs processed across all queues                                 100
+  Concurrent jobs processed from a queue                                      100 divided by number of queues
+  Number of custom output presets                                             100
+  Number of custom output job templates                                       100
+  DescribeEndpoints API calling rate per second                               0.01667 TPS (Once per 60 seconds, burst zero)
+  Aggregate API calling rate per second for job, queue, preset and template   2 TPS (2 per second, burst 100)\]
+
+AWS Elemental MediaLive Limits {#limits_medialive}
+------------------------------
+
+  Resource                        Default Limit
+  ------------------------------- ---------------
+  Maximum inputs                  5
+  Maximum input security groups   5
+  Maximum channels                5
+
+AWS Elemental MediaPackage Limits {#limits_mediapackage}
+---------------------------------
+
+  Resource                        Default Limit
+  ------------------------------- ---------------
+  Maximum channels per account    10
+  Maximum endpoints per channel   10
+
+AWS Elemental MediaStore Limits {#limits_mediastore}
+-------------------------------
+
+  Resource     Default Limit
+  ------------ ---------------
+  Containers   100
+
+For information about AWS Elemental MediaStore limits, including limits that can't be increased, see [Limits](http://docs.aws.amazon.com/mediastore/latest/ug/limits.html) in the *AWS Elemental MediaStore User Guide*.
+
+AWS Elemental MediaTailor Limits {#limits_mediatailor}
+--------------------------------
+
++-----------------------+-----------------------+-----------------------+
+| Resource              | Default Limit         | Comment               |
++=======================+=======================+=======================+
+| Transactions          | 3,000 concurrent      | This is an            |
+|                       | transactions per      | account-level limit.  |
+|                       | second across all     | Your transactions per |
+|                       | request types (such   | second are largely    |
+|                       | as manifest requests  | dependent on how      |
+|                       | and tracking requests | often the player      |
+|                       | for client-side       | requests updated      |
+|                       | reporting).           | manifests. For        |
+|                       |                       | example, a player     |
+|                       |                       | with eight second     |
+|                       |                       | segments might update |
+|                       |                       | the manifest every    |
+|                       |                       | eight seconds. The    |
+|                       |                       | player, then,         |
+|                       |                       | generates 0.125       |
+|                       |                       | transactions per      |
+|                       |                       | second.               |
++-----------------------+-----------------------+-----------------------+
+
+For more information about AWS Elemental MediaTailor limits, including limits that can't be increased, see [Limits](http://docs.aws.amazon.com/mediatailor/latest/ug/limits.html) in the *AWS Elemental MediaTailor User Guide*.
 
 AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits {#limits_opworks}
 ----------------------------------------------------------------------------
