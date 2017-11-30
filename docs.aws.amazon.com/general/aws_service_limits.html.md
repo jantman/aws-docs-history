@@ -28,6 +28,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [AWS Application Discovery Service Limits](#limits_appdiscserve)
 -   [Amazon AppStream Limits](#limits_appstream)
 -   [Amazon AppStream 2.0 Limits](#limits_appstream2)
+-   [AWS AppSync Limits](#limits_appsync)
 -   [Application Auto Scaling Limits](#limits_as-app)
 -   [Amazon Athena Limits](#amazon-athena-limits)
 -   [Auto Scaling Limits](#limits_autoscaling)
@@ -79,6 +80,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Kinesis Firehose Limits](#limits-akf)
 -   [Amazon Kinesis Streams Limits](#limits-aks)
 -   [Amazon Kinesis Analytics Limits](#limits-aka)
+-   [Amazon Kinesis Video Streams Limits](#limits-akv)
 -   [AWS Lambda Limits](#limits_lambda)
 -   [Amazon Lightsail Limits](#limits_lightsail)
 -   [Amazon Machine Learning (Amazon ML) Limits](#limits_machinelearning)
@@ -87,6 +89,8 @@ You can take the following steps to request an increase for limits. These increa
 -   [AWS Elemental MediaPackage Limits](#limits_mediapackage)
 -   [AWS Elemental MediaStore Limits](#limits_mediastore)
 -   [AWS Elemental MediaTailor Limits](#limits_mediatailor)
+-   [Amazon MQ Limits](#limits_amazon-mq)
+-   [Amazon Neptune Limits](#limits_neptune)
 -   [AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits](#limits_opworks)
 -   [AWS OpsWorks Stacks Limits](#aws-opsworks-stacks-limits)
 -   [AWS Organizations Limits](#aws-organizations-limits)
@@ -178,6 +182,17 @@ Amazon AppStream 2.0 Limits {#limits_appstream2}
 **\*** This is the total limit across all instance families. Certain instance families have additional limits. For the Graphics Desktop and Graphics Pro instance families, the default limit is 0. For the Graphics Design instance family, the default limit is 2.
 
 **â€ ** This is the total limit across all instance families. Certain instance families have additional limits. For the Graphics Desktop and Graphics Pro instance families, the default limit is 0. For the Graphics Design instance family, the default limit is 1.
+
+AWS AppSync Limits {#limits_appsync}
+------------------
+
+  Resource                                         Default Limit
+  ------------------------------------------------ ---------------
+  Maximum number of APIs per region                5 per account
+  Maximum number of API keys                       10 per API
+  Maximum schema document size                     5 MB
+  Maximum GraphQL query execution time             30 seconds
+  Maximum request/response mapping template size   64 KB
 
 Application Auto Scaling Limits {#limits_as-app}
 -------------------------------
@@ -1828,6 +1843,104 @@ AWS IoT Limits {#limits_iot}
   Rule size                                 Up to 256 KB of UTF-8 encoded characters (including white space).
   ----------------------------------------- -------------------------------------------------------------------
 
+### AWS IoT Job Limits {#job-limits}
+
++-----------------+-----------------+-----------------+-----------------+
+| Resource        | Min             | Max             | Note            |
++=================+=================+=================+=================+
+| `JobId`{.code}  | 1 character     | 64 characters   | The             |
+|                 |                 |                 | `JobId`{.code}  |
+|                 |                 |                 | length must not |
+|                 |                 |                 | exceed 64       |
+|                 |                 |                 | characters.     |
++-----------------+-----------------+-----------------+-----------------+
+| `Document`{.cod | N/A             | 32768 bytes     | The maximum     |
+| e}              |                 |                 | size of a       |
+|                 |                 |                 | document that   |
+|                 |                 |                 | can be sent to  |
+|                 |                 |                 | an AWS IoT      |
+|                 |                 |                 | device is 32    |
+|                 |                 |                 | KB.             |
++-----------------+-----------------+-----------------+-----------------+
+| `DocumentSource | N/A             | 1350 characters | The maximum job |
+| `{.code}        |                 |                 | document source |
+|                 |                 |                 | size is 1350    |
+|                 |                 |                 | characters.     |
++-----------------+-----------------+-----------------+-----------------+
+| `Description`{. | N/A             | 2028 characters | The maximum job |
+| code}           |                 |                 | description     |
+|                 |                 |                 | size is 2028    |
+|                 |                 |                 | characters.     |
++-----------------+-----------------+-----------------+-----------------+
+| `Targets`{.code | 1               | 100             | The number of   |
+| }               |                 |                 | targets a job   |
+|                 |                 |                 | can have.       |
++-----------------+-----------------+-----------------+-----------------+
+| `ExpiresInSec`{ | 60 seconds      | 3600 seconds    | The lifetime of |
+| .code}          |                 |                 | pre-signed URLs |
+|                 |                 |                 | must be         |
+|                 |                 |                 | configured      |
+|                 |                 |                 | greater than 60 |
+|                 |                 |                 | seconds and     |
+|                 |                 |                 | less than 1     |
+|                 |                 |                 | hour.           |
++-----------------+-----------------+-----------------+-----------------+
+| `Comment`{.code | N/A             | 2028 characters | The maximum     |
+| }               |                 |                 | comment size is |
+|                 |                 |                 | 2028            |
+|                 |                 |                 | characters.     |
++-----------------+-----------------+-----------------+-----------------+
+| `MaxResults`{.c | 1               | 250             | The maximum     |
+| ode}            |                 |                 | list result per |
+|                 |                 |                 | page is 250.    |
++-----------------+-----------------+-----------------+-----------------+
+| `MaximumJobExec | 1               | 1000            | Configures the  |
+| utionsPerMinute |                 |                 | rollout speed   |
+| `{.code}        |                 |                 | for a job.      |
++-----------------+-----------------+-----------------+-----------------+
+| Active snapshot | 0               | 100             | The maximum     |
+| jobs            |                 |                 | number of       |
+|                 |                 |                 | active snapshot |
+|                 |                 |                 | jobs is 100     |
+|                 |                 |                 | (irrespective   |
+|                 |                 |                 | of the number   |
+|                 |                 |                 | of active       |
+|                 |                 |                 | continuous      |
+|                 |                 |                 | jobs).          |
++-----------------+-----------------+-----------------+-----------------+
+| Active          | 0               | 100             | The maximum     |
+| continuous jobs |                 |                 | number of       |
+|                 |                 |                 | active          |
+|                 |                 |                 | continuous jobs |
+|                 |                 |                 | is 100          |
+|                 |                 |                 | (irrespective   |
+|                 |                 |                 | of the number   |
+|                 |                 |                 | of active       |
+|                 |                 |                 | snapshot jobs). |
++-----------------+-----------------+-----------------+-----------------+
+| Job document    | 0               | 10              | Up to 10        |
+| variable        |                 |                 | variables       |
+| substitution    |                 |                 | substitutions,  |
+|                 |                 |                 | including the   |
+|                 |                 |                 | presign URL,    |
+|                 |                 |                 | are allowed in  |
+|                 |                 |                 | a job document. |
++-----------------+-----------------+-----------------+-----------------+
+| Data retention  | N/A             | 90 days         | Job data and    |
+|                 |                 |                 | job execution   |
+|                 |                 |                 | data will be    |
+|                 |                 |                 | purged after 90 |
+|                 |                 |                 | days.           |
++-----------------+-----------------+-----------------+-----------------+
+| `StatusDetail`{ | 1 character     | 128 characters  |                 |
+| .code}          |                 |                 |                 |
+| map key size    |                 |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+| `StatusDetail`{ | 1 character     | 128 characters  |                 |
+| .code}          |                 |                 |                 |
+| map value size  |                 |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+
 AWS Key Management Service (AWS KMS) Limits {#limits_kms}
 -------------------------------------------
 
@@ -1896,6 +2009,192 @@ Amazon Kinesis Analytics Limits {#limits-aka}
 +-----------------------------------+-----------------------------------+
 
 For more information about these limits, see [Limits](http://docs.aws.amazon.com/kinesisanalytics/latest/dev/limits.html) in the *Amazon Kinesis Analytics Developer Guide*.
+
+Amazon Kinesis Video Streams Limits {#limits-akv}
+-----------------------------------
+
+The limits below are either soft \[s\], which can be upgraded by submitting a support ticket, or hard \[h\], which cannot be increased.
+
+### Control Plane API limits {#limits-akv-control}
+
+The following section describes limits for control-plane APIs.
+
+When an account-level Request limit is reached, a `ClientLimitExceededException`{.code} is thrown.
+
+When an account-level Streams limit is reached, or a stream-level limit is reached, a `StreamLimitExceededException`{.code} is thrown.
+
+**Control Plane API limits**
+
+  API                   Account Limit: Request   Account Limit: Streams          Stream-level limit   Relevant Exceptions and Notes
+  --------------------- ------------------------ ------------------------------- -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------
+  **CreateStream**      50 TPS \[s\]             100 streams per account \[s\]   5 TPS \[h\]          Devices, CLIs, SDK-driven access and the console can all invoke this API. Only one API call succeeds if the stream doesnâ€™t already exist.
+  **DescribeStream**    300 TPS \[h\]            N/A                             5 TPS \[h\]          
+  **UpdateStream**      50 TPS \[h\]             N/A                             5 TPS \[h\]          
+  **ListStreams**       300 TPS \[h\]            N/A                             5 TPS \[h\]          
+  **DeleteStream**      50 TPS \[h\]             N/A                             5 TPS \[h\]          
+  **GetDataEndpoint**   300 TPS \[h\]            N/A                             5 TPS \[h\]          When combined with account limit, this implies a maximum of 60 streams can be Put to and Read from (with 4 consumers).
+
+### Data Plane API limits {#limits-akv-data}
+
+The following section describes limits for control-plane APIs.
+
+When a stream-level limit is exceeded, a `StreamLimitExceededException`{.code} is thrown.
+
+When a connection-level limit is reached, a `ConnectionLimitExceededException`{.code} is thrown.
+
+The following errors or acks are thrown when a fragment-level limit is reached:
+
+-   A `MIN_FRAGMENT_DURATION_REACHED`{.code} ack is returned for a fragment below the minumum duration.
+
+-   A `MAX_FRAGMENT_DURATION_REACHED`{.code} ack is returned for a fragment above the maximum duration.
+
+-   A `MAX_FRAGMENT_SIZE`{.code} ack is returned for a fragment above the maximum data size.
+
+-   A `FragmentLimitExceeded`{.code} exception is thrown if a fragment limit is reached in a `GetMediaForFragmentList`{.code} operation.
+
+**Data Plane API limits**
+
++-----------+-----------+-----------+-----------+-----------+-----------+
+| API       | Stream-le | Connectio | Bandwidth | Fragment- | Relevant  |
+|           | vel       | n-level   | limit     | level     | Exception |
+|           | limit     | limit     |           | limit     | s         |
+|           |           |           |           |           | and Notes |
++===========+===========+===========+===========+===========+===========+
+| **PutMedi | 5 TPS     | 1 (5 in   | 12.5      | -   Minim | A typical |
+| a**       | \[h\]     | the       | MB/second | um        | PutMedia  |
+|           |           | config,   | ,         |     fragm | request   |
+|           |           | to allow  | or 100    | ent       | will      |
+|           |           | for       | Mbps      |     durat | contain   |
+|           |           | streaming |           | ion:      | data for  |
+|           |           | token     |           |     1     | several   |
+|           |           | rotation, |           |     secon | seconds,  |
+|           |           | retries,  |           | d         | resulting |
+|           |           | etc.)     |           |           | in a      |
+|           |           |           |           | -   Maxim | lower TPS |
+|           |           |           |           | um        | per       |
+|           |           |           |           |     fragm | stream.   |
+|           |           |           |           | ent       | In the    |
+|           |           |           |           |     durat | case of   |
+|           |           |           |           | ion:      | multiple  |
+|           |           |           |           |     10    | concurren |
+|           |           |           |           |     secon | t         |
+|           |           |           |           | ds        | connectio |
+|           |           |           |           |           | ns        |
+|           |           |           |           | -   Maxim | that      |
+|           |           |           |           | um        | exceed    |
+|           |           |           |           |     fragm | limits,   |
+|           |           |           |           | ent       | the last  |
+|           |           |           |           |     size: | connectio |
+|           |           |           |           |     50 MB | n         |
+|           |           |           |           |           | is        |
+|           |           |           |           |           | accepted. |
++-----------+-----------+-----------+-----------+-----------+-----------+
+| **GetMedi | 5 TPS     | 3         | 25 MB/s   | N/A       | Only      |
+| a**       | \[h\]     |           | or 200    |           | three     |
+|           |           |           | Mbps      |           | clients   |
+|           |           |           |           |           | can       |
+|           |           |           |           |           | concurren |
+|           |           |           |           |           | tly       |
+|           |           |           |           |           | receive   |
+|           |           |           |           |           | content   |
+|           |           |           |           |           | from the  |
+|           |           |           |           |           | media     |
+|           |           |           |           |           | stream at |
+|           |           |           |           |           | any       |
+|           |           |           |           |           | moment of |
+|           |           |           |           |           | time.     |
+|           |           |           |           |           | Further   |
+|           |           |           |           |           | client    |
+|           |           |           |           |           | connectio |
+|           |           |           |           |           | ns        |
+|           |           |           |           |           | are       |
+|           |           |           |           |           | rejected. |
+|           |           |           |           |           | A unique  |
+|           |           |           |           |           | consuming |
+|           |           |           |           |           | client    |
+|           |           |           |           |           | shouldnâ€ |
+|           |           |           |           |           | ™t        |
+|           |           |           |           |           | need more |
+|           |           |           |           |           | than 2 or |
+|           |           |           |           |           | 3 TPS,    |
+|           |           |           |           |           | since     |
+|           |           |           |           |           | once the  |
+|           |           |           |           |           | connectio |
+|           |           |           |           |           | n         |
+|           |           |           |           |           | is        |
+|           |           |           |           |           | establish |
+|           |           |           |           |           | ed,       |
+|           |           |           |           |           | we        |
+|           |           |           |           |           | anticipat |
+|           |           |           |           |           | e         |
+|           |           |           |           |           | that the  |
+|           |           |           |           |           | applicati |
+|           |           |           |           |           | on        |
+|           |           |           |           |           | will read |
+|           |           |           |           |           | continuou |
+|           |           |           |           |           | sly.      |
+|           |           |           |           |           |           |
+|           |           |           |           |           | If a      |
+|           |           |           |           |           | typical   |
+|           |           |           |           |           | fragment  |
+|           |           |           |           |           | is        |
+|           |           |           |           |           | approxima |
+|           |           |           |           |           | tely      |
+|           |           |           |           |           | 5 MB,     |
+|           |           |           |           |           | this      |
+|           |           |           |           |           | limit     |
+|           |           |           |           |           | will mean |
+|           |           |           |           |           | \~75 MB/  |
+|           |           |           |           |           | sec per   |
+|           |           |           |           |           | Kinesis   |
+|           |           |           |           |           | video     |
+|           |           |           |           |           | stream.   |
+|           |           |           |           |           | Such a    |
+|           |           |           |           |           | stream    |
+|           |           |           |           |           | would     |
+|           |           |           |           |           | have an   |
+|           |           |           |           |           | outgoing  |
+|           |           |           |           |           | bit rate  |
+|           |           |           |           |           | of 2x the |
+|           |           |           |           |           | streams'  |
+|           |           |           |           |           | maximum   |
+|           |           |           |           |           | incoming  |
+|           |           |           |           |           | bit rate. |
++-----------+-----------+-----------+-----------+-----------+-----------+
+| **ListFra | 5 TPS     | 5         | N/A       | N/A       | Five      |
+| gments**  | \[h\]     |           |           |           | fragment- |
+|           |           |           |           |           | based     |
+|           |           |           |           |           | consuming |
+|           |           |           |           |           | applicati |
+|           |           |           |           |           | ons       |
+|           |           |           |           |           | can       |
+|           |           |           |           |           | concurren |
+|           |           |           |           |           | tly       |
+|           |           |           |           |           | list      |
+|           |           |           |           |           | fragments |
+|           |           |           |           |           | based on  |
+|           |           |           |           |           | processin |
+|           |           |           |           |           | g         |
+|           |           |           |           |           | requireme |
+|           |           |           |           |           | nts.      |
++-----------+-----------+-----------+-----------+-----------+-----------+
+| **GetMedi | 5 TPS     | 5         | 25 MB/s   | Maximum   | Five      |
+| aForFragm | \[h\]     |           | or 200    | number of | fragment- |
+| entList** |           |           | Mbps      | fragments | based     |
+|           |           |           |           | :         | consuming |
+|           |           |           |           | 1000      | applicati |
+|           |           |           |           |           | ons       |
+|           |           |           |           |           | can       |
+|           |           |           |           |           | concurren |
+|           |           |           |           |           | tly       |
+|           |           |           |           |           | get       |
+|           |           |           |           |           | media.    |
+|           |           |           |           |           | Further   |
+|           |           |           |           |           | connectio |
+|           |           |           |           |           | ns        |
+|           |           |           |           |           | are       |
+|           |           |           |           |           | rejected. |
++-----------+-----------+-----------+-----------+-----------+-----------+
 
 AWS Lambda Limits {#limits_lambda}
 -----------------
@@ -2029,6 +2328,23 @@ AWS Elemental MediaTailor Limits {#limits_mediatailor}
 +-----------------------+-----------------------+-----------------------+
 
 For more information about AWS Elemental MediaTailor limits, including limits that can't be increased, see [Limits](http://docs.aws.amazon.com/mediatailor/latest/ug/limits.html) in the *AWS Elemental MediaTailor User Guide*.
+
+Amazon MQ Limits {#limits_amazon-mq}
+----------------
+
+For more information about these limits, see [Amazon MQ Limits](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html) in the *Amazon MQ Developer Guide*.
+
+Amazon Neptune Limits {#limits_neptune}
+---------------------
+
++-----------------------------------+-----------------------------------+
+| Resource                          | Default Limit                     |
++===================================+===================================+
+| US East (N. Virginia) Region:     | Maximum instances is 3.           |
+| Maximum instances                 |                                   |
++-----------------------------------+-----------------------------------+
+
+You can request an increase on this limit. For more information, see <https://aws.amazon.com/support>.
 
 AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits {#limits_opworks}
 ----------------------------------------------------------------------------
