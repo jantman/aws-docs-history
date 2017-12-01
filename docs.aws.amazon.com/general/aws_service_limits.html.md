@@ -34,6 +34,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Auto Scaling Limits](#limits_autoscaling)
 -   [AWS Batch Limits](#limits_batch)
 -   [AWS Certificate Manager (ACM) Limits](#limits_acm)
+-   [AWS Cloud9 Limits](#limits_cloud9)
 -   [AWS CloudFormation Limits](#limits_cloudformation)
 -   [Amazon CloudFront Limits](#limits_cloudfront)
 -   [AWS CloudHSM Limits](#limits-cloudhsm)
@@ -60,7 +61,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon DynamoDB Limits](#limits_dynamodb)
 -   [Amazon Elastic Container Registry (Amazon ECR) Limits](#limits_ecr)
 -   [Amazon Elastic Container Service (Amazon ECS) Limits](#limits_ecs)
--   [Amazon EC2 Systems Manager Limits](#limits_ssm)
+-   [AWS Systems Manager Limits](#limits_ssm)
 -   [AWS Elastic Beanstalk Limits](#limits_elastic_beanstalk)
 -   [Amazon Elastic Block Store (Amazon EBS) Limits](#limits_ebs)
 -   [Amazon Elastic Compute Cloud (Amazon EC2) Limits](#limits_ec2)
@@ -99,7 +100,9 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Redshift Limits](#limits_redshift)
 -   [Amazon Rekognition Limits](#limits-rekognition)
 -   [Amazon Relational Database Service (Amazon RDS) Limits](#limits_rds)
+-   [AWS Resource Groups Limits](#limits_resgrps)
 -   [Amazon RouteÂ 53 Limits](#limits_route53)
+-   [Amazon SageMaker Limits](#limits_sagemaker)
 -   [AWS Server Migration Service Limits](#limits_server_migration)
 -   [AWS Service Catalog Limits](#limits_servicecatalog)
 -   [AWS Shield Advanced Limits](#limits_shield)
@@ -249,6 +252,29 @@ AWS Certificate Manager (ACM) Limits {#limits_acm}
   Number of ACM-provided certificates                   100
   Number of imported certificates                       100
   Number of domain names per ACM-provided certificate   10
+
+For more information about these limits, see [Limits](http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html) in the *AWS Certificate Manager User Guide*.
+
+AWS Cloud9 Limits {#limits_cloud9}
+-----------------
+
++-----------------------------------+-----------------------------------+
+| Item                              | Default Limit                     |
++===================================+===================================+
+| Maximum number of AWS Cloud9 EC2  | -   20 per IAM user               |
+| development environments          |                                   |
+|                                   | -   100 per AWS account           |
++-----------------------------------+-----------------------------------+
+| Maximum number of SSH             | -   10 per IAM user               |
+| environments                      |                                   |
+|                                   | -   100 per AWS account           |
++-----------------------------------+-----------------------------------+
+| Maximum number of members in an   | 8                                 |
+| environment                       |                                   |
++-----------------------------------+-----------------------------------+
+| Maximum number of environments    | 10 total per IAM user, regardless |
+| open at the same time             | of environment type (EC2 or SSH)  |
++-----------------------------------+-----------------------------------+
 
 For more information about these limits, see [Limits](http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html) in the *AWS Certificate Manager User Guide*.
 
@@ -917,8 +943,8 @@ Amazon Elastic Container Service (Amazon ECS) Limits {#limits_ecs}
 
 For information about additional documented limits, see [Amazon ECS Service Limits](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_limits.html) in the *Amazon Elastic Container Service Developer Guide*.
 
-Amazon EC2 Systems Manager Limits {#limits_ssm}
----------------------------------
+AWS Systems Manager Limits {#limits_ssm}
+--------------------------
 
 +-----------------------------------+-----------------------------------+
 | Resource                          | Default Limit                     |
@@ -926,7 +952,7 @@ Amazon EC2 Systems Manager Limits {#limits_ssm}
 | On-premises managed instances     | Each AWS account can activate a   |
 | registered through Amazon EC2     | maximum of 1,000 on-premises      |
 | activation                        | instances in a region for use     |
-|                                   | with Amazon EC2 Systems Manager.  |
+|                                   | with Systems Manager.             |
 |                                   |                                   |
 |                                   | For more information about        |
 |                                   | activating on-premises instances  |
@@ -1546,6 +1572,11 @@ AWS IoT Limits {#limits_iot}
 | Connect requests per second per   | AWS IoT limits an account to a    |
 | account                           | maximum of 300 MQTT CONNECT       |
 |                                   | requests per second.              |
++-----------------------------------+-----------------------------------+
+| Connect requests per second per   | AWS IoT AWS IoT throttles         |
+| client ID                         | connects from the same accountId  |
+|                                   | and clientId to 1 connect         |
+|                                   | operation per second.             |
 +-----------------------------------+-----------------------------------+
 | Maximum number of slashes in      | A topic provided while publishing |
 | topic and topic filter            | a message or a topic filter       |
@@ -2474,6 +2505,13 @@ Amazon Relational Database Service (Amazon RDS) Limits {#limits_rds}
   Tags per resource                          50
   Total storage for all DB instances         100 TB
 
+AWS Resource Groups Limits {#limits_resgrps}
+--------------------------
+
+  Resource                      Default Limit
+  ----------------------------- ---------------
+  Resource groups per account   100
+
 Amazon RouteÂ 53 Limits {#limits_route53}
 -----------------------
 
@@ -2490,6 +2528,66 @@ Amazon RouteÂ 53 Limits {#limits_route53}
   Policy records                                                  5
 
 For more information about these limits, see [Amazon RouteÂ 53 Limits](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html) in the *Amazon RouteÂ 53 Developer Guide*.
+
+Amazon SageMaker Limits {#limits_sagemaker}
+-----------------------
+
+The following tables group Amazon SageMaker limits by compoents.
+
+Amazon SageMaker Notebooks
+
+  Resource                               Default Limit
+  -------------------------------------- ---------------
+  ml.t2.medium instances                 20
+  ml.m4.xlarge instances                 20
+  ml.p2.xlarge instances                 1
+  Number of notebook instances           100
+  Number of running notebook instances   20
+
+Amazon SageMaker Training
+
+  Resource                                 Default Limit
+  ---------------------------------------- ---------------
+  ml.m4.xlarge instances                   20
+  ml.m4.4xlarge instances                  10
+  ml.m4.10xlarge instances                 5
+  ml.c4.xlarge instances                   20
+  ml.c4.2xlarge instances                  20
+  ml.c4.8xlarge instances                  20
+  ml.c5.xlarge instances                   0
+  ml.c5.2xlarge instances                  0
+  ml.c5.4xlarge instances                  0
+  ml.c5.9xlarge instances                  0
+  ml.c5.18xlarge instances                 0
+  ml.p2.xlarge instances                   1
+  ml.p2.8xlarge instances                  1
+  ml.p2.16xlarge instances                 0
+  ml.p3.2xlarge instances                  0
+  ml.p3.8xlarge instances                  0
+  ml.p3.16xlarge instances                 0
+  Longest run time for a training job      5 days
+  Number of instances                      20
+  Number of instances for a training job   20
+  Size of EBS volume for an instance       1 TB
+
+Amazon SageMaker Hosting
+
+  Resource                              Default Limit
+  ------------------------------------- ---------------
+  ml.t2.medium instances                20
+  ml.m4.xlarge instances                20
+  ml.c4.xlarge instances                20
+  ml.c4.2xlarge instances               20
+  ml.c4.8xlarge instances               20
+  ml.c5.xlarge instances                0
+  ml.c5.2xlarge instances               0
+  ml.c5.9xlarge instances               0
+  ml.p2.xlarge instances                2
+  ml.p3.2xlarge instances               0
+  Number of instances                   20
+  Number of instances for an endpoint   20
+  Total TPS for all endpoints           10,000
+  Hosting                               5 MB
 
 AWS Server Migration Service Limits {#limits_server_migration}
 -----------------------------------
