@@ -806,7 +806,7 @@
                      	
                      		
                      <h2 id="limits_cloud9">AWS Cloud9 Limits</h2>
-                     		
+                     
                      		
                      <div class="table">
                         <p class="title"><b></b></p>
@@ -890,7 +890,9 @@
                                  						
                                  <td>Maximum number of environments open at the same time</td>
                                  						
-                                 <td>10 total per IAM user, regardless of environment type (EC2 or SSH)</td>
+                                 <td>10 total per IAM user, regardless of environment type (EC2 or
+                                    							SSH)
+                                 </td>
                                  					
                               </tr>
                               				
@@ -3066,9 +3068,31 @@
                               					
                               <tr>
                                  						
-                                 <td>Number of tasks per service (the desired count)</td>
+                                 <td>Number of tasks using the EC2 launch type per service (the desired
+                                    							count)
+                                 </td>
                                  						
                                  <td>1000</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Number of tasks using the Fargate launch type, per region, per
+                                    							account
+                                 </td>
+                                 						
+                                 <td>20</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Number of public IP addresses for tasks using the Fargate launch
+                                    							type
+                                 </td>
+                                 						
+                                 <td>20</td>
                                  					
                               </tr>
                               				
@@ -4681,6 +4705,22 @@
                               						
                               <tr>
                                  							
+                                 <td>Maximum number of resources per Lambda function.</td>
+                                 							
+                                 <td>10</td>
+                                 						
+                              </tr>
+                              						
+                              <tr>
+                                 							
+                                 <td>Maximum number of resources per group.</td>
+                                 							
+                                 <td>50</td>
+                                 						
+                              </tr>
+                              						
+                              <tr>
+                                 							
                                  <td>Maximum number of transactions per second (TPS) on the AWS
                                     								Greengrass API.
                                  </td>
@@ -5234,8 +5274,8 @@
                                  </td>
                                  							
                                  <td>
-                                    <p>AWS IoT  AWS IoT throttles connects from the same accountId and clientId to 1 connect
-                                       operation per second.
+                                    <p>AWS IoT AWS IoT throttles connects from the same accountId
+                                       									and clientId to 1 connect operation per second.
                                     </p>
                                  </td>
                                  						
@@ -5336,41 +5376,53 @@
                                  <td>Publish requests per second per account </td>
                                  							
                                  <td>
-                                    <p>9000 per second per account (inbound publishes - max. 3000
-                                       									per second, outbound publishes - max. 6000 per second)
+                                    <p>9000 per second per account (inbound publish requests - max. 3000 per second, outbound
+                                       publish
+                                       									requests - max. 6000 per second).
                                     </p>
                                     								
-                                    <p>Inbound publishes count for all the messages that the message
-                                       									broker processes before routing the messages to the subscribed
-                                       									clients or the rules engine. For example, a single message
-                                       									published on
-                                       										<code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/update</code>
+                                    <p>Inbound publish requests count for all the messages that the message broker processes
+                                       									before routing the messages to the subscribed clients or the
+                                       									rules engine. For example, a single message published on
+                                       											<code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/update</code>
                                        									topic can result in publishing three additional messages to
                                        											<code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/update/accepted</code>,
                                        											<code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/update/documents</code>,
                                        											<code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/delta</code>
-                                       									topics. In this case, AWS IoT counts those as 4 inbound publishes
-                                       									towards this limit. However, a single message to an unreserved
-                                       									topic like <code class="code">"a/b"</code> is counted only as a single
-                                       									inbound publish
+                                       									topics. In this case, AWS IoT counts those as 4 inbound publish
+                                       									requests towards this limit. However, a single message to an
+                                       									unreserved topic like <code class="code">"a/b"</code> is counted only as a
+                                       									single inbound publish request.
                                     </p>
                                     								
-                                    <p>Outbound publishes count for every message that resulted in
-                                       									matching a client's subscription or matching a rules engine
-                                       									subscription. For example, two clients are subscribed to topic
-                                       									filter <code class="code">'a/b'</code> and a rule is subscribed to topic
-                                       									filter <code class="code">'a/#'</code>. An inbound publish message on topic
-                                       									'a/b' results in a total of 3 outbound publishes.
+                                    <p>Outbound publish requests count for every message that resulted in matching a client's
+                                       									subscription or matching a rules engine subscription. For
+                                       									example, two clients are subscribed to topic filter
+                                       										<code class="code">'a/b'</code> and a rule is subscribed to topic filter
+                                       										<code class="code">'a/#'</code>. An inbound publish request message on
+                                       									topic 'a/b' results in a total of 3 outbound publish
+                                       									requests.
                                     </p>
                                     								
                                     <div class="aws-note">
                                        <p class="aws-note">Note</p>
-                                       <p>Inbound and outbound publishes cannot be traded for each
-                                          										other, for example, if only 1,000 inbound publishes per
-                                          										second are used, the maximum outbound publishes per second
-                                          										remains 6,000.
+                                       <p>Inbound and outbound publish requests cannot be traded for each other, for example,
+                                          										if only 1,000 inbound publish requests per second are used,
+                                          										the maximum outbound publish requests per second remains
+                                          										6,000.
                                        </p>
                                     </div>
+                                 </td>
+                                 						
+                              </tr>
+                              						
+                              <tr>
+                                 							
+                                 <td>Publish requests per second per connection</td>
+                                 							
+                                 <td>AWS IoT limits each client connection to 100 inbound publish
+                                    								requests per second and 100 outbound publish requests per second.
+                                    								Publish requests exceeding that limit will be discarded.
                                  </td>
                                  						
                               </tr>
@@ -5414,14 +5466,13 @@
                               						
                               <tr>
                                  							
-                                 <td>Subscriptions per session </td>
+                                 <td>Subscriptions per connection </td>
                                  							
                                  <td>
                                     								
-                                    <p>The message broker limits each client session to subscribe to
-                                       									up to 50 subscriptions. A SUBSCRIBE request that pushes the
-                                       									total number of subscriptions past 50 results in the connection
-                                       									being disconnected.
+                                    <p>AWS IoT limits each client connection to subscribe to up to 50 subscriptions. A
+                                       									SUBSCRIBE request that pushes the total number of subscriptions
+                                       									past 50 results in the connection being disconnected.
                                     </p>
                                     							
                                  </td>

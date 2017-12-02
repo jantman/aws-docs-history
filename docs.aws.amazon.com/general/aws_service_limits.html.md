@@ -934,12 +934,14 @@ For information about additional documented limits, see [Amazon ECR Service Limi
 Amazon Elastic Container Service (Amazon ECS) Limits {#limits_ecs}
 ----------------------------------------------------
 
-  Resource                                          Default Limit
-  ------------------------------------------------- ---------------
-  Number of clusters per region per account         1000
-  Number of container instances per cluster         1000
-  Number of services per cluster                    500
-  Number of tasks per service (the desired count)   1000
+  Resource                                                                    Default Limit
+  --------------------------------------------------------------------------- ---------------
+  Number of clusters per region per account                                   1000
+  Number of container instances per cluster                                   1000
+  Number of services per cluster                                              500
+  Number of tasks using the EC2 launch type per service (the desired count)   1000
+  Number of tasks using the Fargate launch type, per region, per account      20
+  Number of public IP addresses for tasks using the Fargate launch type       20
 
 For information about additional documented limits, see [Amazon ECS Service Limits](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_limits.html) in the *Amazon Elastic Container Service Developer Guide*.
 
@@ -1392,6 +1394,8 @@ AWS Greengrass Limits {#limits_greengrass}
   ----------------------------------------------------------------------------------------------------- ----------------------------------------
   Maximum number of AWS IoT devices in a group.                                                         200
   Maximum number of Lambda functions in a group.                                                        200
+  Maximum number of resources per Lambda function.                                                      10
+  Maximum number of resources per group.                                                                50
   Maximum number of transactions per second (TPS) on the AWS Greengrass API.                            30
   Maximum number of subscriptions per AWS Greengrass group.                                             1000
   Maximum number of subscriptions that specify `Cloud`{.code} as the source per AWS Greengrass group.   50
@@ -1624,17 +1628,17 @@ AWS IoT Limits {#limits_iot}
 |                                   | larger than this size.            |
 +-----------------------------------+-----------------------------------+
 | Publish requests per second per   | 9000 per second per account       |
-| account                           | (inbound publishes - max. 3000    |
-|                                   | per second, outbound publishes -  |
-|                                   | max. 6000 per second)             |
+| account                           | (inbound publish requests - max.  |
+|                                   | 3000 per second, outbound publish |
+|                                   | requests - max. 6000 per second). |
 |                                   |                                   |
-|                                   | Inbound publishes count for all   |
-|                                   | the messages that the message     |
-|                                   | broker processes before routing   |
-|                                   | the messages to the subscribed    |
-|                                   | clients or the rules engine. For  |
-|                                   | example, a single message         |
-|                                   | published on                      |
+|                                   | Inbound publish requests count    |
+|                                   | for all the messages that the     |
+|                                   | message broker processes before   |
+|                                   | routing the messages to the       |
+|                                   | subscribed clients or the rules   |
+|                                   | engine. For example, a single     |
+|                                   | message published on              |
 |                                   | `$aws/things/device`{.code}/shado |
 |                                   | w/update                          |
 |                                   | topic can result in publishing    |
@@ -1646,35 +1650,43 @@ AWS IoT Limits {#limits_iot}
 |                                   | `$aws/things/device`{.code}/shado |
 |                                   | w/delta                           |
 |                                   | topics. In this case, AWS IoT     |
-|                                   | counts those as 4 inbound         |
-|                                   | publishes towards this limit.     |
+|                                   | counts those as 4 inbound publish |
+|                                   | requests towards this limit.      |
 |                                   | However, a single message to an   |
 |                                   | unreserved topic like             |
 |                                   | `"a/b"`{.code} is counted only as |
-|                                   | a single inbound publish          |
+|                                   | a single inbound publish request. |
 |                                   |                                   |
-|                                   | Outbound publishes count for      |
-|                                   | every message that resulted in    |
-|                                   | matching a client's subscription  |
-|                                   | or matching a rules engine        |
-|                                   | subscription. For example, two    |
-|                                   | clients are subscribed to topic   |
-|                                   | filter `'a/b'`{.code} and a rule  |
-|                                   | is subscribed to topic filter     |
-|                                   | `'a/#'`{.code}. An inbound        |
-|                                   | publish message on topic 'a/b'    |
-|                                   | results in a total of 3 outbound  |
-|                                   | publishes.                        |
+|                                   | Outbound publish requests count   |
+|                                   | for every message that resulted   |
+|                                   | in matching a client's            |
+|                                   | subscription or matching a rules  |
+|                                   | engine subscription. For example, |
+|                                   | two clients are subscribed to     |
+|                                   | topic filter `'a/b'`{.code} and a |
+|                                   | rule is subscribed to topic       |
+|                                   | filter `'a/#'`{.code}. An inbound |
+|                                   | publish request message on topic  |
+|                                   | 'a/b' results in a total of 3     |
+|                                   | outbound publish requests.        |
 |                                   |                                   |
 |                                   | Note                              |
 |                                   |                                   |
-|                                   | Inbound and outbound publishes    |
-|                                   | cannot be traded for each other,  |
-|                                   | for example, if only 1,000        |
-|                                   | inbound publishes per second are  |
-|                                   | used, the maximum outbound        |
-|                                   | publishes per second remains      |
-|                                   | 6,000.                            |
+|                                   | Inbound and outbound publish      |
+|                                   | requests cannot be traded for     |
+|                                   | each other, for example, if only  |
+|                                   | 1,000 inbound publish requests    |
+|                                   | per second are used, the maximum  |
+|                                   | outbound publish requests per     |
+|                                   | second remains 6,000.             |
++-----------------------------------+-----------------------------------+
+| Publish requests per second per   | AWS IoT limits each client        |
+| connection                        | connection to 100 inbound publish |
+|                                   | requests per second and 100       |
+|                                   | outbound publish requests per     |
+|                                   | second. Publish requests          |
+|                                   | exceeding that limit will be      |
+|                                   | discarded.                        |
 +-----------------------------------+-----------------------------------+
 | Restricted client ID prefix       | '\$' is reserved for internally   |
 |                                   | generated client IDs.             |
@@ -1694,9 +1706,9 @@ AWS IoT Limits {#limits_iot}
 |                                   | counts those as 6 subscriptions   |
 |                                   | towards this limit.               |
 +-----------------------------------+-----------------------------------+
-| Subscriptions per session         | The message broker limits each    |
-|                                   | client session to subscribe to up |
-|                                   | to 50 subscriptions. A SUBSCRIBE  |
+| Subscriptions per connection      | AWS IoT limits each client        |
+|                                   | connection to subscribe to up to  |
+|                                   | 50 subscriptions. A SUBSCRIBE     |
 |                                   | request that pushes the total     |
 |                                   | number of subscriptions past 50   |
 |                                   | results in the connection being   |
