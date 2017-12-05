@@ -966,8 +966,7 @@ AWS Systems Manager Limits {#limits_ssm}
 |                                   | guide/systems-manager-managedinst |
 |                                   | ances.html#sysman-managed-instanc |
 |                                   | e-activation)                     |
-|                                   | in the *[Amazon EC2 Systems       |
-|                                   | Manager User                      |
+|                                   | in the *[AWS Systems Manager User |
 |                                   | Guide](http://docs.aws.amazon.com |
 |                                   | /systems-manager/latest/userguide |
 |                                   | /)*.                              |
