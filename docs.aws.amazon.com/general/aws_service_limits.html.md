@@ -276,7 +276,7 @@ AWS Cloud9 Limits {#limits_cloud9}
 | open at the same time             | of environment type (EC2 or SSH)  |
 +-----------------------------------+-----------------------------------+
 
-For more information about these limits, see [Limits](http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html) in the *AWS Certificate Manager User Guide*.
+For more information about these limits, see [Limits](https://docs.aws.amazon.com/cloud9/latest/user-guide/limits.html) in the *AWS Cloud9 User Guide*.
 
 AWS CloudFormation Limits {#limits_cloudformation}
 -------------------------
