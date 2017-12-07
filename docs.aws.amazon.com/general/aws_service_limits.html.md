@@ -1162,6 +1162,7 @@ Amazon Elastic Compute Cloud (Amazon EC2) Limits {#limits_ec2}
   Reserved Instances                                                     20 Reserved Instances per Availability Zone, per month, plus 20 regional Reserved Instances. For more information, see [Reserved Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html#ri-limits).
   Dedicated Hosts                                                        Up to two Dedicated Hosts per instance family, per region can be allocated.
   AMI Copies                                                             Destination regions are limited to 50 concurrent AMI copies at a time, with no more than 25 of those coming from a single source region.
+  Launch Templates                                                       1,000 launch templates per region and 10,000 versions per launch template.
 
 For information about related limits for EC2-VPC, see [Amazon Virtual Private Cloud (Amazon VPC) Limits](aws_service_limits.html#limits_vpc).
 
