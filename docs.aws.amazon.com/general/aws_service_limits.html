@@ -1720,7 +1720,7 @@
                               					
                               <tr>
                                  						
-                                 <td>Maximum number of concurrent running builds</td>
+                                 <td>Maximum number of concurrent running builds *</td>
                                  						
                                  <td>20</td>
                                  					
@@ -1729,6 +1729,12 @@
                            </table>
                         </div>
                      </div>
+                     		
+                     <p>* Limits for the maximum number of concurrent running builds vary, depending on the
+                        compute type. For some compute types, the default is 20. To request a higher concurrent
+                        build limit or if you get a "Cannot have more than X active builds for the account"
+                        error, contact AWS support.
+                     </p>
                      		
                      <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/codebuild/latest/userguide/limits.html" target="_blank">Limits for AWS CodeBuild</a> in the <em>AWS CodeBuild User Guide</em>.
                      </p>

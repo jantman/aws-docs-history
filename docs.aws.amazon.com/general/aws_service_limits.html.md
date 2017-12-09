@@ -644,10 +644,12 @@ For more information about these and other CloudWatch Logs limits, see [CloudWat
 AWS CodeBuild Limits {#limits_codebuild}
 --------------------
 
-  Resource                                      Default Limit
-  --------------------------------------------- ---------------
-  Maximum number of build projects              1,000
-  Maximum number of concurrent running builds   20
+  Resource                                         Default Limit
+  ------------------------------------------------ ---------------
+  Maximum number of build projects                 1,000
+  Maximum number of concurrent running builds \*   20
+
+\* Limits for the maximum number of concurrent running builds vary, depending on the compute type. For some compute types, the default is 20. To request a higher concurrent build limit or if you get a "Cannot have more than X active builds for the account" error, contact AWS support.
 
 For more information about these limits, see [Limits for AWS CodeBuild](http://docs.aws.amazon.com/codebuild/latest/userguide/limits.html) in the *AWS CodeBuild User Guide*.
 
