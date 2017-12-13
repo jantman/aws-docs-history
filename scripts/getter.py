@@ -144,7 +144,6 @@ class AwsGetter(object):
             '-f', 'html',
             '-t', 'markdown-raw_html-native_divs-native_spans',
             '-o', outpath,
-            '--normalize',
             '--wrap=none',
             fpath
         ]
