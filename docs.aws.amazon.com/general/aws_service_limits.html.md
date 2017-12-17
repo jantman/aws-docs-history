@@ -147,6 +147,7 @@ The following limits apply to configuring and running an API in Amazon API Gatew
   Stages per API                               10
   Usage plans per account per region           300
   Usage plans per API key                      10
+  VPC links per account per region             5
 :::
 :::
 
@@ -2072,7 +2073,7 @@ AWS IoT Limits {#limits_iot}
 |                                   | For example:                      |
 |                                   |                                   |
 |                                   | ``` {.programlisting}             |
-|                                   | Copy"desired": {                  |
+|                                   | "desired": {                      |
 |                                   |     "one": {                      |
 |                                   |         "two": {                  |
 |                                   |             "three": {            |
