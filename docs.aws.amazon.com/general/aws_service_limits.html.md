@@ -263,8 +263,8 @@ Auto Scaling Limits {#limits_autoscaling}
 ::: {.table-contents}
   Resource                                   Default Limit
   ------------------------------------------ ---------------
-  Launch configurations per region           100
-  Auto Scaling groups per region             20
+  Launch configurations per region           200
+  Auto Scaling groups per region             200
   Scaling policies per Auto Scaling group    50
   Scheduled actions per Auto Scaling group   125
   Lifecycle hooks per Auto Scaling group     50
@@ -3243,7 +3243,13 @@ Unless otherwise noted, [submit a request](https://console.aws.amazon.com/suppor
 |                       |                       | increases the limit   |
 |                       |                       | on Internet gateways  |
 |                       |                       | per region by the     |
-|                       |                       | same amount.          |
+|                       |                       | same amount. The      |
+|                       |                       | multiple of the       |
+|                       |                       | number of VPCs in the |
+|                       |                       | region and the number |
+|                       |                       | of security groups    |
+|                       |                       | per VPC cannot exceed |
+|                       |                       | 5000.                 |
 +-----------------------+-----------------------+-----------------------+
 | Subnets per VPC       | 200                   | \-                    |
 +-----------------------+-----------------------+-----------------------+
