@@ -83,9 +83,9 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Inspector Limits](#limits_inspector)
 -   [AWS IoT Limits](#limits_iot)
 -   [AWS Key Management Service (AWS KMS) Limits](#limits_kms)
--   [Amazon Kinesis Firehose Limits](#limits-akf)
--   [Amazon Kinesis Streams Limits](#limits-aks)
--   [Amazon Kinesis Analytics Limits](#limits-aka)
+-   [Amazon Kinesis Data Firehose Limits](#limits-akf)
+-   [Amazon Kinesis Data Streams Limits](#limits-aks)
+-   [Amazon Kinesis Data Analytics Limits](#limits-aka)
 -   [Amazon Kinesis Video Streams Limits](#limits-akv)
 -   [AWS Lambda Limits](#limits_lambda)
 -   [Amazon Lightsail Limits](#limits_lightsail)
@@ -106,7 +106,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Rekognition Limits](#limits-rekognition)
 -   [Amazon Relational Database Service (Amazon RDS) Limits](#limits_rds)
 -   [AWS Resource Groups Limits](#limits_resgrps)
--   [Amazon RouteÂ 53 Limits](#limits_route53)
+-   [RouteÂ 53 Limits](#limits_route53)
 -   [Amazon SageMaker Limits](#limits_sagemaker)
 -   [AWS Server Migration Service Limits](#limits_server_migration)
 -   [AWS Service Catalog Limits](#limits_servicecatalog)
@@ -2322,8 +2322,8 @@ All limits in the preceding table apply per region and per AWS account.
 
 For more information about these limits, see [Limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html) in the *AWS Key Management Service Developer Guide*.
 
-Amazon Kinesis Firehose Limits {#limits-akf}
-------------------------------
+Amazon Kinesis Data Firehose Limits {#limits-akf}
+-----------------------------------
 
 ::: {.table}
 
@@ -2344,10 +2344,10 @@ Amazon Kinesis Firehose Limits {#limits-akf}
 
 â€  The three capacity limits scale proportionally. For example, if you increase the throughput limit to 10MB/second, the other limits increase to 4,000 transactions/second and 10,000 records/second.
 
-For more information about these limits, see [Amazon Kinesis Firehose Limits](http://docs.aws.amazon.com/firehose/latest/dev/limits.html) in the *Amazon Kinesis Firehose Developer Guide*.
+For more information about these limits, see [Amazon Kinesis Data Firehose Limits](http://docs.aws.amazon.com/firehose/latest/dev/limits.html) in the *Amazon Kinesis Data Firehose Developer Guide*.
 
-Amazon Kinesis Streams Limits {#limits-aks}
------------------------------
+Amazon Kinesis Data Streams Limits {#limits-aks}
+----------------------------------
 
 ::: {.table}
 
@@ -2368,10 +2368,10 @@ Amazon Kinesis Streams Limits {#limits-aks}
 :::
 :::
 
-For more information about these limits, see [Amazon Kinesis Streams Limits](http://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html) in the *Amazon Kinesis Streams Developer Guide*.
+For more information about these limits, see [Amazon Kinesis Data Streams Limits](http://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html) in the *Amazon Kinesis Data Streams Developer Guide*.
 
-Amazon Kinesis Analytics Limits {#limits-aka}
--------------------------------
+Amazon Kinesis Data Analytics Limits {#limits-aka}
+------------------------------------
 
 ::: {.table}
 
@@ -2389,7 +2389,7 @@ Amazon Kinesis Analytics Limits {#limits-aka}
 :::
 :::
 
-For more information about these limits, see [Limits](http://docs.aws.amazon.com/kinesisanalytics/latest/dev/limits.html) in the *Amazon Kinesis Analytics Developer Guide*.
+For more information about these limits, see [Limits](http://docs.aws.amazon.com/kinesisanalytics/latest/dev/limits.html) in the *Amazon Kinesis Data Analytics Developer Guide*.
 
 Amazon Kinesis Video Streams Limits {#limits-akv}
 -----------------------------------
@@ -2968,8 +2968,8 @@ AWS Resource Groups Limits {#limits_resgrps}
 :::
 :::
 
-Amazon RouteÂ 53 Limits {#limits_route53}
------------------------
+RouteÂ 53 Limits {#limits_route53}
+----------------
 
 ::: {.table}
 
@@ -2988,7 +2988,7 @@ Amazon RouteÂ 53 Limits {#limits_route53}
 :::
 :::
 
-For more information about these limits, see [Amazon RouteÂ 53 Limits](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html) in the *Amazon RouteÂ 53 Developer Guide*.
+For more information about these limits, see [RouteÂ 53 Limits](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html) in the *Amazon RouteÂ 53 Developer Guide*.
 
 Amazon SageMaker Limits {#limits_sagemaker}
 -----------------------
@@ -3108,7 +3108,7 @@ AWS Service Catalog Limits {#limits_servicecatalog}
 AWS Shield Advanced Limits {#limits_shield}
 --------------------------
 
-AWS Shield Advanced offers advanced monitoring and protection for up to 100 CloudFront distributions, Amazon RouteÂ 53 hosted zones or Elastic Load Balancing resources combined, per account. If you want to increase these limits, contact the [AWS Support Center](https://console.aws.amazon.com/support/home#/).
+AWS Shield Advanced offers advanced monitoring and protection for up to 100 CloudFront distributions, RouteÂ 53 hosted zones or Elastic Load Balancing resources combined, per account. If you want to increase these limits, contact the [AWS Support Center](https://console.aws.amazon.com/support/home#/).
 
 Amazon Simple Email Service (Amazon SES) Limits {#limits_ses_quota}
 -----------------------------------------------
