@@ -3645,7 +3645,7 @@ AWS X-Ray Limits {#limits_xray}
 :::
 
 ::: {#copyright-main-footer}
-Â© 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+Â© 2018, Amazon Web Services, Inc. or its affiliates. All rights reserved.
 :::
 :::
 :::
