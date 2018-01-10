@@ -78,6 +78,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon GameLift Limits](#limits_gamelift)
 -   [AWS Glue Limits](#limits_glue)
 -   [AWS Greengrass Limits](#limits_greengrass)
+-   [Amazon GuardDuty Limits](#limits_guardduty)
 -   [AWS Identity and Access Management (IAM) Limits](#limits_iam)
 -   [AWS Import/Export Limits](#limits-import-export)
 -   [Amazon Inspector Limits](#limits_inspector)
@@ -1721,6 +1722,24 @@ The Greengrass core software provides a service to automatically detect the IP a
 
 -   Sending IP addresses to the cloud raises security concerns.
 :::
+
+Amazon GuardDuty Limits {#limits_guardduty}
+-----------------------
+
+::: {.table}
+
+::: {.table-contents}
+  Resource                           Default Limit
+  ---------------------------------- ---------------
+  Detectors                          1
+  Trusted IP sets                    1
+  Threat intel sets                  6
+  GuardDuty member accounts          100
+  GuardDuty finding retention time   90 days
+:::
+:::
+
+For more information, see the [Amazon GuardDuty User Guide](http://docs.aws.amazon.com/guardduty/latest/ug/).
 
 AWS Identity and Access Management (IAM) Limits {#limits_iam}
 -----------------------------------------------
