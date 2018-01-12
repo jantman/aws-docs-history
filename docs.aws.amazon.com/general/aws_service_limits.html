@@ -64,7 +64,6 @@
                         <ul>
                            <li><a href="#limits_apigateway">Amazon API Gateway Limits</a></li>
                            <li><a href="#limits_appdiscserve">AWS Application Discovery Service Limits</a></li>
-                           <li><a href="#limits_appstream">Amazon AppStream Limits</a></li>
                            <li><a href="#limits_appstream2">Amazon AppStream 2.0 Limits</a></li>
                            <li><a href="#limits_appsync">AWS AppSync Limits</a></li>
                            <li><a href="#limits_as-app">Application Auto Scaling Limits</a></li>
@@ -90,26 +89,26 @@
                            <li><a href="#limits_cognito_federated_identities">Amazon Cognito Federated Identities
                                  				Limits</a></li>
                            <li><a href="#limits_cognito_sync">Amazon Cognito Sync Limits</a></li>
-                           <li><a href="#limits_amazon_connect">Amazon Connect Limits</a></li>
                            <li><a href="#limits_config">AWS Config Limits</a></li>
+                           <li><a href="#limits_amazon_connect">Amazon Connect Limits</a></li>
                            <li><a href="#limits_datapipeline">AWS Data Pipeline Limits</a></li>
                            <li><a href="#limits_dms">AWS Database Migration Service Limits</a></li>
                            <li><a href="#limits_devicefarm">AWS Device Farm Limits</a></li>
                            <li><a href="#limits_directconnect">AWS Direct Connect Limits</a></li>
                            <li><a href="#limits_ds">AWS Directory Service Limits</a></li>
                            <li><a href="#limits_dynamodb">Amazon DynamoDB Limits</a></li>
-                           <li><a href="#limits_ecr">Amazon Elastic Container Registry (Amazon ECR) Limits</a></li>
-                           <li><a href="#limits_ecs">Amazon Elastic Container Service (Amazon ECS) Limits</a></li>
-                           <li><a href="#limits_ssm">AWS Systems Manager Limits</a></li>
                            <li><a href="#limits_elastic_beanstalk">AWS Elastic Beanstalk Limits</a></li>
                            <li><a href="#limits_ebs">Amazon Elastic Block Store (Amazon EBS) Limits</a></li>
                            <li><a href="#limits_ec2">Amazon Elastic Compute Cloud (Amazon EC2) Limits</a></li>
+                           <li><a href="#limits_ecr">Amazon Elastic Container Registry (Amazon ECR) Limits</a></li>
+                           <li><a href="#limits_ecs">Amazon Elastic Container Service (Amazon ECS) Limits</a></li>
                            <li><a href="#limits_elasticfilesystem">Amazon Elastic File System Limits</a></li>
                            <li><a href="#limits_elastic_load_balancer">Elastic Load Balancing Limits</a></li>
                            <li><a href="#limits_elastictranscoder">Amazon Elastic Transcoder Limits</a></li>
                            <li><a href="#limits_elasticache">Amazon ElastiCache Limits</a></li>
                            <li><a href="#limits_es">Amazon Elasticsearch Service Limits</a></li>
                            <li><a href="#limits_gamelift">Amazon GameLift Limits</a></li>
+                           <li><a href="#limits_glacier">Amazon Glacier Limits</a></li>
                            <li><a href="#limits_glue">AWS Glue Limits</a></li>
                            <li><a href="#limits_greengrass">AWS Greengrass Limits</a></li>
                            <li><a href="#limits_guardduty">Amazon GuardDuty Limits</a></li>
@@ -138,7 +137,7 @@
                            <li><a href="#limits_polly">Amazon Polly Limits</a></li>
                            <li><a href="#limits_pinpoint">Amazon Pinpoint Limits</a></li>
                            <li><a href="#limits_redshift">Amazon Redshift Limits</a></li>
-                           <li><a href="#limits-rekognition">Amazon Rekognition Limits</a></li>
+                           <li><a href="#limits_rekognition">Amazon Rekognition Limits</a></li>
                            <li><a href="#limits_rds">Amazon Relational Database Service (Amazon RDS) Limits</a></li>
                            <li><a href="#limits_resgrps">AWS Resource Groups Limits</a></li>
                            <li><a href="#limits_route53">RouteÂ 53 Limits</a></li>
@@ -154,6 +153,7 @@
                            <li><a href="#limits_simpledb">Amazon SimpleDB Limits</a></li>
                            <li><a href="#limits-step-functions">AWS Step Functions Limits</a></li>
                            <li><a href="#limits-storage-gateway">AWS Storage Gateway Limits</a></li>
+                           <li><a href="#limits_ssm">AWS Systems Manager Limits</a></li>
                            <li><a href="#limits_vpc">Amazon Virtual Private Cloud (Amazon VPC) Limits</a></li>
                            <li><a href="#limits-vpc-dns">Amazon VPC DNS Limits</a></li>
                            <li><a href="#limits_waf">AWS WAF Limits</a></li>
@@ -175,7 +175,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c13b5">
+                           <table id="w113aac15c13b5">
                               					
                               <tr>
                                  						
@@ -296,7 +296,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c15b3">
+                           <table id="w113aac15c15b3">
                               					
                               <tr>
                                  						
@@ -344,52 +344,13 @@
                      </div>
                      	
                      		
-                     <h2 id="limits_appstream">Amazon AppStream Limits</h2>
-                     
-                     		
-                     <div class="aws-note">
-                        <p class="aws-note">Important</p>
-                        <p>This information applies only to the older version of Amazon AppStream.</p>
-                     </div>
-                     		
-                     <p> An Amazon AppStream account has a service limit of up to five concurrent streaming
-                        			sessions:
-                     </p>
-                     		
-                     <div class="itemizedlist">
-                        			
-                        			
-                        		
-                        <ul class="itemizedlist" type="disc">
-                           <li class="listitem">
-                              				
-                              <p>Up to two concurrent streaming application deployments using the interactive
-                                 					wizard.
-                              </p>
-                              			
-                           </li>
-                           <li class="listitem">
-                              				
-                              <p>Up to three streaming applications in the <b>Building</b>,
-                                 						<b>Active</b>, or <b>Error</b> states.
-                              </p>
-                              			
-                           </li>
-                        </ul>
-                     </div>
-                     		
-                     <p>For more information, see <a href="http://docs.aws.amazon.com/appstream/latest/developerguide/appstream-application-lifecycle.html" target="_blank">Amazon AppStream Application
-                           				Lifecycle</a> in the <em>Amazon AppStream Developer Guide</em>.
-                     </p>
-                     	
-                     		
                      <h2 id="limits_appstream2">Amazon AppStream 2.0 Limits</h2>
                      
                      		
                      <div class="table">
                         <p class="title"><b>Default Limits Per Region Per Account</b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c19b3">
+                           <table id="w113aac15c17b3">
                               					
                               <tr>
                                  						
@@ -475,7 +436,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c21b3">
+                           <table id="w113aac15c19b3">
                               					
                               <tr>
                                  						
@@ -536,7 +497,7 @@
                      		
                      <div class="table">
                         <div class="table-contents">
-                           <table id="w114aac16c23b3">
+                           <table id="w113aac15c21b3">
                               					
                               <tr>
                                  						
@@ -582,7 +543,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c25b3">
+                           <table id="w113aac15c23b3">
                               					
                               <tr>
                                  						
@@ -623,7 +584,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c27b3">
+                           <table id="w113aac15c25b3">
                               					
                               <tr>
                                  						
@@ -721,7 +682,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c29b3">
+                           <table id="w113aac15c27b3">
                               					
                               <tr>
                                  						
@@ -771,7 +732,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c31b3">
+                           <table id="w113aac15c29b3">
                               					
                               <tr>
                                  						
@@ -820,7 +781,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c33b3">
+                           <table id="w113aac15c31b3">
                               					
                               <tr>
                                  						
@@ -919,7 +880,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c35b3">
+                           <table id="w113aac15c33b3">
                               					
                               <tr>
                                  						
@@ -969,7 +930,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c37b3">
+                           <table id="w113aac15c35b3">
                               					
                               <tr>
                                  						
@@ -1115,7 +1076,7 @@
                      		
                      <div class="table">
                         <div class="table-contents">
-                           <table id="w114aac16c39b3">
+                           <table id="w113aac15c37b3">
                               					
                               <tr>
                                  						
@@ -1155,7 +1116,7 @@
                      		
                      <div class="table">
                         <div class="table-contents">
-                           <table id="w114aac16c41b3">
+                           <table id="w113aac15c39b3">
                               					
                               <tr>
                                  						
@@ -1197,7 +1158,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c43b3">
+                           <table id="w113aac15c41b3">
                               					
                               <tr>
                                  						
@@ -1246,7 +1207,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c47b3">
+                           <table id="w113aac15c45b3">
                               					
                               <tr>
                                  						
@@ -1434,7 +1395,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c49b3">
+                           <table id="w113aac15c47b3">
                               					
                               <tr>
                                  						
@@ -1543,7 +1504,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c51b3">
+                           <table id="w113aac15c49b3">
                               					
                               <tr>
                                  						
@@ -1708,7 +1669,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c53b3">
+                           <table id="w113aac15c51b3">
                               					
                               <tr>
                                  						
@@ -1755,7 +1716,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c55b3">
+                           <table id="w113aac15c53b3">
                               					
                               <tr>
                                  						
@@ -1788,7 +1749,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c57b3">
+                           <table id="w113aac15c55b3">
                               					
                               <tr>
                                  						
@@ -1861,7 +1822,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c59b3">
+                           <table id="w113aac15c57b3">
                               					
                               <tr>
                                  						
@@ -2018,7 +1979,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c61b3">
+                           <table id="w113aac15c59b3">
                               					
                               <tr>
                                  						
@@ -2094,7 +2055,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c63b3">
+                           <table id="w113aac15c61b3">
                               					
                               <tr>
                                  						
@@ -2128,7 +2089,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c65b3">
+                           <table id="w113aac15c63b3">
                               					
                               <tr>
                                  						
@@ -2172,13 +2133,53 @@
                      </p>
                      	
                      		
-                     <h2 id="limits_amazon_connect">Amazon Connect Limits</h2>
+                     <h2 id="limits_config">AWS Config Limits</h2>
                      
+                     		
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w113aac15c65b3">
+                              					
+                              <tr>
+                                 						
+                                 <th>Resource</th>
+                                 						
+                                 <th>Default Limit</th>
+                                 						
+                                 <th>Notes</th>
+                                 					
+                              </tr>
+                              				
+                              					
+                              <tr>
+                                 						
+                                 <td>Number of AWS Config rules per region in your account</td>
+                                 						
+                                 <td>50</td>
+                                 
+                                 						
+                                 <td>
+                                    							
+                                    <p>You can <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-config-service" target="_blank">request a limit increase</a>.
+                                    </p>
+                                    						
+                                 </td>
+                                 
+                                 					
+                              </tr>
+                              				
+                           </table>
+                        </div>
+                     </div>
+                     	
+                     		
+                     <h2 id="limits_amazon_connect">Amazon Connect Limits</h2>
                      
                      		
                      <div class="table">
                         <div class="table-contents">
-                           <table id="w114aac16c67b3">
+                           <table id="w113aac15c67b3">
                               					
                               <tr>
                                  						
@@ -2450,54 +2451,13 @@
                      </div>
                      	
                      		
-                     <h2 id="limits_config">AWS Config Limits</h2>
-                     
-                     		
-                     <div class="table">
-                        <p class="title"><b></b></p>
-                        <div class="table-contents">
-                           <table id="w114aac16c69b3">
-                              					
-                              <tr>
-                                 						
-                                 <th>Resource</th>
-                                 						
-                                 <th>Default Limit</th>
-                                 						
-                                 <th>Notes</th>
-                                 					
-                              </tr>
-                              				
-                              					
-                              <tr>
-                                 						
-                                 <td>Number of AWS Config rules per region in your account</td>
-                                 						
-                                 <td>50</td>
-                                 
-                                 						
-                                 <td>
-                                    							
-                                    <p>You can <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-config-service" target="_blank">request a limit increase</a>.
-                                    </p>
-                                    						
-                                 </td>
-                                 
-                                 					
-                              </tr>
-                              				
-                           </table>
-                        </div>
-                     </div>
-                     	
-                     		
                      <h2 id="limits_datapipeline">AWS Data Pipeline Limits</h2>
                      
                      		
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c71b3">
+                           <table id="w113aac15c69b3">
                               					
                               <tr>
                                  						
@@ -2655,7 +2615,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c73b3">
+                           <table id="w113aac15c71b3">
                               					
                               <tr>
                                  						
@@ -2734,7 +2694,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c75b3">
+                           <table id="w113aac15c73b3">
                               					
                               <tr>
                                  						
@@ -2856,7 +2816,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c79b3">
+                           <table id="w113aac15c77b3">
                               					
                               <tr>
                                  						
@@ -2923,7 +2883,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c81b3">
+                           <table id="w113aac15c79b3">
                               					
                               <tr>
                                  						
@@ -2998,601 +2958,13 @@
                      </p>
                      	
                      		
-                     <h2 id="limits_ecr">Amazon Elastic Container Registry (Amazon ECR) Limits</h2>
-                     
-                     		
-                     <div class="table">
-                        <p class="title"><b></b></p>
-                        <div class="table-contents">
-                           <table id="w114aac16c83b3">
-                              					
-                              <tr>
-                                 						
-                                 <th>Resource</th>
-                                 						
-                                 <th>Default Limit</th>
-                                 					
-                              </tr>
-                              				
-                              					
-                              <tr>
-                                 						
-                                 <td>Maximum number of repositories per account</td>
-                                 						
-                                 <td>1,000</td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>Maximum number of images per repository</td>
-                                 						
-                                 <td>1,000</td>
-                                 					
-                              </tr>
-                              				
-                           </table>
-                        </div>
-                     </div>
-                     		
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AmazonECR/latest/userguide/service_limits.html" target="_blank">Amazon ECR Service Limits</a> in the
-                        				<em>Amazon Elastic Container Registry User Guide</em>.
-                     </p>
-                     	
-                     		
-                     <h2 id="limits_ecs">Amazon Elastic Container Service (Amazon ECS) Limits</h2>
-                     
-                     		
-                     <div class="table">
-                        <p class="title"><b></b></p>
-                        <div class="table-contents">
-                           <table id="w114aac16c85b3">
-                              					
-                              <tr>
-                                 						
-                                 <th>Resource</th>
-                                 						
-                                 <th>Default Limit</th>
-                                 					
-                              </tr>
-                              				
-                              					
-                              <tr>
-                                 						
-                                 <td>Number of clusters per region per account</td>
-                                 						
-                                 <td>1000</td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>Number of container instances per cluster</td>
-                                 						
-                                 <td>1000</td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>Number of services per cluster</td>
-                                 						
-                                 <td>500</td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>Number of tasks using the EC2 launch type per service (the desired
-                                    							count)
-                                 </td>
-                                 						
-                                 <td>1000</td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>Number of tasks using the Fargate launch type, per region, per
-                                    							account
-                                 </td>
-                                 						
-                                 <td>20</td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>Number of public IP addresses for tasks using the Fargate launch
-                                    							type
-                                 </td>
-                                 						
-                                 <td>20</td>
-                                 					
-                              </tr>
-                              				
-                           </table>
-                        </div>
-                     </div>
-                     		
-                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_limits.html" target="_blank">Amazon ECS Service Limits</a> in the
-                        				<em>Amazon Elastic Container Service Developer Guide</em>.
-                     </p>
-                     	
-                     		
-                     <h2 id="limits_ssm">AWS Systems Manager Limits</h2>
-                     
-                     		
-                     <div class="table">
-                        <p class="title"><b></b></p>
-                        <div class="table-contents">
-                           <table id="w114aac16c87b3">
-                              					
-                              <tr>
-                                 						
-                                 <th>Resource</th>
-                                 						
-                                 <th>Default Limit</th>
-                                 					
-                              </tr>
-                              				
-                              					
-                              <tr>
-                                 						
-                                 <td>On-premises managed instances registered through Amazon EC2
-                                    							activation
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Each AWS account can activate a maximum of 1,000 on-premises
-                                       								instances in a region for use with Systems Manager.
-                                    </p>
-                                    							
-                                    <p>For more information about activating on-premises instances for
-                                       								use in your hybrid environment, see <a href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html#sysman-managed-instance-activation" target="_blank">Create a Managed-Instance Activation</a> in the <em><a href="http://docs.aws.amazon.com/systems-manager/latest/userguide/" target="_blank">AWS Systems Manager User Guide</a></em>.
-                                    </p>
-                                    							
-                                    <div class="aws-note">
-                                       <p class="aws-note">Note</p>
-                                       <p>Activation limits apply only to the on-premises instances you
-                                          									add to your hybrid environment, and not to registered Amazon EC2
-                                          									instances.
-                                       </p>
-                                    </div>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>Systems Manager documents</td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>200</p>
-                                    							
-                                    <p>Each AWS account can create a maximum of 200 documents per
-                                       								region.
-                                    </p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>Privately shared Systems Manager document</td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>1000</p>
-                                    							
-                                    <p>A single Systems Manager document can be shared with a maximum of 1000 AWS
-                                       								accounts.
-                                    </p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>Publicly shared Systems Manager document</td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>5</p>
-                                    							
-                                    <p>Each AWS account can publicly share a maximum of five
-                                       								documents.
-                                    </p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>State Manager associations</td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>10,000</p>
-                                    							
-                                    <p>Each Systems Manager document can be associated with a maximum of 10,000
-                                       								instances.
-                                    </p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>State Manager association versions</td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>1,000</p>
-                                    							
-                                    <p>You can created a maximum of 1,000 versions of a State Manager
-                                       								association.
-                                    </p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Inventory data collected per instance per call</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>1 MB</p>
-                                    							
-                                    <p>This maximum adequately supports most inventory collection
-                                       								scenarios. When this limit is reached, no new inventory data is
-                                       								collected for the instance. Inventory data previously collected is
-                                       								stored until the expiration.
-                                    </p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Inventory data collected per instance per day</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>5 MB</p>
-                                    							
-                                    <p>When this limit is reached, no new inventory data is collected for
-                                       								the instance. Inventory data previously collected is stored until
-                                       								the expiration.
-                                    </p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Custom Inventory Types</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>20</p>
-                                    							
-                                    <p>You can add up to 20 custom inventory types.</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Custom Inventory Type Size</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>200 KB</p>
-                                    							
-                                    <p>This is the maximum size of the type, not the inventory
-                                       								collected.
-                                    </p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Custom Inventory Type Attributes</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>50</p>
-                                    							
-                                    <p>This is the maximum number of attributes within the custom
-                                       								inventory type.
-                                    </p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Inventory data expiration</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>30 days</p>
-                                    							
-                                    <p>If you terminate an instance, inventory data for that instance is
-                                       								deleted immediately. For running instances, inventory data older
-                                       								than 30 days is deleted. If you need to store inventory data longer
-                                       								than 30 days, you can use AWS Config to record history or periodically
-                                       								query and upload the data to an Amazon S3 bucket. For more information,
-                                       								see, <a href="http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#recording-managed-instance-inventory" target="_blank">Recording Amazon EC2 managed instance inventory</a> in the
-                                       									<em>AWS Config Developer Guide</em>.
-                                    </p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Maintenance Windows per account</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>50</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Tasks per Maintenance Window</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>20</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Targets per Maintenance Window</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>50</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Instance IDs per target</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>50</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Targets per task</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>10</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Concurrent executions of a single Maintenance Window</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>1</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Concurrent executions of Maintenance Windows</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>5</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Maintenance Window execution history retention</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>30 days</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Maximum number of parameters per account</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>10,000</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Max size for parameter value</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>4096 characters</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Max history for a parameter</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>100 past values</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Patch baselines per account</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>25</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>
-                                    							
-                                    <p>Patch groups per patch baseline</p>
-                                    						
-                                 </td>
-                                 						
-                                 <td>
-                                    							
-                                    <p>25</p>
-                                    						
-                                 </td>
-                                 					
-                              </tr>
-                              				
-                           </table>
-                        </div>
-                     </div>
-                     
-                     
-                     	
-                     		
                      <h2 id="limits_elastic_beanstalk">AWS Elastic Beanstalk Limits</h2>
                      
                      		
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c89b3">
+                           <table id="w113aac15c81b3">
                               					
                               <tr>
                                  						
@@ -3638,7 +3010,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c91b3">
+                           <table id="w113aac15c83b3">
                               					
                               <tr>
                                  						
@@ -3752,7 +3124,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c93b3">
+                           <table id="w113aac15c85b3">
                               					
                               <tr>
                                  						
@@ -3878,6 +3250,128 @@
                      </p>
                      	
                      		
+                     <h2 id="limits_ecr">Amazon Elastic Container Registry (Amazon ECR) Limits</h2>
+                     		
+                     		
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w113aac15c87b3">
+                              					
+                              <tr>
+                                 						
+                                 <th>Resource</th>
+                                 						
+                                 <th>Default Limit</th>
+                                 					
+                              </tr>
+                              				
+                              					
+                              <tr>
+                                 						
+                                 <td>Maximum number of repositories per account</td>
+                                 						
+                                 <td>1,000</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Maximum number of images per repository</td>
+                                 						
+                                 <td>1,000</td>
+                                 					
+                              </tr>
+                              				
+                           </table>
+                        </div>
+                     </div>
+                     		
+                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AmazonECR/latest/userguide/service_limits.html" target="_blank">Amazon ECR Service Limits</a> in the
+                        			<em>Amazon Elastic Container Registry User Guide</em>.
+                     </p>
+                     	
+                     		
+                     <h2 id="limits_ecs">Amazon Elastic Container Service (Amazon ECS) Limits</h2>
+                     		
+                     		
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w113aac15c89b3">
+                              					
+                              <tr>
+                                 						
+                                 <th>Resource</th>
+                                 						
+                                 <th>Default Limit</th>
+                                 					
+                              </tr>
+                              				
+                              					
+                              <tr>
+                                 						
+                                 <td>Number of clusters per region per account</td>
+                                 						
+                                 <td>1000</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Number of container instances per cluster</td>
+                                 						
+                                 <td>1000</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Number of services per cluster</td>
+                                 						
+                                 <td>500</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Number of tasks using the EC2 launch type per service (the desired
+                                    							count)
+                                 </td>
+                                 						
+                                 <td>1000</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Number of tasks using the Fargate launch type, per region, per
+                                    							account
+                                 </td>
+                                 						
+                                 <td>20</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Number of public IP addresses for tasks using the Fargate launch
+                                    							type
+                                 </td>
+                                 						
+                                 <td>20</td>
+                                 					
+                              </tr>
+                              				
+                           </table>
+                        </div>
+                     </div>
+                     		
+                     <p>For information about additional documented limits, see <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_limits.html" target="_blank">Amazon ECS Service Limits</a> in the
+                        			<em>Amazon Elastic Container Service Developer Guide</em>.
+                     </p>
+                     	
+                     		
                      <h2 id="limits_elasticfilesystem">Amazon Elastic File System Limits</h2>
                      
                      		
@@ -3889,7 +3383,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c97b5">
+                           <table id="w113aac15c91b5">
                               					
                               <tr>
                                  						
@@ -3950,7 +3444,7 @@
                      <div class="table">
                         <p class="title"><b>Application Load Balancers</b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c99b5">
+                           <table id="w113aac15c93b5">
                               					
                               <tr>
                                  						
@@ -4062,7 +3556,7 @@
                      <div class="table">
                         <p class="title"><b>Network Load Balancers</b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c99b9">
+                           <table id="w113aac15c93b9">
                               					
                               <tr>
                                  						
@@ -4132,7 +3626,7 @@
                      <div class="table">
                         <p class="title"><b>Classic Load Balancers</b></p>
                         <div class="table-contents">
-                           <table id="w114aac16c99c13">
+                           <table id="w113aac15c93c13">
                               					
                               <tr>
                                  						
@@ -4190,7 +3684,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d101b3">
+                           <table id="w113aac15c95b3">
                               					
                               <tr>
                                  						
@@ -4264,7 +3758,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d103b5">
+                           <table id="w113aac15c97b5">
                               					
                               <tr>
                                  						
@@ -4409,7 +3903,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d105b3">
+                           <table id="w113aac15c99b3">
                               					
                               <tr>
                                  						
@@ -4448,7 +3942,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d107b3">
+                           <table id="w113aac15d101b3">
                               					
                               <tr>
                                  						
@@ -4564,12 +4058,47 @@
                      </div>
                      	
                      		
+                     <h2 id="limits_glacier">Amazon Glacier Limits</h2>
+                     		
+                     <div class="table">
+                        <div class="table-contents">
+                           <table id="w113aac15d103b3">
+                              					
+                              <tr>
+                                 						
+                                 <th>Resource</th>
+                                 						
+                                 <th>Default Limit</th>
+                                 					
+                              </tr>
+                              				
+                              					
+                              <tr>
+                                 						
+                                 <td>Number of vaults per account</td>
+                                 						
+                                 <td>1000</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Number of provisioned capacity units</td>
+                                 						
+                                 <td>2</td>
+                                 					
+                              </tr>
+                              				
+                           </table>
+                        </div>
+                     </div>
+                     	
+                     		
                      <h2 id="limits_glue">AWS Glue Limits</h2>
                      		
                      <div class="table">
-                        <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d109b3">
+                           <table id="w113aac15d105b3">
                               					
                               <tr>
                                  						
@@ -4692,7 +4221,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d111b3b3">
+                           <table id="w113aac15d107b3b3">
                               						
                               <tr>
                                  							
@@ -4783,7 +4312,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d111b5b3">
+                           <table id="w113aac15d107b5b3">
                               						
                               <tr>
                                  							
@@ -4956,7 +4485,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d113b3">
+                           <table id="w113aac15d109b3">
                               					
                               <tr>
                                  						
@@ -5020,7 +4549,7 @@
                      		
                      <div class="table">
                         <div class="table-contents">
-                           <table id="w114aac16d115b3">
+                           <table id="w113aac15d111b3">
                               					
                               <tr>
                                  						
@@ -5115,7 +4644,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d117b3b3">
+                           <table id="w113aac15d113b3b3">
                               						
                               <tr>
                                  							
@@ -5154,7 +4683,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d119b3">
+                           <table id="w113aac15d115b3">
                               					
                               <tr>
                                  						
@@ -5215,7 +4744,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d121b3b3">
+                           <table id="w113aac15d117b3b3">
                               						
                               <tr>
                                  							
@@ -5284,7 +4813,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d121b5b3">
+                           <table id="w113aac15d117b5b3">
                               						
                               <tr>
                                  							
@@ -5633,7 +5162,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d121b7b3">
+                           <table id="w113aac15d117b7b3">
                               						
                               <tr>
                                  							
@@ -5717,7 +5246,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d121b9b3">
+                           <table id="w113aac15d117b9b3">
                               						
                               <tr>
                                  							
@@ -5777,7 +5306,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d121c11b3">
+                           <table id="w113aac15d117c11b3">
                               						
                               <tr>
                                  							
@@ -6176,7 +5705,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d121c13b3">
+                           <table id="w113aac15d117c13b3">
                               						
                               <tr>
                                  							
@@ -6216,7 +5745,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d121c15b3">
+                           <table id="w113aac15d117c15b3">
                               						
                               <tr>
                                  							
@@ -6475,7 +6004,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d123b3">
+                           <table id="w113aac15d119b3">
                               					
                               <tr>
                                  						
@@ -6543,7 +6072,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d125b3">
+                           <table id="w113aac15d121b3">
                               					
                               <tr>
                                  						
@@ -6601,7 +6130,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d127b3">
+                           <table id="w113aac15d123b3">
                               					
                               <tr>
                                  						
@@ -6644,7 +6173,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d129b3">
+                           <table id="w113aac15d125b3">
                               					
                               <tr>
                                  						
@@ -6728,7 +6257,7 @@
                      <div class="table">
                         <p class="title"><b>Control Plane API limits</b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d131b5b9">
+                           <table id="w113aac15d127b5b9">
                               						
                               <tr>
                                  							
@@ -6897,7 +6426,7 @@
                      <div class="table">
                         <p class="title"><b>Data Plane API limits</b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d131b7c13">
+                           <table id="w113aac15d127b7c13">
                               						
                               <tr>
                                  							
@@ -7042,7 +6571,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d133b3">
+                           <table id="w113aac15d129b3">
                               					
                               <tr>
                                  						
@@ -7068,94 +6597,73 @@
                      <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/limits.html" target="_blank">AWS Lambda Limits</a> in the <em>AWS Lambda Developer Guide</em>.
                      </p>
                      		
-                     <p>AWS Lambda will dynamically scale capacity in response to increased traffic, subject
-                        to
-                        			your account's <a href="http://docs.aws.amazon.com/lambda/latest/dg/concurrent-execution-safety-limit" target="_blank">Concurrent
-                           				Execution Safety Limit</a>. To handle any burst in traffic, Lambda will
-                        			immediately increase your concurrently executing functions by a predetermined amount,
+                     <p>AWS Lambda dynamically scales capacity in response to increased traffic, subject to
+                        			your account's concurrent execution limit. For more information, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html" target="_blank">Managing Concurrency</a>. 
+                        			To handle a burst in traffic, Lambda immediately increases your concurrently executing
+                        functions by a predetermined amount,
                         			dependent on which region it's executed (see table below).
                      </p>
                      		
-                     <p> If the default <b>Immediate Concurrency Increase</b> value,
+                     <p>If the default <b>Immediate Concurrency Increase</b> value,
                         			as noted in the table below, is not sufficient to accommodate the traffic surge,
                         Lambda
-                        			will continue to increase the number of concurrent function executions by 500 per
-                        minute
+                        			continues to increase the number of concurrent function executions by 500 per minute
                         			until your account safety limit has been reached or the number of concurrently
                         executing
                         			functions is sufficient to successfully process the increased load.
                      </p>
                      
-                     
                      		
                      <div class="table">
-                        <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d133c11">
+                           <table id="w113aac15d129c11">
                               					
                               <tr>
                                  						
                                  <th>Region</th>
                                  						
                                  <th>Immediate Concurrency Increase (function executions)</th>
-                                 
-                                 
                                  					
                               </tr>
                               				
-                              
                               					
                               <tr>
                                  						
                                  <td>Asia Pacific (Tokyo)</td>
                                  						
                                  <td>1000</td>
-                                 
-                                 
                                  					
                               </tr>
-                              
                               					
                               <tr>
                                  						
                                  <td>Asia Pacific (Seoul)</td>
                                  						
                                  <td>500</td>
-                                 
-                                 
                                  					
                               </tr>
-                              
                               					
                               <tr>
                                  						
                                  <td>Asia Pacific (Mumbai)</td>
                                  						
                                  <td>500</td>
-                                 
-                                 
                                  					
                               </tr>
-                              
                               					
                               <tr>
                                  						
                                  <td>Asia Pacific (Singapore)</td>
                                  						
                                  <td>500</td>
-                                 
-                                 
                                  					
                               </tr>
-                              
                               					
                               <tr>
                                  						
                                  <td>Asia Pacific (Sydney)</td>
                                  						
                                  <td>500</td>
-                                 
-                                 
                                  					
                               </tr>
                               					
@@ -7164,30 +6672,22 @@
                                  <td>Canada (Central)</td>
                                  						
                                  <td>500</td>
-                                 
-                                 
                                  					
                               </tr>
-                              
                               					
                               <tr>
                                  						
                                  <td>EU (Frankfurt)</td>
                                  						
                                  <td>1000</td>
-                                 
-                                 
                                  					
                               </tr>
-                              
                               					
                               <tr>
                                  						
                                  <td>EU (London)</td>
                                  						
                                  <td>500</td>
-                                 
-                                 
                                  					
                               </tr>
                               					
@@ -7196,8 +6696,6 @@
                                  <td>EU (Ireland)</td>
                                  						
                                  <td>3000</td>
-                                 
-                                 
                                  					
                               </tr>
                               					
@@ -7206,33 +6704,22 @@
                                  <td>AWS GovCloud (US)</td>
                                  						
                                  <td>500</td>
-                                 
-                                 
                                  					
                               </tr>
-                              
-                              
-                              
-                              
                               					
                               <tr>
                                  						
                                  <td>US East (Ohio)</td>
                                  						
                                  <td>500</td>
-                                 
-                                 
                                  					
                               </tr>
-                              
                               					
                               <tr>
                                  						
                                  <td>US West (N. California)</td>
                                  						
                                  <td>500</td>
-                                 
-                                 
                                  					
                               </tr>
                               					
@@ -7241,8 +6728,6 @@
                                  <td>US West (Oregon)</td>
                                  						
                                  <td>3000</td>
-                                 
-                                 
                                  					
                               </tr>
                               					
@@ -7251,30 +6736,22 @@
                                  <td>US East (N. Virginia)</td>
                                  						
                                  <td>3000</td>
-                                 
-                                 
                                  					
                               </tr>
-                              
                               					
                               <tr>
                                  						
                                  <td>South America (SÃ£o Paulo)</td>
                                  						
                                  <td>500</td>
-                                 
-                                 
                                  					
                               </tr>
-                              
                               					
                               <tr>
                                  						
                                  <td>China (Beijing)</td>
                                  						
                                  <td>500</td>
-                                 
-                                 
                                  					
                               </tr>
                               					
@@ -7283,12 +6760,8 @@
                                  <td>AWS GovCloud (US) </td>
                                  						
                                  <td>500 </td>
-                                 
-                                 
                                  					
                               </tr>
-                              
-                              
                               				
                            </table>
                         </div>
@@ -7301,7 +6774,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d135b3">
+                           <table id="w113aac15d131b3">
                               					
                               <tr>
                                  						
@@ -7365,7 +6838,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d137b3">
+                           <table id="w113aac15d133b3">
                               					
                               <tr>
                                  						
@@ -7499,7 +6972,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d139b3">
+                           <table id="w113aac15d135b3">
                               					
                               <tr>
                                  						
@@ -7579,7 +7052,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d141b3">
+                           <table id="w113aac15d137b3">
                               					
                               <tr>
                                  						
@@ -7625,7 +7098,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d143b3">
+                           <table id="w113aac15d139b3">
                               					
                               <tr>
                                  						
@@ -7662,7 +7135,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d145b3">
+                           <table id="w113aac15d141b3">
                               					
                               <tr>
                                  						
@@ -7699,7 +7172,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d147b3">
+                           <table id="w113aac15d143b3">
                               					
                               <tr>
                                  						
@@ -7755,7 +7228,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d151b3">
+                           <table id="w113aac15d147b3">
                               					
                               <tr>
                                  						
@@ -7791,7 +7264,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d153b3">
+                           <table id="w113aac15d149b3">
                               					
                               <tr>
                                  						
@@ -7837,7 +7310,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d155b3">
+                           <table id="w113aac15d151b3">
                               					
                               <tr>
                                  						
@@ -7891,7 +7364,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d157b3">
+                           <table id="w113aac15d153b3">
                               					
                               <tr>
                                  						
@@ -7950,7 +7423,7 @@
                               <div class="table">
                                  <p class="title"><b>Throttle Rate per Operation</b></p>
                                  <div class="table-contents">
-                                    <table id="w114aac16d159b3b3b3">
+                                    <table id="w113aac15d155b3b3b3">
                                        							
                                        <tr>
                                           
@@ -8068,7 +7541,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d161b3">
+                           <table id="w113aac15d157b3">
                               					
                               <tr>
                                  						
@@ -8206,7 +7679,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d163b3">
+                           <table id="w113aac15d159b3">
                               					
                               <tr>
                                  						
@@ -8298,7 +7771,7 @@
                      </p>
                      	
                      		
-                     <h2 id="limits-rekognition">Amazon Rekognition Limits</h2>
+                     <h2 id="limits_rekognition">Amazon Rekognition Limits</h2>
                      		
                      <p>Amazon Rekognition does not have service limits that you can change. For information
                         about
@@ -8313,7 +7786,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d167b3">
+                           <table id="w113aac15d163b3">
                               					
                               <tr>
                                  						
@@ -8469,7 +7942,7 @@
                      		
                      <div class="table">
                         <div class="table-contents">
-                           <table id="w114aac16d169b3">
+                           <table id="w113aac15d165b3">
                               					
                               <tr>
                                  						
@@ -8499,7 +7972,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d171b3">
+                           <table id="w113aac15d167b3">
                               					
                               <tr>
                                  						
@@ -8593,7 +8066,7 @@
                      		
                      <h2 id="limits_sagemaker">Amazon SageMaker Limits</h2>
                      		
-                     <p>The following tables group Amazon SageMaker limits by compoents.
+                     <p>The following tables group Amazon SageMaker limits by components.
                         			
                      </p>
                      		
@@ -8602,7 +8075,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d173b7">
+                           <table id="w113aac15d169b7">
                               					
                               <tr>
                                  						
@@ -8664,7 +8137,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d173c11">
+                           <table id="w113aac15d169c11">
                               					
                               <tr>
                                  						
@@ -8854,7 +8327,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d173c15">
+                           <table id="w113aac15d169c15">
                               					
                               <tr>
                                  						
@@ -8989,7 +8462,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d175b3">
+                           <table id="w113aac15d171b3">
                               					
                               <tr>
                                  						
@@ -9035,7 +8508,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d177b3">
+                           <table id="w113aac15d173b3">
                               					
                               <tr>
                                  						
@@ -9125,7 +8598,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d181b5">
+                           <table id="w113aac15d177b5">
                               					
                               <tr>
                                  						
@@ -9180,7 +8653,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d183b3">
+                           <table id="w113aac15d179b3">
                               					
                               <tr>
                                  						
@@ -9261,7 +8734,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d183b7b3">
+                           <table id="w113aac15d179b7b3">
                               						
                               <tr>
                                  							
@@ -9351,7 +8824,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d187b3">
+                           <table id="w113aac15d183b3">
                               					
                               <tr>
                                  						
@@ -9393,7 +8866,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d191b3">
+                           <table id="w113aac15d187b3">
                               					
                               <tr>
                                  						
@@ -9435,6 +8908,470 @@
                      </p>
                      	
                      		
+                     <h2 id="limits_ssm">AWS Systems Manager Limits</h2>
+                     		
+                     		
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w113aac15d193b3">
+                              					
+                              <tr>
+                                 						
+                                 <th>Resource</th>
+                                 						
+                                 <th>Default Limit</th>
+                                 					
+                              </tr>
+                              				
+                              					
+                              <tr>
+                                 						
+                                 <td>On-premises managed instances registered through Amazon EC2
+                                    							activation
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Each AWS account can activate a maximum of 1,000 on-premises
+                                       								instances in a region for use with Systems Manager.
+                                    </p>
+                                    							
+                                    <p>For more information about activating on-premises instances for
+                                       								use in your hybrid environment, see <a href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html#sysman-managed-instance-activation" target="_blank">Create a Managed-Instance Activation</a> in the <em><a href="http://docs.aws.amazon.com/systems-manager/latest/userguide/" target="_blank">AWS Systems Manager User Guide</a></em>.
+                                    </p>
+                                    							
+                                    <div class="aws-note">
+                                       <p class="aws-note">Note</p>
+                                       <p>Activation limits apply only to the on-premises instances you
+                                          									add to your hybrid environment, and not to registered Amazon EC2
+                                          									instances.
+                                       </p>
+                                    </div>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Systems Manager documents</td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>200</p>
+                                    							
+                                    <p>Each AWS account can create a maximum of 200 documents per
+                                       								region.
+                                    </p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Privately shared Systems Manager document</td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>1000</p>
+                                    							
+                                    <p>A single Systems Manager document can be shared with a maximum of 1000 AWS
+                                       								accounts.
+                                    </p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Publicly shared Systems Manager document</td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>5</p>
+                                    							
+                                    <p>Each AWS account can publicly share a maximum of five
+                                       								documents.
+                                    </p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>State Manager associations</td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>10,000</p>
+                                    							
+                                    <p>Each Systems Manager document can be associated with a maximum of 10,000
+                                       								instances.
+                                    </p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>State Manager association versions</td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>1,000</p>
+                                    							
+                                    <p>You can created a maximum of 1,000 versions of a State Manager
+                                       								association.
+                                    </p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Inventory data collected per instance per call</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>1 MB</p>
+                                    							
+                                    <p>This maximum adequately supports most inventory collection
+                                       								scenarios. When this limit is reached, no new inventory data is
+                                       								collected for the instance. Inventory data previously collected is
+                                       								stored until the expiration.
+                                    </p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Inventory data collected per instance per day</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>5 MB</p>
+                                    							
+                                    <p>When this limit is reached, no new inventory data is collected for
+                                       								the instance. Inventory data previously collected is stored until
+                                       								the expiration.
+                                    </p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Custom Inventory Types</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>20</p>
+                                    							
+                                    <p>You can add up to 20 custom inventory types.</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Custom Inventory Type Size</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>200 KB</p>
+                                    							
+                                    <p>This is the maximum size of the type, not the inventory
+                                       								collected.
+                                    </p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Custom Inventory Type Attributes</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>50</p>
+                                    							
+                                    <p>This is the maximum number of attributes within the custom
+                                       								inventory type.
+                                    </p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Inventory data expiration</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>30 days</p>
+                                    							
+                                    <p>If you terminate an instance, inventory data for that instance is
+                                       								deleted immediately. For running instances, inventory data older
+                                       								than 30 days is deleted. If you need to store inventory data longer
+                                       								than 30 days, you can use AWS Config to record history or periodically
+                                       								query and upload the data to an Amazon S3 bucket. For more information,
+                                       								see, <a href="http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#recording-managed-instance-inventory" target="_blank">Recording Amazon EC2 managed instance inventory</a> in the
+                                       								<em>AWS Config Developer Guide</em>.
+                                    </p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Maintenance Windows per account</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>50</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Tasks per Maintenance Window</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>20</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Targets per Maintenance Window</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>50</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Instance IDs per target</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>50</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Targets per task</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>10</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Concurrent executions of a single Maintenance Window</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>1</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Concurrent executions of Maintenance Windows</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>5</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Maintenance Window execution history retention</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>30 days</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Maximum number of parameters per account</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>10,000</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Max size for parameter value</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>4096 characters</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Max history for a parameter</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>100 past values</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Patch baselines per account</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>25</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Patch groups per patch baseline</p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>25</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              				
+                           </table>
+                        </div>
+                     </div>
+                     	
+                     		
                      <h2 id="limits_vpc">Amazon Virtual Private Cloud (Amazon VPC) Limits</h2>
                      
                      <p>Unless otherwise noted, <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-vpc" target="_blank">submit a request</a> to
@@ -9445,7 +9382,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d197b5">
+                           <table id="w113aac15d195b5">
                               					
                               <tr>
                                  						
@@ -10114,7 +10051,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d201b5">
+                           <table id="w113aac15d199b5">
                               					
                               <tr>
                                  						
@@ -10188,7 +10125,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d201c11">
+                           <table id="w113aac15d199c11">
                               					
                               <tr>
                                  						
@@ -10358,7 +10295,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d205b3">
+                           <table id="w113aac15d203b3">
                               					
                               <tr>
                                  						
@@ -10403,7 +10340,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w114aac16d207b3">
+                           <table id="w113aac15d205b3">
                               					
                               <tr>
                                  						

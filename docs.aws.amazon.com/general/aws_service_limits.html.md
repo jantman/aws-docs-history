@@ -31,7 +31,6 @@ You can take the following steps to request an increase for limits. These increa
 
 -   [Amazon API Gateway Limits](#limits_apigateway)
 -   [AWS Application Discovery Service Limits](#limits_appdiscserve)
--   [Amazon AppStream Limits](#limits_appstream)
 -   [Amazon AppStream 2.0 Limits](#limits_appstream2)
 -   [AWS AppSync Limits](#limits_appsync)
 -   [Application Auto Scaling Limits](#limits_as-app)
@@ -56,26 +55,26 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Cognito User Pools Limits](#limits_cognito_user_pools)
 -   [Amazon Cognito Federated Identities Limits](#limits_cognito_federated_identities)
 -   [Amazon Cognito Sync Limits](#limits_cognito_sync)
--   [Amazon Connect Limits](#limits_amazon_connect)
 -   [AWS Config Limits](#limits_config)
+-   [Amazon Connect Limits](#limits_amazon_connect)
 -   [AWS Data Pipeline Limits](#limits_datapipeline)
 -   [AWS Database Migration Service Limits](#limits_dms)
 -   [AWS Device Farm Limits](#limits_devicefarm)
 -   [AWS Direct Connect Limits](#limits_directconnect)
 -   [AWS Directory Service Limits](#limits_ds)
 -   [Amazon DynamoDB Limits](#limits_dynamodb)
--   [Amazon Elastic Container Registry (Amazon ECR) Limits](#limits_ecr)
--   [Amazon Elastic Container Service (Amazon ECS) Limits](#limits_ecs)
--   [AWS Systems Manager Limits](#limits_ssm)
 -   [AWS Elastic Beanstalk Limits](#limits_elastic_beanstalk)
 -   [Amazon Elastic Block Store (Amazon EBS) Limits](#limits_ebs)
 -   [Amazon Elastic Compute Cloud (Amazon EC2) Limits](#limits_ec2)
+-   [Amazon Elastic Container Registry (Amazon ECR) Limits](#limits_ecr)
+-   [Amazon Elastic Container Service (Amazon ECS) Limits](#limits_ecs)
 -   [Amazon Elastic File System Limits](#limits_elasticfilesystem)
 -   [Elastic Load Balancing Limits](#limits_elastic_load_balancer)
 -   [Amazon Elastic Transcoder Limits](#limits_elastictranscoder)
 -   [Amazon ElastiCache Limits](#limits_elasticache)
 -   [Amazon Elasticsearch Service Limits](#limits_es)
 -   [Amazon GameLift Limits](#limits_gamelift)
+-   [Amazon Glacier Limits](#limits_glacier)
 -   [AWS Glue Limits](#limits_glue)
 -   [AWS Greengrass Limits](#limits_greengrass)
 -   [Amazon GuardDuty Limits](#limits_guardduty)
@@ -104,7 +103,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Polly Limits](#limits_polly)
 -   [Amazon Pinpoint Limits](#limits_pinpoint)
 -   [Amazon Redshift Limits](#limits_redshift)
--   [Amazon Rekognition Limits](#limits-rekognition)
+-   [Amazon Rekognition Limits](#limits_rekognition)
 -   [Amazon Relational Database Service (Amazon RDS) Limits](#limits_rds)
 -   [AWS Resource Groups Limits](#limits_resgrps)
 -   [RouteÂ 53 Limits](#limits_route53)
@@ -120,6 +119,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon SimpleDB Limits](#limits_simpledb)
 -   [AWS Step Functions Limits](#limits-step-functions)
 -   [AWS Storage Gateway Limits](#limits-storage-gateway)
+-   [AWS Systems Manager Limits](#limits_ssm)
 -   [Amazon Virtual Private Cloud (Amazon VPC) Limits](#limits_vpc)
 -   [Amazon VPC DNS Limits](#limits-vpc-dns)
 -   [AWS WAF Limits](#limits_waf)
@@ -170,25 +170,6 @@ AWS Application Discovery Service Limits {#limits_appdiscserve}
   Data storage duration before being purged              90 days
 :::
 :::
-
-Amazon AppStream Limits {#limits_appstream}
------------------------
-
-::: {.aws-note}
-Important
-
-This information applies only to the older version of Amazon AppStream.
-:::
-
-An Amazon AppStream account has a service limit of up to five concurrent streaming sessions:
-
-::: {.itemizedlist}
--   Up to two concurrent streaming application deployments using the interactive wizard.
-
--   Up to three streaming applications in the **Building**, **Active**, or **Error** states.
-:::
-
-For more information, see [Amazon AppStream Application Lifecycle](http://docs.aws.amazon.com/appstream/latest/developerguide/appstream-application-lifecycle.html) in the *Amazon AppStream Developer Guide*.
 
 Amazon AppStream 2.0 Limits {#limits_appstream2}
 ---------------------------
@@ -900,6 +881,28 @@ Amazon Cognito Sync Limits {#limits_cognito_sync}
 
 For information about additional documented limits, see [Limits in Amazon Cognito](http://docs.aws.amazon.com/cognito/latest/developerguide/limits.html) in the *Amazon Cognito Developer Guide*.
 
+AWS Config Limits {#limits_config}
+-----------------
+
+::: {.table}
+
+::: {.table-contents}
++-----------------------+-----------------------+-----------------------+
+| Resource              | Default Limit         | Notes                 |
++=======================+=======================+=======================+
+| Number of AWS Config  | 50                    | You can [request a    |
+| rules per region in   |                       | limit                 |
+| your account          |                       | increase](https://con |
+|                       |                       | sole.aws.amazon.com/s |
+|                       |                       | upport/home#/case/cre |
+|                       |                       | ate?issueType=service |
+|                       |                       | -limit-increase&limit |
+|                       |                       | Type=service-code-con |
+|                       |                       | fig-service).         |
++-----------------------+-----------------------+-----------------------+
+:::
+:::
+
 Amazon Connect Limits {#limits_amazon_connect}
 ---------------------
 
@@ -941,28 +944,6 @@ Amazon Connect Limits {#limits_amazon_connect}
 +-----------------------------------+-----------------------------------+
 | Active calls per instance         | 100                               |
 +-----------------------------------+-----------------------------------+
-:::
-:::
-
-AWS Config Limits {#limits_config}
------------------
-
-::: {.table}
-
-::: {.table-contents}
-+-----------------------+-----------------------+-----------------------+
-| Resource              | Default Limit         | Notes                 |
-+=======================+=======================+=======================+
-| Number of AWS Config  | 50                    | You can [request a    |
-| rules per region in   |                       | limit                 |
-| your account          |                       | increase](https://con |
-|                       |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-con |
-|                       |                       | fig-service).         |
-+-----------------------+-----------------------+-----------------------+
 :::
 :::
 
@@ -1098,200 +1079,6 @@ Amazon DynamoDB Limits {#limits_dynamodb}
 
 For more information about these limits, see [Limits in Amazon DynamoDB](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*.
 
-Amazon Elastic Container Registry (Amazon ECR) Limits {#limits_ecr}
------------------------------------------------------
-
-::: {.table}
-
-::: {.table-contents}
-  Resource                                     Default Limit
-  -------------------------------------------- ---------------
-  Maximum number of repositories per account   1,000
-  Maximum number of images per repository      1,000
-:::
-:::
-
-For information about additional documented limits, see [Amazon ECR Service Limits](http://docs.aws.amazon.com/AmazonECR/latest/userguide/service_limits.html) in the *Amazon Elastic Container Registry User Guide*.
-
-Amazon Elastic Container Service (Amazon ECS) Limits {#limits_ecs}
-----------------------------------------------------
-
-::: {.table}
-
-::: {.table-contents}
-  Resource                                                                    Default Limit
-  --------------------------------------------------------------------------- ---------------
-  Number of clusters per region per account                                   1000
-  Number of container instances per cluster                                   1000
-  Number of services per cluster                                              500
-  Number of tasks using the EC2 launch type per service (the desired count)   1000
-  Number of tasks using the Fargate launch type, per region, per account      20
-  Number of public IP addresses for tasks using the Fargate launch type       20
-:::
-:::
-
-For information about additional documented limits, see [Amazon ECS Service Limits](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_limits.html) in the *Amazon Elastic Container Service Developer Guide*.
-
-AWS Systems Manager Limits {#limits_ssm}
---------------------------
-
-::: {.table}
-
-::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| On-premises managed instances     | Each AWS account can activate a   |
-| registered through Amazon EC2     | maximum of 1,000 on-premises      |
-| activation                        | instances in a region for use     |
-|                                   | with Systems Manager.             |
-|                                   |                                   |
-|                                   | For more information about        |
-|                                   | activating on-premises instances  |
-|                                   | for use in your hybrid            |
-|                                   | environment, see [Create a        |
-|                                   | Managed-Instance                  |
-|                                   | Activation](http://docs.aws.amazo |
-|                                   | n.com/systems-manager/latest/user |
-|                                   | guide/systems-manager-managedinst |
-|                                   | ances.html#sysman-managed-instanc |
-|                                   | e-activation)                     |
-|                                   | in the *[AWS Systems Manager User |
-|                                   | Guide](http://docs.aws.amazon.com |
-|                                   | /systems-manager/latest/userguide |
-|                                   | /)*.                              |
-|                                   |                                   |
-|                                   | ::: {.aws-note}                   |
-|                                   | Note                              |
-|                                   |                                   |
-|                                   | Activation limits apply only to   |
-|                                   | the on-premises instances you add |
-|                                   | to your hybrid environment, and   |
-|                                   | not to registered Amazon EC2      |
-|                                   | instances.                        |
-|                                   | :::                               |
-+-----------------------------------+-----------------------------------+
-| Systems Manager documents         | 200                               |
-|                                   |                                   |
-|                                   | Each AWS account can create a     |
-|                                   | maximum of 200 documents per      |
-|                                   | region.                           |
-+-----------------------------------+-----------------------------------+
-| Privately shared Systems Manager  | 1000                              |
-| document                          |                                   |
-|                                   | A single Systems Manager document |
-|                                   | can be shared with a maximum of   |
-|                                   | 1000 AWS accounts.                |
-+-----------------------------------+-----------------------------------+
-| Publicly shared Systems Manager   | 5                                 |
-| document                          |                                   |
-|                                   | Each AWS account can publicly     |
-|                                   | share a maximum of five           |
-|                                   | documents.                        |
-+-----------------------------------+-----------------------------------+
-| State Manager associations        | 10,000                            |
-|                                   |                                   |
-|                                   | Each Systems Manager document can |
-|                                   | be associated with a maximum of   |
-|                                   | 10,000 instances.                 |
-+-----------------------------------+-----------------------------------+
-| State Manager association         | 1,000                             |
-| versions                          |                                   |
-|                                   | You can created a maximum of      |
-|                                   | 1,000 versions of a State Manager |
-|                                   | association.                      |
-+-----------------------------------+-----------------------------------+
-| Inventory data collected per      | 1 MB                              |
-| instance per call                 |                                   |
-|                                   | This maximum adequately supports  |
-|                                   | most inventory collection         |
-|                                   | scenarios. When this limit is     |
-|                                   | reached, no new inventory data is |
-|                                   | collected for the instance.       |
-|                                   | Inventory data previously         |
-|                                   | collected is stored until the     |
-|                                   | expiration.                       |
-+-----------------------------------+-----------------------------------+
-| Inventory data collected per      | 5 MB                              |
-| instance per day                  |                                   |
-|                                   | When this limit is reached, no    |
-|                                   | new inventory data is collected   |
-|                                   | for the instance. Inventory data  |
-|                                   | previously collected is stored    |
-|                                   | until the expiration.             |
-+-----------------------------------+-----------------------------------+
-| Custom Inventory Types            | 20                                |
-|                                   |                                   |
-|                                   | You can add up to 20 custom       |
-|                                   | inventory types.                  |
-+-----------------------------------+-----------------------------------+
-| Custom Inventory Type Size        | 200 KB                            |
-|                                   |                                   |
-|                                   | This is the maximum size of the   |
-|                                   | type, not the inventory           |
-|                                   | collected.                        |
-+-----------------------------------+-----------------------------------+
-| Custom Inventory Type Attributes  | 50                                |
-|                                   |                                   |
-|                                   | This is the maximum number of     |
-|                                   | attributes within the custom      |
-|                                   | inventory type.                   |
-+-----------------------------------+-----------------------------------+
-| Inventory data expiration         | 30 days                           |
-|                                   |                                   |
-|                                   | If you terminate an instance,     |
-|                                   | inventory data for that instance  |
-|                                   | is deleted immediately. For       |
-|                                   | running instances, inventory data |
-|                                   | older than 30 days is deleted. If |
-|                                   | you need to store inventory data  |
-|                                   | longer than 30 days, you can use  |
-|                                   | AWS Config to record history or   |
-|                                   | periodically query and upload the |
-|                                   | data to an Amazon S3 bucket. For  |
-|                                   | more information, see, [Recording |
-|                                   | Amazon EC2 managed instance       |
-|                                   | inventory](http://docs.aws.amazon |
-|                                   | .com/config/latest/developerguide |
-|                                   | /resource-config-reference.html#r |
-|                                   | ecording-managed-instance-invento |
-|                                   | ry)                               |
-|                                   | in the *AWS Config Developer      |
-|                                   | Guide*.                           |
-+-----------------------------------+-----------------------------------+
-| Maintenance Windows per account   | 50                                |
-+-----------------------------------+-----------------------------------+
-| Tasks per Maintenance Window      | 20                                |
-+-----------------------------------+-----------------------------------+
-| Targets per Maintenance Window    | 50                                |
-+-----------------------------------+-----------------------------------+
-| Instance IDs per target           | 50                                |
-+-----------------------------------+-----------------------------------+
-| Targets per task                  | 10                                |
-+-----------------------------------+-----------------------------------+
-| Concurrent executions of a single | 1                                 |
-| Maintenance Window                |                                   |
-+-----------------------------------+-----------------------------------+
-| Concurrent executions of          | 5                                 |
-| Maintenance Windows               |                                   |
-+-----------------------------------+-----------------------------------+
-| Maintenance Window execution      | 30 days                           |
-| history retention                 |                                   |
-+-----------------------------------+-----------------------------------+
-| Maximum number of parameters per  | 10,000                            |
-| account                           |                                   |
-+-----------------------------------+-----------------------------------+
-| Max size for parameter value      | 4096 characters                   |
-+-----------------------------------+-----------------------------------+
-| Max history for a parameter       | 100 past values                   |
-+-----------------------------------+-----------------------------------+
-| Patch baselines per account       | 25                                |
-+-----------------------------------+-----------------------------------+
-| Patch groups per patch baseline   | 25                                |
-+-----------------------------------+-----------------------------------+
-:::
-:::
-
 AWS Elastic Beanstalk Limits {#limits_elastic_beanstalk}
 ----------------------------
 
@@ -1374,6 +1161,40 @@ Amazon Elastic Compute Cloud (Amazon EC2) Limits {#limits_ec2}
 For information about related limits for EC2-VPC, see [Amazon Virtual Private Cloud (Amazon VPC) Limits](aws_service_limits.html#limits_vpc).
 
 For information about viewing your current limits, see [Amazon EC2 Service Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html) in the *Amazon EC2 User Guide for Linux Instances*.
+
+Amazon Elastic Container Registry (Amazon ECR) Limits {#limits_ecr}
+-----------------------------------------------------
+
+::: {.table}
+
+::: {.table-contents}
+  Resource                                     Default Limit
+  -------------------------------------------- ---------------
+  Maximum number of repositories per account   1,000
+  Maximum number of images per repository      1,000
+:::
+:::
+
+For information about additional documented limits, see [Amazon ECR Service Limits](http://docs.aws.amazon.com/AmazonECR/latest/userguide/service_limits.html) in the *Amazon Elastic Container Registry User Guide*.
+
+Amazon Elastic Container Service (Amazon ECS) Limits {#limits_ecs}
+----------------------------------------------------
+
+::: {.table}
+
+::: {.table-contents}
+  Resource                                                                    Default Limit
+  --------------------------------------------------------------------------- ---------------
+  Number of clusters per region per account                                   1000
+  Number of container instances per cluster                                   1000
+  Number of services per cluster                                              500
+  Number of tasks using the EC2 launch type per service (the desired count)   1000
+  Number of tasks using the Fargate launch type, per region, per account      20
+  Number of public IP addresses for tasks using the Fargate launch type       20
+:::
+:::
+
+For information about additional documented limits, see [Amazon ECS Service Limits](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_limits.html) in the *Amazon Elastic Container Service Developer Guide*.
 
 Amazon Elastic File System Limits {#limits_elasticfilesystem}
 ---------------------------------
@@ -1615,11 +1436,22 @@ Amazon GameLift Limits {#limits_gamelift}
 :::
 :::
 
+Amazon Glacier Limits {#limits_glacier}
+---------------------
+
+::: {.table}
+::: {.table-contents}
+  Resource                               Default Limit
+  -------------------------------------- ---------------
+  Number of vaults per account           1000
+  Number of provisioned capacity units   2
+:::
+:::
+
 AWS Glue Limits {#limits_glue}
 ---------------
 
 ::: {.table}
-
 ::: {.table-contents}
   Resource                                                  Default Limit
   --------------------------------------------------------- ---------------
@@ -2626,12 +2458,11 @@ AWS Lambda Limits {#limits_lambda}
 
 For more information about these limits, see [AWS Lambda Limits](http://docs.aws.amazon.com/lambda/latest/dg/limits.html) in the *AWS Lambda Developer Guide*.
 
-AWS Lambda will dynamically scale capacity in response to increased traffic, subject to your account\'s [Concurrent Execution Safety Limit](http://docs.aws.amazon.com/lambda/latest/dg/concurrent-execution-safety-limit). To handle any burst in traffic, Lambda will immediately increase your concurrently executing functions by a predetermined amount, dependent on which region it\'s executed (see table below).
+AWS Lambda dynamically scales capacity in response to increased traffic, subject to your account\'s concurrent execution limit. For more information, see [Managing Concurrency](http://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html). To handle a burst in traffic, Lambda immediately increases your concurrently executing functions by a predetermined amount, dependent on which region it\'s executed (see table below).
 
-If the default **Immediate Concurrency Increase** value, as noted in the table below, is not sufficient to accommodate the traffic surge, Lambda will continue to increase the number of concurrent function executions by 500 per minute until your account safety limit has been reached or the number of concurrently executing functions is sufficient to successfully process the increased load.
+If the default **Immediate Concurrency Increase** value, as noted in the table below, is not sufficient to accommodate the traffic surge, Lambda continues to increase the number of concurrent function executions by 500 per minute until your account safety limit has been reached or the number of concurrently executing functions is sufficient to successfully process the increased load.
 
 ::: {.table}
-
 ::: {.table-contents}
   Region                       Immediate Concurrency Increase (function executions)
   ---------------------------- ------------------------------------------------------
@@ -2947,7 +2778,7 @@ Amazon Redshift Limits {#limits_redshift}
 
 For more information about these limits, see [Limits in Amazon Redshift](http://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html) in the *Amazon Redshift Cluster Management Guide*.
 
-Amazon Rekognition Limits {#limits-rekognition}
+Amazon Rekognition Limits {#limits_rekognition}
 -------------------------
 
 Amazon Rekognition does not have service limits that you can change. For information about Amazon Rekognition service limits, see [Amazon Rekognition Limits](http://docs.aws.amazon.com/rekognition/latest/dg/limits.html).
@@ -3016,7 +2847,7 @@ For more information about these limits, see [RouteÂ 53 Limits](http://docs.aw
 Amazon SageMaker Limits {#limits_sagemaker}
 -----------------------
 
-The following tables group Amazon SageMaker limits by compoents.
+The following tables group Amazon SageMaker limits by components.
 
 Amazon SageMaker Notebooks
 
@@ -3250,6 +3081,166 @@ AWS Storage Gateway Limits {#limits-storage-gateway}
 --------------------------
 
 For more information about these limits, see [AWS Storage Gateway Limits](http://docs.aws.amazon.com/storagegateway/latest/userguide/resource-gateway-limits.html) in the *AWS Storage Gateway User Guide*.
+
+AWS Systems Manager Limits {#limits_ssm}
+--------------------------
+
+::: {.table}
+
+::: {.table-contents}
++-----------------------------------+-----------------------------------+
+| Resource                          | Default Limit                     |
++===================================+===================================+
+| On-premises managed instances     | Each AWS account can activate a   |
+| registered through Amazon EC2     | maximum of 1,000 on-premises      |
+| activation                        | instances in a region for use     |
+|                                   | with Systems Manager.             |
+|                                   |                                   |
+|                                   | For more information about        |
+|                                   | activating on-premises instances  |
+|                                   | for use in your hybrid            |
+|                                   | environment, see [Create a        |
+|                                   | Managed-Instance                  |
+|                                   | Activation](http://docs.aws.amazo |
+|                                   | n.com/systems-manager/latest/user |
+|                                   | guide/systems-manager-managedinst |
+|                                   | ances.html#sysman-managed-instanc |
+|                                   | e-activation)                     |
+|                                   | in the *[AWS Systems Manager User |
+|                                   | Guide](http://docs.aws.amazon.com |
+|                                   | /systems-manager/latest/userguide |
+|                                   | /)*.                              |
+|                                   |                                   |
+|                                   | ::: {.aws-note}                   |
+|                                   | Note                              |
+|                                   |                                   |
+|                                   | Activation limits apply only to   |
+|                                   | the on-premises instances you add |
+|                                   | to your hybrid environment, and   |
+|                                   | not to registered Amazon EC2      |
+|                                   | instances.                        |
+|                                   | :::                               |
++-----------------------------------+-----------------------------------+
+| Systems Manager documents         | 200                               |
+|                                   |                                   |
+|                                   | Each AWS account can create a     |
+|                                   | maximum of 200 documents per      |
+|                                   | region.                           |
++-----------------------------------+-----------------------------------+
+| Privately shared Systems Manager  | 1000                              |
+| document                          |                                   |
+|                                   | A single Systems Manager document |
+|                                   | can be shared with a maximum of   |
+|                                   | 1000 AWS accounts.                |
++-----------------------------------+-----------------------------------+
+| Publicly shared Systems Manager   | 5                                 |
+| document                          |                                   |
+|                                   | Each AWS account can publicly     |
+|                                   | share a maximum of five           |
+|                                   | documents.                        |
++-----------------------------------+-----------------------------------+
+| State Manager associations        | 10,000                            |
+|                                   |                                   |
+|                                   | Each Systems Manager document can |
+|                                   | be associated with a maximum of   |
+|                                   | 10,000 instances.                 |
++-----------------------------------+-----------------------------------+
+| State Manager association         | 1,000                             |
+| versions                          |                                   |
+|                                   | You can created a maximum of      |
+|                                   | 1,000 versions of a State Manager |
+|                                   | association.                      |
++-----------------------------------+-----------------------------------+
+| Inventory data collected per      | 1 MB                              |
+| instance per call                 |                                   |
+|                                   | This maximum adequately supports  |
+|                                   | most inventory collection         |
+|                                   | scenarios. When this limit is     |
+|                                   | reached, no new inventory data is |
+|                                   | collected for the instance.       |
+|                                   | Inventory data previously         |
+|                                   | collected is stored until the     |
+|                                   | expiration.                       |
++-----------------------------------+-----------------------------------+
+| Inventory data collected per      | 5 MB                              |
+| instance per day                  |                                   |
+|                                   | When this limit is reached, no    |
+|                                   | new inventory data is collected   |
+|                                   | for the instance. Inventory data  |
+|                                   | previously collected is stored    |
+|                                   | until the expiration.             |
++-----------------------------------+-----------------------------------+
+| Custom Inventory Types            | 20                                |
+|                                   |                                   |
+|                                   | You can add up to 20 custom       |
+|                                   | inventory types.                  |
++-----------------------------------+-----------------------------------+
+| Custom Inventory Type Size        | 200 KB                            |
+|                                   |                                   |
+|                                   | This is the maximum size of the   |
+|                                   | type, not the inventory           |
+|                                   | collected.                        |
++-----------------------------------+-----------------------------------+
+| Custom Inventory Type Attributes  | 50                                |
+|                                   |                                   |
+|                                   | This is the maximum number of     |
+|                                   | attributes within the custom      |
+|                                   | inventory type.                   |
++-----------------------------------+-----------------------------------+
+| Inventory data expiration         | 30 days                           |
+|                                   |                                   |
+|                                   | If you terminate an instance,     |
+|                                   | inventory data for that instance  |
+|                                   | is deleted immediately. For       |
+|                                   | running instances, inventory data |
+|                                   | older than 30 days is deleted. If |
+|                                   | you need to store inventory data  |
+|                                   | longer than 30 days, you can use  |
+|                                   | AWS Config to record history or   |
+|                                   | periodically query and upload the |
+|                                   | data to an Amazon S3 bucket. For  |
+|                                   | more information, see, [Recording |
+|                                   | Amazon EC2 managed instance       |
+|                                   | inventory](http://docs.aws.amazon |
+|                                   | .com/config/latest/developerguide |
+|                                   | /resource-config-reference.html#r |
+|                                   | ecording-managed-instance-invento |
+|                                   | ry)                               |
+|                                   | in the *AWS Config Developer      |
+|                                   | Guide*.                           |
++-----------------------------------+-----------------------------------+
+| Maintenance Windows per account   | 50                                |
++-----------------------------------+-----------------------------------+
+| Tasks per Maintenance Window      | 20                                |
++-----------------------------------+-----------------------------------+
+| Targets per Maintenance Window    | 50                                |
++-----------------------------------+-----------------------------------+
+| Instance IDs per target           | 50                                |
++-----------------------------------+-----------------------------------+
+| Targets per task                  | 10                                |
++-----------------------------------+-----------------------------------+
+| Concurrent executions of a single | 1                                 |
+| Maintenance Window                |                                   |
++-----------------------------------+-----------------------------------+
+| Concurrent executions of          | 5                                 |
+| Maintenance Windows               |                                   |
++-----------------------------------+-----------------------------------+
+| Maintenance Window execution      | 30 days                           |
+| history retention                 |                                   |
++-----------------------------------+-----------------------------------+
+| Maximum number of parameters per  | 10,000                            |
+| account                           |                                   |
++-----------------------------------+-----------------------------------+
+| Max size for parameter value      | 4096 characters                   |
++-----------------------------------+-----------------------------------+
+| Max history for a parameter       | 100 past values                   |
++-----------------------------------+-----------------------------------+
+| Patch baselines per account       | 25                                |
++-----------------------------------+-----------------------------------+
+| Patch groups per patch baseline   | 25                                |
++-----------------------------------+-----------------------------------+
+:::
+:::
 
 Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc}
 ------------------------------------------------
