@@ -804,10 +804,6 @@ AWS CodePipeline Limits {#limits_codepipeline}
 | Number of custom actions per      | 50                                |
 | region in an AWS account          |                                   |
 +-----------------------------------+-----------------------------------+
-| Maximum number of revisions       | Five times the number of          |
-| running across all pipelines in   | pipelines in the region           |
-| an AWS account, per region        |                                   |
-+-----------------------------------+-----------------------------------+
 | Maximum size of artifacts in a    | Artifacts stored in Amazon S3     |
 | source stage                      | buckets: 2 GB                     |
 |                                   |                                   |
