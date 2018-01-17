@@ -30,11 +30,12 @@ You can take the following steps to request an increase for limits. These increa
 **Default Limits**
 
 -   [Amazon API Gateway Limits](#limits_apigateway)
+-   [Application Auto Scaling Limits](#limits_as-app)
 -   [AWS Application Discovery Service Limits](#limits_appdiscserve)
 -   [Amazon AppStream 2.0 Limits](#limits_appstream2)
 -   [AWS AppSync Limits](#limits_appsync)
--   [Application Auto Scaling Limits](#limits_as-app)
 -   [Amazon Athena Limits](#amazon-athena-limits)
+-   [AWS Auto Scaling Limits](#limits_aws_autoscaling)
 -   [Auto Scaling Limits](#limits_autoscaling)
 -   [AWS Batch Limits](#limits_batch)
 -   [AWS Certificate Manager (ACM) Limits](#limits_acm)
@@ -156,6 +157,19 @@ All of the per API limits can only be increased on specific APIs.
 
 For more information about these limits, see [Limits in Amazon API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html) in the *API Gateway Developer Guide*.
 
+Application Auto Scaling Limits {#limits_as-app}
+-------------------------------
+
+::: {.table}
+::: {.table-contents}
+  Resource                               Default Limit
+  -------------------------------------- ---------------
+  Scalable targets                       500
+  Scaling policies per scalable target   50
+  Step adjustments per scaling policy    20
+:::
+:::
+
 AWS Application Discovery Service Limits {#limits_appdiscserve}
 ----------------------------------------
 
@@ -209,19 +223,6 @@ AWS AppSync Limits {#limits_appsync}
 :::
 :::
 
-Application Auto Scaling Limits {#limits_as-app}
--------------------------------
-
-::: {.table}
-::: {.table-contents}
-  Resource                               Default Limit
-  -------------------------------------- ---------------
-  Scalable targets                       500
-  Scaling policies per scalable target   50
-  Step adjustments per scaling policy    20
-:::
-:::
-
 Amazon Athena Limits
 --------------------
 
@@ -236,6 +237,19 @@ Amazon Athena Limits
 :::
 
 For information about limits for databases, tables, and partitions, see [AWS Glue Limits](aws_service_limits.html#limits_glue).
+
+AWS Auto Scaling Limits {#limits_aws_autoscaling}
+-----------------------
+
+::: {.table}
+::: {.table-contents}
+  Resource                                                 Default Limit
+  -------------------------------------------------------- ---------------
+  Scaling plans                                            100
+  Target tracking configurations per scaling instruction   10
+  Target tracking configurations per scaling plan          500
+:::
+:::
 
 Auto Scaling Limits {#limits_autoscaling}
 -------------------
@@ -907,7 +921,7 @@ Amazon Connect Limits {#limits_amazon_connect}
 +-----------------------------------+-----------------------------------+
 | Item                              | Default limit                     |
 +===================================+===================================+
-| Amazon Connect instances per      | 10                                |
+| Amazon Connect instances per      | 2                                 |
 | account                           |                                   |
 +-----------------------------------+-----------------------------------+
 | Users per instance                | 500                               |
@@ -938,10 +952,12 @@ Amazon Connect Limits {#limits_amazon_connect}
 +-----------------------------------+-----------------------------------+
 | Scheduled reports per instance    | 50                                |
 +-----------------------------------+-----------------------------------+
-| Active calls per instance         | 100                               |
+| Active calls per instance         | 10                                |
 +-----------------------------------+-----------------------------------+
 :::
 :::
+
+You can request an increase for any of the limits using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect).
 
 AWS Data Pipeline Limits {#limits_datapipeline}
 ------------------------
