@@ -107,7 +107,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Rekognition Limits](#limits_rekognition)
 -   [Amazon Relational Database Service (Amazon RDS) Limits](#limits_rds)
 -   [AWS Resource Groups Limits](#limits_resgrps)
--   [RouteÂ 53 Limits](#limits_route53)
+-   [Amazon RouteÂ 53 Limits](#limits_route53)
 -   [Amazon SageMaker Limits](#limits_sagemaker)
 -   [AWS Server Migration Service Limits](#limits_server_migration)
 -   [AWS Service Catalog Limits](#limits_servicecatalog)
@@ -357,6 +357,7 @@ Amazon CloudFront Limits {#limits_cloudfront}
 ------------------------
 
 ::: {.table}
+**General Limits**
 
 ::: {.table-contents}
 +-----------------------------------+-----------------------------------+
@@ -405,8 +406,8 @@ Amazon CloudFront Limits {#limits_cloudfront}
 |                                   | in the *Amazon CloudFront         |
 |                                   | Developer Guide*.                 |
 +-----------------------------------+-----------------------------------+
-| Request timeout per origin        | For more information, see         |
-|                                   | [Request                          |
+| Response timeout per origin       | For more information, see         |
+|                                   | [Response                         |
 |                                   | Timeout](http://docs.aws.amazon.c |
 |                                   | om/AmazonCloudFront/latest/Develo |
 |                                   | perGuide/RequestAndResponseBehavi |
@@ -415,6 +416,19 @@ Amazon CloudFront Limits {#limits_cloudfront}
 |                                   | in the *Amazon CloudFront         |
 |                                   | Developer Guide*.                 |
 +-----------------------------------+-----------------------------------+
+:::
+:::
+
+::: {.table}
+**Lambda@Edge Limits**
+
+::: {.table-contents}
+  Resource                                                         Default Limit
+  ---------------------------------------------------------------- ---------------
+  Distributions per AWS account that you can create triggers for   25
+  Triggers per distribution                                        25
+  Requests per second                                              10,000
+  Concurrent executions                                            1,000
 :::
 :::
 
@@ -2834,10 +2848,11 @@ AWS Resource Groups Limits {#limits_resgrps}
 :::
 :::
 
-RouteÂ 53 Limits {#limits_route53}
-----------------
+Amazon RouteÂ 53 Limits {#limits_route53}
+-----------------------
 
 ::: {.table}
+**DNS and Domain Registration**
 
 ::: {.table-contents}
   Resource                                                        Default Limit
@@ -2848,9 +2863,21 @@ RouteÂ 53 Limits {#limits_route53}
   Reusable delegation sets                                        100
   Hosted zones that can use the same reusable delegation set      100
   Amazon VPCs that you can associate with a private hosted zone   100
-  Health checks                                                   50
+  Health checks                                                   200
   Traffic policies                                                50
-  Policy records                                                  5
+  Traffic policy records                                          5
+:::
+:::
+
+::: {.table}
+**Auto Naming**
+
+::: {.table-contents}
+  Resource                     Default Limit
+  ---------------------------- ------------------
+  Namespaces per AWS account   50 per region
+  Instances per namespace      2,000 per region
+  Instances per service        100 per region
 :::
 :::
 

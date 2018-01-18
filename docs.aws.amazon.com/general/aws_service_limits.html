@@ -141,7 +141,7 @@
                            <li><a href="#limits_rekognition">Amazon Rekognition Limits</a></li>
                            <li><a href="#limits_rds">Amazon Relational Database Service (Amazon RDS) Limits</a></li>
                            <li><a href="#limits_resgrps">AWS Resource Groups Limits</a></li>
-                           <li><a href="#limits_route53">RouteÂ 53 Limits</a></li>
+                           <li><a href="#limits_route53">Amazon RouteÂ 53 Limits</a></li>
                            <li><a href="#limits_sagemaker">Amazon SageMaker Limits</a></li>
                            <li><a href="#limits_server_migration">AWS Server Migration Service Limits</a></li>
                            <li><a href="#limits_servicecatalog">AWS Service Catalog Limits</a></li>
@@ -974,7 +974,7 @@
                      
                      		
                      <div class="table">
-                        <p class="title"><b></b></p>
+                        <p class="title"><b>General Limits</b></p>
                         <div class="table-contents">
                            <table id="w113aac15c37b3">
                               					
@@ -1098,12 +1098,13 @@
                               <tr>
                                  						
                                  <td>
-                                    <p>Request timeout per origin</p>
+                                    <p>Response timeout per origin</p>
                                  </td>
                                  						
                                  <td>
-                                    <p>For more information, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout" target="_blank">Request Timeout</a> in the
-                                       									<em>Amazon CloudFront Developer Guide</em>.
+                                    <p>For more information, see 
+                                       							<a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout" target="_blank">Response Timeout</a> 
+                                       							in the <em>Amazon CloudFront Developer Guide</em>.
                                     </p>
                                  </td>
                                  					
@@ -1113,7 +1114,60 @@
                         </div>
                      </div>
                      		
-                     <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html" target="_blank">Limits</a> in the
+                     		
+                     		
+                     <div class="table">
+                        <p class="title"><b>Lambda@Edge Limits</b></p>
+                        <div class="table-contents">
+                           <table id="w113aac15c37b5">
+                              					
+                              <tr>
+                                 						
+                                 <th>Resource</th>
+                                 						
+                                 <th>Default Limit</th>
+                                 					
+                              </tr>
+                              				
+                              					
+                              <tr>
+                                 						
+                                 <td>Distributions per AWS account that you can create triggers for</td>
+                                 						
+                                 <td>25</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Triggers per distribution</td>
+                                 						
+                                 <td>25</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Requests per second</td>
+                                 						
+                                 <td>10,000</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Concurrent executions</td>
+                                 						
+                                 <td>1,000</td>
+                                 					
+                              </tr>
+                              				
+                           </table>
+                        </div>
+                     </div>
+                     		
+                     		
+                     <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html" target="_blank">Limits</a> in the 
                         				<em>Amazon CloudFront Developer Guide</em>.
                      </p>
                      	
@@ -7998,11 +8052,11 @@
                      </div>
                      	
                      		
-                     <h2 id="limits_route53">RouteÂ 53 Limits</h2>
+                     <h2 id="limits_route53">Amazon RouteÂ 53 Limits</h2>
                      
                      		
                      <div class="table">
-                        <p class="title"><b></b></p>
+                        <p class="title"><b>DNS and Domain Registration</b></p>
                         <div class="table-contents">
                            <table id="w113aac15d169b3">
                               					
@@ -8067,7 +8121,7 @@
                                  						
                                  <td>Health checks</td>
                                  						
-                                 <td>50</td>
+                                 <td>200</td>
                                  					
                               </tr>
                               					
@@ -8081,7 +8135,7 @@
                               					
                               <tr>
                                  						
-                                 <td>Policy records</td>
+                                 <td>Traffic policy records</td>
                                  						
                                  <td>5</td>
                                  					
@@ -8091,9 +8145,54 @@
                         </div>
                      </div>
                      		
-                     <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html" target="_blank">RouteÂ 53 Limits</a> in the
-                        				<em>Amazon RouteÂ 53 Developer Guide</em>.
+                     		
+                     <div class="table">
+                        <p class="title"><b>Auto Naming</b></p>
+                        <div class="table-contents">
+                           <table id="w113aac15d169b5">
+                              					
+                              <tr>
+                                 						
+                                 <th>Resource</th>
+                                 						
+                                 <th>Default Limit</th>
+                                 					
+                              </tr>
+                              				
+                              					
+                              <tr>
+                                 						
+                                 <td>Namespaces per AWS account</td>
+                                 						
+                                 <td>50 per region</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Instances per namespace</td>
+                                 						
+                                 <td>2,000 per region</td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>Instances per service</td>
+                                 						
+                                 <td>100 per region</td>
+                                 					
+                              </tr>
+                              				
+                           </table>
+                        </div>
+                     </div>
+                     		
+                     		
+                     <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html" target="_blank">RouteÂ 53 Limits</a> 
+                        			in the <em>Amazon RouteÂ 53 Developer Guide</em>.
                      </p>
+                     		
                      	
                      		
                      <h2 id="limits_sagemaker">Amazon SageMaker Limits</h2>
