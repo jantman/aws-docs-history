@@ -271,7 +271,7 @@ Auto Scaling Limits {#limits_autoscaling}
 :::
 :::
 
-For more information about these limits, see [Auto Scaling Limits](http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html) in the *Auto Scaling User Guide*.
+For more information about these limits, see [Amazon EC2 Auto Scaling Limits](http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html) in the *Amazon EC2 Auto Scaling User Guide*.
 
 AWS Batch Limits {#limits_batch}
 ----------------
