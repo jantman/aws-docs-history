@@ -26,7 +26,7 @@ You can take the following steps to request an increase for limits. These increa
 
 4.  Choose **Submit**.
 
-::: {.highlights}
+::: {#inline-topiclist .highlights}
 **Default Limits**
 
 -   [Amazon API Gateway Limits](#limits_apigateway)
