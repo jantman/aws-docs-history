@@ -2760,27 +2760,23 @@ Amazon Pinpoint Limits {#limits_pinpoint}
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                                      Default Limit
-  --------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------
-  Active campaigns per account                  100
-  Apps per account                              100
-  Concurrent endpoint import jobs per account   2
-  Custom event types per app                    1500
-  Endpoint custom attributes per app            40
-  Endpoints per mobile app user                 10
-  Message sends per campaign activity           100 million
-  Segments per app                              200
-  Total file size per endpoint import job       1 GB
-  SMS sending rate                              20 messages per second.
-  Email sending quota                           200 emails per 24 hour period for accounts in the sandbox environment.
-  Email sending rate                            1 email per second for accounts in the sandbox environment.
-  Email recipient addresses                     Accounts in the sandbox environment may only send email to recipients whose email addresses or domains have been verified.
+  Resource                                                                 Default Limit
+  ------------------------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------
+  Active campaigns per account                                             200 per account.
+  Concurrent endpoint import jobs per account                              2 per account.
+  Message sends per campaign activity                                      100 million.
+  Total file size per endpoint import job                                  1 GB per import job.
+  SMS account spend threshold                                              USD\$1.00 per account.
+  Maximum number of Amazon SNS topics for two-way SMS.                     100,000 per account.
+  Number of emails that can be sent per 24-hour period (*sending quota*)   200 emails per 24-hour period for accounts in the sandbox environment.
+  Number of emails that can be sent each second (*sending rate*)           1 email per second for accounts in the sandbox environment.
+  Email recipient addresses                                                Accounts in the sandbox environment may only send email to recipients whose email addresses or domains have been verified.
 :::
 :::
 
-For more information about verifying email addresses and domains, see [Email Address or Domain Verification](http://docs.aws.amazon.com/pinpoint/latest/userguide/channels-email-manage-verify.html) in the *Amazon Pinpoint User Guide*.
+To increase any of the limits above, submit a [Amazon Pinpoint Limit Increase case](https://console.aws.amazon.com/support/home#/case/create).
 
-For information about moving out of the email sandbox environment, see [Requesting Production Access for Email](http://docs.aws.amazon.com/pinpoint/latest/userguide/channels-email-setup-production-access.html) in the *Amazon Pinpoint User Guide*.
+For more information about Amazon Pinpoint limits, including limits that can\'t be increased, see [Limits](http://docs.aws.amazon.com/pinpoint/latest/developerguide/limits.html) in the Amazon Pinpoint Developer Guide.
 
 Amazon Redshift Limits {#limits_redshift}
 ----------------------
@@ -2822,7 +2818,6 @@ Amazon Relational Database Service (Amazon RDS) Limits {#limits_rds}
   DB Instances                               40
   Event subscriptions                        20
   Manual snapshots                           100
-  Manual cluster snapshots                   100
   Option groups                              20
   Parameter groups                           50
   Read replicas per master                   5
