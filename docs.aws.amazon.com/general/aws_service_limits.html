@@ -135,8 +135,8 @@
                            <li><a href="#limits_opworks">AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits</a></li>
                            <li><a href="#aws-opsworks-stacks-limits">AWS OpsWorks Stacks Limits</a></li>
                            <li><a href="#aws-organizations-limits">AWS Organizations Limits</a></li>
-                           <li><a href="#limits_polly">Amazon Polly Limits</a></li>
                            <li><a href="#limits_pinpoint">Amazon Pinpoint Limits</a></li>
+                           <li><a href="#limits_polly">Amazon Polly Limits</a></li>
                            <li><a href="#limits_redshift">Amazon Redshift Limits</a></li>
                            <li><a href="#limits_rekognition">Amazon Rekognition Limits</a></li>
                            <li><a href="#limits_rds">Amazon Relational Database Service (Amazon RDS) Limits</a></li>
@@ -7487,6 +7487,117 @@
                      </p>
                      
                      
+                     <h2 id="limits_pinpoint">Amazon Pinpoint Limits</h2>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w113aac15d157b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Default Limit</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Active campaigns per account</td>
+                                 
+                                 <td>200 per account.</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Concurrent endpoint import jobs per account</td>
+                                 
+                                 <td>2 per account.</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Message sends per campaign activity</td>
+                                 
+                                 <td>100 million.</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Total file size per endpoint import job</td>
+                                 
+                                 <td>1 GB per import job.</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>SMS account spend threshold</td>
+                                 
+                                 <td>USD$1.00 per account.</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of Amazon SNS topics for two-way SMS</td>
+                                 
+                                 <td>100,000 per account.</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Number of emails that can be sent per 24-hour period
+                                    (<em>sending quota</em>)
+                                 </td>
+                                 
+                                 <td>200 emails per 24-hour period for accounts in the sandbox
+                                    environment.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Number of emails that can be sent each second (<em>sending
+                                       rate</em>)
+                                 </td>
+                                 
+                                 <td>1 email per second for accounts in the sandbox environment.</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Email recipient addresses</td>
+                                 
+                                 <td>Accounts in the sandbox environment may only send email to recipients
+                                    whose email addresses or domains have been verified.
+                                 </td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     <p>To increase any of the limits above, submit a <a href="https://console.aws.amazon.com/support/home#/case/create" target="_blank">Amazon Pinpoint Limit Increase
+                           case</a>.
+                     </p>
+                     
+                     <p>For more information about Amazon Pinpoint limits, including limits that can't be
+                        increased, see
+                        <a href="http://docs.aws.amazon.com/pinpoint/latest/developerguide/limits.html" target="_blank">Limits</a> in the Amazon Pinpoint Developer Guide.
+                     </p>
+                     
+                     
                      <h2 id="limits_polly">Amazon Polly Limits</h2>
                      
                      
@@ -7510,7 +7621,7 @@
                               <div class="table">
                                  <p class="title"><b>Throttle Rate per Operation</b></p>
                                  <div class="table-contents">
-                                    <table id="w113aac15d157b3b3b3">
+                                    <table id="w113aac15d159b3b3b3">
                                        
                                        <tr>
                                           
@@ -7620,117 +7731,6 @@
                            </li>
                         </ul>
                      </div>
-                     
-                     
-                     <h2 id="limits_pinpoint">Amazon Pinpoint Limits</h2>
-                     
-                     
-                     <div class="table">
-                        <p class="title"><b></b></p>
-                        <div class="table-contents">
-                           <table id="w113aac15d159b3">
-                              
-                              <tr>
-                                 
-                                 <th>Resource</th>
-                                 
-                                 <th>Default Limit</th>
-                                 
-                              </tr>
-                              
-                              
-                              <tr>
-                                 
-                                 <td>Active campaigns per account</td>
-                                 
-                                 <td>200 per account.</td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Concurrent endpoint import jobs per account</td>
-                                 
-                                 <td>2 per account.</td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Message sends per campaign activity</td>
-                                 
-                                 <td>100 million.</td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Total file size per endpoint import job</td>
-                                 
-                                 <td>1 GB per import job.</td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>SMS account spend threshold</td>
-                                 
-                                 <td>USD$1.00 per account.</td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Maximum number of Amazon SNS topics for two-way SMS.</td>
-                                 
-                                 <td>100,000 per account.</td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Number of emails that can be sent per 24-hour period
-                                    (<em>sending quota</em>)
-                                 </td>
-                                 
-                                 <td>200 emails per 24-hour period for accounts in the sandbox
-                                    environment.
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Number of emails that can be sent each second (<em>sending
-                                       rate</em>)
-                                 </td>
-                                 
-                                 <td>1 email per second for accounts in the sandbox environment.</td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Email recipient addresses</td>
-                                 
-                                 <td>Accounts in the sandbox environment may only send email to recipients
-                                    whose email addresses or domains have been verified.
-                                 </td>
-                                 
-                              </tr>
-                              
-                           </table>
-                        </div>
-                     </div>
-                     
-                     <p>To increase any of the limits above, submit a <a href="https://console.aws.amazon.com/support/home#/case/create" target="_blank">Amazon Pinpoint Limit Increase
-                           case</a>.
-                     </p>
-                     
-                     <p>For more information about Amazon Pinpoint limits, including limits that can't be
-                        increased, see
-                        <a href="http://docs.aws.amazon.com/pinpoint/latest/developerguide/limits.html" target="_blank">Limits</a> in the Amazon Pinpoint Developer Guide.
-                     </p>
                      
                      
                      <h2 id="limits_redshift">Amazon Redshift Limits</h2>

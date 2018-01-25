@@ -101,8 +101,8 @@ You can take the following steps to request an increase for limits. These increa
 -   [AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits](#limits_opworks)
 -   [AWS OpsWorks Stacks Limits](#aws-opsworks-stacks-limits)
 -   [AWS Organizations Limits](#aws-organizations-limits)
--   [Amazon Polly Limits](#limits_polly)
 -   [Amazon Pinpoint Limits](#limits_pinpoint)
+-   [Amazon Polly Limits](#limits_polly)
 -   [Amazon Redshift Limits](#limits_redshift)
 -   [Amazon Rekognition Limits](#limits_rekognition)
 -   [Amazon Relational Database Service (Amazon RDS) Limits](#limits_rds)
@@ -2717,6 +2717,30 @@ AWS Organizations Limits
 
 For more information about these limits, see [Limits of AWS Organizations](http://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html) in the *AWS Organizations User Guide*.
 
+Amazon Pinpoint Limits {#limits_pinpoint}
+----------------------
+
+::: {.table}
+
+::: {.table-contents}
+  Resource                                                                 Default Limit
+  ------------------------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------
+  Active campaigns per account                                             200 per account.
+  Concurrent endpoint import jobs per account                              2 per account.
+  Message sends per campaign activity                                      100 million.
+  Total file size per endpoint import job                                  1 GB per import job.
+  SMS account spend threshold                                              USD\$1.00 per account.
+  Maximum number of Amazon SNS topics for two-way SMS                      100,000 per account.
+  Number of emails that can be sent per 24-hour period (*sending quota*)   200 emails per 24-hour period for accounts in the sandbox environment.
+  Number of emails that can be sent each second (*sending rate*)           1 email per second for accounts in the sandbox environment.
+  Email recipient addresses                                                Accounts in the sandbox environment may only send email to recipients whose email addresses or domains have been verified.
+:::
+:::
+
+To increase any of the limits above, submit a [Amazon Pinpoint Limit Increase case](https://console.aws.amazon.com/support/home#/case/create).
+
+For more information about Amazon Pinpoint limits, including limits that can\'t be increased, see [Limits](http://docs.aws.amazon.com/pinpoint/latest/developerguide/limits.html) in the Amazon Pinpoint Developer Guide.
+
 Amazon Polly Limits {#limits_polly}
 -------------------
 
@@ -2753,30 +2777,6 @@ Amazon Polly Limits {#limits_polly}
     :::
     :::
 :::
-
-Amazon Pinpoint Limits {#limits_pinpoint}
-----------------------
-
-::: {.table}
-
-::: {.table-contents}
-  Resource                                                                 Default Limit
-  ------------------------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------
-  Active campaigns per account                                             200 per account.
-  Concurrent endpoint import jobs per account                              2 per account.
-  Message sends per campaign activity                                      100 million.
-  Total file size per endpoint import job                                  1 GB per import job.
-  SMS account spend threshold                                              USD\$1.00 per account.
-  Maximum number of Amazon SNS topics for two-way SMS.                     100,000 per account.
-  Number of emails that can be sent per 24-hour period (*sending quota*)   200 emails per 24-hour period for accounts in the sandbox environment.
-  Number of emails that can be sent each second (*sending rate*)           1 email per second for accounts in the sandbox environment.
-  Email recipient addresses                                                Accounts in the sandbox environment may only send email to recipients whose email addresses or domains have been verified.
-:::
-:::
-
-To increase any of the limits above, submit a [Amazon Pinpoint Limit Increase case](https://console.aws.amazon.com/support/home#/case/create).
-
-For more information about Amazon Pinpoint limits, including limits that can\'t be increased, see [Limits](http://docs.aws.amazon.com/pinpoint/latest/developerguide/limits.html) in the Amazon Pinpoint Developer Guide.
 
 Amazon Redshift Limits {#limits_redshift}
 ----------------------
