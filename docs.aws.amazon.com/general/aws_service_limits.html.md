@@ -1592,7 +1592,7 @@ Amazon GuardDuty Limits {#limits_guardduty}
   Detectors                          1
   Trusted IP sets                    1
   Threat intel sets                  6
-  GuardDuty member accounts          100
+  GuardDuty member accounts          1000
   GuardDuty finding retention time   90 days
 :::
 :::
