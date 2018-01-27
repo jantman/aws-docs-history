@@ -281,8 +281,8 @@ AWS Batch Limits {#limits_batch}
 ::: {.table-contents}
   Item                                                   Default Limit
   ------------------------------------------------------ ---------------
-  Maximum number of compute environments                 10
-  Maximum number of job queues                           5
+  Maximum number of compute environments                 18
+  Maximum number of job queues                           20
   Maximum number of compute environments per job queue   3
 :::
 :::
