@@ -3125,6 +3125,25 @@ AWS Systems Manager Limits {#limits_ssm}
 +-----------------------------------+-----------------------------------+
 | Resource                          | Default Limit                     |
 +===================================+===================================+
+| Concurrently executing            | 25                                |
+| Automations                       |                                   |
+|                                   | Each AWS account can execute a    |
+|                                   | maximum of 25 Automations at one  |
+|                                   | time. Concurrent executions       |
+|                                   | greater than 25 are automatically |
+|                                   | added to an execution queue.      |
++-----------------------------------+-----------------------------------+
+| Additional Automation executions  | 75                                |
+| that can be queued                |                                   |
++-----------------------------------+-----------------------------------+
+| Maximum duration an execution can | 12 hours                          |
+| run when running in the context   |                                   |
+| of a user                         | If you expect an Automation to    |
+|                                   | run longer than 12 hours, then    |
+|                                   | you must execute the Automation   |
+|                                   | by using a service role (or       |
+|                                   | assume role).                     |
++-----------------------------------+-----------------------------------+
 | On-premises managed instances     | Each AWS account can activate a   |
 | registered through Amazon EC2     | maximum of 1,000 on-premises      |
 | activation                        | instances in a region for use     |
