@@ -57,6 +57,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Cognito Federated Identities Limits](#limits_cognito_federated_identities)
 -   [Amazon Cognito Sync Limits](#limits_cognito_sync)
 -   [AWS Config Limits](#limits_config)
+-   [Amazon Comprehend Limits](#limits_amazon_comprehend)
 -   [Amazon Connect Limits](#limits_amazon_connect)
 -   [AWS Data Pipeline Limits](#limits_datapipeline)
 -   [AWS Database Migration Service Limits](#limits_dms)
@@ -926,6 +927,24 @@ AWS Config Limits {#limits_config}
 +-----------------------+-----------------------+-----------------------+
 :::
 :::
+
+Amazon Comprehend Limits {#limits_amazon_comprehend}
+------------------------
+
+::: {.table}
+::: {.table-contents}
+  Resource                                                                                                             Default Limit
+  -------------------------------------------------------------------------------------------------------------------- ---------------
+  Transactions per second for synchronous APIs                                                                         20
+  Transactions per second for the `StartTopicsDetectionJob`{.code} operation                                           1
+  Transactions per second for the `DescribeTopicsDetectionJob`{.code} and `ListTopicDetectionJobs`{.code} operations   10
+  Maximum concurrent jobs                                                                                              10
+:::
+:::
+
+You can request an increase for any of the limits using the [Amazon Comprehend service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-comprehend).
+
+For information about additional documented limits, see [Guidelines and Limits](https://docs.aws.amazon.com/comprehend/latest/dg/guidelines-and-limits.html) in the *Amazon Comprehend Developer Guide*.
 
 Amazon Connect Limits {#limits_amazon_connect}
 ---------------------
