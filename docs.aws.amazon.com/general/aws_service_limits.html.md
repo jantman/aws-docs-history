@@ -1503,7 +1503,7 @@ AWS Glue Limits {#limits_glue}
   Number of databases per account                           100
   Number of tables per database                             1000
   Number of partitions per table                            20,000
-  Number of crawlers per account                            10
+  Number of crawlers per account                            25
   Number of jobs per account                                25
   Number of triggers per account                            25
   Number of concurrent job runs per account                 30
@@ -2742,17 +2742,49 @@ Amazon Pinpoint Limits {#limits_pinpoint}
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                                                                 Default Limit
-  ------------------------------------------------------------------------ ----------------------------------------------------------------------------------------------------------------------------
-  Active campaigns per account                                             200 per account.
-  Concurrent endpoint import jobs per account                              2 per account.
-  Message sends per campaign activity                                      100 million.
-  Total file size per endpoint import job                                  1 GB per import job.
-  SMS account spend threshold                                              USD\$1.00 per account.
-  Maximum number of Amazon SNS topics for two-way SMS                      100,000 per account.
-  Number of emails that can be sent per 24-hour period (*sending quota*)   200 emails per 24-hour period for accounts in the sandbox environment.
-  Number of emails that can be sent each second (*sending rate*)           1 email per second for accounts in the sandbox environment.
-  Email recipient addresses                                                Accounts in the sandbox environment may only send email to recipients whose email addresses or domains have been verified.
++-----------------------------------+-----------------------------------+
+| Resource                          | Default Limit                     |
++===================================+===================================+
+| Active campaigns per account      | 200 per account.                  |
+|                                   |                                   |
+|                                   | ::: {.aws-note}                   |
+|                                   | Note                              |
+|                                   |                                   |
+|                                   | An *active campaign* is a         |
+|                                   | campaign that hasn\'t completed   |
+|                                   | or failed. Active campaigns have  |
+|                                   | a status of `SCHEDULED`{.code},   |
+|                                   | `EXECUTING`{.code}, or            |
+|                                   | `PENDING_NEXT_RUN`{.code}.        |
+|                                   | :::                               |
++-----------------------------------+-----------------------------------+
+| Concurrent endpoint import jobs   | 2 per account.                    |
+| per account                       |                                   |
++-----------------------------------+-----------------------------------+
+| Message sends per campaign        | 100 million.                      |
+| activity                          |                                   |
++-----------------------------------+-----------------------------------+
+| Total file size per endpoint      | 1 GB per import job.              |
+| import job                        |                                   |
++-----------------------------------+-----------------------------------+
+| SMS account spend threshold       | USD\$1.00 per account.            |
++-----------------------------------+-----------------------------------+
+| Maximum number of Amazon SNS      | 100,000 per account.              |
+| topics for two-way SMS            |                                   |
++-----------------------------------+-----------------------------------+
+| Number of emails that can be sent | 200 emails per 24-hour period for |
+| per 24-hour period (*sending      | accounts in the sandbox           |
+| quota*)                           | environment.                      |
++-----------------------------------+-----------------------------------+
+| Number of emails that can be sent | 1 email per second for accounts   |
+| each second (*sending rate*)      | in the sandbox environment.       |
++-----------------------------------+-----------------------------------+
+| Email recipient addresses         | Accounts in the sandbox           |
+|                                   | environment may only send email   |
+|                                   | to recipients whose email         |
+|                                   | addresses or domains have been    |
+|                                   | verified.                         |
++-----------------------------------+-----------------------------------+
 :::
 :::
 
