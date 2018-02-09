@@ -2227,18 +2227,24 @@ Amazon Kinesis Data Firehose Limits {#limits-akf}
 +-----------------------------------+-----------------------------------+
 | Resource                          | Default Limit                     |
 +===================================+===================================+
-| Delivery streams per region       | 20                                |
+| Delivery streams per region       | 50                                |
 +-----------------------------------+-----------------------------------+
-| Delivery stream capacity â€       | 2,000 transactions/second         |
-|                                   |                                   |
-|                                   | 5,000 records/second              |
+| Delivery stream capacity for US   | 2,000 transactions/second         |
+| East (N. Virginia), US West       |                                   |
+| (Oregon), and EU (Ireland) â€     | 5,000 records/second              |
 |                                   |                                   |
 |                                   | 5 MB/second                       |
++-----------------------------------+-----------------------------------+
+| Delivery stream capacity for      | 1,000 transactions/second         |
+| other Regions where Kinesis Data  |                                   |
+| Firehose is available â€          | 1,000 records/second              |
+|                                   |                                   |
+|                                   | 1 MB/second                       |
 +-----------------------------------+-----------------------------------+
 :::
 :::
 
-â€  The three capacity limits scale proportionally. For example, if you increase the throughput limit to 10MB/second, the other limits increase to 4,000 transactions/second and 10,000 records/second.
+â€  The three capacity limits scale proportionally. For example, if you increase the throughput limit to 2 MB/second in Asia Pacific (Singapore), the other limits increase to 2,000 transactions/second and 2,000 records/second.
 
 For more information about these limits, see [Amazon Kinesis Data Firehose Limits](http://docs.aws.amazon.com/firehose/latest/dev/limits.html) in the *Amazon Kinesis Data Firehose Developer Guide*.
 
