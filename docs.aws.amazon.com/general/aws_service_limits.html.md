@@ -2194,6 +2194,41 @@ AWS IoT Limits {#limits_iot}
 | .code}          |                 |                 |                 |
 | map value size  |                 |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
+| Control plane   | N/A             | 30 TPS          | For the         |
+| APIs            |                 |                 | [control        |
+|                 |                 |                 | plane](https:// |
+|                 |                 |                 | aws.amazon.com/ |
+|                 |                 |                 | iot-core/faqs/) |
+|                 |                 |                 | ,               |
+|                 |                 |                 | AWS IoT [Jobs   |
+|                 |                 |                 | APIs](http://do |
+|                 |                 |                 | cs.aws.amazon.c |
+|                 |                 |                 | om/iot/latest/d |
+|                 |                 |                 | eveloperguide/j |
+|                 |                 |                 | obs-api.html)   |
+|                 |                 |                 | have a maximum  |
+|                 |                 |                 | of 30           |
+|                 |                 |                 | transactions    |
+|                 |                 |                 | per second      |
+|                 |                 |                 | (TPS).          |
++-----------------+-----------------+-----------------+-----------------+
+| Data plane APIs | N/A             | 200 TPS         | For the [data   |
+|                 |                 |                 | plane](https:// |
+|                 |                 |                 | aws.amazon.com/ |
+|                 |                 |                 | iot-core/faqs/) |
+|                 |                 |                 | ,               |
+|                 |                 |                 | AWS IoT [Jobs   |
+|                 |                 |                 | APIs](http://do |
+|                 |                 |                 | cs.aws.amazon.c |
+|                 |                 |                 | om/iot/latest/d |
+|                 |                 |                 | eveloperguide/j |
+|                 |                 |                 | obs-api.html)   |
+|                 |                 |                 | have a maximum  |
+|                 |                 |                 | of 200          |
+|                 |                 |                 | transactions    |
+|                 |                 |                 | per second      |
+|                 |                 |                 | (TPS).          |
++-----------------+-----------------+-----------------+-----------------+
 :::
 :::
 

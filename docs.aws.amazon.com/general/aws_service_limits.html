@@ -5978,9 +5978,7 @@
                               
                               <tr>
                                  
-                                 <td><code class="code">ExpiresInSec</code>
-                                    
-                                 </td>
+                                 <td><code class="code">ExpiresInSec</code></td>
                                  
                                  <td>60 seconds</td>
                                  
@@ -6034,11 +6032,7 @@
                               
                               <tr>
                                  
-                                 <td>
-                                    
-                                    <p>Active snapshot jobs </p>
-                                    
-                                 </td>
+                                 <td>Active snapshot jobs</td>
                                  
                                  <td>0</td>
                                  
@@ -6052,11 +6046,7 @@
                               
                               <tr>
                                  
-                                 <td>
-                                    
-                                    <p>Active continuous jobs </p>
-                                    
-                                 </td>
+                                 <td>Active continuous jobs</td>
                                  
                                  <td>0</td>
                                  
@@ -6070,22 +6060,14 @@
                               
                               <tr>
                                  
-                                 <td>
-                                    
-                                    <p>Job document variable substitution</p>
-                                    
-                                 </td>
+                                 <td>Job document variable substitution</td>
                                  
                                  <td>0</td>
                                  
                                  <td>10</td>
                                  
-                                 <td>
-                                    
-                                    <p>Up to 10 variables substitutions, including the presign URL,
-                                       are allowed in a job document.
-                                    </p>
-                                    
+                                 <td> Up to 10 variables substitutions, including the presign URL, are
+                                    allowed in a job document. 
                                  </td>
                                  
                               </tr>
@@ -6098,11 +6080,7 @@
                                  
                                  <td>90 days</td>
                                  
-                                 <td>
-                                    
-                                    <p>Job data and job execution data will be purged after 90
-                                       days.
-                                    </p>
+                                 <td> Job data and job execution data will be purged after 90 days.
                                     
                                  </td>
                                  
@@ -6110,11 +6088,7 @@
                               
                               <tr>
                                  
-                                 <td>
-                                    
-                                    <p><code class="code">StatusDetail</code> map key size 
-                                    </p>
-                                    
+                                 <td><code class="code">StatusDetail</code> map key size 
                                  </td>
                                  
                                  <td>1 character</td>
@@ -6138,9 +6112,40 @@
                                  
                               </tr>
                               
+                              <tr>
+                                 
+                                 <td>Control plane APIs</td>
+                                 
+                                 <td>N/A</td>
+                                 
+                                 <td>30 TPS</td>
+                                 
+                                 <td>For the <a href="https://aws.amazon.com/iot-core/faqs/" target="_blank">control
+                                       plane</a>, AWS IoT <a href="http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html" target="_blank">Jobs APIs</a> have a maximum of 30 transactions per second
+                                    (TPS).
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Data plane APIs</td>
+                                 
+                                 <td>N/A</td>
+                                 
+                                 <td>200 TPS</td>
+                                 
+                                 <td>For the <a href="https://aws.amazon.com/iot-core/faqs/" target="_blank">data
+                                       plane</a>, AWS IoT <a href="http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html" target="_blank">Jobs APIs</a> have a maximum of 200 transactions per second
+                                    (TPS).
+                                 </td>
+                                 
+                              </tr>
+                              
                            </table>
                         </div>
                      </div>
+                     
                      
                      
                      
@@ -6283,8 +6288,7 @@
                      
                      <p>â  The three capacity limits scale proportionally. For example, if you increase
                         the throughput limit to 2 MB/second in Asia Pacific (Singapore), the other limits
-                        increase to
-                        2,000 transactions/second and 2,000 records/second.
+                        increase to 2,000 transactions/second and 2,000 records/second.
                      </p>
                      
                      <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/firehose/latest/dev/limits.html" target="_blank">Amazon Kinesis Data Firehose Limits</a> in the <em>Amazon Kinesis Data Firehose Developer Guide</em>.
