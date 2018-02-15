@@ -6114,30 +6114,102 @@
                               
                               <tr>
                                  
-                                 <td>Control plane APIs</td>
+                                 <td>Job management APIs</td>
                                  
                                  <td>N/A</td>
                                  
                                  <td>30 TPS</td>
                                  
-                                 <td>For the <a href="https://aws.amazon.com/iot-core/faqs/" target="_blank">control
-                                       plane</a>, AWS IoT <a href="http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html" target="_blank">Jobs APIs</a> have a maximum of 30 transactions per second
-                                    (TPS).
+                                 <td>The AWS IoT <a href="http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html#jobs-http-api" target="_blank">Job Management and Control APIs</a> have a maximum of 30
+                                    transactions per second (TPS).
                                  </td>
                                  
                               </tr>
                               
                               <tr>
                                  
-                                 <td>Data plane APIs</td>
+                                 <td>Job messaging APIs</td>
                                  
                                  <td>N/A</td>
                                  
-                                 <td>200 TPS</td>
+                                 <td>200 MPS</td>
                                  
-                                 <td>For the <a href="https://aws.amazon.com/iot-core/faqs/" target="_blank">data
-                                       plane</a>, AWS IoT <a href="http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html" target="_blank">Jobs APIs</a> have a maximum of 200 transactions per second
-                                    (TPS).
+                                 <td>The AWS IoT <a href="http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html#jobs-mqtt-api" target="_blank">Jobs Device MQTT and HTTPS APIs</a> have a maximum of 200
+                                    messages per second (MPS).
+                                 </td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     
+                     
+                     <h3 id="bulk-thing-reg-limits">AWS IoT Bulk Thing Registration Limits</h3>
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w113aac15d121c19b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Limit</th>
+                                 
+                                 <th>Note</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Registration task termination</td>
+                                 
+                                 <td>30 days</td>
+                                 
+                                 <td>Any pending/uncompleted bulk registration tasks are terminated
+                                    after 30 days.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Data retention policy</td>
+                                 
+                                 <td>30 days</td>
+                                 
+                                 <td>Once the associated bulk registration task has completed (which
+                                    can be long lived), bulk Thing registration related data is
+                                    permanently deleted after 30 days.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Allowed registration tasks</td>
+                                 
+                                 <td>1</td>
+                                 
+                                 <td>For any given AWS account, only one bulk registration task can
+                                    run at a time.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum line length</td>
+                                 
+                                 <td>256K</td>
+                                 
+                                 <td>Each line in an <a href="http://docs.aws.amazon.com/iot/latest/developerguide/bulk-provisioning.html" target="_blank">Amazon S3 input JSON file</a> cannot exceed 256K in
+                                    length.
                                  </td>
                                  
                               </tr>
@@ -7387,7 +7459,7 @@
                      
                      <h2 id="limits_amazon-mq">Amazon MQ Limits</h2>
                      
-                     <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html" target="_blank">Amazon MQ Limits</a> in the <em>Amazon MQ Developer
+                     <p>For information about these limits, see <a href="http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html" target="_blank">Amazon MQ Limits</a> in the <em>Amazon MQ Developer
                            Guide</em>.
                      </p>
                      

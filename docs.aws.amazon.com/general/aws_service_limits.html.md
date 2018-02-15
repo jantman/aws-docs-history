@@ -2194,41 +2194,49 @@ AWS IoT Limits {#limits_iot}
 | .code}          |                 |                 |                 |
 | map value size  |                 |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| Control plane   | N/A             | 30 TPS          | For the         |
-| APIs            |                 |                 | [control        |
-|                 |                 |                 | plane](https:// |
-|                 |                 |                 | aws.amazon.com/ |
-|                 |                 |                 | iot-core/faqs/) |
-|                 |                 |                 | ,               |
-|                 |                 |                 | AWS IoT [Jobs   |
+| Job management  | N/A             | 30 TPS          | The AWS IoT     |
+| APIs            |                 |                 | [Job Management |
+|                 |                 |                 | and Control     |
 |                 |                 |                 | APIs](http://do |
 |                 |                 |                 | cs.aws.amazon.c |
 |                 |                 |                 | om/iot/latest/d |
 |                 |                 |                 | eveloperguide/j |
-|                 |                 |                 | obs-api.html)   |
+|                 |                 |                 | obs-api.html#jo |
+|                 |                 |                 | bs-http-api)    |
 |                 |                 |                 | have a maximum  |
 |                 |                 |                 | of 30           |
 |                 |                 |                 | transactions    |
 |                 |                 |                 | per second      |
 |                 |                 |                 | (TPS).          |
 +-----------------+-----------------+-----------------+-----------------+
-| Data plane APIs | N/A             | 200 TPS         | For the [data   |
-|                 |                 |                 | plane](https:// |
-|                 |                 |                 | aws.amazon.com/ |
-|                 |                 |                 | iot-core/faqs/) |
-|                 |                 |                 | ,               |
-|                 |                 |                 | AWS IoT [Jobs   |
+| Job messaging   | N/A             | 200 MPS         | The AWS IoT     |
+| APIs            |                 |                 | [Jobs Device    |
+|                 |                 |                 | MQTT and HTTPS  |
 |                 |                 |                 | APIs](http://do |
 |                 |                 |                 | cs.aws.amazon.c |
 |                 |                 |                 | om/iot/latest/d |
 |                 |                 |                 | eveloperguide/j |
-|                 |                 |                 | obs-api.html)   |
+|                 |                 |                 | obs-api.html#jo |
+|                 |                 |                 | bs-mqtt-api)    |
 |                 |                 |                 | have a maximum  |
-|                 |                 |                 | of 200          |
-|                 |                 |                 | transactions    |
+|                 |                 |                 | of 200 messages |
 |                 |                 |                 | per second      |
-|                 |                 |                 | (TPS).          |
+|                 |                 |                 | (MPS).          |
 +-----------------+-----------------+-----------------+-----------------+
+:::
+:::
+
+### AWS IoT Bulk Thing Registration Limits {#bulk-thing-reg-limits}
+
+::: {.table}
+
+::: {.table-contents}
+  Resource                        Limit     Note
+  ------------------------------- --------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Registration task termination   30 days   Any pending/uncompleted bulk registration tasks are terminated after 30 days.
+  Data retention policy           30 days   Once the associated bulk registration task has completed (which can be long lived), bulk Thing registration related data is permanently deleted after 30 days.
+  Allowed registration tasks      1         For any given AWS account, only one bulk registration task can run at a time.
+  Maximum line length             256K      Each line in an [Amazon S3 input JSON file](http://docs.aws.amazon.com/iot/latest/developerguide/bulk-provisioning.html) cannot exceed 256K in length.
 :::
 :::
 
@@ -2712,7 +2720,7 @@ For more information about AWS Elemental MediaTailor limits, including limits th
 Amazon MQ Limits {#limits_amazon-mq}
 ----------------
 
-For more information about these limits, see [Amazon MQ Limits](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html) in the *Amazon MQ Developer Guide*.
+For information about these limits, see [Amazon MQ Limits](http://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-limits.html) in the *Amazon MQ Developer Guide*.
 
 Amazon Neptune Limits {#limits_neptune}
 ---------------------
