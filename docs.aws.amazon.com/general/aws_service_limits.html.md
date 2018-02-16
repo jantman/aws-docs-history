@@ -3095,7 +3095,7 @@ AWS Service Catalog Limits {#limits_servicecatalog}
 AWS Shield Advanced Limits {#limits_shield}
 --------------------------
 
-AWS Shield Advanced offers advanced monitoring and protection for up to 100 CloudFront distributions, RouteÂ 53 hosted zones or Elastic Load Balancing resources combined, per account. If you want to increase these limits, contact the [AWS Support Center](https://console.aws.amazon.com/support/home#/).
+offers advanced monitoring and protection for Elastic IP addresses, CloudFront distributions, RouteÂ 53 hosted zones, or Elastic Load Balancing load balancers. You can monitor and protect up to 100 of each of these resource types per account. If you want to increase these limits, contact the [AWS Support Center](https://console.aws.amazon.com/support/home#/).
 
 Amazon Simple Email Service (Amazon SES) Limits {#limits_ses_quota}
 -----------------------------------------------
