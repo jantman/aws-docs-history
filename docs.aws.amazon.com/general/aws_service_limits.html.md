@@ -3235,13 +3235,23 @@ AWS Systems Manager Limits {#limits_ssm}
 | Additional Automation executions  | 75                                |
 | that can be queued                |                                   |
 +-----------------------------------+-----------------------------------+
-| Maximum duration an execution can | 12 hours                          |
-| run when running in the context   |                                   |
-| of a user                         | If you expect an Automation to    |
+| Maximum duration an Automation    | 12 hours                          |
+| execution can run when running in |                                   |
+| the context of a user             | If you expect an Automation to    |
 |                                   | run longer than 12 hours, then    |
 |                                   | you must execute the Automation   |
 |                                   | by using a service role (or       |
 |                                   | assume role).                     |
++-----------------------------------+-----------------------------------+
+| Run Command execution history     | 30 days                           |
+| retention                         |                                   |
+|                                   | The history of each command is    |
+|                                   | available for up to 30 days. In   |
+|                                   | addition, you can store a copy of |
+|                                   | all log files in Amazon Simple    |
+|                                   | Storage Service or have an audit  |
+|                                   | trail of all API calls in AWS     |
+|                                   | CloudTrail.                       |
 +-----------------------------------+-----------------------------------+
 | On-premises managed instances     | Each AWS account can activate a   |
 | registered through Amazon EC2     | maximum of 1,000 on-premises      |
