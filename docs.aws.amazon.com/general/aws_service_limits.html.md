@@ -111,6 +111,7 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon RouteÂ 53 Limits](#limits_route53)
 -   [Amazon SageMaker Limits](#limits_sagemaker)
 -   [AWS Server Migration Service Limits](#limits_server_migration)
+-   [AWS Serverless Application Repository Limits](#limits_serverlessrepo)
 -   [AWS Service Catalog Limits](#limits_servicecatalog)
 -   [AWS Shield Advanced Limits](#limits_shield)
 -   [Amazon Simple Email Service (Amazon SES) Limits](#limits_ses_quota)
@@ -3070,6 +3071,24 @@ AWS Server Migration Service Limits {#limits_server_migration}
 | an ongoing replication after this |                                   |
 | period, unless a customer         |                                   |
 | requests a limit increase.        |                                   |
++-----------------------------------+-----------------------------------+
+:::
+:::
+
+AWS Serverless Application Repository Limits {#limits_serverlessrepo}
+--------------------------------------------
+
+::: {.table}
+**Limits Per Account Per Region**
+
+::: {.table-contents}
++-----------------------------------+-----------------------------------+
+| Resource                          | Default Limit                     |
++===================================+===================================+
+| Public Applications               | 100                               |
++-----------------------------------+-----------------------------------+
+| Free Amazon S3 Storage for Code   | 5 GB                              |
+| Packages                          |                                   |
 +-----------------------------------+-----------------------------------+
 :::
 :::
