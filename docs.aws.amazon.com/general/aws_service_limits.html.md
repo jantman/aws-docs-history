@@ -985,12 +985,13 @@ Amazon Connect Limits {#limits_amazon_connect}
 +-----------------------------------+-----------------------------------+
 | Scheduled reports per instance    | 50                                |
 +-----------------------------------+-----------------------------------+
-| Active calls per instance         | 10                                |
+| Concurrent active calls per       | 10                                |
+| instance                          |                                   |
 +-----------------------------------+-----------------------------------+
 :::
 :::
 
-You can request an increase for any of the limits using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect).
+These are the default limits for new Amazon Connect instances. You can create two instances per AWS account to start, but if you need more instances it is easy to request an increase. You can also request an increase for any of the limits using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect). You need to be signed in to your AWS account to access the form.
 
 AWS Data Pipeline Limits {#limits_datapipeline}
 ------------------------
