@@ -2399,41 +2399,44 @@ The following errors or acks are thrown when a fragment-level limit is reached:
 |           | limit     | limit     |           | limit     | s         |
 |           |           |           |           |           | and Notes |
 +===========+===========+===========+===========+===========+===========+
-| **PutMedi | 5 TPS     | 1 (5 in   | 12.5      | ::: {.ite | A typical |
-| a**       | \[h\]     | the       | MB/second | mizedlist | PutMedia  |
-|           |           | config,   | ,         | }         | request   |
-|           |           | to allow  | or 100    | -   Minim | will      |
-|           |           | for       | Mbps      | um        | contain   |
-|           |           | streaming |           |     fragm | data for  |
-|           |           | token     |           | ent       | several   |
-|           |           | rotation, |           |     durat | seconds,  |
-|           |           | retries,  |           | ion:      | resulting |
-|           |           | etc.)     |           |     1     | in a      |
+| **PutMedi | 5 TPS     | 1 \[s\]   | 12.5      | ::: {.ite | A typical |
+| a**       | \[h\]     |           | MB/second | mizedlist | PutMedia  |
+|           |           |           | ,         | }         | request   |
+|           |           |           | or 100    | -   Minim | will      |
+|           |           |           | Mbps      | um        | contain   |
+|           |           |           | \[s\]     |     fragm | data for  |
+|           |           |           |           | ent       | several   |
+|           |           |           |           |     durat | seconds,  |
+|           |           |           |           | ion:      | resulting |
+|           |           |           |           |     1     | in a      |
 |           |           |           |           |     secon | lower TPS |
 |           |           |           |           | d         | per       |
-|           |           |           |           |           | stream.   |
-|           |           |           |           | -   Maxim | In the    |
-|           |           |           |           | um        | case of   |
-|           |           |           |           |     fragm | multiple  |
-|           |           |           |           | ent       | concurren |
-|           |           |           |           |     durat | t         |
-|           |           |           |           | ion:      | connectio |
-|           |           |           |           |     10    | ns        |
-|           |           |           |           |     secon | that      |
-|           |           |           |           | ds        | exceed    |
-|           |           |           |           |           | limits,   |
-|           |           |           |           | -   Maxim | the last  |
-|           |           |           |           | um        | connectio |
-|           |           |           |           |     fragm | n         |
-|           |           |           |           | ent       | is        |
-|           |           |           |           |     size: | accepted. |
+|           |           |           |           |     \[h\] | stream.   |
+|           |           |           |           |           | In the    |
+|           |           |           |           | -   Maxim | case of   |
+|           |           |           |           | um        | multiple  |
+|           |           |           |           |     fragm | concurren |
+|           |           |           |           | ent       | t         |
+|           |           |           |           |     durat | connectio |
+|           |           |           |           | ion:      | ns        |
+|           |           |           |           |     10    | that      |
+|           |           |           |           |     secon | exceed    |
+|           |           |           |           | ds        | limits,   |
+|           |           |           |           |     \[h\] | the last  |
+|           |           |           |           |           | connectio |
+|           |           |           |           | -   Maxim | n         |
+|           |           |           |           | um        | is        |
+|           |           |           |           |     fragm | accepted. |
+|           |           |           |           | ent       |           |
+|           |           |           |           |     size: |           |
 |           |           |           |           |     50 MB |           |
+|           |           |           |           |     \[h\] |           |
 |           |           |           |           | :::       |           |
 +-----------+-----------+-----------+-----------+-----------+-----------+
-| **GetMedi | 5 TPS     | 3         | 25 MB/s   | N/A       | Only      |
+| **GetMedi | 5 TPS     | 3 \[s\]   | 25 MB/s   | N/A       | Only      |
 | a**       | \[h\]     |           | or 200    |           | three     |
 |           |           |           | Mbps      |           | clients   |
-|           |           |           |           |           | can       |
+|           |           |           | \[s\]     |           | can       |
 |           |           |           |           |           | concurren |
 |           |           |           |           |           | tly       |
 |           |           |           |           |           | receive   |
@@ -2502,7 +2505,7 @@ The following errors or acks are thrown when a fragment-level limit is reached:
 |           |           |           |           |           | incoming  |
 |           |           |           |           |           | bit rate. |
 +-----------+-----------+-----------+-----------+-----------+-----------+
-| **ListFra | 5 TPS     | 5         | N/A       | N/A       | Five      |
+| **ListFra | 5 TPS     | 5 \[s\]   | N/A       | N/A       | Five      |
 | gments**  | \[h\]     |           |           |           | fragment- |
 |           |           |           |           |           | based     |
 |           |           |           |           |           | consuming |
@@ -2519,12 +2522,12 @@ The following errors or acks are thrown when a fragment-level limit is reached:
 |           |           |           |           |           | requireme |
 |           |           |           |           |           | nts.      |
 +-----------+-----------+-----------+-----------+-----------+-----------+
-| **GetMedi | 5 TPS     | 5         | 25 MB/s   | Maximum   | Five      |
+| **GetMedi | 5 TPS     | 5 \[s\]   | 25 MB/s   | Maximum   | Five      |
 | aForFragm | \[h\]     |           | or 200    | number of | fragment- |
 | entList** |           |           | Mbps      | fragments | based     |
-|           |           |           |           | :         | consuming |
+|           |           |           | \[s\]     | :         | consuming |
 |           |           |           |           | 1000      | applicati |
-|           |           |           |           |           | ons       |
+|           |           |           |           | \[h\]     | ons       |
 |           |           |           |           |           | can       |
 |           |           |           |           |           | concurren |
 |           |           |           |           |           | tly       |
