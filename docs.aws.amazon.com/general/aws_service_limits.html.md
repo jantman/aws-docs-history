@@ -56,8 +56,8 @@ You can take the following steps to request an increase for limits. These increa
 -   [Amazon Cognito User Pools Limits](#limits_cognito_user_pools)
 -   [Amazon Cognito Federated Identities Limits](#limits_cognito_federated_identities)
 -   [Amazon Cognito Sync Limits](#limits_cognito_sync)
--   [AWS Config Limits](#limits_config)
 -   [Amazon Comprehend Limits](#limits_amazon_comprehend)
+-   [AWS Config Limits](#limits_config)
 -   [Amazon Connect Limits](#limits_amazon_connect)
 -   [AWS Data Pipeline Limits](#limits_datapipeline)
 -   [AWS Database Migration Service Limits](#limits_dms)
@@ -906,6 +906,25 @@ Amazon Cognito Sync Limits {#limits_cognito_sync}
 
 For information about additional documented limits, see [Limits in Amazon Cognito](http://docs.aws.amazon.com/cognito/latest/developerguide/limits.html) in the *Amazon Cognito Developer Guide*.
 
+Amazon Comprehend Limits {#limits_amazon_comprehend}
+------------------------
+
+::: {.table}
+::: {.table-contents}
+  Resource                                                                                                                                                                           Default Limit
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------
+  Transactions per second for the `DetectDominantLanguage`{.code}, `DetectEntities`{.code}, `DetectKeyPhrases`{.code}, and `DetectSentiment`{.code} operations                       20
+  Transactions per second for the `BatchDetectDominantLanguage`{.code}, `BatchDetectEntities`{.code}, `BatchDetectKeyPhrases`{.code}, and `BatchDetectSentiment`{.code} operations   10
+  Transactions per second for the `StartTopicsDetectionJob`{.code} operation                                                                                                         1
+  Transactions per second for the `DescribeTopicsDetectionJob`{.code} and `ListTopicDetectionJobs`{.code} operations                                                                 10
+  Maximum concurrent jobs                                                                                                                                                            10
+:::
+:::
+
+You can request an increase for any of the limits using the [Amazon Comprehend service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-comprehend).
+
+For information about additional documented limits, see [Guidelines and Limits](https://docs.aws.amazon.com/comprehend/latest/dg/guidelines-and-limits.html) in the *Amazon Comprehend Developer Guide*.
+
 AWS Config Limits {#limits_config}
 -----------------
 
@@ -927,24 +946,6 @@ AWS Config Limits {#limits_config}
 +-----------------------+-----------------------+-----------------------+
 :::
 :::
-
-Amazon Comprehend Limits {#limits_amazon_comprehend}
-------------------------
-
-::: {.table}
-::: {.table-contents}
-  Resource                                                                                                             Default Limit
-  -------------------------------------------------------------------------------------------------------------------- ---------------
-  Transactions per second for synchronous APIs                                                                         20
-  Transactions per second for the `StartTopicsDetectionJob`{.code} operation                                           1
-  Transactions per second for the `DescribeTopicsDetectionJob`{.code} and `ListTopicDetectionJobs`{.code} operations   10
-  Maximum concurrent jobs                                                                                              10
-:::
-:::
-
-You can request an increase for any of the limits using the [Amazon Comprehend service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-comprehend).
-
-For information about additional documented limits, see [Guidelines and Limits](https://docs.aws.amazon.com/comprehend/latest/dg/guidelines-and-limits.html) in the *Amazon Comprehend Developer Guide*.
 
 Amazon Connect Limits {#limits_amazon_connect}
 ---------------------

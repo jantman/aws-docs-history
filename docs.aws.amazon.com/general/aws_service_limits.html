@@ -90,8 +90,8 @@
                            <li><a href="#limits_cognito_federated_identities">Amazon Cognito Federated Identities
                                  Limits</a></li>
                            <li><a href="#limits_cognito_sync">Amazon Cognito Sync Limits</a></li>
-                           <li><a href="#limits_config">AWS Config Limits</a></li>
                            <li><a href="#limits_amazon_comprehend">Amazon Comprehend Limits</a></li>
+                           <li><a href="#limits_config">AWS Config Limits</a></li>
                            <li><a href="#limits_amazon_connect">Amazon Connect Limits</a></li>
                            <li><a href="#limits_datapipeline">AWS Data Pipeline Limits</a></li>
                            <li><a href="#limits_dms">AWS Database Migration Service Limits</a></li>
@@ -2207,11 +2207,9 @@
                      </p>
                      
                      
-                     <h2 id="limits_config">AWS Config Limits</h2>
-                     
+                     <h2 id="limits_amazon_comprehend">Amazon Comprehend Limits</h2>
                      
                      <div class="table">
-                        <p class="title"><b></b></p>
                         <div class="table-contents">
                            <table id="w116aac15c67b3">
                               
@@ -2221,53 +2219,30 @@
                                  
                                  <th>Default Limit</th>
                                  
-                                 <th>Notes</th>
-                                 
                               </tr>
                               
                               
                               <tr>
                                  
-                                 <td>Number of AWS Config rules per region in your account</td>
-                                 
-                                 <td>50</td>
-                                 
-                                 
-                                 <td>
-                                    
-                                    <p>You can <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-config-service" target="_blank">request a limit increase</a>.
-                                    </p>
-                                    
+                                 <td>Transactions per second for the <code class="code">DetectDominantLanguage</code>,
+                                    <code class="code">DetectEntities</code>, <code class="code">DetectKeyPhrases</code>, and
+                                    <code class="code">DetectSentiment</code> operations
                                  </td>
                                  
-                                 
-                              </tr>
-                              
-                           </table>
-                        </div>
-                     </div>
-                     
-                     
-                     <h2 id="limits_amazon_comprehend">Amazon Comprehend Limits</h2>
-                     
-                     <div class="table">
-                        <div class="table-contents">
-                           <table id="w116aac15c69b3">
-                              
-                              <tr>
-                                 
-                                 <th>Resource</th>
-                                 
-                                 <th>Default Limit</th>
-                                 
-                              </tr>
-                              
-                              
-                              <tr>
-                                 
-                                 <td>Transactions per second for synchronous APIs</td>
-                                 
                                  <td>20</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Transactions per second for the
+                                    <code class="code">BatchDetectDominantLanguage</code>,
+                                    <code class="code">BatchDetectEntities</code>,
+                                    <code class="code">BatchDetectKeyPhrases</code>, and
+                                    <code class="code">BatchDetectSentiment</code> operations
+                                 </td>
+                                 
+                                 <td>10</td>
                                  
                               </tr>
                               
@@ -2311,6 +2286,47 @@
                      <p>For information about additional documented limits, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/guidelines-and-limits.html" target="_blank">Guidelines and Limits</a> in the <em>Amazon Comprehend Developer
                            Guide</em>.
                      </p>
+                     
+                     
+                     <h2 id="limits_config">AWS Config Limits</h2>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w116aac15c69b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Default Limit</th>
+                                 
+                                 <th>Notes</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Number of AWS Config rules per region in your account</td>
+                                 
+                                 <td>50</td>
+                                 
+                                 
+                                 <td>
+                                    
+                                    <p>You can <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-config-service" target="_blank">request a limit increase</a>.
+                                    </p>
+                                    
+                                 </td>
+                                 
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
                      
                      
                      <h2 id="limits_amazon_connect">Amazon Connect Limits</h2>
@@ -2589,12 +2605,12 @@
                         </div>
                      </div>
                      
-                     <p>These are the default limits for new Amazon Connect instances. You can
-                        create two instances per AWS account to start, but if you need more instances it is
-                        easy to request an increase. You can also request an increase for any of the limits
-                        using the <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-connect" target="_blank">Amazon Connect service
-                           limits increase form</a>. You need to be signed in to your AWS account to
-                        access the form.
+                     <p>These are the default limits for new Amazon Connect instances. You can create two
+                        instances per
+                        AWS account to start, but if you need more instances it is easy to request an
+                        increase. You can also request an increase for any of the limits using the <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-connect" target="_blank">Amazon Connect service limits
+                           increase form</a>. You need to be signed in to your AWS account to access the
+                        form.
                      </p>
                      
                      
