@@ -218,7 +218,7 @@ AWS AppSync Limits {#limits_appsync}
   Resource                                         Default Limit
   ------------------------------------------------ ---------------
   Maximum number of APIs per region                5 per account
-  Maximum number of API keys                       10 per API
+  Maximum number of API keys                       50 per API
   Maximum schema document size                     5 MB
   Maximum GraphQL query execution time             30 seconds
   Maximum request/response mapping template size   64 KB
