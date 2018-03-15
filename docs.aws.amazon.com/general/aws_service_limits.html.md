@@ -1262,6 +1262,9 @@ Following are the limits for Amazon EFS that can be increased by contacting AWS 
 |                                   | US East (N. Virginia) Region â€"  |
 |                                   | 3 GB/s                            |
 |                                   |                                   |
+|                                   | US West (N. California) Region    |
+|                                   | â€" 1 GB/s                        |
+|                                   |                                   |
 |                                   | US West (Oregon) Region â€" 3     |
 |                                   | GB/s                              |
 |                                   |                                   |
@@ -2574,7 +2577,7 @@ If the default **Immediate Concurrency Increase** value, as noted in the table b
   EU (Frankfurt)               1000
   EU (London)                  500
   EU (Ireland)                 3000
-  AWS GovCloud (US)            500
+  EU (Paris)                   500
   US East (Ohio)               500
   US West (N. California)      500
   US West (Oregon)             3000
