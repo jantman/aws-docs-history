@@ -1254,9 +1254,6 @@ Following are the limits for Amazon EFS that can be increased by contacting AWS 
 +-----------------------------------+-----------------------------------+
 | Resource                          | Default Limit                     |
 +===================================+===================================+
-| Number of file systems per        | 10                                |
-| customer account per AWS region   |                                   |
-+-----------------------------------+-----------------------------------+
 | Total throughput per file system  | US East (Ohio) Region â€" 3 GB/s  |
 | for all connected clients         |                                   |
 |                                   | US East (N. Virginia) Region â€"  |
@@ -3001,6 +2998,7 @@ Amazon SageMaker Notebooks
   ml.t2.medium instances                 20
   ml.m4.xlarge instances                 20
   ml.p2.xlarge instances                 1
+  ml.p3.2xlarge instances                1
   Number of notebook instances           100
   Number of running notebook instances   20
 :::
@@ -3011,29 +3009,29 @@ Amazon SageMaker Training
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                                 Default Limit
-  ---------------------------------------- ---------------
-  ml.m4.xlarge instances                   20
-  ml.m4.4xlarge instances                  10
-  ml.m4.10xlarge instances                 5
-  ml.c4.xlarge instances                   20
-  ml.c4.2xlarge instances                  20
-  ml.c4.8xlarge instances                  20
-  ml.c5.xlarge instances                   0
-  ml.c5.2xlarge instances                  0
-  ml.c5.4xlarge instances                  0
-  ml.c5.9xlarge instances                  0
-  ml.c5.18xlarge instances                 0
-  ml.p2.xlarge instances                   1
-  ml.p2.8xlarge instances                  1
-  ml.p2.16xlarge instances                 0
-  ml.p3.2xlarge instances                  0
-  ml.p3.8xlarge instances                  0
-  ml.p3.16xlarge instances                 0
-  Longest run time for a training job      5 days
-  Number of instances                      20
-  Number of instances for a training job   20
-  Size of EBS volume for an instance       1 TB
+  Resource                                   Default Limit
+  ------------------------------------------ ---------------
+  ml.m4.xlarge instances                     20
+  ml.m4.4xlarge instances                    10
+  ml.m4.10xlarge instances                   5
+  ml.c4.xlarge instances                     20
+  ml.c4.2xlarge instances                    20
+  ml.c4.8xlarge instances                    20
+  ml.c5.xlarge instances                     0
+  ml.c5.2xlarge instances                    0
+  ml.c5.4xlarge instances                    0
+  ml.c5.9xlarge instances                    0
+  ml.c5.18xlarge instances                   0
+  ml.p2.xlarge instances                     1
+  ml.p2.8xlarge instances                    1
+  ml.p2.16xlarge instances                   0
+  ml.p3.2xlarge instances                    0
+  ml.p3.8xlarge instances                    0
+  ml.p3.16xlarge instances                   0
+  Longest run time for a training job        5 days
+  Number of instances across training jobs   20
+  Number of instances for a training job     20
+  Size of EBS volume for an instance         1 TB
 :::
 :::
 
@@ -3042,22 +3040,22 @@ Amazon SageMaker Hosting
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                              Default Limit
-  ------------------------------------- ---------------
-  ml.t2.medium instances                20
-  ml.m4.xlarge instances                20
-  ml.c4.xlarge instances                20
-  ml.c4.2xlarge instances               20
-  ml.c4.8xlarge instances               20
-  ml.c5.xlarge instances                0
-  ml.c5.2xlarge instances               0
-  ml.c5.9xlarge instances               0
-  ml.p2.xlarge instances                2
-  ml.p3.2xlarge instances               0
-  Number of instances                   20
-  Number of instances for an endpoint   20
-  Total TPS for all endpoints           10,000
-  Hosting                               5 MB
+  Resource                                       Default Limit
+  ---------------------------------------------- ---------------
+  ml.t2.medium instances                         20
+  ml.m4.xlarge instances                         20
+  ml.c4.xlarge instances                         20
+  ml.c4.2xlarge instances                        20
+  ml.c4.8xlarge instances                        20
+  ml.c5.xlarge instances                         0
+  ml.c5.2xlarge instances                        0
+  ml.c5.9xlarge instances                        0
+  ml.p2.xlarge instances                         2
+  ml.p3.2xlarge instances                        0
+  Number of instances across active endpoints    20
+  Number of instances for an endpoint            20
+  Total TPS for all endpoints                    10,000
+  Maximum payload size for endpoint invocation   5 MB
 :::
 :::
 
