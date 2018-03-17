@@ -1983,7 +1983,7 @@
                                  
                                  <td>Maximum number of parallel actions in a stage</td>
                                  
-                                 <td>Maximum of 5</td>
+                                 <td>Maximum of 10</td>
                                  
                               </tr>
                               
@@ -4968,11 +4968,320 @@
                      
                      <h3 id="message-broker-limits">Message Broker Limits</h3>
                      
-                     
                      <div class="table">
-                        <p class="title"><b></b></p>
                         <div class="table-contents">
                            <table id="w116aac15d121b5b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Description</th>
+                                 
+                                 <th>Limit</th>
+                                 
+                                 <th>Adjustable</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Maximum concurrent client connections per account</td>
+                                 
+                                 <td>The maximum number of concurrent connections allowed per
+                                    account.
+                                 </td>
+                                 
+                                 <td>500,000</td>
+                                 
+                                 <td><a href="https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;limitType=service-code-iot" target="_blank">Yes</a></td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Connect requests per second per account</td>
+                                 
+                                 <td>AWS IoT limits an account to a maximum number of MQTT
+                                    <code class="code">CONNECT</code> requests per second.
+                                 </td>
+                                 
+                                 <td>500</td>
+                                 
+                                 <td><a href="https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;limitType=service-code-iot" target="_blank">Yes</a></td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p>Connect requests per second per client ID</p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>AWS IoT limits MQTT <code class="code">CONNECT</code> requests from the same
+                                       <code class="code">accountId</code> and <code class="code">clientId</code> to 1 MQTT
+                                       <code class="code">CONNECT</code> operation per second.
+                                    </p>
+                                    
+                                 </td>
+                                 
+                                 <td>1</td>
+                                 
+                                 <td>No</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Subscriptions per account</td>
+                                 
+                                 <td>AWS IoT limits an account to a maximum number of subscriptions
+                                    across all active connections.
+                                 </td>
+                                 
+                                 <td>500,000</td>
+                                 
+                                 <td><a href="https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;limitType=service-code-iot" target="_blank">Yes</a></td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Subscriptions per second per account</td>
+                                 
+                                 <td>AWS IoT limits an account to a maximum number of subscriptions per
+                                    second. For example, if there are two MQTT <code class="code">SUBSCRIBE</code>
+                                    requests within a second with 3 subscriptions (topic filters) each,
+                                    AWS IoT counts those as 6 subscriptions towards this limit.
+                                 </td>
+                                 
+                                 <td>500</td>
+                                 
+                                 <td><a href="https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;limitType=service-code-iot" target="_blank">Yes</a></td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Subscriptions per connection</td>
+                                 
+                                 <td>AWS IoT supports 50 subscriptions per connection. Subscription
+                                    requests on the same connection in excess of this amount may be
+                                    rejected by AWS IoT and the connection will be closed. Clients should
+                                    validate the <code class="code">SUBACK</code> message to ensure that their
+                                    subscription requests have been successfully processed.
+                                 </td>
+                                 
+                                 <td>50</td>
+                                 
+                                 <td>No</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Publish requests per second per connection</td>
+                                 
+                                 <td>AWS IoT limits each client connection to a maximum number of
+                                    inbound and outbound publish requests per second. Publish requests
+                                    exceeding that limit will be discarded.
+                                 </td>
+                                 
+                                 <td>100</td>
+                                 
+                                 <td>No</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Inbound publish requests per second per account</td>
+                                 
+                                 <td>Inbound publish requests count for all the messages that AWS IoT
+                                    processes before routing the messages to the subscribed clients or
+                                    the rules engine. For example, a single message published on
+                                    <code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/update</code>
+                                    topic can result in publishing three additional messages to
+                                    <code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/update/accepted</code>,
+                                    <code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/update/documents</code>,
+                                    and
+                                    <code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/delta</code>
+                                    topics. In this case, AWS IoT counts those as 4 inbound publish
+                                    requests towards this limit. However, a single message to an
+                                    unreserved topic like <code class="code">a/b</code> is counted only as a single
+                                    inbound publish request.
+                                 </td>
+                                 
+                                 <td>10,000</td>
+                                 
+                                 <td><a href="https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;limitType=service-code-iot" target="_blank">Yes</a></td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Outbound publish requests per second per account</td>
+                                 
+                                 <td>Outbound publish requests count for every message that resulted
+                                    in matching a client's subscription or matching a rules engine
+                                    subscription. For example, two clients are subscribed to topic
+                                    filter <code class="code">a/b</code> and a rule is subscribed to topic filter
+                                    <code class="code">a/#</code>. An inbound publish requests on topic
+                                    <code class="code">a/b</code> results in a total of 3 outbound publish
+                                    requests.
+                                 </td>
+                                 
+                                 <td>20,000</td>
+                                 
+                                 <td><a href="https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;limitType=service-code-iot" target="_blank">Yes</a></td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Throughput per second per connection</td>
+                                 
+                                 <td>Data received or sent over a client connection is processed at a
+                                    maximum throughput rate. Data exceeding the maximum throughput will
+                                    be delayed in processing.
+                                 </td>
+                                 
+                                 <td>512 KiB</td>
+                                 
+                                 <td>No</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum inbound unacknowledged QoS 1 publish requests</td>
+                                 
+                                 <td>AWS IoT limits the number of unacknowledged inbound publish
+                                    requests per client. When this limit is reached, no new publish
+                                    requests are accepted from this client until a <code class="code">PUBACK</code>
+                                    message is returned by the server.
+                                 </td>
+                                 
+                                 <td>100</td>
+                                 
+                                 <td>No</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum outbound unacknowledged QoS 1publish requests </td>
+                                 
+                                 <td>AWS IoT limits the number of unacknowledged outbound publish
+                                    requests per client. When this limit is reached, no new publish
+                                    requests are sent to the client until the client acknowledges the
+                                    publish requests.
+                                 </td>
+                                 
+                                 <td>100</td>
+                                 
+                                 <td>No</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum retry interval for delivering QoS 1 messages</td>
+                                 
+                                 <td>AWS IoT will retry delivery of unacknowledged quality-of-service 1
+                                    (QoS 1) publish requests to a client for up to one hour. If AWS IoT
+                                    does not receive a <code class="code">PUBACK</code> message from the client after
+                                    one hour, it will drop the publish requests.
+                                 </td>
+                                 
+                                 <td>1 hour</td>
+                                 
+                                 <td>No</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     
+                     
+                     <h3 id="iot-protocol-limits">Protocol Limits</h3>
+                     
+                     <div class="table">
+                        <div class="table-contents">
+                           <table id="w116aac15d121b7b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Description</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Connection inactivity (keep-alive interval)</td>
+                                 
+                                 <td>For MQTT (or MQTT over WebSockets) connections, a client can
+                                    request a keep-alive interval between 30 - 1200 seconds as part of
+                                    the MQTT <code class="code">CONNECT</code> message. AWS IoT starts the keep-alive
+                                    timer for a client when sending <code class="code">CONNACK</code> in response to
+                                    the <code class="code">CONNECT</code> message. This timer is reset whenever AWS IoT
+                                    receives a <code class="code">PUBLISH</code>, <code class="code">SUBSCRIBE</code>,
+                                    <code class="code">PING</code>, or <code class="code">PUBACK</code> message from the
+                                    client. AWS IoT will disconnect a client whose keep-alive timer has
+                                    reached 1.5x the specified keep-alive interval (i.e., by a factor of
+                                    1.5).The default keep-alive interval is 1200 seconds. If a
+                                    client requests a keep-alive interval of zero, the default
+                                    keep-alive interval will be used. If a client requests a keep-alive
+                                    interval greater than 1200 seconds, the default keep-alive interval
+                                    will be used. If a client requests a keep-alive interval shorter
+                                    than 30 seconds but greater than zero, the server treats the client
+                                    as though it requested a keep-alive interval of 30 seconds.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>WebSocket connection duration</td>
+                                 
+                                 <td>WebSocket connections are limited to 24 hours. If the limit is
+                                    exceeded, the WebSocket connection is automatically closed when an
+                                    attempt is made to send a message by the client or server. 
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum subscriptions per subscribe request</td>
+                                 
+                                 <td>A single <code class="code">SUBSCRIBE</code> request is limited a maximum of
+                                    eight subscriptions.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Message size</td>
+                                 
+                                 <td>The payload for every publish request is limited to 128 KB. The
+                                    AWS IoT service rejects publish and connect requests larger than this
+                                    size.
+                                 </td>
+                                 
+                              </tr>
                               
                               <tr>
                                  
@@ -4984,329 +5293,42 @@
                               
                               <tr>
                                  
-                                 <td>Connection inactivity (keep-alive interval) </td>
+                                 <td>Restricted client ID prefix</td>
                                  
-                                 <td>
-                                    
-                                    <p>By default, an MQTT client connection is disconnected after 30
-                                       minutes of inactivity. When the client sends a PUBLISH,
-                                       SUBSCRIBE, PING, or PUBACK message, the inactivity timer is
-                                       reset.
-                                    </p>
-                                    
-                                    <p>A client can request a shorter keep-alive interval by
-                                       specifying a value between 5-1,200 seconds in the MQTT CONNECT
-                                       message sent to the server. If a keep-alive value is specified,
-                                       the server disconnects the client if it does not receive a
-                                       PUBLISH, SUBSCRIBE, PINGREQ, or PUBACK message within a period
-                                       1.5 times the requested interval. The keep-alive timer starts
-                                       after the sender sends a CONNACK.
-                                    </p>
-                                    
-                                    <p>If a client sends a keep-alive value of zero, the default
-                                       keep-alive behavior remains in place.
-                                    </p>
-                                    
-                                    <p>If a client requests a keep-alive shorter than 5 seconds, the
-                                       server treats the client as though it requested a keep-alive
-                                       interval of 5 seconds.
-                                    </p>
-                                    
-                                    <p>The keep-alive timer begins immediately after the server
-                                       returns a CONNACK to the client. There might be a brief delay
-                                       between the client's sending of a CONNECT message and the start
-                                       of keep-alive behavior.
-                                    </p>
-                                    
+                                 <td><code class="code">$</code> is reserved for AWS IoT generated client
+                                    IDs.
                                  </td>
                                  
                               </tr>
                               
                               <tr>
                                  
-                                 <td>
-                                    <p>Connect requests per second per account</p>
-                                 </td>
+                                 <td>Topic size</td>
                                  
-                                 <td>
-                                    <p>AWS IoT limits an account to a maximum of 300 MQTT CONNECT
-                                       requests per second.
-                                    </p>
+                                 <td>The topic passed to the AWS IoT when sending a publish request is
+                                    limited to 256 bytes of UTF-8 encoded characters.
                                  </td>
                                  
                               </tr>
                               
                               <tr>
                                  
-                                 <td>
-                                    <p>Connect requests per second per client ID</p>
-                                 </td>
+                                 <td>Restricted topic prefix</td>
                                  
-                                 <td>
-                                    <p>AWS IoT AWS IoT throttles connects from the same accountId
-                                       and clientId to 1 connect operation per second.
-                                    </p>
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Maximum number of slashes in topic and topic filter </td>
-                                 
-                                 <td>
-                                    
-                                    <p>A topic provided while publishing a message or a topic filter
-                                       provided while subscribing can have no more than 7 forward
-                                       slashes (/).
-                                    </p>
-                                    
+                                 <td>Topics beginning with <code class="code">$</code> are reserved by AWS IoT and
+                                    are not supported for publishing and subscribing except for using
+                                    the specific topic names defined by AWS IoT services (i.e., Thing
+                                    Shadow).
                                  </td>
                                  
                               </tr>
                               
                               <tr>
                                  
-                                 <td>Maximum inbound unacknowledged messages </td>
+                                 <td>Maximum number of slashes in topic and topic filter</td>
                                  
-                                 <td>
-                                    
-                                    <p>The message broker allows 100 in-progress unacknowledged
-                                       messages per client. (This limit is applied across all messages
-                                       that require ACK.) When this limit is reached, no new messages
-                                       are accepted from this client until an ACK is returned by the
-                                       server.
-                                    </p>
-                                    
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Maximum outbound unacknowledged messages </td>
-                                 
-                                 <td>
-                                    
-                                    <p>The message broker allows only 100 in-progress unacknowledged
-                                       messages per client. (This limit is applied across all messages
-                                       that require ACK.) When this limit is reached, no new messages
-                                       are sent to the client until the client acknowledges the
-                                       in-progress messages.
-                                    </p>
-                                    
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Maximum retry interval for delivering QoS 1 messages </td>
-                                 
-                                 <td>If a connected client is unable to receive an ACK on a QoS 1
-                                    message for one hour, the message broker drops the message. The
-                                    client might be unable to receive the message if it has 100
-                                    in-flight messages, it is being throttled due to large payloads, or
-                                    other errors.
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Maximum subscriptions per subscribe call </td>
-                                 
-                                 <td>
-                                    
-                                    <p>A single SUBSCRIBE call is limited to request a maximum of
-                                       eight subscriptions.
-                                    </p>
-                                    
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Message size</td>
-                                 
-                                 <td>
-                                    
-                                    <p>The payload for every PUBLISH message is limited to 128 KB.
-                                       The AWS IoT service rejects messages larger than this size.
-                                    </p>
-                                    
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Publish requests per second per account </td>
-                                 
-                                 <td>
-                                    <p>9000 per second per account (inbound publish requests -
-                                       max. 3000 per second, outbound publish requests - max. 6000 per
-                                       second).
-                                    </p>
-                                    
-                                    <p>Inbound publish requests count for all the messages that the
-                                       message broker processes before routing the messages to the
-                                       subscribed clients or the rules engine. For example, a single
-                                       message published on
-                                       <code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/update</code>
-                                       topic can result in publishing three additional messages to
-                                       <code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/update/accepted</code>,
-                                       <code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/update/documents</code>,
-                                       <code class="code">$aws/things/<em class="replaceable"><code>device</code></em>/shadow/delta</code>
-                                       topics. In this case, AWS IoT counts those as 4 inbound publish
-                                       requests towards this limit. However, a single message to an
-                                       unreserved topic like <code class="code">"a/b"</code> is counted only as a
-                                       single inbound publish request.
-                                    </p>
-                                    
-                                    <p>Outbound publish requests count for every message that
-                                       resulted in matching a client's subscription or matching a rules
-                                       engine subscription. For example, two clients are subscribed to
-                                       topic filter <code class="code">'a/b'</code> and a rule is subscribed to
-                                       topic filter <code class="code">'a/#'</code>. An inbound publish request
-                                       message on topic 'a/b' results in a total of 3 outbound publish
-                                       requests.
-                                    </p>
-                                    
-                                    <div class="aws-note">
-                                       <p class="aws-note">Note</p>
-                                       <p>Inbound and outbound publish requests cannot be traded for
-                                          each other, for example, if only 1,000 inbound publish
-                                          requests per second are used, the maximum outbound publish
-                                          requests per second remains 6,000.
-                                       </p>
-                                    </div>
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Publish requests per second per connection</td>
-                                 
-                                 <td>AWS IoT limits each client connection to 100 inbound publish
-                                    requests per second and 100 outbound publish requests per second.
-                                    Publish requests exceeding that limit will be discarded.
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Restricted client ID prefix </td>
-                                 
-                                 <td>'$' is reserved for internally generated client IDs.</td>
-                                 
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Restricted topic prefix </td>
-                                 
-                                 <td>Topics beginning with '$' are considered reserved and are not
-                                    supported for publishing and subscribing except when working with
-                                    the Thing Shadows service.
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>
-                                    <p>Subscriptions per second per account </p>
-                                 </td>
-                                 
-                                 <td>
-                                    <p>AWS IoT limits an account to a maximum of 500 subscriptions
-                                       per second. For example, if there are two MQTT SUBSCRIBE calls
-                                       within a second with 3 subscriptions (topic filters) each, AWS IoT
-                                       counts those as 6 subscriptions towards this limit.
-                                       
-                                    </p>
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Subscriptions per connection </td>
-                                 
-                                 <td>
-                                    
-                                    <p>AWS IoT limits each client connection to subscribe to up to 50
-                                       subscriptions. A SUBSCRIBE request that pushes the total number
-                                       of subscriptions past 50 results in the connection being
-                                       disconnected.
-                                    </p>
-                                    
-                                 </td>
-                                 
-                              </tr>
-                              
-                              
-                              <tr>
-                                 
-                                 <td>Throughput per connection </td>
-                                 
-                                 <td>
-                                    
-                                    <p>AWS IoT limits the ingress and egress rate on each client
-                                       connection to 512 KB/s. Data sent or received at a higher rate
-                                       is throttled to this throughput.
-                                    </p>
-                                    
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Topic size </td>
-                                 
-                                 <td>The topic passed to the message broker when publishing a message
-                                    cannot exceed 256 bytes of UTF-8 encoded characters.
-                                 </td>
-                                 
-                              </tr>
-                              
-                              
-                              <tr>
-                                 
-                                 <td>WebSocket connection duration</td>
-                                 
-                                 <td>
-                                    
-                                    <p>WebSocket connections are limited to 24 hours. If the limit is
-                                       exceeded, the WebSocket connection is automatically closed when
-                                       an attempt is made to send a message by the client or server. To
-                                       maintain an active WebSocket connection for longer than 24
-                                       hours, simply close and reopen the WebSocket connection from the
-                                       client side before the time limit elapses.
-                                    </p>
-                                    
-                                    <p>AWS IoT supports keep-alive values specified in MQTT CONNECT
-                                       messages. When a client specifies a keep-alive value, the client
-                                       tells the server to disconnect the client and transmit any
-                                       last-will message associated with the MQTT session if the server
-                                       does not receive a message (PUBLISH, SUBSCRIBE, PUBACK, PINGREQ)
-                                       within 1.5 times the keep-alive period. AWS IoT supports
-                                       keep-alive values between 5 seconds and 20 minutes. If a client
-                                       requests no keep-alive (that is, sets the field to 0 in the MQTT
-                                       CONNECT message), the server sets the keep-alive value to 20
-                                       minutes, which corresponds to the maximum idle time supported by
-                                       AWS IoT of 30 minutes. Most MQTT clients (including the AWS SDK
-                                       clients) support keep-alive values by sending a PINGREQ if the
-                                       keep-alive period expires without the transmission of any other
-                                       message by the client.
-                                    </p>
-                                    
+                                 <td>A topic in a publish or subscribe request is limited to 7 forward
+                                    slashes (<code class="code">/</code>).
                                  </td>
                                  
                               </tr>
@@ -5323,7 +5345,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d121b7b3">
+                           <table id="w116aac15d121b9b3">
                               
                               <tr>
                                  
@@ -5349,11 +5371,18 @@
                               
                               <tr>
                                  
-                                 <td>Maximum number of in-flight, unacknowledged messages</td>
+                                 <td>Maximum number of in-flight, unacknowledged messages per
+                                    thing
+                                 </td>
                                  
-                                 <td>The Thing Shadows service supports up to 10 in-flight
-                                    unacknowledged messages. When this limit is reached, all new shadow
-                                    requests is rejected with a 429 error code.
+                                 <td>
+                                    
+                                    <p>The Thing Shadows service supports up to 10 in-flight
+                                       unacknowledged messages per thing. When this limit is reached,
+                                       all new shadow requests are rejected with a 429 error
+                                       code.
+                                    </p>
+                                    
                                  </td>
                                  
                               </tr>
@@ -5395,6 +5424,25 @@
                                  
                               </tr>
                               
+                              <tr>
+                                 
+                                 <td>Maximum number of shadows in an AWS account</td>
+                                 
+                                 <td>Unlimited</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Requests per second per thing</td>
+                                 
+                                 <td>The Thing Shadows service supports up to 20 requests per second
+                                    per thing. Note that this limit is per thing and not per
+                                    API.
+                                 </td>
+                                 
+                              </tr>
+                              
                            </table>
                         </div>
                      </div>
@@ -5407,7 +5455,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d121b9b3">
+                           <table id="w116aac15d121c11b3">
                               
                               <tr>
                                  
@@ -5467,7 +5515,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d121c11b3">
+                           <table id="w116aac15d121c13b3">
                               
                               <tr>
                                  
@@ -5846,13 +5894,6 @@
                                  
                               </tr>
                               
-                              <tr>
-                                 
-                                 <td>UpdateThingShadow</td>
-                                 
-                                 <td>10</td>
-                                 
-                              </tr>
                               
                            </table>
                         </div>
@@ -5866,7 +5907,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d121c13b3">
+                           <table id="w116aac15d121c15b3">
                               
                               <tr>
                                  
@@ -5906,7 +5947,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d121c15b3">
+                           <table id="w116aac15d121c17b3">
                               
                               <tr>
                                  
@@ -6167,7 +6208,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d121c19b3">
+                           <table id="w116aac15d121c21b3">
                               
                               <tr>
                                  
@@ -6958,7 +6999,7 @@
                                  
                                  <td>EU (Paris)</td>
                                  
-                                 <td>500</td>                        
+                                 <td>500</td>
                                  
                                  
                               </tr>
