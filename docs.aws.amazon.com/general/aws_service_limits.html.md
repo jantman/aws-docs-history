@@ -26,111 +26,6 @@ You can take the following steps to request an increase for limits. These increa
 
 4.  Choose **Submit**.
 
-::: {#inline-topiclist .highlights}
-**Default Limits**
-
--   [Amazon API Gateway Limits](#limits_apigateway)
--   [Application Auto Scaling Limits](#limits_as-app)
--   [AWS Application Discovery Service Limits](#limits_appdiscserve)
--   [Amazon AppStream 2.0 Limits](#limits_appstream2)
--   [AWS AppSync Limits](#limits_appsync)
--   [Amazon Athena Limits](#amazon-athena-limits)
--   [AWS Auto Scaling Limits](#limits_aws_autoscaling)
--   [Auto Scaling Limits](#limits_autoscaling)
--   [AWS Batch Limits](#limits_batch)
--   [AWS Certificate Manager (ACM) Limits](#limits_acm)
--   [AWS Cloud9 Limits](#limits_cloud9)
--   [AWS CloudFormation Limits](#limits_cloudformation)
--   [Amazon CloudFront Limits](#limits_cloudfront)
--   [AWS CloudHSM Limits](#limits-cloudhsm)
--   [AWS CloudHSM Classic Limits](#limits-cloudhsm-classic)
--   [Amazon CloudSearch Limits](#limits_cloudsearch)
--   [AWS CloudTrail Limits](#limits_cloudtrail)
--   [Amazon CloudWatch Limits](#limits_cloudwatch)
--   [Amazon CloudWatch Events Limits](#limits_cloudwatch_events)
--   [Amazon CloudWatch Logs Limits](#limits_cloudwatch_logs)
--   [AWS CodeBuild Limits](#limits_codebuild)
--   [AWS CodeCommit Limits](#limits_codecommit)
--   [AWS CodeDeploy Limits](#limits_codedeploy)
--   [AWS CodePipeline Limits](#limits_codepipeline)
--   [Amazon Cognito User Pools Limits](#limits_cognito_user_pools)
--   [Amazon Cognito Federated Identities Limits](#limits_cognito_federated_identities)
--   [Amazon Cognito Sync Limits](#limits_cognito_sync)
--   [Amazon Comprehend Limits](#limits_amazon_comprehend)
--   [AWS Config Limits](#limits_config)
--   [Amazon Connect Limits](#limits_amazon_connect)
--   [AWS Data Pipeline Limits](#limits_datapipeline)
--   [AWS Database Migration Service Limits](#limits_dms)
--   [AWS Device Farm Limits](#limits_devicefarm)
--   [AWS Direct Connect Limits](#limits_directconnect)
--   [AWS Directory Service Limits](#limits_ds)
--   [Amazon DynamoDB Limits](#limits_dynamodb)
--   [AWS Elastic Beanstalk Limits](#limits_elastic_beanstalk)
--   [Amazon Elastic Block Store (Amazon EBS) Limits](#limits_ebs)
--   [Amazon Elastic Compute Cloud (Amazon EC2) Limits](#limits_ec2)
--   [Amazon Elastic Container Registry (Amazon ECR) Limits](#limits_ecr)
--   [Amazon Elastic Container Service (Amazon ECS) Limits](#limits_ecs)
--   [Amazon Elastic File System Limits](#limits_elasticfilesystem)
--   [Elastic Load Balancing Limits](#limits_elastic_load_balancer)
--   [Amazon Elastic Transcoder Limits](#limits_elastictranscoder)
--   [Amazon ElastiCache Limits](#limits_elasticache)
--   [Amazon Elasticsearch Service Limits](#limits_es)
--   [Amazon GameLift Limits](#limits_gamelift)
--   [Amazon Glacier Limits](#limits_glacier)
--   [AWS Glue Limits](#limits_glue)
--   [AWS Greengrass Limits](#limits_greengrass)
--   [Amazon GuardDuty Limits](#limits_guardduty)
--   [AWS Identity and Access Management (IAM) Limits](#limits_iam)
--   [AWS Import/Export Limits](#limits-import-export)
--   [Amazon Inspector Limits](#limits_inspector)
--   [AWS IoT Limits](#limits_iot)
--   [AWS Key Management Service (AWS KMS) Limits](#limits_kms)
--   [Amazon Kinesis Data Firehose Limits](#limits-akf)
--   [Amazon Kinesis Data Streams Limits](#limits-aks)
--   [Amazon Kinesis Data Analytics Limits](#limits-aka)
--   [Amazon Kinesis Video Streams Limits](#limits-akv)
--   [AWS Lambda Limits](#limits_lambda)
--   [Amazon Lightsail Limits](#limits_lightsail)
--   [Amazon Machine Learning (Amazon ML) Limits](#limits_machinelearning)
--   [AWS Elemental MediaConvert Limits](#limits_mediaconvert)
--   [AWS Elemental MediaLive Limits](#limits_medialive)
--   [AWS Elemental MediaPackage Limits](#limits_mediapackage)
--   [AWS Elemental MediaStore Limits](#limits_mediastore)
--   [AWS Elemental MediaTailor Limits](#limits_mediatailor)
--   [Amazon MQ Limits](#limits_amazon-mq)
--   [Amazon Neptune Limits](#limits_neptune)
--   [AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise Limits](#limits_opworks)
--   [AWS OpsWorks Stacks Limits](#aws-opsworks-stacks-limits)
--   [AWS Organizations Limits](#aws-organizations-limits)
--   [Amazon Pinpoint Limits](#limits_pinpoint)
--   [Amazon Polly Limits](#limits_polly)
--   [Amazon Redshift Limits](#limits_redshift)
--   [Amazon Rekognition Limits](#limits_rekognition)
--   [Amazon Relational Database Service (Amazon RDS) Limits](#limits_rds)
--   [AWS Resource Groups Limits](#limits_resgrps)
--   [Amazon RouteÂ 53 Limits](#limits_route53)
--   [Amazon SageMaker Limits](#limits_sagemaker)
--   [AWS Server Migration Service Limits](#limits_server_migration)
--   [AWS Serverless Application Repository Limits](#limits_serverlessrepo)
--   [AWS Service Catalog Limits](#limits_servicecatalog)
--   [AWS Shield Advanced Limits](#limits_shield)
--   [Amazon Simple Email Service (Amazon SES) Limits](#limits_ses_quota)
--   [Amazon Simple Notification Service (Amazon SNS) Limits](#limits_sns)
--   [Amazon Simple Queue Service (Amazon SQS)](#limits_sqs)
--   [Amazon Simple Storage Service (Amazon S3) Limits](#limits_s3)
--   [Amazon Simple Workflow Service (Amazon SWF) Limits](#limits_swf)
--   [Amazon SimpleDB Limits](#limits_simpledb)
--   [AWS Step Functions Limits](#limits-step-functions)
--   [AWS Storage Gateway Limits](#limits-storage-gateway)
--   [AWS Systems Manager Limits](#limits_ssm)
--   [Amazon Virtual Private Cloud (Amazon VPC) Limits](#limits_vpc)
--   [Amazon VPC DNS Limits](#limits-vpc-dns)
--   [AWS WAF Limits](#limits_waf)
--   [Amazon WorkMail Limits](#limits_workmail)
--   [Amazon WorkSpaces Limits](#limits_workspaces)
--   [AWS X-Ray Limits](#limits_xray)
-:::
-
 Amazon API Gateway Limits {#limits_apigateway}
 -------------------------
 
@@ -1195,6 +1090,7 @@ Amazon Elastic Compute Cloud (Amazon EC2) Limits {#limits_ec2}
   Security groups for EC2-Classic per instance                           500
   Rules per security group for EC2-Classic                               100
   Key pairs                                                              5,000
+  Placement groups                                                       500
   Throttle on the emails that can be sent from your Amazon EC2 account   Throttle applied
   On-Demand Instances                                                    Limits vary depending on instance type. For more information, see [How many instances can I run in Amazon EC2](https://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2).
   Spot Instances                                                         Limits vary depending on instance type, region, and account. For more information, see [Spot Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html).
@@ -2967,24 +2863,24 @@ Amazon Relational Database Service (Amazon RDS) Limits {#limits_rds}
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                                   Default Limit
-  ------------------------------------------ ---------------
-  Clusters                                   40
-  Cluster parameter groups                   50
-  DB Instances                               40
-  Event subscriptions                        20
-  Manual snapshots                           100
-  Option groups                              20
-  Parameter groups                           50
-  Read replicas per master                   5
-  Reserved instances (purchased per month)   40
-  Rules per security group                   20
-  Security groups                            25
-  Security groups (VPC)                      5
-  Subnet groups                              50
-  Subnets per subnet group                   20
-  Tags per resource                          50
-  Total storage for all DB instances         100 TB
+  Resource                             Default Limit
+  ------------------------------------ ---------------
+  Clusters                             40
+  Cluster parameter groups             50
+  DB Instances                         40
+  Event subscriptions                  20
+  Manual snapshots                     100
+  Option groups                        20
+  Parameter groups                     50
+  Read replicas per master             5
+  Reserved instances                   40
+  Rules per security group             20
+  Security groups                      25
+  Security groups (VPC)                5
+  Subnet groups                        50
+  Subnets per subnet group             20
+  Tags per resource                    50
+  Total storage for all DB instances   100 TB
 :::
 :::
 
