@@ -2584,17 +2584,44 @@ AWS Elemental MediaConvert Limits {#limits_mediaconvert}
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                                                                    Default Limit
-  --------------------------------------------------------------------------- -----------------------------------------------
-  Number of queues                                                            10
-  Concurrent jobs processed across all queues                                 100
-  Concurrent jobs processed from a queue                                      100 divided by number of queues
-  Number of custom output presets                                             100
-  Number of custom output job templates                                       100
-  DescribeEndpoints API calling rate per second                               0.01667 TPS (Once per 60 seconds, burst zero)
-  Aggregate API calling rate per second for job, queue, preset and template   2 TPS (2 per second, burst 100)\]
++-----------------------------------+-----------------------------------+
+| Resource                          | Default Limit                     |
++===================================+===================================+
+| Number of queues per account      | 10                                |
++-----------------------------------+-----------------------------------+
+| Concurrent jobs per account,      | Varies by region.                 |
+| processed across all queues       |                                   |
+|                                   | 40 in these regions:              |
+|                                   |                                   |
+|                                   | ::: {.itemizedlist}               |
+|                                   | -   US East (N. Virginia)         |
+|                                   |                                   |
+|                                   | -   US West (Oregon)              |
+|                                   |                                   |
+|                                   | -   EU (Ireland)                  |
+|                                   | :::                               |
+|                                   |                                   |
+|                                   | 20 in all other regions           |
++-----------------------------------+-----------------------------------+
+| Concurrent jobs processed per     | Number allowed across all queues, |
+| queue                             | divided equally by number of      |
+|                                   | queues you create.                |
++-----------------------------------+-----------------------------------+
+| Number of custom output presets   | 100                               |
++-----------------------------------+-----------------------------------+
+| Number of custom output job       | 100                               |
+| templates                         |                                   |
++-----------------------------------+-----------------------------------+
+| DescribeEndpoints API calling     | 0.01667 TPS (Once per 60 seconds, |
+| rate per second                   | burst zero)                       |
++-----------------------------------+-----------------------------------+
+| Aggregate API calling rate for    | 2 TPS (2 transactions per second, |
+| job, queue, preset and template   | burst 100)                        |
++-----------------------------------+-----------------------------------+
 :::
 :::
+
+You can request increses on these limits. To do so, go to the [AWS suport center](https://aws.amazon.com/support) and create a case.
 
 AWS Elemental MediaLive Limits {#limits_medialive}
 ------------------------------

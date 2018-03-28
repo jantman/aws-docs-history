@@ -7184,7 +7184,7 @@
                               
                               <tr>
                                  
-                                 <td>Number of queues</td>
+                                 <td>Number of queues per account</td>
                                  
                                  <td>10</td>
                                  
@@ -7192,17 +7192,41 @@
                               
                               <tr>
                                  
-                                 <td>Concurrent jobs processed across all queues</td>
+                                 <td>Concurrent jobs per account, processed across all queues</td>
                                  
-                                 <td>100</td>
+                                 <td>Varies by region.
+                                    <p>40 in these regions:</p>
+                                    <div class="itemizedlist">
+                                       
+                                       
+                                       
+                                       
+                                       <ul class="itemizedlist" type="disc">
+                                          <li class="listitem">
+                                             <p>US East (N. Virginia)</p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p>US West (Oregon)</p>
+                                          </li>
+                                          <li class="listitem">
+                                             
+                                             <p>EU (Ireland)</p>
+                                             
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <p> 20 in all other regions </p>
+                                 </td>
                                  
                               </tr>
                               
                               <tr>
                                  
-                                 <td>Concurrent jobs processed from a queue</td>
+                                 <td>Concurrent jobs processed per queue</td>
                                  
-                                 <td>100 divided by number of queues</td>
+                                 <td>Number allowed across all queues, divided equally by number of queues
+                                    you create.
+                                 </td>
                                  
                               </tr>
                               
@@ -7232,17 +7256,18 @@
                               
                               <tr>
                                  
-                                 <td>Aggregate API calling rate per second for job, queue, preset and
-                                    template 
-                                 </td>
+                                 <td>Aggregate API calling rate for job, queue, preset and template </td>
                                  
-                                 <td>2 TPS (2 per second, burst 100)]</td>
+                                 <td>2 TPS (2 transactions per second, burst 100)</td>
                                  
                               </tr>
                               
                            </table>
                         </div>
                      </div>
+                     
+                     <p>You can request increses on these limits. To do so, go to the <a href="https://aws.amazon.com/support" target="_blank">AWS suport center</a> and create a case.
+                     </p>
                      
                      
                      <h2 id="limits_medialive">AWS Elemental MediaLive Limits</h2>
