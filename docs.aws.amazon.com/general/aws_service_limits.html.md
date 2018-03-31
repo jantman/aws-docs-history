@@ -1398,9 +1398,14 @@ AWS Glue Limits {#limits_glue}
 ::: {.table-contents}
   Resource                                                  Default Limit
   --------------------------------------------------------- ---------------
-  Number of databases per account                           100
-  Number of tables per database                             1000
-  Number of partitions per table                            20,000
+  Number of databases per account                           10,000
+  Number of tables per database                             100,000
+  Number of partitions per table                            1,000,000
+  Number of table versions per table                        100,000
+  Number of tables per account                              1,000,000
+  Number of partitions per account                          10,000,000
+  Number of table verions per account                       1,000,000
+  Number of connections per account                         1,000
   Number of crawlers per account                            25
   Number of jobs per account                                25
   Number of triggers per account                            25
