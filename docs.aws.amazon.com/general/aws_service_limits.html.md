@@ -2552,6 +2552,22 @@ Amazon Lightsail Limits {#limits_lightsail}
 :::
 :::
 
+Amazon Macie Limits {#limits_macie}
+-------------------
+
+::: {.table}
+
+::: {.table-contents}
+  Resource                                                Default Limit
+  ------------------------------------------------------- --------------------------------------------------
+  Full data classification                                3 TB per month
+  Macie member accounts                                   10
+  S3 buckets/prefixes specified for data classification   250 (this is a hard limit and cannot be changed)
+:::
+:::
+
+For more information, see the [Amazon Macie User Guide](http://docs.aws.amazon.com/macie/latest/userguide/).
+
 Amazon Machine Learning (Amazon ML) Limits {#limits_machinelearning}
 ------------------------------------------
 
