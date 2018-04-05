@@ -191,11 +191,30 @@ AWS Certificate Manager (ACM) Limits {#limits_acm}
 ::: {.table}
 
 ::: {.table-contents}
-  Item                                                  Default Limit
-  ----------------------------------------------------- ---------------
-  Number of ACM-provided certificates                   100
-  Number of imported certificates                       100
-  Number of domain names per ACM-provided certificate   10
+  Item                                                       Default Limit
+  ---------------------------------------------------------- --------------------------
+  Number of ACM certificates                                 100
+  Number of ACM certificates per year (last 365 days)        Twice your account limit
+  Number of imported certificates                            100
+  Number of imported certificates per year (lsat 365 days)   Twice your account limit
+  Number of domain names per ACM certificate                 10
+  Number of private CAs                                      10
+  Number of private certificates per CA                      50,000
+:::
+:::
+
+For more information about these limits, see [Limits](http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html) in the *AWS Certificate Manager User Guide*.
+
+AWS Certificate Manager Private Certificate Authority (ACM PCA) Limits {#limits_acm-pca}
+----------------------------------------------------------------------
+
+::: {.table}
+
+::: {.table-contents}
+  Item                                    Default Limit
+  --------------------------------------- ---------------
+  Number of private CAs                   10
+  Number of private certificates per CA   50,000
 :::
 :::
 
@@ -688,7 +707,7 @@ AWS CodeDeploy Limits {#limits_codedeploy}
   Resource                                                                           Default Limit
   ---------------------------------------------------------------------------------- ---------------
   Maximum number of applications associated with an AWS account in a single region   100
-  Maximum number of concurrent deployments associated with an AWS account            10
+  Maximum number of concurrent deployments associated with an AWS account            100
   Maximum number of deployment groups associated with a single application           100
   Maximum number of instances in a single deployment                                 500
   Maximum number of event notification triggers in a deployment group                10
@@ -1321,6 +1340,46 @@ Amazon Elasticsearch Service Limits {#limits_es}
 |                                   | Center](https://console.aws.amazo |
 |                                   | n.com/support/home#/).            |
 |                                   | :::                               |
++-----------------------------------+-----------------------------------+
+:::
+:::
+
+AWS Firewall Manager Limits {#limits_firewall_manager}
+---------------------------
+
+AWS Firewall Manager has default limits on the number of entities per account. You can [request an increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-waf) in these limits.
+
+::: {.table}
+::: {.table-contents}
++-----------------------------------+-----------------------------------+
+| Resource                          | Default Limit                     |
++===================================+===================================+
+| Firewall Manager policies per AWS | 20                                |
+| account                           |                                   |
++-----------------------------------+-----------------------------------+
+| Rule groups per Firewall Manager  | 1                                 |
+| policy                            |                                   |
++-----------------------------------+-----------------------------------+
+| Tags to specified include or      | 8                                 |
+| exclude per Firewall Manager      |                                   |
+| policy                            |                                   |
++-----------------------------------+-----------------------------------+
+| Rule groups per AWS Firewall      | 3                                 |
+| Manager administrator account     |                                   |
++-----------------------------------+-----------------------------------+
+:::
+:::
+
+The following limits related to Firewall Manager can\'t be changed.
+
+::: {.table}
+::: {.table-contents}
++-----------------------------------+-----------------------------------+
+| Resource                          | Limit                             |
++===================================+===================================+
+| Accounts per AWS Organization     | 2500                              |
++-----------------------------------+-----------------------------------+
+| Rules per rule group              | 10                                |
 +-----------------------------------+-----------------------------------+
 :::
 :::
@@ -2991,9 +3050,20 @@ Amazon SageMaker Notebooks
   Resource                               Default Limit
   -------------------------------------- ---------------
   ml.t2.medium instances                 20
+  ml.t2.large instances                  20
+  ml.t2.xlarge instances                 20
+  ml.t2.2xlarge instances                20
   ml.m4.xlarge instances                 20
+  ml.m4.2xlarge instances                20
+  ml.m4.4xlarge instances                10
+  ml.m4.10xlarge instances               5
+  ml.m4.16xlarge instances               5
   ml.p2.xlarge instances                 1
-  ml.p3.2xlarge instances                1
+  ml.p2.8xlarge instances                1
+  ml.p2.16xlarge instances               1
+  ml.p3.2xlarge instances                2
+  ml.p3.8xlarge instances                2
+  ml.p3.16xlarge instances               2
   Number of notebook instances           100
   Number of running notebook instances   20
 :::
@@ -3007,22 +3077,31 @@ Amazon SageMaker Training
   Resource                                   Default Limit
   ------------------------------------------ ---------------
   ml.m4.xlarge instances                     20
+  ml.m4.2xlarge instances                    20
   ml.m4.4xlarge instances                    10
   ml.m4.10xlarge instances                   5
+  ml.m4.16xlarge instances                   5
+  ml.m5.large instances                      20
+  ml.m5.xlarge instances                     20
+  ml.m5.2xlarge instances                    20
+  ml.m5.4xlarge instances                    10
+  ml.m5.12xlarge instances                   3
+  ml.m5.24xlarge instances                   2
   ml.c4.xlarge instances                     20
   ml.c4.2xlarge instances                    20
+  ml.c4.4xlarge instances                    20
   ml.c4.8xlarge instances                    20
-  ml.c5.xlarge instances                     0
-  ml.c5.2xlarge instances                    0
-  ml.c5.4xlarge instances                    0
-  ml.c5.9xlarge instances                    0
-  ml.c5.18xlarge instances                   0
+  ml.c5.xlarge instances                     20
+  ml.c5.2xlarge instances                    20
+  ml.c5.4xlarge instances                    5
+  ml.c5.9xlarge instances                    5
+  ml.c5.18xlarge instances                   5
   ml.p2.xlarge instances                     1
   ml.p2.8xlarge instances                    1
-  ml.p2.16xlarge instances                   0
-  ml.p3.2xlarge instances                    0
-  ml.p3.8xlarge instances                    0
-  ml.p3.16xlarge instances                   0
+  ml.p2.16xlarge instances                   1
+  ml.p3.2xlarge instances                    2
+  ml.p3.8xlarge instances                    2
+  ml.p3.16xlarge instances                   2
   Longest run time for a training job        5 days
   Number of instances across training jobs   20
   Number of instances for a training job     20
@@ -3038,15 +3117,37 @@ Amazon SageMaker Hosting
   Resource                                       Default Limit
   ---------------------------------------------- ---------------
   ml.t2.medium instances                         20
+  ml.t2.large instances                          20
+  ml.t2.xlarge instances                         20
+  ml.t2.2xlarge instances                        20
   ml.m4.xlarge instances                         20
+  ml.m4.2xlarge instances                        20
+  ml.m4.4xlarge instances                        10
+  ml.m4.10xlarge instances                       5
+  ml.m4.16xlarge instances                       5
+  ml.m5.large instances                          20
+  ml.m5.xlarge instances                         20
+  ml.m5.2xlarge instances                        20
+  ml.m5.4xlarge instances                        10
+  ml.m5.12xlarge instances                       3
+  ml.m5.24xlarge instances                       2
+  ml.c4.large instances                          20
   ml.c4.xlarge instances                         20
   ml.c4.2xlarge instances                        20
+  ml.c4.4xlarge instances                        20
   ml.c4.8xlarge instances                        20
-  ml.c5.xlarge instances                         0
-  ml.c5.2xlarge instances                        0
-  ml.c5.9xlarge instances                        0
+  ml.c5.large instances                          20
+  ml.c5.xlarge instances                         20
+  ml.c5.2xlarge instances                        20
+  ml.c5.4xlarge instances                        5
+  ml.c5.9xlarge instances                        5
+  ml.c5.18xlarge instances                       5
   ml.p2.xlarge instances                         2
-  ml.p3.2xlarge instances                        0
+  ml.p2.8xlarge instances                        2
+  ml.p2.16xlarge instances                       2
+  ml.p3.2xlarge instances                        2
+  ml.p3.8xlarge instances                        2
+  ml.p3.16xlarge instances                       2
   Number of instances across active endpoints    20
   Number of instances for an endpoint            20
   Total TPS for all endpoints                    10,000
@@ -3423,6 +3524,40 @@ AWS Systems Manager Limits {#limits_ssm}
 +-----------------------------------+-----------------------------------+
 :::
 :::
+
+Amazon Transcribe Limits {#limits-amazon-transcribe}
+------------------------
+
+::: {.table}
+
+::: {.table-contents}
+  Resource                                   Default Limit
+  ------------------------------------------ ---------------
+  Number of concurrent transcription jobs    10
+  Total number of vocabularies per account   100
+  Number of pending vocabularies             10
+:::
+:::
+
+You can request an increase for any of the limits using the [Amazon Comprehend service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-transcribe).
+
+For information about additional documented limits, see [Guidelines and Limits](https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html) in the *Amazon Transcribe Developer Guide*.
+
+Amazon Translate Limits {#limits_amazon_translate}
+-----------------------
+
+::: {.table}
+::: {.table-contents}
+  Resource                                         Default Limit
+  ------------------------------------------------ ---------------
+  Characters per 5 seconds                         5,000
+  Transactions per second for all language pairs   10
+:::
+:::
+
+You can request an increase for any of the limits using the [Amazon Translate service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-translate).
+
+For information about additional documented limits, see [Guidelines and Limits](http://docs.aws.amazon.com/translate/latest/dg/limits-guidelines.html) in the *Amazon Translate Developer Guide*.
 
 Amazon Virtual Private Cloud (Amazon VPC) Limits {#limits_vpc}
 ------------------------------------------------
