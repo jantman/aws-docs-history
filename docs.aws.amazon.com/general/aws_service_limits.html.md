@@ -3539,7 +3539,7 @@ Amazon Transcribe Limits {#limits-amazon-transcribe}
 :::
 :::
 
-You can request an increase for any of the limits using the [Amazon Comprehend service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-transcribe).
+You can request an increase for any of the limits using the [Amazon Transcribe service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-transcribe).
 
 For information about additional documented limits, see [Guidelines and Limits](https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html) in the *Amazon Transcribe Developer Guide*.
 
