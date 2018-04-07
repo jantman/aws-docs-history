@@ -110,13 +110,15 @@ AWS AppSync Limits {#limits_appsync}
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                                         Default Limit
-  ------------------------------------------------ ---------------
-  Maximum number of APIs per region                5 per account
-  Maximum number of API keys                       50 per API
-  Maximum schema document size                     5 MB
-  Maximum GraphQL query execution time             10 seconds
-  Maximum request/response mapping template size   64 KB
+  Resource                                                                             Default Limit
+  ------------------------------------------------------------------------------------ ----------------
+  Maximum number of APIs per region                                                    25 per account
+  Maximum number of API keys                                                           50 per API
+  Maximum schema document size                                                         5 MB
+  Maximum GraphQL query execution time                                                 10 seconds
+  Maximum request/response mapping template size                                       64 KB
+  Maximum subscription payload size                                                    128 KB
+  Maximum number of iterations in `#foreach...#end`{.code} loop in mapping templates   1000
 :::
 :::
 
@@ -433,6 +435,32 @@ Amazon CloudWatch Limits {#limits_cloudwatch}
 |                       |                       | -limit-increase&limit |
 |                       |                       | Type=service-code-ama |
 |                       |                       | zon-cloudwatch).      |
++-----------------------+-----------------------+-----------------------+
+| [GetMetricData](http: | 50 transactions per   | The maximum number of |
+| //docs.aws.amazon.com | second (TPS).         | operation requests    |
+| /AmazonCloudWatch/lat |                       | you can make per      |
+| est/APIReference/API_ | 180,000 Datapoints    | second without being  |
+| GetMetricData.html)   | Per Second (DPS) if   | throttled.            |
+|                       | the                   |                       |
+|                       | `StartTime`{.code}    | This is the maximum   |
+|                       | used in the API       | number of datapoints  |
+|                       | request is less than  | you can request per   |
+|                       | or equal to three     | second using one or   |
+|                       | hours from current    | more API calls        |
+|                       | time. 90,000 DPS if   | without being         |
+|                       | the                   | throttled.            |
+|                       | `StartTime`{.code} is |                       |
+|                       | more than three hours | You can [request a    |
+|                       | from current time.    | limit                 |
+|                       |                       | increase](https://con |
+|                       |                       | sole.aws.amazon.com/s |
+|                       |                       | upport/home#/case/cre |
+|                       |                       | ate?issueType=service |
+|                       |                       | -limit-increase&limit |
+|                       |                       | Type=service-code-ama |
+|                       |                       | zon-cloudwatch)       |
+|                       |                       | for both of these     |
+|                       |                       | limits.               |
 +-----------------------+-----------------------+-----------------------+
 | [GetMetricStatistics] | 400 transactions per  | The maximum number of |
 | (http://docs.aws.amaz | second (TPS)          | operation requests    |
@@ -3550,7 +3578,7 @@ Amazon Translate Limits {#limits_amazon_translate}
 ::: {.table-contents}
   Resource                                         Default Limit
   ------------------------------------------------ ---------------
-  Characters per 5 seconds                         5,000
+  Characters per 10 seconds                        5,000
   Transactions per second for all language pairs   10
 :::
 :::
