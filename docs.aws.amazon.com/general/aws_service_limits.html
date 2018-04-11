@@ -8327,11 +8327,368 @@
                      
                      <h2 id="limits_rekognition">Amazon Rekognition Limits</h2>
                      
-                     <p>Amazon Rekognition does not have service limits that you can change. For information
-                        about
-                        Amazon Rekognition service limits, see <a href="http://docs.aws.amazon.com/rekognition/latest/dg/limits.html" target="_blank">Amazon Rekognition
-                           Limits</a>.
+                     <p>Amazon Rekognition has the following limits that you can change.</p>
+                     
+                     
+                     
+                     
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w116aac15d169b7">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Default Limit</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Transactions per second per account for image data plane operations:</p>
+                                    
+                                    <div class="itemizedlist">
+                                       
+                                       
+                                          
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       <ul class="itemizedlist" type="disc">
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_CompareFaces.html" target="_blank">CompareFaces</a></p>
+                                          </li>
+                                          <li class="listitem"> 
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_DetectFaces.html" target="_blank">DetectFaces</a></p> 
+                                          </li>
+                                          <li class="listitem"> 
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_DetectLabelshtml" target="_blank">DetectLabels</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_DetectModerationLabels.html" target="_blank">DetectModerationLabels</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_DetectText.html" target="_blank">DetectText</a></p>  
+                                          </li>
+                                          <li class="listitem"> 
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_GetCelebrityInfo.html" target="_blank">GetCelebrityInfo</a></p>   
+                                          </li>
+                                          <li class="listitem"> 
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_IndexFaces.html" target="_blank">IndexFaces</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_ListFaces.html" target="_blank">ListFaces</a></p> 
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_RecognizeCelebrities.html" target="_blank">RecognizeCelebrities</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_SearchFaces.html" target="_blank">SearchFaces</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_SearchFacesByImage.html" target="_blank">SearchFacesByImage</a></p>
+                                          </li>
+                                       </ul>
+                                    </div> 
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <div class="itemizedlist">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       <ul class="itemizedlist" type="disc">
+                                          <li class="listitem">
+                                             <p>US East (N. Virginia) Region â 50 </p> 
+                                          </li>
+                                          <li class="listitem">
+                                             <p>US West (Oregon) Region â 50 </p>
+                                          </li>
+                                          <li class="listitem"> 
+                                             <p>EU (Ireland) Region â 50</p> 
+                                          </li>
+                                          <li class="listitem">   
+                                             <p>US East (Ohio) Region â 5</p> 
+                                          </li>
+                                          <li class="listitem">  
+                                             <p>Asia Pacific (Sydney) Region â 5</p> 
+                                          </li>
+                                          <li class="listitem">  
+                                             <p>Asia Pacific (Tokyo) Region â 5 </p> 
+                                          </li>
+                                          <li class="listitem"> 
+                                             <p>AWS GovCloud (US) â 5</p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    
+                                    
+                                    
+                                 </td>
+                                 
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Transactions per second per account for image control plane operations:</p>
+                                    
+                                    <div class="itemizedlist">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       <ul class="itemizedlist" type="disc">
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_CreateCollection.html" target="_blank">CreateCollection</a></p>
+                                          </li>
+                                          <li class="listitem"> 
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_DeleteCollection.html" target="_blank">DeleteCollection</a></p>
+                                          </li>
+                                          <li class="listitem"> 
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_DeleteFaces.html" target="_blank">DeleteFaces</a></p>
+                                          </li>
+                                          <li class="listitem"> 
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_ListCollections.html" target="_blank">ListCollections</a></p>
+                                          </li>
+                                       </ul>
+                                    </div> 
+                                    
+                                 </td>
+                                 
+                                 
+                                 <td>In each region that Amazon Rekognition supports â 5</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Transactions per second per account for all stored video <em>Start</em> operations:
+                                    </p>
+                                    
+                                    <div class="itemizedlist">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       <ul class="itemizedlist" type="disc">
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_StartCelebrityRecognition.html" target="_blank">StartCelebrityRecognition</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_StartContentModeration.html" target="_blank">StartContentModeration</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_StartFaceDetection.html" target="_blank">StartFaceDetection</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_StartFaceSearch.html" target="_blank">StartFaceSearch</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_StartLabelDetection.html" target="_blank">StartLabelDetection</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_StartPersonTracking.html" target="_blank">StartPersonTracking</a></p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                 </td>
+                                 
+                                 <td>In each region that Amazon Rekognition supports â 5</td>
+                                 
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Transactions per second per account for all stored video <em>Get</em> operations:
+                                    </p>
+                                    
+                                    <div class="itemizedlist">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       <ul class="itemizedlist" type="disc">
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_GetCelebrityRecognition.html" target="_blank">GetCelebrityRecognition</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_GetContentModeration.html" target="_blank">GetContentModeration</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_GetFaceDetection.html" target="_blank">GetFaceDetection</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_GetFaceSearch.html" target="_blank">GetFaceSearch</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_GetLabelDetection.html" target="_blank">GetLabelDetection</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_GetPersonTracking.html" target="_blank">GetPersonTracking</a></p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    
+                                    
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <div class="itemizedlist">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       <ul class="itemizedlist" type="disc">
+                                          <li class="listitem">
+                                             <p>US East (N. Virginia) Region â 20 </p> 
+                                          </li>
+                                          <li class="listitem">
+                                             <p>US West (Oregon) Region â 20 </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p>EU (Ireland) Region â 20</p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p>US East (Ohio) Region â 5</p> 
+                                          </li>
+                                          <li class="listitem">
+                                             <p>Asia Pacific (Sydney) Region â 5 </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p>Asia Pacific (Tokyo) Region â 5</p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    
+                                    
+                                 </td>
+                                 
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of concurrent stored video jobs per account</td>
+                                 
+                                 <td>20</td>
+                                 
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of streaming video stream processors per account that can simultaneously
+                                    exist       
+                                    
+                                 </td>
+                                 
+                                 <td>In each region that Amazon Rekognition supports â 10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 
+                                 <td>
+                                    <p>Transactions per second per account for all streaming video operations:</p>   
+                                    
+                                    <div class="itemizedlist">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       <ul class="itemizedlist" type="disc">
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_CreateStreamProcessor.html" target="_blank">CreateStreamProcessor</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_DeleteStreamProcessor.html" target="_blank">DeleteStreamProcessor</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_DescribeStreamProcessor.html" target="_blank">DescribeStreamProcessor</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_ListStreamProcessors.html" target="_blank">ListStreamProcessors</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_StartStreamProcessor.html" target="_blank">StartStreamProcessor</a></p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_StopStreamProcessor.html" target="_blank">StopStreamProcessor</a></p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    
+                                 </td>
+                                 
+                                 <td>In each region that Amazon Rekognition supports â 1</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     <p>For more information about Amazon Rekognition limits, including limits that can't
+                        be increased, see
+                        <a href="http://docs.aws.amazon.com/rekognition/latest/dg/limits.html" target="_blank">Amazon Rekognition Limits</a>.
                      </p>
+                     
+                     
+                     
+                     
+                     
+                     
                      
                      
                      <h2 id="limits_rds">Amazon Relational Database Service (Amazon RDS) Limits</h2>

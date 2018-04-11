@@ -1,11 +1,10 @@
 ::: {#main-content}
 ::: {#main-col-body}
-+-----------------------------------------------------------------------+
-| ::: {.breadcrumb}                                                     |
-| [AWS Documentation](http://aws.amazon.com/documentation) Â» [General  |
-| Reference](index.html) Â» [AWS Service Limits]{.breadcrumb}           |
-| :::                                                                   |
-+-----------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+| ::: {.breadcrumb}                                                                                                                |
+| [AWS Documentation](http://aws.amazon.com/documentation) Â» [General Reference](index.html) Â» [AWS Service Limits]{.breadcrumb} |
+| :::                                                                                                                              |
++----------------------------------------------------------------------------------------------------------------------------------+
 
 AWS Service Limits {#aws_service_limits .topictitle}
 ==================
@@ -228,27 +227,25 @@ AWS Cloud9 Limits {#limits_cloud9}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Item                              | Default Limit                     |
-+===================================+===================================+
-| Maximum number of AWS Cloud9 EC2  | ::: {.itemizedlist}               |
-| development environments          | -   20 per IAM user               |
-|                                   |                                   |
-|                                   | -   100 per AWS account           |
-|                                   | :::                               |
-+-----------------------------------+-----------------------------------+
-| Maximum number of SSH             | ::: {.itemizedlist}               |
-| environments                      | -   10 per IAM user               |
-|                                   |                                   |
-|                                   | -   100 per AWS account           |
-|                                   | :::                               |
-+-----------------------------------+-----------------------------------+
-| Maximum number of members in an   | 8                                 |
-| environment                       |                                   |
-+-----------------------------------+-----------------------------------+
-| Maximum number of environments    | 10 total per IAM user, regardless |
-| open at the same time             | of environment type (EC2 or SSH)  |
-+-----------------------------------+-----------------------------------+
++-----------------------------------------------------------+--------------------------------------------------------------------+
+| Item                                                      | Default Limit                                                      |
++===========================================================+====================================================================+
+| Maximum number of AWS Cloud9 EC2 development environments | ::: {.itemizedlist}                                                |
+|                                                           | -   20 per IAM user                                                |
+|                                                           |                                                                    |
+|                                                           | -   100 per AWS account                                            |
+|                                                           | :::                                                                |
++-----------------------------------------------------------+--------------------------------------------------------------------+
+| Maximum number of SSH environments                        | ::: {.itemizedlist}                                                |
+|                                                           | -   10 per IAM user                                                |
+|                                                           |                                                                    |
+|                                                           | -   100 per AWS account                                            |
+|                                                           | :::                                                                |
++-----------------------------------------------------------+--------------------------------------------------------------------+
+| Maximum number of members in an environment               | 8                                                                  |
++-----------------------------------------------------------+--------------------------------------------------------------------+
+| Maximum number of environments open at the same time      | 10 total per IAM user, regardless of environment type (EC2 or SSH) |
++-----------------------------------------------------------+--------------------------------------------------------------------+
 :::
 :::
 
@@ -277,67 +274,40 @@ Amazon CloudFront Limits {#limits_cloudfront}
 **General Limits**
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Data transfer rate per            | 40 Gbps                           |
-| distribution                      |                                   |
-+-----------------------------------+-----------------------------------+
-| Requests per second per           | 100,000                           |
-| distribution                      |                                   |
-+-----------------------------------+-----------------------------------+
-| Web distributions per account     | 200                               |
-+-----------------------------------+-----------------------------------+
-| RTMP distributions per account    | 100                               |
-+-----------------------------------+-----------------------------------+
-| Alternate domain names (CNAMEs)   | 100                               |
-| per distribution                  |                                   |
-+-----------------------------------+-----------------------------------+
-| Origins per distribution          | 25                                |
-+-----------------------------------+-----------------------------------+
-| Cache behaviors per distribution  | 25                                |
-+-----------------------------------+-----------------------------------+
-| Whitelisted headers per cache     | 10                                |
-| behavior                          |                                   |
-+-----------------------------------+-----------------------------------+
-| Whitelisted cookies per cache     | 10                                |
-| behavior                          |                                   |
-+-----------------------------------+-----------------------------------+
-| SSL certificates per account when | 2                                 |
-| serving HTTPS requests using      |                                   |
-| dedicated IP addresses (no limit  |                                   |
-| when serving HTTPS requests using |                                   |
-| SNI)                              |                                   |
-+-----------------------------------+-----------------------------------+
-| Custom headers that you can have  | 10 nameâ€"value pairs             |
-| Amazon CloudFront forward to the  |                                   |
-| origin                            |                                   |
-+-----------------------------------+-----------------------------------+
-| Whitelisted query strings per     | For more information, see         |
-| cache behavior                    | [Configuring CloudFront to Cache  |
-|                                   | Based on Query String             |
-|                                   | Parameters](http://docs.aws.amazo |
-|                                   | n.com/AmazonCloudFront/latest/Dev |
-|                                   | eloperGuide/QueryStringParameters |
-|                                   | .html)                            |
-|                                   | in the *Amazon CloudFront         |
-|                                   | Developer Guide*.                 |
-+-----------------------------------+-----------------------------------+
-| Response timeout per origin       | For more information, see         |
-|                                   | [Response                         |
-|                                   | Timeout](http://docs.aws.amazon.c |
-|                                   | om/AmazonCloudFront/latest/Develo |
-|                                   | perGuide/RequestAndResponseBehavi |
-|                                   | orCustomOrigin.html#request-custo |
-|                                   | m-request-timeout)                |
-|                                   | in the *Amazon CloudFront         |
-|                                   | Developer Guide*.                 |
-+-----------------------------------+-----------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                                                                                                                               | Default Limit                                                                                                                                                                                                                          |
++========================================================================================================================================+========================================================================================================================================================================================================================================+
+| Data transfer rate per distribution                                                                                                    | 40 Gbps                                                                                                                                                                                                                                |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Requests per second per distribution                                                                                                   | 100,000                                                                                                                                                                                                                                |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Web distributions per account                                                                                                          | 200                                                                                                                                                                                                                                    |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| RTMP distributions per account                                                                                                         | 100                                                                                                                                                                                                                                    |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Alternate domain names (CNAMEs) per distribution                                                                                       | 100                                                                                                                                                                                                                                    |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Origins per distribution                                                                                                               | 25                                                                                                                                                                                                                                     |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Cache behaviors per distribution                                                                                                       | 25                                                                                                                                                                                                                                     |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Whitelisted headers per cache behavior                                                                                                 | 10                                                                                                                                                                                                                                     |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Whitelisted cookies per cache behavior                                                                                                 | 10                                                                                                                                                                                                                                     |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SSL certificates per account when serving HTTPS requests using dedicated IP addresses (no limit when serving HTTPS requests using SNI) | 2                                                                                                                                                                                                                                      |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Custom headers that you can have Amazon CloudFront forward to the origin                                                               | 10 nameâ€"value pairs                                                                                                                                                                                                                  |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Whitelisted query strings per cache behavior                                                                                           | For more information, see [Configuring CloudFront to Cache Based on Query String Parameters](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/QueryStringParameters.html) in the *Amazon CloudFront Developer Guide*. |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Response timeout per origin                                                                                                            | For more information, see [Response Timeout](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout) in the *Amazon CloudFront Developer Guide*. |
++----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
 ::: {.table}
-**Lambda@Edge Limits**
+**Lambda\@Edge Limits**
 
 ::: {.table-contents}
   Resource                                                         Default Limit
@@ -405,127 +375,37 @@ Amazon CloudWatch Limits {#limits_cloudwatch}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------+-----------------------+-----------------------+
-| Resource              | Default Limit         | Comments              |
-+=======================+=======================+=======================+
-| Alarms                | 10 per month per      | For the 5000 per      |
-|                       | customer for free.    | region per account    |
-|                       | 5000 per region per   | limit, you can        |
-|                       | account.              | [request a limit      |
-|                       |                       | increase](https://con |
-|                       |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-ama |
-|                       |                       | zon-cloudwatch).      |
-+-----------------------+-----------------------+-----------------------+
-| [DescribeAlarms](http | 9 transactions per    | The maximum number of |
-| ://docs.aws.amazon.co | second (TPS)          | operation requests    |
-| m/AmazonCloudWatch/la |                       | you can make per      |
-| test/APIReference/API |                       | second without being  |
-| _DescribeAlarms.html) |                       | throttled.            |
-|                       |                       |                       |
-|                       |                       | You can [request a    |
-|                       |                       | limit                 |
-|                       |                       | increase](https://con |
-|                       |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-ama |
-|                       |                       | zon-cloudwatch).      |
-+-----------------------+-----------------------+-----------------------+
-| [GetMetricData](http: | 50 transactions per   | The maximum number of |
-| //docs.aws.amazon.com | second (TPS).         | operation requests    |
-| /AmazonCloudWatch/lat |                       | you can make per      |
-| est/APIReference/API_ | 180,000 Datapoints    | second without being  |
-| GetMetricData.html)   | Per Second (DPS) if   | throttled.            |
-|                       | the                   |                       |
-|                       | `StartTime`{.code}    | This is the maximum   |
-|                       | used in the API       | number of datapoints  |
-|                       | request is less than  | you can request per   |
-|                       | or equal to three     | second using one or   |
-|                       | hours from current    | more API calls        |
-|                       | time. 90,000 DPS if   | without being         |
-|                       | the                   | throttled.            |
-|                       | `StartTime`{.code} is |                       |
-|                       | more than three hours | You can [request a    |
-|                       | from current time.    | limit                 |
-|                       |                       | increase](https://con |
-|                       |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-ama |
-|                       |                       | zon-cloudwatch)       |
-|                       |                       | for both of these     |
-|                       |                       | limits.               |
-+-----------------------+-----------------------+-----------------------+
-| [GetMetricStatistics] | 400 transactions per  | The maximum number of |
-| (http://docs.aws.amaz | second (TPS)          | operation requests    |
-| on.com/AmazonCloudWat |                       | you can make per      |
-| ch/latest/APIReferenc |                       | second without being  |
-| e/API_GetMetricStatis |                       | throttled.            |
-| tics.html)            |                       |                       |
-|                       |                       | You can [request a    |
-|                       |                       | limit                 |
-|                       |                       | increase](https://con |
-|                       |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-ama |
-|                       |                       | zon-cloudwatch).      |
-+-----------------------+-----------------------+-----------------------+
-| [ListMetrics](http:// | 25 transactions per   | The maximum number of |
-| docs.aws.amazon.com/A | second (TPS)          | operation requests    |
-| mazonCloudWatch/lates |                       | you can make per      |
-| t/APIReference/API_Li |                       | second without being  |
-| stMetrics.html)       |                       | throttled.            |
-|                       |                       |                       |
-|                       |                       | You can [request a    |
-|                       |                       | limit                 |
-|                       |                       | increase](https://con |
-|                       |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-ama |
-|                       |                       | zon-cloudwatch).      |
-+-----------------------+-----------------------+-----------------------+
-| [PutMetricAlarm](http | 3 transactions per    | The maximum number of |
-| ://docs.aws.amazon.co | second (TPS)          | operation requests    |
-| m/AmazonCloudWatch/la |                       | you can make per      |
-| test/APIReference/API |                       | second without being  |
-| _PutMetricAlarm.html) |                       | throttled.            |
-|                       |                       |                       |
-|                       |                       | You can [request a    |
-|                       |                       | limit                 |
-|                       |                       | increase](https://con |
-|                       |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-ama |
-|                       |                       | zon-cloudwatch).      |
-+-----------------------+-----------------------+-----------------------+
-| [PutMetricData](http: | 150 transactions per  | The maximum number of |
-| //docs.aws.amazon.com | second (TPS)          | operation requests    |
-| /AmazonCloudWatch/lat |                       | you can make per      |
-| est/APIReference/API_ |                       | second without being  |
-| PutMetricData.html)   |                       | throttled.            |
-|                       |                       |                       |
-|                       |                       | You can [request a    |
-|                       |                       | limit                 |
-|                       |                       | increase](https://con |
-|                       |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-ama |
-|                       |                       | zon-cloudwatch).      |
-+-----------------------+-----------------------+-----------------------+
++---------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                                                                                                            | Default Limit                                                                                                                                                                                                                  | Comments                                                                                                                                                                                                           |
++=====================================================================================================================+================================================================================================================================================================================================================================+====================================================================================================================================================================================================================+
+| Alarms                                                                                                              | 10 per month per customer for free. 5000 per region per account.                                                                                                                                                               | For the 5000 per region per account limit, you can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-amazon-cloudwatch). |
++---------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [DescribeAlarms](http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeAlarms.html)           | 9 transactions per second (TPS)                                                                                                                                                                                                | The maximum number of operation requests you can make per second without being throttled.                                                                                                                          |
+|                                                                                                                     |                                                                                                                                                                                                                                |                                                                                                                                                                                                                    |
+|                                                                                                                     |                                                                                                                                                                                                                                | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-amazon-cloudwatch).                                            |
++---------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [GetMetricData](http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html)             | 50 transactions per second (TPS).                                                                                                                                                                                              | The maximum number of operation requests you can make per second without being throttled.                                                                                                                          |
+|                                                                                                                     |                                                                                                                                                                                                                                |                                                                                                                                                                                                                    |
+|                                                                                                                     | 180,000 Datapoints Per Second (DPS) if the `StartTime`{.code} used in the API request is less than or equal to three hours from current time. 90,000 DPS if the `StartTime`{.code} is more than three hours from current time. | This is the maximum number of datapoints you can request per second using one or more API calls without being throttled.                                                                                           |
+|                                                                                                                     |                                                                                                                                                                                                                                |                                                                                                                                                                                                                    |
+|                                                                                                                     |                                                                                                                                                                                                                                | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-amazon-cloudwatch) for both of these limits.                   |
++---------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [GetMetricStatistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html) | 400 transactions per second (TPS)                                                                                                                                                                                              | The maximum number of operation requests you can make per second without being throttled.                                                                                                                          |
+|                                                                                                                     |                                                                                                                                                                                                                                |                                                                                                                                                                                                                    |
+|                                                                                                                     |                                                                                                                                                                                                                                | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-amazon-cloudwatch).                                            |
++---------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [ListMetrics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)                 | 25 transactions per second (TPS)                                                                                                                                                                                               | The maximum number of operation requests you can make per second without being throttled.                                                                                                                          |
+|                                                                                                                     |                                                                                                                                                                                                                                |                                                                                                                                                                                                                    |
+|                                                                                                                     |                                                                                                                                                                                                                                | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-amazon-cloudwatch).                                            |
++---------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [PutMetricAlarm](http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricAlarm.html)           | 3 transactions per second (TPS)                                                                                                                                                                                                | The maximum number of operation requests you can make per second without being throttled.                                                                                                                          |
+|                                                                                                                     |                                                                                                                                                                                                                                |                                                                                                                                                                                                                    |
+|                                                                                                                     |                                                                                                                                                                                                                                | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-amazon-cloudwatch).                                            |
++---------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [PutMetricData](http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricData.html)             | 150 transactions per second (TPS)                                                                                                                                                                                              | The maximum number of operation requests you can make per second without being throttled.                                                                                                                          |
+|                                                                                                                     |                                                                                                                                                                                                                                |                                                                                                                                                                                                                    |
+|                                                                                                                     |                                                                                                                                                                                                                                | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-amazon-cloudwatch).                                            |
++---------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -537,70 +417,17 @@ Amazon CloudWatch Events Limits {#limits_cloudwatch_events}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------+-----------------------+-----------------------+
-| Resource              | Default Limit         | Comments              |
-+=======================+=======================+=======================+
-| Invocations           | 750 per second (after | You can [request a    |
-|                       | 750 invocations, the  | limit                 |
-|                       | invocations are       | increase](https://con |
-|                       | throttled; that is,   | sole.aws.amazon.com/s |
-|                       | they still happen but | upport/home#/case/cre |
-|                       | they are delayed). If | ate?issueType=service |
-|                       | the invocation of a   | -limit-increase&limit |
-|                       | target fails due to a | Type=service-code-clo |
-|                       | problem with the      | udwatch-events).      |
-|                       | target service,       |                       |
-|                       | account throttling,   |                       |
-|                       | etc., new attempts    |                       |
-|                       | are made for up to 24 |                       |
-|                       | hours for a specific  |                       |
-|                       | invocation.           |                       |
-+-----------------------+-----------------------+-----------------------+
-| Rules                 | 100 per region per    | You can [request a    |
-|                       | account               | limit                 |
-|                       |                       | increase](https://con |
-|                       |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-clo |
-|                       |                       | udwatch-events).      |
-|                       |                       |                       |
-|                       |                       | Before requesting a   |
-|                       |                       | limit increase,       |
-|                       |                       | examine your rules.   |
-|                       |                       | You may have multiple |
-|                       |                       | rules each matching   |
-|                       |                       | to very specific      |
-|                       |                       | events. Consider      |
-|                       |                       | broadening their      |
-|                       |                       | scope by using fewer  |
-|                       |                       | identifiers in your   |
-|                       |                       | [Events and Event     |
-|                       |                       | Patterns](http://docs |
-|                       |                       | .aws.amazon.com/Amazo |
-|                       |                       | nCloudWatch/latest/De |
-|                       |                       | veloperGuide/CloudWat |
-|                       |                       | chEventsandEventPatte |
-|                       |                       | rns.html).            |
-|                       |                       | In addition, a rule   |
-|                       |                       | can invoke several    |
-|                       |                       | targets each time it  |
-|                       |                       | matches an event.     |
-|                       |                       | Consider adding more  |
-|                       |                       | targets to your       |
-|                       |                       | rules.                |
-+-----------------------+-----------------------+-----------------------+
-| [PutEvents](http://do | 10 entries per        | You can [request a    |
-| cs.aws.amazon.com/Ama | request and 400       | limit                 |
-| zonCloudWatchEvents/l | requests per second.  | increase](https://con |
-| atest/APIReference/AP | Each request can be   | sole.aws.amazon.com/s |
-| I_PutEvents.html)     | up to 256 KB in size. | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-clo |
-|                       |                       | udwatch-events).      |
-+-----------------------+-----------------------+-----------------------+
++-------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                                                                                              | Default Limit                                                                                                                                                                                                                                                                                       | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
++=======================================================================================================+=====================================================================================================================================================================================================================================================================================================+===============================================================================================================================================================================================================================================================================================================================================================================================================================================================+
+| Invocations                                                                                           | 750 per second (after 750 invocations, the invocations are throttled; that is, they still happen but they are delayed). If the invocation of a target fails due to a problem with the target service, account throttling, etc., new attempts are made for up to 24 hours for a specific invocation. | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-cloudwatch-events).                                                                                                                                                                                                                                                                                       |
++-------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Rules                                                                                                 | 100 per region per account                                                                                                                                                                                                                                                                          | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-cloudwatch-events).                                                                                                                                                                                                                                                                                       |
+|                                                                                                       |                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                                                                                                       |                                                                                                                                                                                                                                                                                                     | Before requesting a limit increase, examine your rules. You may have multiple rules each matching to very specific events. Consider broadening their scope by using fewer identifiers in your [Events and Event Patterns](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CloudWatchEventsandEventPatterns.html). In addition, a rule can invoke several targets each time it matches an event. Consider adding more targets to your rules. |
++-------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [PutEvents](http://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_PutEvents.html) | 10 entries per request and 400 requests per second. Each request can be up to 256 KB in size.                                                                                                                                                                                                       | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-cloudwatch-events).                                                                                                                                                                                                                                                                                       |
++-------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -612,84 +439,25 @@ Amazon CloudWatch Logs Limits {#limits_cloudwatch_logs}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------+-----------------------+-----------------------+
-| Resource              | Default Limit         | Comments              |
-+=======================+=======================+=======================+
-| [CreateLogGroup](http | 5000 log              | If you exceed your    |
-| ://docs.aws.amazon.co | groups/account/Region | log group limit, you  |
-| m/AmazonCloudWatchLog |                       | get a                 |
-| s/latest/APIReference |                       | `ResourceLimitExceede |
-| /API_CreateLogGroup.h |                       | d`{.code}             |
-| tml)                  |                       | exception.            |
-|                       |                       |                       |
-|                       |                       | You can [request a    |
-|                       |                       | limit                 |
-|                       |                       | increase](https://con |
-|                       |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-clo |
-|                       |                       | udwatch-logs).        |
-+-----------------------+-----------------------+-----------------------+
-| [DescribeLogStreams]( | 5 transactions per    | If you experience     |
-| http://docs.aws.amazo | second                | frequent throttling,  |
-| n.com/AmazonCloudWatc | (TPS)/account/Region  | you can [request a    |
-| hLogs/latest/APIRefer |                       | limit                 |
-| ence/API_DescribeLogS |                       | increase](https://con |
-| treams.html)          |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-clo |
-|                       |                       | udwatch-logs).        |
-+-----------------------+-----------------------+-----------------------+
-| [FilterLogEvents](htt | 5 transactions per    | This limit can be     |
-| p://docs.aws.amazon.c | second                | changed only in       |
-| om/AmazonCloudWatchLo | (TPS)/account/region  | special               |
-| gs/latest/APIReferenc |                       | circumstances. If you |
-| e/API_FilterLogEvents |                       | experience frequent   |
-| .html)                |                       | throttling, contact   |
-|                       |                       | AWS Support.          |
-+-----------------------+-----------------------+-----------------------+
-| [GetLogEvents](http:/ | 10 transactions per   | We recommend          |
-| /docs.aws.amazon.com/ | second                | subscriptions if you  |
-| AmazonCloudWatchLogs/ | (TPS)/account/Region  | are continuously      |
-| latest/APIReference/A |                       | processing new data.  |
-| PI_GetLogEvents.html) |                       | If you need           |
-|                       |                       | historical data, we   |
-|                       |                       | recommend exporting   |
-|                       |                       | your data to Amazon   |
-|                       |                       | S3. This limit can be |
-|                       |                       | changed only in       |
-|                       |                       | special               |
-|                       |                       | circumstances. If you |
-|                       |                       | experience frequent   |
-|                       |                       | throttling, contact   |
-|                       |                       | AWS Support.          |
-+-----------------------+-----------------------+-----------------------+
-| [PutLogEvents](http:/ | 1500 transactions per | You can [request a    |
-| /docs.aws.amazon.com/ | second per account    | limit                 |
-| AmazonCloudWatchLogs/ | per Region, except    | increase](https://con |
-| latest/APIReference/A | for the following     | sole.aws.amazon.com/s |
-| PI_PutLogEvents.html) | Regions where the     | upport/home#/case/cre |
-|                       | limit is 800          | ate?issueType=service |
-|                       | transactions per      | -limit-increase&limit |
-|                       | second per account    | Type=service-code-clo |
-|                       | per Region:           | udwatch-logs).        |
-|                       | ap-south-1,           |                       |
-|                       | ap-northeast-1,       | The maximum batch     |
-|                       | ap-northeast-2,       | size of a             |
-|                       | ap-southeast-1,       | PutLogEvents request  |
-|                       | ap-southeast-2,       | is 1MB.               |
-|                       | eu-central-1,         |                       |
-|                       | eu-west-2, sa-east-1, | 5 requests per second |
-|                       | us-east-2, and        | per log stream.       |
-|                       | us-west-1.            | Additional requests   |
-|                       |                       | are throttled. This   |
-|                       |                       | limit cannot be       |
-|                       |                       | changed.              |
-+-----------------------+-----------------------+-----------------------+
++-----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                                                                                                              | Default Limit                                                                                                                                                                                                                                                                                          | Comments                                                                                                                                                                                                                                                                 |
++=======================================================================================================================+========================================================================================================================================================================================================================================================================================================+==========================================================================================================================================================================================================================================================================+
+| [CreateLogGroup](http://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateLogGroup.html)         | 5000 log groups/account/Region                                                                                                                                                                                                                                                                         | If you exceed your log group limit, you get a `ResourceLimitExceeded`{.code} exception.                                                                                                                                                                                  |
+|                                                                                                                       |                                                                                                                                                                                                                                                                                                        |                                                                                                                                                                                                                                                                          |
+|                                                                                                                       |                                                                                                                                                                                                                                                                                                        | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-cloudwatch-logs).                                                                                                    |
++-----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [DescribeLogStreams](http://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeLogStreams.html) | 5 transactions per second (TPS)/account/Region                                                                                                                                                                                                                                                         | If you experience frequent throttling, you can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-cloudwatch-logs).                                                             |
++-----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [FilterLogEvents](http://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_FilterLogEvents.html)       | 5 transactions per second (TPS)/account/region                                                                                                                                                                                                                                                         | This limit can be changed only in special circumstances. If you experience frequent throttling, contact AWS Support.                                                                                                                                                     |
++-----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [GetLogEvents](http://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_GetLogEvents.html)             | 10 transactions per second (TPS)/account/Region                                                                                                                                                                                                                                                        | We recommend subscriptions if you are continuously processing new data. If you need historical data, we recommend exporting your data to Amazon S3. This limit can be changed only in special circumstances. If you experience frequent throttling, contact AWS Support. |
++-----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [PutLogEvents](http://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutLogEvents.html)             | 1500 transactions per second per account per Region, except for the following Regions where the limit is 800 transactions per second per account per Region: ap-south-1, ap-northeast-1, ap-northeast-2, ap-southeast-1, ap-southeast-2, eu-central-1, eu-west-2, sa-east-1, us-east-2, and us-west-1. | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-cloudwatch-logs).                                                                                                    |
+|                                                                                                                       |                                                                                                                                                                                                                                                                                                        |                                                                                                                                                                                                                                                                          |
+|                                                                                                                       |                                                                                                                                                                                                                                                                                                        | The maximum batch size of a PutLogEvents request is 1MB.                                                                                                                                                                                                                 |
+|                                                                                                                       |                                                                                                                                                                                                                                                                                                        |                                                                                                                                                                                                                                                                          |
+|                                                                                                                       |                                                                                                                                                                                                                                                                                                        | 5 requests per second per log stream. Additional requests are throttled. This limit cannot be changed.                                                                                                                                                                   |
++-----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -750,48 +518,35 @@ AWS CodePipeline Limits {#limits_codepipeline}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Maximum number of pipelines per   | US East (N. Virginia)             |
-| region in an AWS account          | (us-east-1): 40                   |
-|                                   |                                   |
-|                                   | US West (Oregon) (us-west-2): 60  |
-|                                   |                                   |
-|                                   | EU (Ireland) (eu-west-1): 60      |
-|                                   |                                   |
-|                                   | All other supported regions: 20   |
-+-----------------------------------+-----------------------------------+
-| Number of stages in a pipeline    | Minimum of 2, maxiÂ­mum of 10     |
-+-----------------------------------+-----------------------------------+
-| Number of actions in a stage      | Minimum of 1, maxiÂ­mum of 20     |
-+-----------------------------------+-----------------------------------+
-| Maximum number of parallel        | Maximum of 10                     |
-| actions in a stage                |                                   |
-+-----------------------------------+-----------------------------------+
-| Maximum number of sequential      | Maximum of 10                     |
-| actions in a stage                |                                   |
-+-----------------------------------+-----------------------------------+
-| Number of custom actions per      | 50                                |
-| region in an AWS account          |                                   |
-+-----------------------------------+-----------------------------------+
-| Maximum size of artifacts in a    | Artifacts stored in Amazon S3     |
-| source stage                      | buckets: 2 GB                     |
-|                                   |                                   |
-|                                   | Artifacts stored in AWS           |
-|                                   | CodeCommit or GitHub              |
-|                                   | repositories: 1 GB                |
-|                                   |                                   |
-|                                   | Exception: If you are using       |
-|                                   | Amazon EBS to deploy              |
-|                                   | applications, the maximum         |
-|                                   | artifact size is always 512 MB.   |
-|                                   |                                   |
-|                                   | Exception: If you are using AWS   |
-|                                   | CloudFormation to deploy          |
-|                                   | applications, the maximum         |
-|                                   | artifact size is always 256 MB.   |
-+-----------------------------------+-----------------------------------+
++----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Resource                                                 | Default Limit                                                                                                      |
++==========================================================+====================================================================================================================+
+| Maximum number of pipelines per region in an AWS account | US East (N. Virginia) (us-east-1): 40                                                                              |
+|                                                          |                                                                                                                    |
+|                                                          | US West (Oregon) (us-west-2): 60                                                                                   |
+|                                                          |                                                                                                                    |
+|                                                          | EU (Ireland) (eu-west-1): 60                                                                                       |
+|                                                          |                                                                                                                    |
+|                                                          | All other supported regions: 20                                                                                    |
++----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Number of stages in a pipeline                           | Minimum of 2, maxiÂ­mum of 10                                                                                      |
++----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Number of actions in a stage                             | Minimum of 1, maxiÂ­mum of 20                                                                                      |
++----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Maximum number of parallel actions in a stage            | Maximum of 10                                                                                                      |
++----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Maximum number of sequential actions in a stage          | Maximum of 10                                                                                                      |
++----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Number of custom actions per region in an AWS account    | 50                                                                                                                 |
++----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Maximum size of artifacts in a source stage              | Artifacts stored in Amazon S3 buckets: 2 GB                                                                        |
+|                                                          |                                                                                                                    |
+|                                                          | Artifacts stored in AWS CodeCommit or GitHub repositories: 1 GB                                                    |
+|                                                          |                                                                                                                    |
+|                                                          | Exception: If you are using Amazon EBS to deploy applications, the maximum artifact size is always 512 MB.         |
+|                                                          |                                                                                                                    |
+|                                                          | Exception: If you are using AWS CloudFormation to deploy applications, the maximum artifact size is always 256 MB. |
++----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -873,19 +628,11 @@ AWS Config Limits {#limits_config}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------+-----------------------+-----------------------+
-| Resource              | Default Limit         | Notes                 |
-+=======================+=======================+=======================+
-| Number of AWS Config  | 50                    | You can [request a    |
-| rules per region in   |                       | limit                 |
-| your account          |                       | increase](https://con |
-|                       |                       | sole.aws.amazon.com/s |
-|                       |                       | upport/home#/case/cre |
-|                       |                       | ate?issueType=service |
-|                       |                       | -limit-increase&limit |
-|                       |                       | Type=service-code-con |
-|                       |                       | fig-service).         |
-+-----------------------+-----------------------+-----------------------+
++-------------------------------------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                                              | Default Limit | Notes                                                                                                                                                                |
++=======================================================+===============+======================================================================================================================================================================+
+| Number of AWS Config rules per region in your account | 50            | You can [request a limit increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-config-service). |
++-------------------------------------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -894,43 +641,41 @@ Amazon Connect Limits {#limits_amazon_connect}
 
 ::: {.table}
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Item                              | Default limit                     |
-+===================================+===================================+
-| Amazon Connect instances per      | 2                                 |
-| account                           |                                   |
-+-----------------------------------+-----------------------------------+
-| Users per instance                | 500                               |
-+-----------------------------------+-----------------------------------+
-| Phone numbers per instance        | 10                                |
-+-----------------------------------+-----------------------------------+
-| Queues per instance               | 50                                |
-+-----------------------------------+-----------------------------------+
-| Queues per routing profile        | 50                                |
-+-----------------------------------+-----------------------------------+
-| Routing profiles per instance     | 100                               |
-+-----------------------------------+-----------------------------------+
-| Hours of operation per instance   | 100                               |
-+-----------------------------------+-----------------------------------+
-| Quick connects per instance       | 100                               |
-+-----------------------------------+-----------------------------------+
-| Prompts per instance              | 500                               |
-+-----------------------------------+-----------------------------------+
-| Agent status per instance         | 50                                |
-+-----------------------------------+-----------------------------------+
-| Security profiles per instance    | 100                               |
-+-----------------------------------+-----------------------------------+
-| Contact flows per instance        | 100                               |
-+-----------------------------------+-----------------------------------+
-| Groups per level                  | 50                                |
-+-----------------------------------+-----------------------------------+
-| Reports per instance              | 500                               |
-+-----------------------------------+-----------------------------------+
-| Scheduled reports per instance    | 50                                |
-+-----------------------------------+-----------------------------------+
-| Concurrent active calls per       | 10                                |
-| instance                          |                                   |
-+-----------------------------------+-----------------------------------+
++--------------------------------------+---------------+
+| Item                                 | Default limit |
++======================================+===============+
+| Amazon Connect instances per account | 2             |
++--------------------------------------+---------------+
+| Users per instance                   | 500           |
++--------------------------------------+---------------+
+| Phone numbers per instance           | 10            |
++--------------------------------------+---------------+
+| Queues per instance                  | 50            |
++--------------------------------------+---------------+
+| Queues per routing profile           | 50            |
++--------------------------------------+---------------+
+| Routing profiles per instance        | 100           |
++--------------------------------------+---------------+
+| Hours of operation per instance      | 100           |
++--------------------------------------+---------------+
+| Quick connects per instance          | 100           |
++--------------------------------------+---------------+
+| Prompts per instance                 | 500           |
++--------------------------------------+---------------+
+| Agent status per instance            | 50            |
++--------------------------------------+---------------+
+| Security profiles per instance       | 100           |
++--------------------------------------+---------------+
+| Contact flows per instance           | 100           |
++--------------------------------------+---------------+
+| Groups per level                     | 50            |
++--------------------------------------+---------------+
+| Reports per instance                 | 500           |
++--------------------------------------+---------------+
+| Scheduled reports per instance       | 50            |
++--------------------------------------+---------------+
+| Concurrent active calls per instance | 10            |
++--------------------------------------+---------------+
 :::
 :::
 
@@ -986,26 +731,19 @@ AWS Device Farm Limits {#limits_devicefarm}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------+-----------------------+-----------------------+
-| Resource              | Default Limit         | Comments              |
-+=======================+=======================+=======================+
-| App file size you can | 4 GB                  |                       |
-| upload                |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| Number of devices     | 5                     | This limit can be     |
-| that AWS Device Farm  |                       | increased to 100 upon |
-| can test during a run |                       | request.              |
-+-----------------------+-----------------------+-----------------------+
-| Number of devices you | None                  |                       |
-| can include in a test |                       |                       |
-| run                   |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| Number of runs you    | None                  |                       |
-| can schedule          |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| Duration of a remote  | 60 minutes            |                       |
-| access session        |                       |                       |
-+-----------------------+-----------------------+-----------------------+
++--------------------------------------------------------------+---------------+--------------------------------------------------+
+| Resource                                                     | Default Limit | Comments                                         |
++==============================================================+===============+==================================================+
+| App file size you can upload                                 | 4 GB          |                                                  |
++--------------------------------------------------------------+---------------+--------------------------------------------------+
+| Number of devices that AWS Device Farm can test during a run | 5             | This limit can be increased to 100 upon request. |
++--------------------------------------------------------------+---------------+--------------------------------------------------+
+| Number of devices you can include in a test run              | None          |                                                  |
++--------------------------------------------------------------+---------------+--------------------------------------------------+
+| Number of runs you can schedule                              | None          |                                                  |
++--------------------------------------------------------------+---------------+--------------------------------------------------+
+| Duration of a remote access session                          | 60 minutes    |                                                  |
++--------------------------------------------------------------+---------------+--------------------------------------------------+
 :::
 :::
 
@@ -1038,31 +776,27 @@ Amazon DynamoDB Limits {#limits_dynamodb}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| US East (N. Virginia) Region:     | 40,000 read capacity units and    |
-|                                   | 40,000 write capacity units       |
-| Maximum capacity units per table  |                                   |
-| or global secondary index         |                                   |
-+-----------------------------------+-----------------------------------+
-| US East (N. Virginia) Region:     | 80,000 read capacity units and    |
-|                                   | 80,000 write capacity units       |
-| Maximum capacity units per        |                                   |
-| account                           |                                   |
-+-----------------------------------+-----------------------------------+
-| All other regions:                | 10,000 read capacity units and    |
-|                                   | 10,000 write capacity units       |
-| Maximum capacity units per table  |                                   |
-| or global secondary index         |                                   |
-+-----------------------------------+-----------------------------------+
-| All other regions:                | 20,000 read capacity units and    |
-|                                   | 20,000 write capacity units       |
-| Maximum capacity units per        |                                   |
-| account                           |                                   |
-+-----------------------------------+-----------------------------------+
-| Maximum number of tables          | 256                               |
-+-----------------------------------+-----------------------------------+
++------------------------------------------------------------+------------------------------------------------------------+
+| Resource                                                   | Default Limit                                              |
++============================================================+============================================================+
+| US East (N. Virginia) Region:                              | 40,000 read capacity units and 40,000 write capacity units |
+|                                                            |                                                            |
+| Maximum capacity units per table or global secondary index |                                                            |
++------------------------------------------------------------+------------------------------------------------------------+
+| US East (N. Virginia) Region:                              | 80,000 read capacity units and 80,000 write capacity units |
+|                                                            |                                                            |
+| Maximum capacity units per account                         |                                                            |
++------------------------------------------------------------+------------------------------------------------------------+
+| All other regions:                                         | 10,000 read capacity units and 10,000 write capacity units |
+|                                                            |                                                            |
+| Maximum capacity units per table or global secondary index |                                                            |
++------------------------------------------------------------+------------------------------------------------------------+
+| All other regions:                                         | 20,000 read capacity units and 20,000 write capacity units |
+|                                                            |                                                            |
+| Maximum capacity units per account                         |                                                            |
++------------------------------------------------------------+------------------------------------------------------------+
+| Maximum number of tables                                   | 256                                                        |
++------------------------------------------------------------+------------------------------------------------------------+
 :::
 :::
 
@@ -1088,38 +822,27 @@ Amazon Elastic Block Store (Amazon EBS) Limits {#limits_ebs}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Number of EBS snapshots           | 10,000                            |
-+-----------------------------------+-----------------------------------+
-| Concurrent snapshots allowed for  | 5 for `io1`{.code}, `gp2`{.code}, |
-| a single volume                   | `magnetic`{.code}; 1 for          |
-|                                   | `st1`{.code}, `sc1`{.code}        |
-+-----------------------------------+-----------------------------------+
-| Concurrent snapshot copy requests | 5                                 |
-| to a single destination region    |                                   |
-+-----------------------------------+-----------------------------------+
-| Total volume storage of General   | 100 TiB                           |
-| Purpose SSD (`gp2`{.code})        |                                   |
-| volumes                           |                                   |
-+-----------------------------------+-----------------------------------+
-| Total volume storage of           | 100 TiB                           |
-| Provisioned IOPS SSD              |                                   |
-| (`io1`{.code}) volumes            |                                   |
-+-----------------------------------+-----------------------------------+
-| Total volume storage of           | 300 TiB                           |
-| Throughput Optimized HDD          |                                   |
-| (`st1`{.code})                    |                                   |
-+-----------------------------------+-----------------------------------+
-| Total volume storage of Cold HDD  | 300 TiB                           |
-| (`sc1`{.code})                    |                                   |
-+-----------------------------------+-----------------------------------+
-| Total volume storage of Magnetic  | 20 TiB                            |
-| volumes (`standard`{.code})       |                                   |
-+-----------------------------------+-----------------------------------+
-| Total provisioned IOPS            | 200,000                           |
-+-----------------------------------+-----------------------------------+
++---------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+| Resource                                                            | Default Limit                                                                         |
++=====================================================================+=======================================================================================+
+| Number of EBS snapshots                                             | 10,000                                                                                |
++---------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+| Concurrent snapshots allowed for a single volume                    | 5 for `io1`{.code}, `gp2`{.code}, `magnetic`{.code}; 1 for `st1`{.code}, `sc1`{.code} |
++---------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+| Concurrent snapshot copy requests to a single destination region    | 5                                                                                     |
++---------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+| Total volume storage of General Purpose SSD (`gp2`{.code}) volumes  | 100 TiB                                                                               |
++---------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+| Total volume storage of Provisioned IOPS SSD (`io1`{.code}) volumes | 100 TiB                                                                               |
++---------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+| Total volume storage of Throughput Optimized HDD (`st1`{.code})     | 300 TiB                                                                               |
++---------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+| Total volume storage of Cold HDD (`sc1`{.code})                     | 300 TiB                                                                               |
++---------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+| Total volume storage of Magnetic volumes (`standard`{.code})        | 20 TiB                                                                                |
++---------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+| Total provisioned IOPS                                              | 200,000                                                                               |
++---------------------------------------------------------------------+---------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -1194,27 +917,23 @@ Following are the limits for Amazon EFS that can be increased by contacting AWS 
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Total throughput per file system  | US East (Ohio) Region â€" 3 GB/s  |
-| for all connected clients         |                                   |
-|                                   | US East (N. Virginia) Region â€"  |
-|                                   | 3 GB/s                            |
-|                                   |                                   |
-|                                   | US West (N. California) Region    |
-|                                   | â€" 1 GB/s                        |
-|                                   |                                   |
-|                                   | US West (Oregon) Region â€" 3     |
-|                                   | GB/s                              |
-|                                   |                                   |
-|                                   | EU (Frankfurt) Region â€" 1 GB/s  |
-|                                   |                                   |
-|                                   | EU (Ireland) Region â€" 3 GB/s    |
-|                                   |                                   |
-|                                   | Asia Pacific (Sydney) Region â€"  |
-|                                   | 3 GB/s                            |
-+-----------------------------------+-----------------------------------+
++------------------------------------------------------------+-------------------------------------------+
+| Resource                                                   | Default Limit                             |
++============================================================+===========================================+
+| Total throughput per file system for all connected clients | US East (Ohio) Region â€" 3 GB/s          |
+|                                                            |                                           |
+|                                                            | US East (N. Virginia) Region â€" 3 GB/s   |
+|                                                            |                                           |
+|                                                            | US West (N. California) Region â€" 1 GB/s |
+|                                                            |                                           |
+|                                                            | US West (Oregon) Region â€" 3 GB/s        |
+|                                                            |                                           |
+|                                                            | EU (Frankfurt) Region â€" 1 GB/s          |
+|                                                            |                                           |
+|                                                            | EU (Ireland) Region â€" 3 GB/s            |
+|                                                            |                                           |
+|                                                            | Asia Pacific (Sydney) Region â€" 3 GB/s   |
++------------------------------------------------------------+-------------------------------------------+
 :::
 :::
 
@@ -1285,35 +1004,29 @@ Amazon Elastic Transcoder Limits {#limits_elastictranscoder}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Pipelines per region              | 4                                 |
-+-----------------------------------+-----------------------------------+
-| User-defined presets              | 50                                |
-+-----------------------------------+-----------------------------------+
-| Maximum number of jobs processed  | US East (N. Virginia) Region â€"  |
-| simultaneously by each pipeline   | 20                                |
-|                                   |                                   |
-|                                   | US West (N. California) Region    |
-|                                   | â€" 12                            |
-|                                   |                                   |
-|                                   | US West (Oregon) Region â€" 20    |
-|                                   |                                   |
-|                                   | Asia Pacific (Mumbai) Region â€"  |
-|                                   | 12                                |
-|                                   |                                   |
-|                                   | Asia Pacific (Singapore) Region   |
-|                                   | â€" 12                            |
-|                                   |                                   |
-|                                   | Asia Pacific (Sydney) Region â€"  |
-|                                   | 12                                |
-|                                   |                                   |
-|                                   | Asia Pacific (Tokyo) Region â€"   |
-|                                   | 12                                |
-|                                   |                                   |
-|                                   | EU (Ireland) Region â€" 20        |
-+-----------------------------------+-----------------------------------+
++------------------------------------------------------------------+----------------------------------------+
+| Resource                                                         | Default Limit                          |
++==================================================================+========================================+
+| Pipelines per region                                             | 4                                      |
++------------------------------------------------------------------+----------------------------------------+
+| User-defined presets                                             | 50                                     |
++------------------------------------------------------------------+----------------------------------------+
+| Maximum number of jobs processed simultaneously by each pipeline | US East (N. Virginia) Region â€" 20    |
+|                                                                  |                                        |
+|                                                                  | US West (N. California) Region â€" 12  |
+|                                                                  |                                        |
+|                                                                  | US West (Oregon) Region â€" 20         |
+|                                                                  |                                        |
+|                                                                  | Asia Pacific (Mumbai) Region â€" 12    |
+|                                                                  |                                        |
+|                                                                  | Asia Pacific (Singapore) Region â€" 12 |
+|                                                                  |                                        |
+|                                                                  | Asia Pacific (Sydney) Region â€" 12    |
+|                                                                  |                                        |
+|                                                                  | Asia Pacific (Tokyo) Region â€" 12     |
+|                                                                  |                                        |
+|                                                                  | EU (Ireland) Region â€" 20             |
++------------------------------------------------------------------+----------------------------------------+
 :::
 :::
 
@@ -1351,24 +1064,17 @@ Amazon Elasticsearch Service Limits {#limits_es}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Number of Amazon ES instances per | 20 (except for T2 instance types, |
-| cluster                           | which have a maximum of 10).      |
-|                                   |                                   |
-|                                   | ::: {.aws-note}                   |
-|                                   | Note                              |
-|                                   |                                   |
-|                                   | The default limit is 20 instances |
-|                                   | per domain. To request an         |
-|                                   | increase up to 100 instances per  |
-|                                   | domain, create a case with the    |
-|                                   | [AWS Support                      |
-|                                   | Center](https://console.aws.amazo |
-|                                   | n.com/support/home#/).            |
-|                                   | :::                               |
-+-----------------------------------+-----------------------------------+
++-------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                                  | Default Limit                                                                                                                                                                                    |
++===========================================+==================================================================================================================================================================================================+
+| Number of Amazon ES instances per cluster | 20 (except for T2 instance types, which have a maximum of 10).                                                                                                                                   |
+|                                           |                                                                                                                                                                                                  |
+|                                           | ::: {.aws-note}                                                                                                                                                                                  |
+|                                           | Note                                                                                                                                                                                             |
+|                                           |                                                                                                                                                                                                  |
+|                                           | The default limit is 20 instances per domain. To request an increase up to 100 instances per domain, create a case with the [AWS Support Center](https://console.aws.amazon.com/support/home#/). |
+|                                           | :::                                                                                                                                                                                              |
++-------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -1379,22 +1085,17 @@ AWS Firewall Manager has default limits on the number of entities per account. Y
 
 ::: {.table}
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Firewall Manager policies per AWS | 20                                |
-| account                           |                                   |
-+-----------------------------------+-----------------------------------+
-| Rule groups per Firewall Manager  | 1                                 |
-| policy                            |                                   |
-+-----------------------------------+-----------------------------------+
-| Tags to specified include or      | 8                                 |
-| exclude per Firewall Manager      |                                   |
-| policy                            |                                   |
-+-----------------------------------+-----------------------------------+
-| Rule groups per AWS Firewall      | 3                                 |
-| Manager administrator account     |                                   |
-+-----------------------------------+-----------------------------------+
++------------------------------------------------------------------+---------------+
+| Resource                                                         | Default Limit |
++==================================================================+===============+
+| Firewall Manager policies per AWS account                        | 20            |
++------------------------------------------------------------------+---------------+
+| Rule groups per Firewall Manager policy                          | 1             |
++------------------------------------------------------------------+---------------+
+| Tags to specified include or exclude per Firewall Manager policy | 8             |
++------------------------------------------------------------------+---------------+
+| Rule groups per AWS Firewall Manager administrator account       | 3             |
++------------------------------------------------------------------+---------------+
 :::
 :::
 
@@ -1402,13 +1103,13 @@ The following limits related to Firewall Manager can\'t be changed.
 
 ::: {.table}
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Limit                             |
-+===================================+===================================+
-| Accounts per AWS Organization     | 2500                              |
-+-----------------------------------+-----------------------------------+
-| Rules per rule group              | 10                                |
-+-----------------------------------+-----------------------------------+
++-------------------------------+-------+
+| Resource                      | Limit |
++===============================+=======+
+| Accounts per AWS Organization | 2500  |
++-------------------------------+-------+
+| Rules per rule group          | 10    |
++-------------------------------+-------+
 :::
 :::
 
@@ -1418,51 +1119,37 @@ Amazon GameLift Limits {#limits_gamelift}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Aliases                           | 20                                |
-+-----------------------------------+-----------------------------------+
-| Fleets                            | 20                                |
-+-----------------------------------+-----------------------------------+
-| Builds                            | 1000                              |
-+-----------------------------------+-----------------------------------+
-| Total size of builds              | 100 GB                            |
-+-----------------------------------+-----------------------------------+
-| Log upload size per game session  | 200 MB                            |
-+-----------------------------------+-----------------------------------+
-| On-demand instances               | Per instance type: limits vary.   |
-|                                   |                                   |
-|                                   | Per account: 20 instances max,    |
-|                                   | regardless of instance type.      |
-|                                   |                                   |
-|                                   | For more information, see         |
-|                                   | [Scaling Amazon Elastic Compute   |
-|                                   | Cloud (Amazon EC2)                |
-|                                   | Instances](http://docs.aws.amazon |
-|                                   | .com/gamelift/latest/developergui |
-|                                   | de/gamelift-ec2-instances.html)   |
-|                                   | for Amazon GameLift.              |
-+-----------------------------------+-----------------------------------+
-| Server processes per instance     | GameLift SDK v2.x: 1              |
-|                                   |                                   |
-|                                   | GameLift SDK v3.x and up: 50      |
-+-----------------------------------+-----------------------------------+
-| Player sessions per game session  | 200                               |
-+-----------------------------------+-----------------------------------+
-| Matchmakers per account           | 100                               |
-+-----------------------------------+-----------------------------------+
-| VPC peering connections           | For limits on active and pending  |
-|                                   | VPC peering connections, see      |
-|                                   | [Amazon Virtual Private Cloud     |
-|                                   | (Amazon VPC)                      |
-|                                   | Limits](aws_service_limits.html#l |
-|                                   | imits_vpc).                       |
-|                                   |                                   |
-|                                   | The expiry time for an Amazon     |
-|                                   | GameLift VPC peering              |
-|                                   | authorization is 24 hours.        |
-+-----------------------------------+-----------------------------------+
++----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                         | Default Limit                                                                                                                                                                                       |
++==================================+=====================================================================================================================================================================================================+
+| Aliases                          | 20                                                                                                                                                                                                  |
++----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Fleets                           | 20                                                                                                                                                                                                  |
++----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Builds                           | 1000                                                                                                                                                                                                |
++----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Total size of builds             | 100 GB                                                                                                                                                                                              |
++----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Log upload size per game session | 200 MB                                                                                                                                                                                              |
++----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| On-demand instances              | Per instance type: limits vary.                                                                                                                                                                     |
+|                                  |                                                                                                                                                                                                     |
+|                                  | Per account: 20 instances max, regardless of instance type.                                                                                                                                         |
+|                                  |                                                                                                                                                                                                     |
+|                                  | For more information, see [Scaling Amazon Elastic Compute Cloud (Amazon EC2) Instances](http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html) for Amazon GameLift. |
++----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Server processes per instance    | GameLift SDK v2.x: 1                                                                                                                                                                                |
+|                                  |                                                                                                                                                                                                     |
+|                                  | GameLift SDK v3.x and up: 50                                                                                                                                                                        |
++----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Player sessions per game session | 200                                                                                                                                                                                                 |
++----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Matchmakers per account          | 100                                                                                                                                                                                                 |
++----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| VPC peering connections          | For limits on active and pending VPC peering connections, see [Amazon Virtual Private Cloud (Amazon VPC) Limits](aws_service_limits.html#limits_vpc).                                               |
+|                                  |                                                                                                                                                                                                     |
+|                                  | The expiry time for an Amazon GameLift VPC peering authorization is 24 hours.                                                                                                                       |
++----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -1531,50 +1218,33 @@ AWS Greengrass Limits {#limits_greengrass}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Description                       | Limit                             |
-+===================================+===================================+
-| Maximum number of routing table   | 50 (matches AWS IoT subscription  |
-| entries that specify \"Cloud\" as | limit)                            |
-| the source.                       |                                   |
-+-----------------------------------+-----------------------------------+
-| Maximum size of messages sent by  | 128 KB (matches AWS IoT message   |
-| an AWS IoT device.                | size limit)                       |
-+-----------------------------------+-----------------------------------+
-| Maximum message queue size in the | 2.5 MB                            |
-| Greengrass core router.           |                                   |
-+-----------------------------------+-----------------------------------+
-| Maximum length of a topic string  | 256 bytes of UTF-8 encoded        |
-|                                   | characters.                       |
-+-----------------------------------+-----------------------------------+
-| Maximum number of forward slashes | 7                                 |
-| \'/\' in a topic or topic filter. |                                   |
-+-----------------------------------+-----------------------------------+
-| Minimum disk space needed to run  | 128 MB                            |
-| the Greengrass core software      |                                   |
-+-----------------------------------+-----------------------------------+
-| Minimum RAM to run the Greengrass | 128 MB                            |
-| core software                     |                                   |
-+-----------------------------------+-----------------------------------+
-| Automatic IP detection should not | ::: {.itemizedlist}               |
-| be used when:                     | -   IP address changes are        |
-|                                   |     frequent.                     |
-|                                   |                                   |
-|                                   | -   Interruption of the           |
-|                                   |     Greengrass core service is    |
-|                                   |     unacceptable.                 |
-|                                   |                                   |
-|                                   | -   The Greengrass core is        |
-|                                   |     multi-homed or Greengrass     |
-|                                   |     devices cannot reliably       |
-|                                   |     determine which IP address to |
-|                                   |     use.                          |
-|                                   |                                   |
-|                                   | -   Reporting of Greengrass core  |
-|                                   |     IP addresses to the cloud may |
-|                                   |     raise security concerns.      |
-|                                   | :::                               |
-+-----------------------------------+-----------------------------------+
++-------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Description                                                                   | Limit                                                                                                           |
++===============================================================================+=================================================================================================================+
+| Maximum number of routing table entries that specify \"Cloud\" as the source. | 50 (matches AWS IoT subscription limit)                                                                         |
++-------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Maximum size of messages sent by an AWS IoT device.                           | 128 KB (matches AWS IoT message size limit)                                                                     |
++-------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Maximum message queue size in the Greengrass core router.                     | 2.5 MB                                                                                                          |
++-------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Maximum length of a topic string                                              | 256 bytes of UTF-8 encoded characters.                                                                          |
++-------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Maximum number of forward slashes \'/\' in a topic or topic filter.           | 7                                                                                                               |
++-------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Minimum disk space needed to run the Greengrass core software                 | 128 MB                                                                                                          |
++-------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Minimum RAM to run the Greengrass core software                               | 128 MB                                                                                                          |
++-------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Automatic IP detection should not be used when:                               | ::: {.itemizedlist}                                                                                             |
+|                                                                               | -   IP address changes are frequent.                                                                            |
+|                                                                               |                                                                                                                 |
+|                                                                               | -   Interruption of the Greengrass core service is unacceptable.                                                |
+|                                                                               |                                                                                                                 |
+|                                                                               | -   The Greengrass core is multi-homed or Greengrass devices cannot reliably determine which IP address to use. |
+|                                                                               |                                                                                                                 |
+|                                                                               | -   Reporting of Greengrass core IP addresses to the cloud may raise security concerns.                         |
+|                                                                               | :::                                                                                                             |
++-------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -1613,32 +1283,23 @@ AWS Identity and Access Management (IAM) Limits {#limits_iam}
 
 ::: {.table}
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Customer managed policies in an   | 1500                              |
-| AWS account                       |                                   |
-+-----------------------------------+-----------------------------------+
-| Groups in an AWS account          | 300                               |
-+-----------------------------------+-----------------------------------+
-| Roles in an AWS account           | 1000                              |
-+-----------------------------------+-----------------------------------+
-| Users in an AWS account           | 5000 (If you need to add a large  |
-|                                   | number of users, consider using   |
-|                                   | [temporary security               |
-|                                   | credentials](http://docs.aws.amaz |
-|                                   | on.com/IAM/latest/UserGuide/id_cr |
-|                                   | edentials_temp.html).)            |
-+-----------------------------------+-----------------------------------+
-| Virtual MFA devices (assigned or  | Equal to the user quota for the   |
-| unassigned) in an AWS account     | account                           |
-+-----------------------------------+-----------------------------------+
-| Instance profiles in an AWS       | 1000                              |
-| account                           |                                   |
-+-----------------------------------+-----------------------------------+
-| Server certificates stored in an  | 20                                |
-| AWS account                       |                                   |
-+-----------------------------------+-----------------------------------+
++----------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                                                       | Default Limit                                                                                                                                                                 |
++================================================================+===============================================================================================================================================================================+
+| Customer managed policies in an AWS account                    | 1500                                                                                                                                                                          |
++----------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Groups in an AWS account                                       | 300                                                                                                                                                                           |
++----------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Roles in an AWS account                                        | 1000                                                                                                                                                                          |
++----------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Users in an AWS account                                        | 5000 (If you need to add a large number of users, consider using [temporary security credentials](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html).) |
++----------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Virtual MFA devices (assigned or unassigned) in an AWS account | Equal to the user quota for the account                                                                                                                                       |
++----------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Instance profiles in an AWS account                            | 1000                                                                                                                                                                          |
++----------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Server certificates stored in an AWS account                   | 20                                                                                                                                                                            |
++----------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -1652,13 +1313,11 @@ AWS Import/Export Limits {#limits-import-export}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------+-----------------------+-----------------------+
-| Resource              | Default Limit         | Comments              |
-+=======================+=======================+=======================+
-| Snowball              | 1                     | To increase this      |
-|                       |                       | limit, contact AWS    |
-|                       |                       | Support.              |
-+-----------------------+-----------------------+-----------------------+
++----------+---------------+----------------------------------------------+
+| Resource | Default Limit | Comments                                     |
++==========+===============+==============================================+
+| Snowball | 1             | To increase this limit, contact AWS Support. |
++----------+---------------+----------------------------------------------+
 :::
 :::
 
@@ -1701,272 +1360,35 @@ AWS IoT Limits {#limits_iot}
 
 ::: {.table}
 ::: {.table-contents}
-+-----------------+-----------------+-----------------+-----------------+
-| Resource        | Description     | Limit           | Adjustable      |
-+=================+=================+=================+=================+
-| Maximum         | The maximum     | 500,000         | [Yes](https://c |
-| concurrent      | number of       |                 | onsole.aws.amaz |
-| client          | concurrent      |                 | on.com/support/ |
-| connections per | connections     |                 | v1#/case/create |
-| account         | allowed per     |                 | ?issueType=serv |
-|                 | account.        |                 | ice-limit-incre |
-|                 |                 |                 | ase&limitType=s |
-|                 |                 |                 | ervice-code-iot |
-|                 |                 |                 | )               |
-+-----------------+-----------------+-----------------+-----------------+
-| Connect         | AWS IoT limits  | 500             | [Yes](https://c |
-| requests per    | an account to a |                 | onsole.aws.amaz |
-| second per      | maximum number  |                 | on.com/support/ |
-| account         | of MQTT         |                 | v1#/case/create |
-|                 | `CONNECT`{.code |                 | ?issueType=serv |
-|                 | }               |                 | ice-limit-incre |
-|                 | requests per    |                 | ase&limitType=s |
-|                 | second.         |                 | ervice-code-iot |
-|                 |                 |                 | )               |
-+-----------------+-----------------+-----------------+-----------------+
-| Connect         | AWS IoT limits  | 1               | No              |
-| requests per    | MQTT            |                 |                 |
-| second per      | `CONNECT`{.code |                 |                 |
-| client ID       | }               |                 |                 |
-|                 | requests from   |                 |                 |
-|                 | the same        |                 |                 |
-|                 | `accountId`{.co |                 |                 |
-|                 | de}             |                 |                 |
-|                 | and             |                 |                 |
-|                 | `clientId`{.cod |                 |                 |
-|                 | e}              |                 |                 |
-|                 | to 1 MQTT       |                 |                 |
-|                 | `CONNECT`{.code |                 |                 |
-|                 | }               |                 |                 |
-|                 | operation per   |                 |                 |
-|                 | second.         |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Subscriptions   | AWS IoT limits  | 500,000         | [Yes](https://c |
-| per account     | an account to a |                 | onsole.aws.amaz |
-|                 | maximum number  |                 | on.com/support/ |
-|                 | of              |                 | v1#/case/create |
-|                 | subscriptions   |                 | ?issueType=serv |
-|                 | across all      |                 | ice-limit-incre |
-|                 | active          |                 | ase&limitType=s |
-|                 | connections.    |                 | ervice-code-iot |
-|                 |                 |                 | )               |
-+-----------------+-----------------+-----------------+-----------------+
-| Subscriptions   | AWS IoT limits  | 500             | [Yes](https://c |
-| per second per  | an account to a |                 | onsole.aws.amaz |
-| account         | maximum number  |                 | on.com/support/ |
-|                 | of              |                 | v1#/case/create |
-|                 | subscriptions   |                 | ?issueType=serv |
-|                 | per second. For |                 | ice-limit-incre |
-|                 | example, if     |                 | ase&limitType=s |
-|                 | there are two   |                 | ervice-code-iot |
-|                 | MQTT            |                 | )               |
-|                 | `SUBSCRIBE`{.co |                 |                 |
-|                 | de}             |                 |                 |
-|                 | requests within |                 |                 |
-|                 | a second with 3 |                 |                 |
-|                 | subscriptions   |                 |                 |
-|                 | (topic filters) |                 |                 |
-|                 | each, AWS IoT   |                 |                 |
-|                 | counts those as |                 |                 |
-|                 | 6 subscriptions |                 |                 |
-|                 | towards this    |                 |                 |
-|                 | limit.          |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Subscriptions   | AWS IoT         | 50              | No              |
-| per connection  | supports 50     |                 |                 |
-|                 | subscriptions   |                 |                 |
-|                 | per connection. |                 |                 |
-|                 | Subscription    |                 |                 |
-|                 | requests on the |                 |                 |
-|                 | same connection |                 |                 |
-|                 | in excess of    |                 |                 |
-|                 | this amount may |                 |                 |
-|                 | be rejected by  |                 |                 |
-|                 | AWS IoT and the |                 |                 |
-|                 | connection will |                 |                 |
-|                 | be closed.      |                 |                 |
-|                 | Clients should  |                 |                 |
-|                 | validate the    |                 |                 |
-|                 | `SUBACK`{.code} |                 |                 |
-|                 | message to      |                 |                 |
-|                 | ensure that     |                 |                 |
-|                 | their           |                 |                 |
-|                 | subscription    |                 |                 |
-|                 | requests have   |                 |                 |
-|                 | been            |                 |                 |
-|                 | successfully    |                 |                 |
-|                 | processed.      |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Publish         | AWS IoT limits  | 100             | No              |
-| requests per    | each client     |                 |                 |
-| second per      | connection to a |                 |                 |
-| connection      | maximum number  |                 |                 |
-|                 | of inbound and  |                 |                 |
-|                 | outbound        |                 |                 |
-|                 | publish         |                 |                 |
-|                 | requests per    |                 |                 |
-|                 | second. Publish |                 |                 |
-|                 | requests        |                 |                 |
-|                 | exceeding that  |                 |                 |
-|                 | limit will be   |                 |                 |
-|                 | discarded.      |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Inbound publish | Inbound publish | 10,000          | [Yes](https://c |
-| requests per    | requests count  |                 | onsole.aws.amaz |
-| second per      | for all the     |                 | on.com/support/ |
-| account         | messages that   |                 | v1#/case/create |
-|                 | AWS IoT         |                 | ?issueType=serv |
-|                 | processes       |                 | ice-limit-incre |
-|                 | before routing  |                 | ase&limitType=s |
-|                 | the messages to |                 | ervice-code-iot |
-|                 | the subscribed  |                 | )               |
-|                 | clients or the  |                 |                 |
-|                 | rules engine.   |                 |                 |
-|                 | For example, a  |                 |                 |
-|                 | single message  |                 |                 |
-|                 | published on    |                 |                 |
-|                 | `$aws/things/de |                 |                 |
-|                 | vice`{.code}/sh |                 |                 |
-|                 | adow/update     |                 |                 |
-|                 | topic can       |                 |                 |
-|                 | result in       |                 |                 |
-|                 | publishing      |                 |                 |
-|                 | three           |                 |                 |
-|                 | additional      |                 |                 |
-|                 | messages to     |                 |                 |
-|                 | `$aws/things/de |                 |                 |
-|                 | vice`{.code}/sh |                 |                 |
-|                 | adow/update/acc |                 |                 |
-|                 | epted,          |                 |                 |
-|                 | `$aws/things/de |                 |                 |
-|                 | vice`{.code}/sh |                 |                 |
-|                 | adow/update/doc |                 |                 |
-|                 | uments,         |                 |                 |
-|                 | and             |                 |                 |
-|                 | `$aws/things/de |                 |                 |
-|                 | vice`{.code}/sh |                 |                 |
-|                 | adow/delta      |                 |                 |
-|                 | topics. In this |                 |                 |
-|                 | case, AWS IoT   |                 |                 |
-|                 | counts those as |                 |                 |
-|                 | 4 inbound       |                 |                 |
-|                 | publish         |                 |                 |
-|                 | requests        |                 |                 |
-|                 | towards this    |                 |                 |
-|                 | limit. However, |                 |                 |
-|                 | a single        |                 |                 |
-|                 | message to an   |                 |                 |
-|                 | unreserved      |                 |                 |
-|                 | topic like      |                 |                 |
-|                 | `a/b`{.code} is |                 |                 |
-|                 | counted only as |                 |                 |
-|                 | a single        |                 |                 |
-|                 | inbound publish |                 |                 |
-|                 | request.        |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Outbound        | Outbound        | 20,000          | [Yes](https://c |
-| publish         | publish         |                 | onsole.aws.amaz |
-| requests per    | requests count  |                 | on.com/support/ |
-| second per      | for every       |                 | v1#/case/create |
-| account         | message that    |                 | ?issueType=serv |
-|                 | resulted in     |                 | ice-limit-incre |
-|                 | matching a      |                 | ase&limitType=s |
-|                 | client\'s       |                 | ervice-code-iot |
-|                 | subscription or |                 | )               |
-|                 | matching a      |                 |                 |
-|                 | rules engine    |                 |                 |
-|                 | subscription.   |                 |                 |
-|                 | For example,    |                 |                 |
-|                 | two clients are |                 |                 |
-|                 | subscribed to   |                 |                 |
-|                 | topic filter    |                 |                 |
-|                 | `a/b`{.code}    |                 |                 |
-|                 | and a rule is   |                 |                 |
-|                 | subscribed to   |                 |                 |
-|                 | topic filter    |                 |                 |
-|                 | `a/#`{.code}.   |                 |                 |
-|                 | An inbound      |                 |                 |
-|                 | publish         |                 |                 |
-|                 | requests on     |                 |                 |
-|                 | topic           |                 |                 |
-|                 | `a/b`{.code}    |                 |                 |
-|                 | results in a    |                 |                 |
-|                 | total of 3      |                 |                 |
-|                 | outbound        |                 |                 |
-|                 | publish         |                 |                 |
-|                 | requests.       |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Throughput per  | Data received   | 512 KiB         | No              |
-| second per      | or sent over a  |                 |                 |
-| connection      | client          |                 |                 |
-|                 | connection is   |                 |                 |
-|                 | processed at a  |                 |                 |
-|                 | maximum         |                 |                 |
-|                 | throughput      |                 |                 |
-|                 | rate. Data      |                 |                 |
-|                 | exceeding the   |                 |                 |
-|                 | maximum         |                 |                 |
-|                 | throughput will |                 |                 |
-|                 | be delayed in   |                 |                 |
-|                 | processing.     |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Maximum inbound | AWS IoT limits  | 100             | No              |
-| unacknowledged  | the number of   |                 |                 |
-| QoS 1 publish   | unacknowledged  |                 |                 |
-| requests        | inbound publish |                 |                 |
-|                 | requests per    |                 |                 |
-|                 | client. When    |                 |                 |
-|                 | this limit is   |                 |                 |
-|                 | reached, no new |                 |                 |
-|                 | publish         |                 |                 |
-|                 | requests are    |                 |                 |
-|                 | accepted from   |                 |                 |
-|                 | this client     |                 |                 |
-|                 | until a         |                 |                 |
-|                 | `PUBACK`{.code} |                 |                 |
-|                 | message is      |                 |                 |
-|                 | returned by the |                 |                 |
-|                 | server.         |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Maximum         | AWS IoT limits  | 100             | No              |
-| outbound        | the number of   |                 |                 |
-| unacknowledged  | unacknowledged  |                 |                 |
-| QoS 1publish    | outbound        |                 |                 |
-| requests        | publish         |                 |                 |
-|                 | requests per    |                 |                 |
-|                 | client. When    |                 |                 |
-|                 | this limit is   |                 |                 |
-|                 | reached, no new |                 |                 |
-|                 | publish         |                 |                 |
-|                 | requests are    |                 |                 |
-|                 | sent to the     |                 |                 |
-|                 | client until    |                 |                 |
-|                 | the client      |                 |                 |
-|                 | acknowledges    |                 |                 |
-|                 | the publish     |                 |                 |
-|                 | requests.       |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Maximum retry   | AWS IoT will    | 1 hour          | No              |
-| interval for    | retry delivery  |                 |                 |
-| delivering QoS  | of              |                 |                 |
-| 1 messages      | unacknowledged  |                 |                 |
-|                 | quality-of-serv |                 |                 |
-|                 | ice             |                 |                 |
-|                 | 1 (QoS 1)       |                 |                 |
-|                 | publish         |                 |                 |
-|                 | requests to a   |                 |                 |
-|                 | client for up   |                 |                 |
-|                 | to one hour. If |                 |                 |
-|                 | AWS IoT does    |                 |                 |
-|                 | not receive a   |                 |                 |
-|                 | `PUBACK`{.code} |                 |                 |
-|                 | message from    |                 |                 |
-|                 | the client      |                 |                 |
-|                 | after one hour, |                 |                 |
-|                 | it will drop    |                 |                 |
-|                 | the publish     |                 |                 |
-|                 | requests.       |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Resource                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Limit   | Adjustable                                                                                                                |
++=======================================================+===================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================+=========+===========================================================================================================================+
+| Maximum concurrent client connections per account     | The maximum number of concurrent connections allowed per account.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 500,000 | [Yes](https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&limitType=service-code-iot) |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Connect requests per second per account               | AWS IoT limits an account to a maximum number of MQTT `CONNECT`{.code} requests per second.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | 500     | [Yes](https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&limitType=service-code-iot) |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Connect requests per second per client ID             | AWS IoT limits MQTT `CONNECT`{.code} requests from the same `accountId`{.code} and `clientId`{.code} to 1 MQTT `CONNECT`{.code} operation per second.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 1       | No                                                                                                                        |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Subscriptions per account                             | AWS IoT limits an account to a maximum number of subscriptions across all active connections.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | 500,000 | [Yes](https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&limitType=service-code-iot) |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Subscriptions per second per account                  | AWS IoT limits an account to a maximum number of subscriptions per second. For example, if there are two MQTT `SUBSCRIBE`{.code} requests within a second with 3 subscriptions (topic filters) each, AWS IoT counts those as 6 subscriptions towards this limit.                                                                                                                                                                                                                                                                                                                                                                                                                  | 500     | [Yes](https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&limitType=service-code-iot) |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Subscriptions per connection                          | AWS IoT supports 50 subscriptions per connection. Subscription requests on the same connection in excess of this amount may be rejected by AWS IoT and the connection will be closed. Clients should validate the `SUBACK`{.code} message to ensure that their subscription requests have been successfully processed.                                                                                                                                                                                                                                                                                                                                                            | 50      | No                                                                                                                        |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Publish requests per second per connection            | AWS IoT limits each client connection to a maximum number of inbound and outbound publish requests per second. Publish requests exceeding that limit will be discarded.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | 100     | No                                                                                                                        |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Inbound publish requests per second per account       | Inbound publish requests count for all the messages that AWS IoT processes before routing the messages to the subscribed clients or the rules engine. For example, a single message published on `$aws/things/device`{.code}/shadow/update topic can result in publishing three additional messages to `$aws/things/device`{.code}/shadow/update/accepted, `$aws/things/device`{.code}/shadow/update/documents, and `$aws/things/device`{.code}/shadow/delta topics. In this case, AWS IoT counts those as 4 inbound publish requests towards this limit. However, a single message to an unreserved topic like `a/b`{.code} is counted only as a single inbound publish request. | 10,000  | [Yes](https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&limitType=service-code-iot) |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Outbound publish requests per second per account      | Outbound publish requests count for every message that resulted in matching a client\'s subscription or matching a rules engine subscription. For example, two clients are subscribed to topic filter `a/b`{.code} and a rule is subscribed to topic filter `a/#`{.code}. An inbound publish requests on topic `a/b`{.code} results in a total of 3 outbound publish requests.                                                                                                                                                                                                                                                                                                    | 20,000  | [Yes](https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&limitType=service-code-iot) |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Throughput per second per connection                  | Data received or sent over a client connection is processed at a maximum throughput rate. Data exceeding the maximum throughput will be delayed in processing.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 512 KiB | No                                                                                                                        |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Maximum inbound unacknowledged QoS 1 publish requests | AWS IoT limits the number of unacknowledged inbound publish requests per client. When this limit is reached, no new publish requests are accepted from this client until a `PUBACK`{.code} message is returned by the server.                                                                                                                                                                                                                                                                                                                                                                                                                                                     | 100     | No                                                                                                                        |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Maximum outbound unacknowledged QoS 1publish requests | AWS IoT limits the number of unacknowledged outbound publish requests per client. When this limit is reached, no new publish requests are sent to the client until the client acknowledges the publish requests.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | 100     | No                                                                                                                        |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
+| Maximum retry interval for delivering QoS 1 messages  | AWS IoT will retry delivery of unacknowledged quality-of-service 1 (QoS 1) publish requests to a client for up to one hour. If AWS IoT does not receive a `PUBACK`{.code} message from the client after one hour, it will drop the publish requests.                                                                                                                                                                                                                                                                                                                                                                                                                              | 1 hour  | No                                                                                                                        |
++-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -1993,62 +1415,38 @@ AWS IoT Limits {#limits_iot}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Maximum depth of JSON device      | The maximum number of levels in   |
-| state documents                   | the `desired`{.code} or           |
-|                                   | `reported`{.code} section of the  |
-|                                   | JSON device state document is 5.  |
-|                                   | For example:                      |
-|                                   |                                   |
-|                                   | ``` {.programlisting}             |
-|                                   | "desired": {                      |
-|                                   |     "one": {                      |
-|                                   |         "two": {                  |
-|                                   |             "three": {            |
-|                                   |                 "four": {         |
-|                                   |                     "five":{      |
-|                                   |                     }             |
-|                                   |                  }                |
-|                                   |              }                    |
-|                                   |         }                         |
-|                                   |     }                             |
-|                                   | }                                 |
-|                                   | ```                               |
-+-----------------------------------+-----------------------------------+
-| Maximum number of in-flight,      | The Thing Shadows service         |
-| unacknowledged messages per thing | supports up to 10 in-flight       |
-|                                   | unacknowledged messages per       |
-|                                   | thing. When this limit is         |
-|                                   | reached, all new shadow requests  |
-|                                   | are rejected with a 429 error     |
-|                                   | code.                             |
-+-----------------------------------+-----------------------------------+
-| Maximum number of JSON objects    | There is no limit on the number   |
-| per AWS account                   | of JSON objects per AWS account.  |
-+-----------------------------------+-----------------------------------+
-| Maximum size of a JSON state      | 8 KB.                             |
-| document                          |                                   |
-+-----------------------------------+-----------------------------------+
-| Maximum size of a thing name      | 128 bytes of UTF-8 encoded        |
-|                                   | characters.                       |
-+-----------------------------------+-----------------------------------+
-| Shadow lifetime                   | A thing shadow is deleted by AWS  |
-|                                   | IoT up to six months after the    |
-|                                   | creating account is deleted or    |
-|                                   | per customer request. For         |
-|                                   | operational purposes, AWS IoT     |
-|                                   | service backups are kept for 6    |
-|                                   | months                            |
-+-----------------------------------+-----------------------------------+
-| Maximum number of shadows in an   | Unlimited                         |
-| AWS account                       |                                   |
-+-----------------------------------+-----------------------------------+
-| Requests per second per thing     | The Thing Shadows service         |
-|                                   | supports up to 20 requests per    |
-|                                   | second per thing. Note that this  |
-|                                   | limit is per thing and not per    |
-|                                   | API.                              |
-+-----------------------------------+-----------------------------------+
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum depth of JSON device state documents                   | The maximum number of levels in the `desired`{.code} or `reported`{.code} section of the JSON device state document is 5. For example:                                                       |
+|                                                                |                                                                                                                                                                                              |
+|                                                                | ``` {.programlisting}                                                                                                                                                                        |
+|                                                                | "desired": {                                                                                                                                                                                 |
+|                                                                |     "one": {                                                                                                                                                                                 |
+|                                                                |         "two": {                                                                                                                                                                             |
+|                                                                |             "three": {                                                                                                                                                                       |
+|                                                                |                 "four": {                                                                                                                                                                    |
+|                                                                |                     "five":{                                                                                                                                                                 |
+|                                                                |                     }                                                                                                                                                                        |
+|                                                                |                  }                                                                                                                                                                           |
+|                                                                |              }                                                                                                                                                                               |
+|                                                                |         }                                                                                                                                                                                    |
+|                                                                |     }                                                                                                                                                                                        |
+|                                                                | }                                                                                                                                                                                            |
+|                                                                | ```                                                                                                                                                                                          |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum number of in-flight, unacknowledged messages per thing | The Thing Shadows service supports up to 10 in-flight unacknowledged messages per thing. When this limit is reached, all new shadow requests are rejected with a 429 error code.             |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum number of JSON objects per AWS account                 | There is no limit on the number of JSON objects per AWS account.                                                                                                                             |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum size of a JSON state document                          | 8 KB.                                                                                                                                                                                        |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum size of a thing name                                   | 128 bytes of UTF-8 encoded characters.                                                                                                                                                       |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Shadow lifetime                                                | A thing shadow is deleted by AWS IoT up to six months after the creating account is deleted or per customer request. For operational purposes, AWS IoT service backups are kept for 6 months |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum number of shadows in an AWS account                    | Unlimited                                                                                                                                                                                    |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Requests per second per thing                                  | The Thing Shadows service supports up to 20 requests per second per thing. Note that this limit is per thing and not per API.                                                                |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -2141,130 +1539,43 @@ AWS IoT Limits {#limits_iot}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------+-----------------+-----------------+-----------------+
-| Resource        | Min             | Max             | Note            |
-+=================+=================+=================+=================+
-| `JobId`{.code}  | 1 character     | 64 characters   | The             |
-|                 |                 |                 | `JobId`{.code}  |
-|                 |                 |                 | length must not |
-|                 |                 |                 | exceed 64       |
-|                 |                 |                 | characters.     |
-+-----------------+-----------------+-----------------+-----------------+
-| `Document`{.cod | N/A             | 32768 bytes     | The maximum     |
-| e}              |                 |                 | size of a       |
-|                 |                 |                 | document that   |
-|                 |                 |                 | can be sent to  |
-|                 |                 |                 | an AWS IoT      |
-|                 |                 |                 | device is 32    |
-|                 |                 |                 | KB.             |
-+-----------------+-----------------+-----------------+-----------------+
-| `DocumentSource | N/A             | 1350 characters | The maximum job |
-| `{.code}        |                 |                 | document source |
-|                 |                 |                 | size is 1350    |
-|                 |                 |                 | characters.     |
-+-----------------+-----------------+-----------------+-----------------+
-| `Description`{. | N/A             | 2028 characters | The maximum job |
-| code}           |                 |                 | description     |
-|                 |                 |                 | size is 2028    |
-|                 |                 |                 | characters.     |
-+-----------------+-----------------+-----------------+-----------------+
-| `Targets`{.code | 1               | 100             | The number of   |
-| }               |                 |                 | targets a job   |
-|                 |                 |                 | can have.       |
-+-----------------+-----------------+-----------------+-----------------+
-| `ExpiresInSec`{ | 60 seconds      | 3600 seconds    | The lifetime of |
-| .code}          |                 |                 | pre-signed URLs |
-|                 |                 |                 | must be         |
-|                 |                 |                 | configured      |
-|                 |                 |                 | greater than 60 |
-|                 |                 |                 | seconds and     |
-|                 |                 |                 | less than 1     |
-|                 |                 |                 | hour.           |
-+-----------------+-----------------+-----------------+-----------------+
-| `Comment`{.code | N/A             | 2028 characters | The maximum     |
-| }               |                 |                 | comment size is |
-|                 |                 |                 | 2028            |
-|                 |                 |                 | characters.     |
-+-----------------+-----------------+-----------------+-----------------+
-| `MaxResults`{.c | 1               | 250             | The maximum     |
-| ode}            |                 |                 | list result per |
-|                 |                 |                 | page is 250.    |
-+-----------------+-----------------+-----------------+-----------------+
-| `MaximumJobExec | 1               | 1000            | Configures the  |
-| utionsPerMinute |                 |                 | rollout speed   |
-| `{.code}        |                 |                 | for a job.      |
-+-----------------+-----------------+-----------------+-----------------+
-| Active snapshot | 0               | 100             | The maximum     |
-| jobs            |                 |                 | number of       |
-|                 |                 |                 | active snapshot |
-|                 |                 |                 | jobs is 100     |
-|                 |                 |                 | (irrespective   |
-|                 |                 |                 | of the number   |
-|                 |                 |                 | of active       |
-|                 |                 |                 | continuous      |
-|                 |                 |                 | jobs).          |
-+-----------------+-----------------+-----------------+-----------------+
-| Active          | 0               | 100             | The maximum     |
-| continuous jobs |                 |                 | number of       |
-|                 |                 |                 | active          |
-|                 |                 |                 | continuous jobs |
-|                 |                 |                 | is 100          |
-|                 |                 |                 | (irrespective   |
-|                 |                 |                 | of the number   |
-|                 |                 |                 | of active       |
-|                 |                 |                 | snapshot jobs). |
-+-----------------+-----------------+-----------------+-----------------+
-| Job document    | 0               | 10              | Up to 10        |
-| variable        |                 |                 | variables       |
-| substitution    |                 |                 | substitutions,  |
-|                 |                 |                 | including the   |
-|                 |                 |                 | presign URL,    |
-|                 |                 |                 | are allowed in  |
-|                 |                 |                 | a job document. |
-+-----------------+-----------------+-----------------+-----------------+
-| Data retention  | N/A             | 90 days         | Job data and    |
-|                 |                 |                 | job execution   |
-|                 |                 |                 | data will be    |
-|                 |                 |                 | purged after 90 |
-|                 |                 |                 | days.           |
-+-----------------+-----------------+-----------------+-----------------+
-| `StatusDetail`{ | 1 character     | 128 characters  |                 |
-| .code}          |                 |                 |                 |
-| map key size    |                 |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| `StatusDetail`{ | 1 character     | 128 characters  |                 |
-| .code}          |                 |                 |                 |
-| map value size  |                 |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Job management  | N/A             | 30 TPS          | The AWS IoT     |
-| APIs            |                 |                 | [Job Management |
-|                 |                 |                 | and Control     |
-|                 |                 |                 | APIs](http://do |
-|                 |                 |                 | cs.aws.amazon.c |
-|                 |                 |                 | om/iot/latest/d |
-|                 |                 |                 | eveloperguide/j |
-|                 |                 |                 | obs-api.html#jo |
-|                 |                 |                 | bs-http-api)    |
-|                 |                 |                 | have a maximum  |
-|                 |                 |                 | of 30           |
-|                 |                 |                 | transactions    |
-|                 |                 |                 | per second      |
-|                 |                 |                 | (TPS).          |
-+-----------------+-----------------+-----------------+-----------------+
-| Job messaging   | N/A             | 200 MPS         | The AWS IoT     |
-| APIs            |                 |                 | [Jobs Device    |
-|                 |                 |                 | MQTT and HTTPS  |
-|                 |                 |                 | APIs](http://do |
-|                 |                 |                 | cs.aws.amazon.c |
-|                 |                 |                 | om/iot/latest/d |
-|                 |                 |                 | eveloperguide/j |
-|                 |                 |                 | obs-api.html#jo |
-|                 |                 |                 | bs-mqtt-api)    |
-|                 |                 |                 | have a maximum  |
-|                 |                 |                 | of 200 messages |
-|                 |                 |                 | per second      |
-|                 |                 |                 | (MPS).          |
-+-----------------+-----------------+-----------------+-----------------+
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                               | Min         | Max             | Note                                                                                                                                                                                |
++========================================+=============+=================+=====================================================================================================================================================================================+
+| `JobId`{.code}                         | 1 character | 64 characters   | The `JobId`{.code} length must not exceed 64 characters.                                                                                                                            |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `Document`{.code}                      | N/A         | 32768 bytes     | The maximum size of a document that can be sent to an AWS IoT device is 32 KB.                                                                                                      |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `DocumentSource`{.code}                | N/A         | 1350 characters | The maximum job document source size is 1350 characters.                                                                                                                            |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `Description`{.code}                   | N/A         | 2028 characters | The maximum job description size is 2028 characters.                                                                                                                                |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `Targets`{.code}                       | 1           | 100             | The number of targets a job can have.                                                                                                                                               |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `ExpiresInSec`{.code}                  | 60 seconds  | 3600 seconds    | The lifetime of pre-signed URLs must be configured greater than 60 seconds and less than 1 hour.                                                                                    |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `Comment`{.code}                       | N/A         | 2028 characters | The maximum comment size is 2028 characters.                                                                                                                                        |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `MaxResults`{.code}                    | 1           | 250             | The maximum list result per page is 250.                                                                                                                                            |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `MaximumJobExecutionsPerMinute`{.code} | 1           | 1000            | Configures the rollout speed for a job.                                                                                                                                             |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Active snapshot jobs                   | 0           | 100             | The maximum number of active snapshot jobs is 100 (irrespective of the number of active continuous jobs).                                                                           |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Active continuous jobs                 | 0           | 100             | The maximum number of active continuous jobs is 100 (irrespective of the number of active snapshot jobs).                                                                           |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Job document variable substitution     | 0           | 10              | Up to 10 variables substitutions, including the presign URL, are allowed in a job document.                                                                                         |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Data retention                         | N/A         | 90 days         | Job data and job execution data will be purged after 90 days.                                                                                                                       |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `StatusDetail`{.code} map key size     | 1 character | 128 characters  |                                                                                                                                                                                     |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `StatusDetail`{.code} map value size   | 1 character | 128 characters  |                                                                                                                                                                                     |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Job management APIs                    | N/A         | 30 TPS          | The AWS IoT [Job Management and Control APIs](http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html#jobs-http-api) have a maximum of 30 transactions per second (TPS). |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Job messaging APIs                     | N/A         | 200 MPS         | The AWS IoT [Jobs Device MQTT and HTTPS APIs](http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html#jobs-mqtt-api) have a maximum of 200 messages per second (MPS).    |
++----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -2308,23 +1619,23 @@ Amazon Kinesis Data Firehose Limits {#limits-akf}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Delivery streams per region       | 50                                |
-+-----------------------------------+-----------------------------------+
-| Delivery stream capacity for US   | 2,000 transactions/second         |
-| East (N. Virginia), US West       |                                   |
-| (Oregon), and EU (Ireland) â€     | 5,000 records/second              |
-|                                   |                                   |
-|                                   | 5 MB/second                       |
-+-----------------------------------+-----------------------------------+
-| Delivery stream capacity for      | 1,000 transactions/second         |
-| other Regions where Kinesis Data  |                                   |
-| Firehose is available â€          | 1,000 records/second              |
-|                                   |                                   |
-|                                   | 1 MB/second                       |
-+-----------------------------------+-----------------------------------+
++--------------------------------------------------------------------------------------------+---------------------------+
+| Resource                                                                                   | Default Limit             |
++============================================================================================+===========================+
+| Delivery streams per region                                                                | 50                        |
++--------------------------------------------------------------------------------------------+---------------------------+
+| Delivery stream capacity for US East (N. Virginia), US West (Oregon), and EU (Ireland) â€  | 2,000 transactions/second |
+|                                                                                            |                           |
+|                                                                                            | 5,000 records/second      |
+|                                                                                            |                           |
+|                                                                                            | 5 MB/second               |
++--------------------------------------------------------------------------------------------+---------------------------+
+| Delivery stream capacity for other Regions where Kinesis Data Firehose is available â€     | 1,000 transactions/second |
+|                                                                                            |                           |
+|                                                                                            | 1,000 records/second      |
+|                                                                                            |                           |
+|                                                                                            | 1 MB/second               |
++--------------------------------------------------------------------------------------------+---------------------------+
 :::
 :::
 
@@ -2338,19 +1649,17 @@ Amazon Kinesis Data Streams Limits {#limits-aks}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Shards per region                 | US East (N. Virginia) Region â€"  |
-|                                   | 500                               |
-|                                   |                                   |
-|                                   | US West (Oregon) Region â€" 500   |
-|                                   |                                   |
-|                                   | EU (Ireland) Region â€" 500       |
-|                                   |                                   |
-|                                   | All other supported regions â€"   |
-|                                   | 200                               |
-+-----------------------------------+-----------------------------------+
++-------------------+--------------------------------------+
+| Resource          | Default Limit                        |
++===================+======================================+
+| Shards per region | US East (N. Virginia) Region â€" 500 |
+|                   |                                      |
+|                   | US West (Oregon) Region â€" 500      |
+|                   |                                      |
+|                   | EU (Ireland) Region â€" 500          |
+|                   |                                      |
+|                   | All other supported regions â€" 200  |
++-------------------+--------------------------------------+
 :::
 :::
 
@@ -2362,20 +1671,19 @@ Amazon Kinesis Data Analytics Limits {#limits-aka}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Kinesis Processing Units (KPUs)   | US East (N. Virginia) Region â€"  |
-|                                   | 8                                 |
-|                                   |                                   |
-|                                   | US West (Oregon) Region â€" 8     |
-|                                   |                                   |
-|                                   | EU (Ireland) Region â€" 8         |
-+-----------------------------------+-----------------------------------+
-| Input Parallelism                 | 64 input streams                  |
-+-----------------------------------+-----------------------------------+
-| Applications                      | 50                                |
-+-----------------------------------+-----------------------------------+
++---------------------------------+------------------------------------+
+| Resource                        | Default Limit                      |
++=================================+====================================+
+| Kinesis Processing Units (KPUs) | US East (N. Virginia) Region â€" 8 |
+|                                 |                                    |
+|                                 | US West (Oregon) Region â€" 8      |
+|                                 |                                    |
+|                                 | EU (Ireland) Region â€" 8          |
++---------------------------------+------------------------------------+
+| Input Parallelism               | 64 input streams                   |
++---------------------------------+------------------------------------+
+| Applications                    | 50                                 |
++---------------------------------+------------------------------------+
 :::
 :::
 
@@ -2433,152 +1741,25 @@ The following errors or acks are thrown when a fragment-level limit is reached:
 **Data Plane API limits**
 
 ::: {.table-contents}
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| API       | Stream-le | Connectio | Bandwidth | Fragment- | Relevant  |
-|           | vel       | n-level   | limit     | level     | Exception |
-|           | limit     | limit     |           | limit     | s         |
-|           |           |           |           |           | and Notes |
-+===========+===========+===========+===========+===========+===========+
-| **PutMedi | 5 TPS     | 1 \[s\]   | 12.5      | ::: {.ite | A typical |
-| a**       | \[h\]     |           | MB/second | mizedlist | PutMedia  |
-|           |           |           | ,         | }         | request   |
-|           |           |           | or 100    | -   Minim | will      |
-|           |           |           | Mbps      | um        | contain   |
-|           |           |           | \[s\]     |     fragm | data for  |
-|           |           |           |           | ent       | several   |
-|           |           |           |           |     durat | seconds,  |
-|           |           |           |           | ion:      | resulting |
-|           |           |           |           |     1     | in a      |
-|           |           |           |           |     secon | lower TPS |
-|           |           |           |           | d         | per       |
-|           |           |           |           |     \[h\] | stream.   |
-|           |           |           |           |           | In the    |
-|           |           |           |           | -   Maxim | case of   |
-|           |           |           |           | um        | multiple  |
-|           |           |           |           |     fragm | concurren |
-|           |           |           |           | ent       | t         |
-|           |           |           |           |     durat | connectio |
-|           |           |           |           | ion:      | ns        |
-|           |           |           |           |     10    | that      |
-|           |           |           |           |     secon | exceed    |
-|           |           |           |           | ds        | limits,   |
-|           |           |           |           |     \[h\] | the last  |
-|           |           |           |           |           | connectio |
-|           |           |           |           | -   Maxim | n         |
-|           |           |           |           | um        | is        |
-|           |           |           |           |     fragm | accepted. |
-|           |           |           |           | ent       |           |
-|           |           |           |           |     size: |           |
-|           |           |           |           |     50 MB |           |
-|           |           |           |           |     \[h\] |           |
-|           |           |           |           | :::       |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| **GetMedi | 5 TPS     | 3 \[s\]   | 25 MB/s   | N/A       | Only      |
-| a**       | \[h\]     |           | or 200    |           | three     |
-|           |           |           | Mbps      |           | clients   |
-|           |           |           | \[s\]     |           | can       |
-|           |           |           |           |           | concurren |
-|           |           |           |           |           | tly       |
-|           |           |           |           |           | receive   |
-|           |           |           |           |           | content   |
-|           |           |           |           |           | from the  |
-|           |           |           |           |           | media     |
-|           |           |           |           |           | stream at |
-|           |           |           |           |           | any       |
-|           |           |           |           |           | moment of |
-|           |           |           |           |           | time.     |
-|           |           |           |           |           | Further   |
-|           |           |           |           |           | client    |
-|           |           |           |           |           | connectio |
-|           |           |           |           |           | ns        |
-|           |           |           |           |           | are       |
-|           |           |           |           |           | rejected. |
-|           |           |           |           |           | A unique  |
-|           |           |           |           |           | consuming |
-|           |           |           |           |           | client    |
-|           |           |           |           |           | shouldnâ€ |
-|           |           |           |           |           | ™t        |
-|           |           |           |           |           | need more |
-|           |           |           |           |           | than 2 or |
-|           |           |           |           |           | 3 TPS,    |
-|           |           |           |           |           | since     |
-|           |           |           |           |           | once the  |
-|           |           |           |           |           | connectio |
-|           |           |           |           |           | n         |
-|           |           |           |           |           | is        |
-|           |           |           |           |           | establish |
-|           |           |           |           |           | ed,       |
-|           |           |           |           |           | we        |
-|           |           |           |           |           | anticipat |
-|           |           |           |           |           | e         |
-|           |           |           |           |           | that the  |
-|           |           |           |           |           | applicati |
-|           |           |           |           |           | on        |
-|           |           |           |           |           | will read |
-|           |           |           |           |           | continuou |
-|           |           |           |           |           | sly.      |
-|           |           |           |           |           |           |
-|           |           |           |           |           | If a      |
-|           |           |           |           |           | typical   |
-|           |           |           |           |           | fragment  |
-|           |           |           |           |           | is        |
-|           |           |           |           |           | approxima |
-|           |           |           |           |           | tely      |
-|           |           |           |           |           | 5 MB,     |
-|           |           |           |           |           | this      |
-|           |           |           |           |           | limit     |
-|           |           |           |           |           | will mean |
-|           |           |           |           |           | \~75 MB/  |
-|           |           |           |           |           | sec per   |
-|           |           |           |           |           | Kinesis   |
-|           |           |           |           |           | video     |
-|           |           |           |           |           | stream.   |
-|           |           |           |           |           | Such a    |
-|           |           |           |           |           | stream    |
-|           |           |           |           |           | would     |
-|           |           |           |           |           | have an   |
-|           |           |           |           |           | outgoing  |
-|           |           |           |           |           | bit rate  |
-|           |           |           |           |           | of 2x the |
-|           |           |           |           |           | streams\' |
-|           |           |           |           |           | maximum   |
-|           |           |           |           |           | incoming  |
-|           |           |           |           |           | bit rate. |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| **ListFra | 5 TPS     | 5 \[s\]   | N/A       | N/A       | Five      |
-| gments**  | \[h\]     |           |           |           | fragment- |
-|           |           |           |           |           | based     |
-|           |           |           |           |           | consuming |
-|           |           |           |           |           | applicati |
-|           |           |           |           |           | ons       |
-|           |           |           |           |           | can       |
-|           |           |           |           |           | concurren |
-|           |           |           |           |           | tly       |
-|           |           |           |           |           | list      |
-|           |           |           |           |           | fragments |
-|           |           |           |           |           | based on  |
-|           |           |           |           |           | processin |
-|           |           |           |           |           | g         |
-|           |           |           |           |           | requireme |
-|           |           |           |           |           | nts.      |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| **GetMedi | 5 TPS     | 5 \[s\]   | 25 MB/s   | Maximum   | Five      |
-| aForFragm | \[h\]     |           | or 200    | number of | fragment- |
-| entList** |           |           | Mbps      | fragments | based     |
-|           |           |           | \[s\]     | :         | consuming |
-|           |           |           |           | 1000      | applicati |
-|           |           |           |           | \[h\]     | ons       |
-|           |           |           |           |           | can       |
-|           |           |           |           |           | concurren |
-|           |           |           |           |           | tly       |
-|           |           |           |           |           | get       |
-|           |           |           |           |           | media.    |
-|           |           |           |           |           | Further   |
-|           |           |           |           |           | connectio |
-|           |           |           |           |           | ns        |
-|           |           |           |           |           | are       |
-|           |           |           |           |           | rejected. |
-+-----------+-----------+-----------+-----------+-----------+-----------+
++-----------------------------+--------------------+------------------------+-----------------------------------+-------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| API                         | Stream-level limit | Connection-level limit | Bandwidth limit                   | Fragment-level limit                            | Relevant Exceptions and Notes                                                                                                                                                                                                                                                                                   |
++=============================+====================+========================+===================================+=================================================+=================================================================================================================================================================================================================================================================================================================+
+| **PutMedia**                | 5 TPS \[h\]        | 1 \[s\]                | 12.5 MB/second, or 100 Mbps \[s\] | ::: {.itemizedlist}                             | A typical PutMedia request will contain data for several seconds, resulting in a lower TPS per stream. In the case of multiple concurrent connections that exceed limits, the last connection is accepted.                                                                                                      |
+|                             |                    |                        |                                   | -   Minimum fragment duration: 1 second \[h\]   |                                                                                                                                                                                                                                                                                                                 |
+|                             |                    |                        |                                   |                                                 |                                                                                                                                                                                                                                                                                                                 |
+|                             |                    |                        |                                   | -   Maximum fragment duration: 10 seconds \[h\] |                                                                                                                                                                                                                                                                                                                 |
+|                             |                    |                        |                                   |                                                 |                                                                                                                                                                                                                                                                                                                 |
+|                             |                    |                        |                                   | -   Maximum fragment size: 50 MB \[h\]          |                                                                                                                                                                                                                                                                                                                 |
+|                             |                    |                        |                                   | :::                                             |                                                                                                                                                                                                                                                                                                                 |
++-----------------------------+--------------------+------------------------+-----------------------------------+-------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **GetMedia**                | 5 TPS \[h\]        | 3 \[s\]                | 25 MB/s or 200 Mbps \[s\]         | N/A                                             | Only three clients can concurrently receive content from the media stream at any moment of time. Further client connections are rejected. A unique consuming client shouldnâ€™t need more than 2 or 3 TPS, since once the connection is established, we anticipate that the application will read continuously. |
+|                             |                    |                        |                                   |                                                 |                                                                                                                                                                                                                                                                                                                 |
+|                             |                    |                        |                                   |                                                 | If a typical fragment is approximately 5 MB, this limit will mean \~75 MB/ sec per Kinesis video stream. Such a stream would have an outgoing bit rate of 2x the streams\' maximum incoming bit rate.                                                                                                           |
++-----------------------------+--------------------+------------------------+-----------------------------------+-------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **ListFragments**           | 5 TPS \[h\]        | 5 \[s\]                | N/A                               | N/A                                             | Five fragment-based consuming applications can concurrently list fragments based on processing requirements.                                                                                                                                                                                                    |
++-----------------------------+--------------------+------------------------+-----------------------------------+-------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **GetMediaForFragmentList** | 5 TPS \[h\]        | 5 \[s\]                | 25 MB/s or 200 Mbps \[s\]         | Maximum number of fragments: 1000 \[h\]         | Five fragment-based consuming applications can concurrently get media. Further connections are rejected.                                                                                                                                                                                                        |
++-----------------------------+--------------------+------------------------+-----------------------------------+-------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -2692,40 +1873,35 @@ AWS Elemental MediaConvert Limits {#limits_mediaconvert}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Number of queues per account      | 10                                |
-+-----------------------------------+-----------------------------------+
-| Concurrent jobs per account,      | Varies by region.                 |
-| processed across all queues       |                                   |
-|                                   | 40 in these regions:              |
-|                                   |                                   |
-|                                   | ::: {.itemizedlist}               |
-|                                   | -   US East (N. Virginia)         |
-|                                   |                                   |
-|                                   | -   US West (Oregon)              |
-|                                   |                                   |
-|                                   | -   EU (Ireland)                  |
-|                                   | :::                               |
-|                                   |                                   |
-|                                   | 20 in all other regions           |
-+-----------------------------------+-----------------------------------+
-| Concurrent jobs processed per     | Number allowed across all queues, |
-| queue                             | divided equally by number of      |
-|                                   | queues you create.                |
-+-----------------------------------+-----------------------------------+
-| Number of custom output presets   | 100                               |
-+-----------------------------------+-----------------------------------+
-| Number of custom output job       | 100                               |
-| templates                         |                                   |
-+-----------------------------------+-----------------------------------+
-| DescribeEndpoints API calling     | 0.01667 TPS (Once per 60 seconds, |
-| rate per second                   | burst zero)                       |
-+-----------------------------------+-----------------------------------+
-| Aggregate API calling rate for    | 2 TPS (2 transactions per second, |
-| job, queue, preset and template   | burst 100)                        |
-+-----------------------------------+-----------------------------------+
++----------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| Resource                                                       | Default Limit                                                                     |
++================================================================+===================================================================================+
+| Number of queues per account                                   | 10                                                                                |
++----------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| Concurrent jobs per account, processed across all queues       | Varies by region.                                                                 |
+|                                                                |                                                                                   |
+|                                                                | 40 in these regions:                                                              |
+|                                                                |                                                                                   |
+|                                                                | ::: {.itemizedlist}                                                               |
+|                                                                | -   US East (N. Virginia)                                                         |
+|                                                                |                                                                                   |
+|                                                                | -   US West (Oregon)                                                              |
+|                                                                |                                                                                   |
+|                                                                | -   EU (Ireland)                                                                  |
+|                                                                | :::                                                                               |
+|                                                                |                                                                                   |
+|                                                                | 20 in all other regions                                                           |
++----------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| Concurrent jobs processed per queue                            | Number allowed across all queues, divided equally by number of queues you create. |
++----------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| Number of custom output presets                                | 100                                                                               |
++----------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| Number of custom output job templates                          | 100                                                                               |
++----------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| DescribeEndpoints API calling rate per second                  | 0.01667 TPS (Once per 60 seconds, burst zero)                                     |
++----------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| Aggregate API calling rate for job, queue, preset and template | 2 TPS (2 transactions per second, burst 100)                                      |
++----------------------------------------------------------------+-----------------------------------------------------------------------------------+
 :::
 :::
 
@@ -2778,28 +1954,13 @@ AWS Elemental MediaTailor Limits {#limits_mediatailor}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------+-----------------------+-----------------------+
-| Resource              | Default Limit         | Comment               |
-+=======================+=======================+=======================+
-| Transactions          | 3,000 concurrent      | This is an            |
-|                       | transactions per      | account-level limit.  |
-|                       | second across all     |                       |
-|                       | request types (such   | Your transactions per |
-|                       | as manifest requests  | second are largely    |
-|                       | and tracking requests | dependent on how      |
-|                       | for client-side       | often the player      |
-|                       | reporting).           | requests updated      |
-|                       |                       | manifests. For        |
-|                       |                       | example, a player     |
-|                       |                       | with eight second     |
-|                       |                       | segments might update |
-|                       |                       | the manifest every    |
-|                       |                       | eight seconds. The    |
-|                       |                       | player, then,         |
-|                       |                       | generates 0.125       |
-|                       |                       | transactions per      |
-|                       |                       | second.               |
-+-----------------------+-----------------------+-----------------------+
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource     | Default Limit                                                                                                                                  | Comment                                                                                                                                                                                                                                                           |
++==============+================================================================================================================================================+===================================================================================================================================================================================================================================================================+
+| Transactions | 3,000 concurrent transactions per second across all request types (such as manifest requests and tracking requests for client-side reporting). | This is an account-level limit.                                                                                                                                                                                                                                   |
+|              |                                                                                                                                                |                                                                                                                                                                                                                                                                   |
+|              |                                                                                                                                                | Your transactions per second are largely dependent on how often the player requests updated manifests. For example, a player with eight second segments might update the manifest every eight seconds. The player, then, generates 0.125 transactions per second. |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -2816,13 +1977,13 @@ Amazon Neptune Limits {#limits_neptune}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| US East (N. Virginia) Region:     | Maximum instances is 3.           |
-|                                   |                                   |
-| Maximum instances                 |                                   |
-+-----------------------------------+-----------------------------------+
++-------------------------------+-------------------------+
+| Resource                      | Default Limit           |
++===============================+=========================+
+| US East (N. Virginia) Region: | Maximum instances is 3. |
+|                               |                         |
+| Maximum instances             |                         |
++-------------------------------+-------------------------+
 :::
 :::
 
@@ -2878,49 +2039,33 @@ Amazon Pinpoint Limits {#limits_pinpoint}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Active campaigns per account      | 200 per account.                  |
-|                                   |                                   |
-|                                   | ::: {.aws-note}                   |
-|                                   | Note                              |
-|                                   |                                   |
-|                                   | An *active campaign* is a         |
-|                                   | campaign that hasn\'t completed   |
-|                                   | or failed. Active campaigns have  |
-|                                   | a status of `SCHEDULED`{.code},   |
-|                                   | `EXECUTING`{.code}, or            |
-|                                   | `PENDING_NEXT_RUN`{.code}.        |
-|                                   | :::                               |
-+-----------------------------------+-----------------------------------+
-| Concurrent endpoint import jobs   | 2 per account.                    |
-| per account                       |                                   |
-+-----------------------------------+-----------------------------------+
-| Message sends per campaign        | 100 million.                      |
-| activity                          |                                   |
-+-----------------------------------+-----------------------------------+
-| Total file size per endpoint      | 1 GB per import job.              |
-| import job                        |                                   |
-+-----------------------------------+-----------------------------------+
-| SMS account spend threshold       | USD\$1.00 per account.            |
-+-----------------------------------+-----------------------------------+
-| Maximum number of Amazon SNS      | 100,000 per account.              |
-| topics for two-way SMS            |                                   |
-+-----------------------------------+-----------------------------------+
-| Number of emails that can be sent | 200 emails per 24-hour period for |
-| per 24-hour period (*sending      | accounts in the sandbox           |
-| quota*)                           | environment.                      |
-+-----------------------------------+-----------------------------------+
-| Number of emails that can be sent | 1 email per second for accounts   |
-| each second (*sending rate*)      | in the sandbox environment.       |
-+-----------------------------------+-----------------------------------+
-| Email recipient addresses         | Accounts in the sandbox           |
-|                                   | environment may only send email   |
-|                                   | to recipients whose email         |
-|                                   | addresses or domains have been    |
-|                                   | verified.                         |
-+-----------------------------------+-----------------------------------+
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                                                               | Default Limit                                                                                                                                                                |
++========================================================================+==============================================================================================================================================================================+
+| Active campaigns per account                                           | 200 per account.                                                                                                                                                             |
+|                                                                        |                                                                                                                                                                              |
+|                                                                        | ::: {.aws-note}                                                                                                                                                              |
+|                                                                        | Note                                                                                                                                                                         |
+|                                                                        |                                                                                                                                                                              |
+|                                                                        | An *active campaign* is a campaign that hasn\'t completed or failed. Active campaigns have a status of `SCHEDULED`{.code}, `EXECUTING`{.code}, or `PENDING_NEXT_RUN`{.code}. |
+|                                                                        | :::                                                                                                                                                                          |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Concurrent endpoint import jobs per account                            | 2 per account.                                                                                                                                                               |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Message sends per campaign activity                                    | 100 million.                                                                                                                                                                 |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Total file size per endpoint import job                                | 1 GB per import job.                                                                                                                                                         |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SMS account spend threshold                                            | USD\$1.00 per account.                                                                                                                                                       |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum number of Amazon SNS topics for two-way SMS                    | 100,000 per account.                                                                                                                                                         |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Number of emails that can be sent per 24-hour period (*sending quota*) | 200 emails per 24-hour period for accounts in the sandbox environment.                                                                                                       |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Number of emails that can be sent each second (*sending rate*)         | 1 email per second for accounts in the sandbox environment.                                                                                                                  |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Email recipient addresses                                              | Accounts in the sandbox environment may only send email to recipients whose email addresses or domains have been verified.                                                   |
++------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -2940,27 +2085,25 @@ Amazon Polly Limits {#limits_polly}
     **Throttle Rate per Operation**
 
     ::: {.table-contents}
-    +-----------------------------------+-----------------------------------+
-    | Operation                         | Limit                             |
-    +===================================+===================================+
-    | **Lexicon**                       |                                   |
-    +-----------------------------------+-----------------------------------+
-    | `DeleteLexicon`{.code}            | Any 2 transactions per second     |
-    |                                   | (tps) from these operations       |
-    | `PutLexicon`{.code}               | combined.                         |
-    |                                   |                                   |
-    | `GetLexicon`{.code}               | Maximum allowed burst of 4 tps.   |
-    |                                   |                                   |
-    | `ListLexicons`{.code}             |                                   |
-    +-----------------------------------+-----------------------------------+
-    | **Speech**                        |                                   |
-    +-----------------------------------+-----------------------------------+
-    | `DescribeVoices`{.code}           | 80 rps with a burst limit of 100  |
-    |                                   | tps                               |
-    +-----------------------------------+-----------------------------------+
-    | `SynthesizeSpeech`{.code}         | 80 rps with a burst limit of 100  |
-    |                                   | tps                               |
-    +-----------------------------------+-----------------------------------+
+    +---------------------------+---------------------------------------------------------------------+
+    | Operation                 | Limit                                                               |
+    +===========================+=====================================================================+
+    | **Lexicon**               |                                                                     |
+    +---------------------------+---------------------------------------------------------------------+
+    | `DeleteLexicon`{.code}    | Any 2 transactions per second (tps) from these operations combined. |
+    |                           |                                                                     |
+    | `PutLexicon`{.code}       | Maximum allowed burst of 4 tps.                                     |
+    |                           |                                                                     |
+    | `GetLexicon`{.code}       |                                                                     |
+    |                           |                                                                     |
+    | `ListLexicons`{.code}     |                                                                     |
+    +---------------------------+---------------------------------------------------------------------+
+    | **Speech**                |                                                                     |
+    +---------------------------+---------------------------------------------------------------------+
+    | `DescribeVoices`{.code}   | 80 rps with a burst limit of 100 tps                                |
+    +---------------------------+---------------------------------------------------------------------+
+    | `SynthesizeSpeech`{.code} | 80 rps with a burst limit of 100 tps                                |
+    +---------------------------+---------------------------------------------------------------------+
     :::
     :::
 :::
@@ -2990,7 +2133,108 @@ For more information about these limits, see [Limits in Amazon Redshift](http://
 Amazon Rekognition Limits {#limits_rekognition}
 -------------------------
 
-Amazon Rekognition does not have service limits that you can change. For information about Amazon Rekognition service limits, see [Amazon Rekognition Limits](http://docs.aws.amazon.com/rekognition/latest/dg/limits.html).
+Amazon Rekognition has the following limits that you can change.
+
+::: {.table}
+
+::: {.table-contents}
++----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| Resource                                                                                                             | Default Limit                                          |
++======================================================================================================================+========================================================+
+| Transactions per second per account for image data plane operations:                                                 | ::: {.itemizedlist}                                    |
+|                                                                                                                      | -   US East (N. Virginia) Region â€" 50                |
+| ::: {.itemizedlist}                                                                                                  |                                                        |
+| -   [CompareFaces](http://docs.aws.amazon.com/rekognition/latest/dg/API_CompareFaces.html)                           | -   US West (Oregon) Region â€" 50                     |
+|                                                                                                                      |                                                        |
+| -   [DetectFaces](http://docs.aws.amazon.com/rekognition/latest/dg/API_DetectFaces.html)                             | -   EU (Ireland) Region â€" 50                         |
+|                                                                                                                      |                                                        |
+| -   [DetectLabels](http://docs.aws.amazon.com/rekognition/latest/dg/API_DetectLabelshtml)                            | -   US East (Ohio) Region â€" 5                        |
+|                                                                                                                      |                                                        |
+| -   [DetectModerationLabels](http://docs.aws.amazon.com/rekognition/latest/dg/API_DetectModerationLabels.html)       | -   Asia Pacific (Sydney) Region â€" 5                 |
+|                                                                                                                      |                                                        |
+| -   [DetectText](http://docs.aws.amazon.com/rekognition/latest/dg/API_DetectText.html)                               | -   Asia Pacific (Tokyo) Region â€" 5                  |
+|                                                                                                                      |                                                        |
+| -   [GetCelebrityInfo](http://docs.aws.amazon.com/rekognition/latest/dg/API_GetCelebrityInfo.html)                   | -   AWS GovCloud (US) â€" 5                            |
+|                                                                                                                      | :::                                                    |
+| -   [IndexFaces](http://docs.aws.amazon.com/rekognition/latest/dg/API_IndexFaces.html)                               |                                                        |
+|                                                                                                                      |                                                        |
+| -   [ListFaces](http://docs.aws.amazon.com/rekognition/latest/dg/API_ListFaces.html)                                 |                                                        |
+|                                                                                                                      |                                                        |
+| -   [RecognizeCelebrities](http://docs.aws.amazon.com/rekognition/latest/dg/API_RecognizeCelebrities.html)           |                                                        |
+|                                                                                                                      |                                                        |
+| -   [SearchFaces](http://docs.aws.amazon.com/rekognition/latest/dg/API_SearchFaces.html)                             |                                                        |
+|                                                                                                                      |                                                        |
+| -   [SearchFacesByImage](http://docs.aws.amazon.com/rekognition/latest/dg/API_SearchFacesByImage.html)               |                                                        |
+| :::                                                                                                                  |                                                        |
++----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| Transactions per second per account for image control plane operations:                                              | In each region that Amazon Rekognition supports â€" 5  |
+|                                                                                                                      |                                                        |
+| ::: {.itemizedlist}                                                                                                  |                                                        |
+| -   [CreateCollection](http://docs.aws.amazon.com/rekognition/latest/dg/API_CreateCollection.html)                   |                                                        |
+|                                                                                                                      |                                                        |
+| -   [DeleteCollection](http://docs.aws.amazon.com/rekognition/latest/dg/API_DeleteCollection.html)                   |                                                        |
+|                                                                                                                      |                                                        |
+| -   [DeleteFaces](http://docs.aws.amazon.com/rekognition/latest/dg/API_DeleteFaces.html)                             |                                                        |
+|                                                                                                                      |                                                        |
+| -   [ListCollections](http://docs.aws.amazon.com/rekognition/latest/dg/API_ListCollections.html)                     |                                                        |
+| :::                                                                                                                  |                                                        |
++----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| Transactions per second per account for all stored video *Start* operations:                                         | In each region that Amazon Rekognition supports â€" 5  |
+|                                                                                                                      |                                                        |
+| ::: {.itemizedlist}                                                                                                  |                                                        |
+| -   [StartCelebrityRecognition](http://docs.aws.amazon.com/rekognition/latest/dg/API_StartCelebrityRecognition.html) |                                                        |
+|                                                                                                                      |                                                        |
+| -   [StartContentModeration](http://docs.aws.amazon.com/rekognition/latest/dg/API_StartContentModeration.html)       |                                                        |
+|                                                                                                                      |                                                        |
+| -   [StartFaceDetection](http://docs.aws.amazon.com/rekognition/latest/dg/API_StartFaceDetection.html)               |                                                        |
+|                                                                                                                      |                                                        |
+| -   [StartFaceSearch](http://docs.aws.amazon.com/rekognition/latest/dg/API_StartFaceSearch.html)                     |                                                        |
+|                                                                                                                      |                                                        |
+| -   [StartLabelDetection](http://docs.aws.amazon.com/rekognition/latest/dg/API_StartLabelDetection.html)             |                                                        |
+|                                                                                                                      |                                                        |
+| -   [StartPersonTracking](http://docs.aws.amazon.com/rekognition/latest/dg/API_StartPersonTracking.html)             |                                                        |
+| :::                                                                                                                  |                                                        |
++----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| Transactions per second per account for all stored video *Get* operations:                                           | ::: {.itemizedlist}                                    |
+|                                                                                                                      | -   US East (N. Virginia) Region â€" 20                |
+| ::: {.itemizedlist}                                                                                                  |                                                        |
+| -   [GetCelebrityRecognition](http://docs.aws.amazon.com/rekognition/latest/dg/API_GetCelebrityRecognition.html)     | -   US West (Oregon) Region â€" 20                     |
+|                                                                                                                      |                                                        |
+| -   [GetContentModeration](http://docs.aws.amazon.com/rekognition/latest/dg/API_GetContentModeration.html)           | -   EU (Ireland) Region â€" 20                         |
+|                                                                                                                      |                                                        |
+| -   [GetFaceDetection](http://docs.aws.amazon.com/rekognition/latest/dg/API_GetFaceDetection.html)                   | -   US East (Ohio) Region â€" 5                        |
+|                                                                                                                      |                                                        |
+| -   [GetFaceSearch](http://docs.aws.amazon.com/rekognition/latest/dg/API_GetFaceSearch.html)                         | -   Asia Pacific (Sydney) Region â€" 5                 |
+|                                                                                                                      |                                                        |
+| -   [GetLabelDetection](http://docs.aws.amazon.com/rekognition/latest/dg/API_GetLabelDetection.html)                 | -   Asia Pacific (Tokyo) Region â€" 5                  |
+|                                                                                                                      | :::                                                    |
+| -   [GetPersonTracking](http://docs.aws.amazon.com/rekognition/latest/dg/API_GetPersonTracking.html)                 |                                                        |
+| :::                                                                                                                  |                                                        |
++----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| Maximum number of concurrent stored video jobs per account                                                           | 20                                                     |
++----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| Maximum number of streaming video stream processors per account that can simultaneously exist                        | In each region that Amazon Rekognition supports â€" 10 |
++----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| Transactions per second per account for all streaming video operations:                                              | In each region that Amazon Rekognition supports â€" 1  |
+|                                                                                                                      |                                                        |
+| ::: {.itemizedlist}                                                                                                  |                                                        |
+| -   [CreateStreamProcessor](http://docs.aws.amazon.com/rekognition/latest/dg/API_CreateStreamProcessor.html)         |                                                        |
+|                                                                                                                      |                                                        |
+| -   [DeleteStreamProcessor](http://docs.aws.amazon.com/rekognition/latest/dg/API_DeleteStreamProcessor.html)         |                                                        |
+|                                                                                                                      |                                                        |
+| -   [DescribeStreamProcessor](http://docs.aws.amazon.com/rekognition/latest/dg/API_DescribeStreamProcessor.html)     |                                                        |
+|                                                                                                                      |                                                        |
+| -   [ListStreamProcessors](http://docs.aws.amazon.com/rekognition/latest/dg/API_ListStreamProcessors.html)           |                                                        |
+|                                                                                                                      |                                                        |
+| -   [StartStreamProcessor](http://docs.aws.amazon.com/rekognition/latest/dg/API_StartStreamProcessor.html)           |                                                        |
+|                                                                                                                      |                                                        |
+| -   [StopStreamProcessor](http://docs.aws.amazon.com/rekognition/latest/dg/API_StopStreamProcessor.html)             |                                                        |
+| :::                                                                                                                  |                                                        |
++----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+:::
+:::
+
+For more information about Amazon Rekognition limits, including limits that can\'t be increased, see [Amazon Rekognition Limits](http://docs.aws.amazon.com/rekognition/latest/dg/limits.html).
 
 Amazon Relational Database Service (Amazon RDS) Limits {#limits_rds}
 ------------------------------------------------------
@@ -3189,19 +2433,13 @@ AWS Server Migration Service Limits {#limits_server_migration}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Concurrent VM migrations          | 50 per account                    |
-+-----------------------------------+-----------------------------------+
-| Maximum duration of service usage | 90 days                           |
-| per VM (not per account),         |                                   |
-| beginning with the initial        |                                   |
-| replication of a VM. We terminate |                                   |
-| an ongoing replication after this |                                   |
-| period, unless a customer         |                                   |
-| requests a limit increase.        |                                   |
-+-----------------------------------+-----------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
+| Resource                                                                                                                                                                                                        | Default Limit  |
++=================================================================================================================================================================================================================+================+
+| Concurrent VM migrations                                                                                                                                                                                        | 50 per account |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
+| Maximum duration of service usage per VM (not per account), beginning with the initial replication of a VM. We terminate an ongoing replication after this period, unless a customer requests a limit increase. | 90 days        |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
 :::
 :::
 
@@ -3212,14 +2450,13 @@ AWS Serverless Application Repository Limits {#limits_serverlessrepo}
 **Limits Per Account Per Region**
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Public Applications               | 100                               |
-+-----------------------------------+-----------------------------------+
-| Free Amazon S3 Storage for Code   | 5 GB                              |
-| Packages                          |                                   |
-+-----------------------------------+-----------------------------------+
++------------------------------------------+---------------+
+| Resource                                 | Default Limit |
++==========================================+===============+
+| Public Applications                      | 100           |
++------------------------------------------+---------------+
+| Free Amazon S3 Storage for Code Packages | 5 GB          |
++------------------------------------------+---------------+
 :::
 :::
 
@@ -3254,24 +2491,21 @@ The following are the default limits for Amazon SES in the sandbox environment.
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Daily sending quota               | 200 messages per 24-hour period.  |
-+-----------------------------------+-----------------------------------+
-| Maximum send rate                 | 1 email per second.               |
-|                                   |                                   |
-|                                   | ::: {.aws-note}                   |
-|                                   | Note                              |
-|                                   |                                   |
-|                                   | The rate at which Amazon SES      |
-|                                   | accepts your messages might be    |
-|                                   | less than the maximum send rate.  |
-|                                   | :::                               |
-+-----------------------------------+-----------------------------------+
-| Recipient address verification    | All recipient addresses must be   |
-|                                   | verified.                         |
-+-----------------------------------+-----------------------------------+
++--------------------------------+----------------------------------------------------------------------------------------------+
+| Resource                       | Default Limit                                                                                |
++================================+==============================================================================================+
+| Daily sending quota            | 200 messages per 24-hour period.                                                             |
++--------------------------------+----------------------------------------------------------------------------------------------+
+| Maximum send rate              | 1 email per second.                                                                          |
+|                                |                                                                                              |
+|                                | ::: {.aws-note}                                                                              |
+|                                | Note                                                                                         |
+|                                |                                                                                              |
+|                                | The rate at which Amazon SES accepts your messages might be less than the maximum send rate. |
+|                                | :::                                                                                          |
++--------------------------------+----------------------------------------------------------------------------------------------+
+| Recipient address verification | All recipient addresses must be verified.                                                    |
++--------------------------------+----------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -3370,186 +2604,103 @@ AWS Systems Manager Limits {#limits_ssm}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Concurrently executing            | 25                                |
-| Automations                       |                                   |
-|                                   | Each AWS account can execute a    |
-|                                   | maximum of 25 Automations at one  |
-|                                   | time. Concurrent executions       |
-|                                   | greater than 25 are automatically |
-|                                   | added to an execution queue.      |
-+-----------------------------------+-----------------------------------+
-| Additional Automation executions  | 75                                |
-| that can be queued                |                                   |
-+-----------------------------------+-----------------------------------+
-| Maximum duration an Automation    | 12 hours                          |
-| execution can run when running in |                                   |
-| the context of a user             | If you expect an Automation to    |
-|                                   | run longer than 12 hours, then    |
-|                                   | you must execute the Automation   |
-|                                   | by using a service role (or       |
-|                                   | assume role).                     |
-+-----------------------------------+-----------------------------------+
-| Run Command execution history     | 30 days                           |
-| retention                         |                                   |
-|                                   | The history of each command is    |
-|                                   | available for up to 30 days. In   |
-|                                   | addition, you can store a copy of |
-|                                   | all log files in Amazon Simple    |
-|                                   | Storage Service or have an audit  |
-|                                   | trail of all API calls in AWS     |
-|                                   | CloudTrail.                       |
-+-----------------------------------+-----------------------------------+
-| On-premises managed instances     | Each AWS account can activate a   |
-| registered through Amazon EC2     | maximum of 1,000 on-premises      |
-| activation                        | instances in a region for use     |
-|                                   | with Systems Manager.             |
-|                                   |                                   |
-|                                   | For more information about        |
-|                                   | activating on-premises instances  |
-|                                   | for use in your hybrid            |
-|                                   | environment, see [Create a        |
-|                                   | Managed-Instance                  |
-|                                   | Activation](http://docs.aws.amazo |
-|                                   | n.com/systems-manager/latest/user |
-|                                   | guide/systems-manager-managedinst |
-|                                   | ances.html#sysman-managed-instanc |
-|                                   | e-activation)                     |
-|                                   | in the *[AWS Systems Manager User |
-|                                   | Guide](http://docs.aws.amazon.com |
-|                                   | /systems-manager/latest/userguide |
-|                                   | /)*.                              |
-|                                   |                                   |
-|                                   | ::: {.aws-note}                   |
-|                                   | Note                              |
-|                                   |                                   |
-|                                   | Activation limits apply only to   |
-|                                   | the on-premises instances you add |
-|                                   | to your hybrid environment, and   |
-|                                   | not to registered Amazon EC2      |
-|                                   | instances.                        |
-|                                   | :::                               |
-+-----------------------------------+-----------------------------------+
-| Systems Manager documents         | 200                               |
-|                                   |                                   |
-|                                   | Each AWS account can create a     |
-|                                   | maximum of 200 documents per      |
-|                                   | region.                           |
-+-----------------------------------+-----------------------------------+
-| Privately shared Systems Manager  | 1000                              |
-| document                          |                                   |
-|                                   | A single Systems Manager document |
-|                                   | can be shared with a maximum of   |
-|                                   | 1000 AWS accounts.                |
-+-----------------------------------+-----------------------------------+
-| Publicly shared Systems Manager   | 5                                 |
-| document                          |                                   |
-|                                   | Each AWS account can publicly     |
-|                                   | share a maximum of five           |
-|                                   | documents.                        |
-+-----------------------------------+-----------------------------------+
-| State Manager associations        | 10,000                            |
-|                                   |                                   |
-|                                   | Each Systems Manager document can |
-|                                   | be associated with a maximum of   |
-|                                   | 10,000 instances.                 |
-+-----------------------------------+-----------------------------------+
-| State Manager association         | 1,000                             |
-| versions                          |                                   |
-|                                   | You can created a maximum of      |
-|                                   | 1,000 versions of a State Manager |
-|                                   | association.                      |
-+-----------------------------------+-----------------------------------+
-| Inventory data collected per      | 1 MB                              |
-| instance per call                 |                                   |
-|                                   | This maximum adequately supports  |
-|                                   | most inventory collection         |
-|                                   | scenarios. When this limit is     |
-|                                   | reached, no new inventory data is |
-|                                   | collected for the instance.       |
-|                                   | Inventory data previously         |
-|                                   | collected is stored until the     |
-|                                   | expiration.                       |
-+-----------------------------------+-----------------------------------+
-| Inventory data collected per      | 5 MB                              |
-| instance per day                  |                                   |
-|                                   | When this limit is reached, no    |
-|                                   | new inventory data is collected   |
-|                                   | for the instance. Inventory data  |
-|                                   | previously collected is stored    |
-|                                   | until the expiration.             |
-+-----------------------------------+-----------------------------------+
-| Custom Inventory Types            | 20                                |
-|                                   |                                   |
-|                                   | You can add up to 20 custom       |
-|                                   | inventory types.                  |
-+-----------------------------------+-----------------------------------+
-| Custom Inventory Type Size        | 200 KB                            |
-|                                   |                                   |
-|                                   | This is the maximum size of the   |
-|                                   | type, not the inventory           |
-|                                   | collected.                        |
-+-----------------------------------+-----------------------------------+
-| Custom Inventory Type Attributes  | 50                                |
-|                                   |                                   |
-|                                   | This is the maximum number of     |
-|                                   | attributes within the custom      |
-|                                   | inventory type.                   |
-+-----------------------------------+-----------------------------------+
-| Inventory data expiration         | 30 days                           |
-|                                   |                                   |
-|                                   | If you terminate an instance,     |
-|                                   | inventory data for that instance  |
-|                                   | is deleted immediately. For       |
-|                                   | running instances, inventory data |
-|                                   | older than 30 days is deleted. If |
-|                                   | you need to store inventory data  |
-|                                   | longer than 30 days, you can use  |
-|                                   | AWS Config to record history or   |
-|                                   | periodically query and upload the |
-|                                   | data to an Amazon S3 bucket. For  |
-|                                   | more information, see, [Recording |
-|                                   | Amazon EC2 managed instance       |
-|                                   | inventory](http://docs.aws.amazon |
-|                                   | .com/config/latest/developerguide |
-|                                   | /resource-config-reference.html#r |
-|                                   | ecording-managed-instance-invento |
-|                                   | ry)                               |
-|                                   | in the *AWS Config Developer      |
-|                                   | Guide*.                           |
-+-----------------------------------+-----------------------------------+
-| Maintenance Windows per account   | 50                                |
-+-----------------------------------+-----------------------------------+
-| Tasks per Maintenance Window      | 20                                |
-+-----------------------------------+-----------------------------------+
-| Targets per Maintenance Window    | 50                                |
-+-----------------------------------+-----------------------------------+
-| Instance IDs per target           | 50                                |
-+-----------------------------------+-----------------------------------+
-| Targets per task                  | 10                                |
-+-----------------------------------+-----------------------------------+
-| Concurrent executions of a single | 1                                 |
-| Maintenance Window                |                                   |
-+-----------------------------------+-----------------------------------+
-| Concurrent executions of          | 5                                 |
-| Maintenance Windows               |                                   |
-+-----------------------------------+-----------------------------------+
-| Maintenance Window execution      | 30 days                           |
-| history retention                 |                                   |
-+-----------------------------------+-----------------------------------+
-| Maximum number of parameters per  | 10,000                            |
-| account                           |                                   |
-+-----------------------------------+-----------------------------------+
-| Max size for parameter value      | 4096 characters                   |
-+-----------------------------------+-----------------------------------+
-| Max history for a parameter       | 100 past values                   |
-+-----------------------------------+-----------------------------------+
-| Patch baselines per account       | 25                                |
-+-----------------------------------+-----------------------------------+
-| Patch groups per patch baseline   | 25                                |
-+-----------------------------------+-----------------------------------+
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                                                                               | Default Limit                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
++========================================================================================+================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================+
+| Concurrently executing Automations                                                     | 25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | Each AWS account can execute a maximum of 25 Automations at one time. Concurrent executions greater than 25 are automatically added to an execution queue.                                                                                                                                                                                                                                                                                                                                                                                                                     |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Additional Automation executions that can be queued                                    | 75                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum duration an Automation execution can run when running in the context of a user | 12 hours                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | If you expect an Automation to run longer than 12 hours, then you must execute the Automation by using a service role (or assume role).                                                                                                                                                                                                                                                                                                                                                                                                                                        |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Run Command execution history retention                                                | 30 days                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | The history of each command is available for up to 30 days. In addition, you can store a copy of all log files in Amazon Simple Storage Service or have an audit trail of all API calls in AWS CloudTrail.                                                                                                                                                                                                                                                                                                                                                                     |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| On-premises managed instances registered through Amazon EC2 activation                 | Each AWS account can activate a maximum of 1,000 on-premises instances in a region for use with Systems Manager.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | For more information about activating on-premises instances for use in your hybrid environment, see [Create a Managed-Instance Activation](http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html#sysman-managed-instance-activation) in the *[AWS Systems Manager User Guide](http://docs.aws.amazon.com/systems-manager/latest/userguide/)*.                                                                                                                                                                                      |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | ::: {.aws-note}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | Note                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | Activation limits apply only to the on-premises instances you add to your hybrid environment, and not to registered Amazon EC2 instances.                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                                                                                        | :::                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Systems Manager documents                                                              | 200                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | Each AWS account can create a maximum of 200 documents per region.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Privately shared Systems Manager document                                              | 1000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | A single Systems Manager document can be shared with a maximum of 1000 AWS accounts.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Publicly shared Systems Manager document                                               | 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | Each AWS account can publicly share a maximum of five documents.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| State Manager associations                                                             | 10,000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | Each Systems Manager document can be associated with a maximum of 10,000 instances.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| State Manager association versions                                                     | 1,000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | You can created a maximum of 1,000 versions of a State Manager association.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Inventory data collected per instance per call                                         | 1 MB                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | This maximum adequately supports most inventory collection scenarios. When this limit is reached, no new inventory data is collected for the instance. Inventory data previously collected is stored until the expiration.                                                                                                                                                                                                                                                                                                                                                     |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Inventory data collected per instance per day                                          | 5 MB                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | When this limit is reached, no new inventory data is collected for the instance. Inventory data previously collected is stored until the expiration.                                                                                                                                                                                                                                                                                                                                                                                                                           |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Custom Inventory Types                                                                 | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | You can add up to 20 custom inventory types.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Custom Inventory Type Size                                                             | 200 KB                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | This is the maximum size of the type, not the inventory collected.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Custom Inventory Type Attributes                                                       | 50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | This is the maximum number of attributes within the custom inventory type.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Inventory data expiration                                                              | 30 days                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                        | If you terminate an instance, inventory data for that instance is deleted immediately. For running instances, inventory data older than 30 days is deleted. If you need to store inventory data longer than 30 days, you can use AWS Config to record history or periodically query and upload the data to an Amazon S3 bucket. For more information, see, [Recording Amazon EC2 managed instance inventory](http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#recording-managed-instance-inventory) in the *AWS Config Developer Guide*. |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maintenance Windows per account                                                        | 50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Tasks per Maintenance Window                                                           | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Targets per Maintenance Window                                                         | 50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Instance IDs per target                                                                | 50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Targets per task                                                                       | 10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Concurrent executions of a single Maintenance Window                                   | 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Concurrent executions of Maintenance Windows                                           | 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maintenance Window execution history retention                                         | 30 days                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum number of parameters per account                                               | 10,000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Max size for parameter value                                                           | 4096 characters                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Max history for a parameter                                                            | 100 past values                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Patch baselines per account                                                            | 25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Patch groups per patch baseline                                                        | 25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -3595,281 +2746,67 @@ Unless otherwise noted, [submit a request](https://console.aws.amazon.com/suppor
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------+-----------------------+-----------------------+
-| Resource              | Default limit         | Comments              |
-+=======================+=======================+=======================+
-| VPCs per region       | 5                     | Increasing this limit |
-|                       |                       | increases the limit   |
-|                       |                       | on Internet gateways  |
-|                       |                       | per region by the     |
-|                       |                       | same amount. The      |
-|                       |                       | multiple of the       |
-|                       |                       | number of VPCs in the |
-|                       |                       | region and the number |
-|                       |                       | of security groups    |
-|                       |                       | per VPC cannot exceed |
-|                       |                       | 5000.                 |
-+-----------------------+-----------------------+-----------------------+
-| Subnets per VPC       | 200                   | \-                    |
-+-----------------------+-----------------------+-----------------------+
-| IPv4 CIDR blocks per  | 5                     | This limit is made up |
-| VPC                   |                       | of the primary CIDR   |
-|                       |                       | block plus 4          |
-|                       |                       | secondary CIDR        |
-|                       |                       | blocks.               |
-+-----------------------+-----------------------+-----------------------+
-| IPv6 CIDR blocks per  | 1                     | This limit cannot be  |
-| VPC                   |                       | increased.            |
-+-----------------------+-----------------------+-----------------------+
-| Internet gateways per | 5                     | This limit is         |
-| region                |                       | directly correlated   |
-|                       |                       | with the limit on     |
-|                       |                       | VPCs per region. To   |
-|                       |                       | increase this limit,  |
-|                       |                       | increase the limit on |
-|                       |                       | VPCs per region. Only |
-|                       |                       | one Internet gateway  |
-|                       |                       | can be attached to a  |
-|                       |                       | VPC at a time.        |
-+-----------------------+-----------------------+-----------------------+
-| Egress-only Internet  | 5                     | This limit is         |
-| gateways per region   |                       | directly correlated   |
-|                       |                       | with the limit on     |
-|                       |                       | VPCs per region. To   |
-|                       |                       | increase this limit,  |
-|                       |                       | increase the limit on |
-|                       |                       | VPCs per region. Only |
-|                       |                       | one egress-only       |
-|                       |                       | Internet gateway can  |
-|                       |                       | be attached to a VPC  |
-|                       |                       | at a time.            |
-+-----------------------+-----------------------+-----------------------+
-| Virtual private       | 5                     | Only one virtual      |
-| gateways per region   |                       | private gateway can   |
-|                       |                       | be attached to a VPC  |
-|                       |                       | at a time.            |
-+-----------------------+-----------------------+-----------------------+
-| Customer gateways per | 50                    | To increase this      |
-| region                |                       | limit, contact AWS    |
-|                       |                       | Support.              |
-+-----------------------+-----------------------+-----------------------+
-| VPN connections per   | 50                    | \-                    |
-| region                |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| VPN connections per   | 10                    | \-                    |
-| VPC (per virtual      |                       |                       |
-| private gateway)      |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| Route tables per VPC  | 200                   | This limit includes   |
-|                       |                       | the main route table. |
-+-----------------------+-----------------------+-----------------------+
-| Routes per route      | 50                    | You can increase this |
-| table (non-propagated |                       | limit up to a maximum |
-| routes)               |                       | of 100; however,      |
-|                       |                       | network performance   |
-|                       |                       | may be impacted. This |
-|                       |                       | limit is enforced     |
-|                       |                       | separately for IPv4   |
-|                       |                       | routes and IPv6       |
-|                       |                       | routes (50 each, and  |
-|                       |                       | a maximum of 100      |
-|                       |                       | each).                |
-+-----------------------+-----------------------+-----------------------+
-| BGP advertised routes | 100                   | This limit cannot be  |
-| per route table       |                       | increased. If you     |
-| (propagated routes)   |                       | require more than 100 |
-|                       |                       | prefixes, advertise a |
-|                       |                       | default route.        |
-+-----------------------+-----------------------+-----------------------+
-| Elastic IP addresses  | 5                     | This is the limit for |
-| per region for        |                       | the number of Elastic |
-| EC2-VPC               |                       | IP addresses for use  |
-|                       |                       | in EC2-VPC. For       |
-|                       |                       | Elastic IP addresses  |
-|                       |                       | for EC2-Classic, see  |
-|                       |                       | [Amazon Elastic       |
-|                       |                       | Compute Cloud (Amazon |
-|                       |                       | EC2)                  |
-|                       |                       | Limits](aws_service_l |
-|                       |                       | imits.html#limits_ec2 |
-|                       |                       | ).                    |
-+-----------------------+-----------------------+-----------------------+
-| Security groups per   | 500                   | The multiple of the   |
-| VPC                   |                       | number of VPCs in the |
-|                       |                       | region and the number |
-|                       |                       | of security groups    |
-|                       |                       | per VPC cannot exceed |
-|                       |                       | 5000.                 |
-+-----------------------+-----------------------+-----------------------+
-| Inbound or outbound   | 50                    | You can have 50       |
-| rules per security    |                       | inbound and 50        |
-| group                 |                       | outbound rules per    |
-|                       |                       | security group        |
-|                       |                       | (giving a total of    |
-|                       |                       | 100 rules). To change |
-|                       |                       | this limit, contact   |
-|                       |                       | AWS Support â€" a     |
-|                       |                       | limit change applies  |
-|                       |                       | to both inbound and   |
-|                       |                       | outbound rules. The   |
-|                       |                       | multiple of the limit |
-|                       |                       | for inbound or        |
-|                       |                       | outbound rules per    |
-|                       |                       | security group and    |
-|                       |                       | the limit for         |
-|                       |                       | security groups per   |
-|                       |                       | network interface     |
-|                       |                       | cannot exceed 250.    |
-|                       |                       | For example, if you   |
-|                       |                       | increase the limit to |
-|                       |                       | 100, we decrease your |
-|                       |                       | number of security    |
-|                       |                       | groups per network    |
-|                       |                       | interface to 2.       |
-|                       |                       |                       |
-|                       |                       | This limit is         |
-|                       |                       | enforced separately   |
-|                       |                       | for IPv4 rules and    |
-|                       |                       | IPv6 rules. A rule    |
-|                       |                       | that references a     |
-|                       |                       | security group counts |
-|                       |                       | as one rule for IPv4  |
-|                       |                       | and one rule for      |
-|                       |                       | IPv6.                 |
-+-----------------------+-----------------------+-----------------------+
-| Security groups per   | 5                     | To increase or        |
-| network interface     |                       | decrease this limit,  |
-|                       |                       | contact AWS Support.  |
-|                       |                       | The maximum is 16.    |
-|                       |                       | The multiple of the   |
-|                       |                       | limit for security    |
-|                       |                       | groups per network    |
-|                       |                       | interface and the     |
-|                       |                       | limit for rules per   |
-|                       |                       | security group cannot |
-|                       |                       | exceed 250. For       |
-|                       |                       | example, if you       |
-|                       |                       | increase the limit to |
-|                       |                       | 10, we decrease your  |
-|                       |                       | number of rules per   |
-|                       |                       | security group to 25. |
-+-----------------------+-----------------------+-----------------------+
-| Network interfaces    | \-                    | This limit varies by  |
-| per instance          |                       | instance type. For    |
-|                       |                       | more information, see |
-|                       |                       | [IP Addresses Per ENI |
-|                       |                       | Per Instance          |
-|                       |                       | Type](http://docs.aws |
-|                       |                       | .amazon.com/AWSEC2/la |
-|                       |                       | test/UserGuide/using- |
-|                       |                       | eni.html#AvailableIpP |
-|                       |                       | erENI).               |
-+-----------------------+-----------------------+-----------------------+
-| Network interfaces    | 350                   | This limit is the     |
-| per region            |                       | greater of either the |
-|                       |                       | default limit (350)   |
-|                       |                       | or your On-Demand     |
-|                       |                       | Instance limit        |
-|                       |                       | multiplied by 5. The  |
-|                       |                       | default limit for     |
-|                       |                       | On-Demand Instances   |
-|                       |                       | is 20. If your        |
-|                       |                       | On-Demand Instance    |
-|                       |                       | limit is below 70,    |
-|                       |                       | the default limit of  |
-|                       |                       | 350 applies. To       |
-|                       |                       | increase this limit,  |
-|                       |                       | submit a request or   |
-|                       |                       | increase your         |
-|                       |                       | On-Demand Instance    |
-|                       |                       | limit.                |
-+-----------------------+-----------------------+-----------------------+
-| Network ACLs per VPC  | 200                   | You can associate one |
-|                       |                       | network ACL to one or |
-|                       |                       | more subnets in a     |
-|                       |                       | VPC. This limit is    |
-|                       |                       | not the same as the   |
-|                       |                       | number of rules per   |
-|                       |                       | network ACL.          |
-+-----------------------+-----------------------+-----------------------+
-| Rules per network ACL | 20                    | This is the one-way   |
-|                       |                       | limit for a single    |
-|                       |                       | network ACL, where    |
-|                       |                       | the limit for ingress |
-|                       |                       | rules is 20, and the  |
-|                       |                       | limit for egress      |
-|                       |                       | rules is 20. This     |
-|                       |                       | limit includes both   |
-|                       |                       | IPv4 and IPv6 rules,  |
-|                       |                       | and includes the      |
-|                       |                       | default deny rules    |
-|                       |                       | (rule number 32767    |
-|                       |                       | for IPv4 and 32768    |
-|                       |                       | for IPv6, or an       |
-|                       |                       | asterisk \* in the    |
-|                       |                       | Amazon VPC console).  |
-|                       |                       |                       |
-|                       |                       | This limit can be     |
-|                       |                       | increased up to a     |
-|                       |                       | maximum if 40;        |
-|                       |                       | however, network      |
-|                       |                       | performance may be    |
-|                       |                       | impacted.             |
-+-----------------------+-----------------------+-----------------------+
-| Active VPC peering    | 50                    | The maximum limit is  |
-| connections per VPC   |                       | 125 peering           |
-|                       |                       | connections per VPC.  |
-|                       |                       | The number of entries |
-|                       |                       | per route table       |
-|                       |                       | should be increased   |
-|                       |                       | accordingly; however, |
-|                       |                       | network performance   |
-|                       |                       | may be impacted.      |
-+-----------------------+-----------------------+-----------------------+
-| Outstanding VPC       | 25                    | This is the limit for |
-| peering connection    |                       | the number of         |
-| requests              |                       | outstanding VPC       |
-|                       |                       | peering connection    |
-|                       |                       | requests that you\'ve |
-|                       |                       | requested from your   |
-|                       |                       | account. To increase  |
-|                       |                       | this limit, contact   |
-|                       |                       | AWS Support.          |
-+-----------------------+-----------------------+-----------------------+
-| Expiry time for an    | 1 week (168 hours)    | To increase this      |
-| unaccepted VPC        |                       | limit, contact AWS    |
-| peering connection    |                       | Support.              |
-| request               |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| VPC endpoints per     | 20                    | You can have 20       |
-| region                |                       | interface endpoints   |
-|                       |                       | and 20 gateway        |
-|                       |                       | endpoints. The        |
-|                       |                       | maximum limit for     |
-|                       |                       | gateway endpoints is  |
-|                       |                       | 255 endpoints per     |
-|                       |                       | VPC, regardless of    |
-|                       |                       | your endpoint limit   |
-|                       |                       | per region.           |
-+-----------------------+-----------------------+-----------------------+
-| Flow logs per single  | 2                     | This limit cannot be  |
-| network interface,    |                       | increased. You can    |
-| single subnet, or     |                       | effectively have 6    |
-| single VPC in a       |                       | flow logs per network |
-| region                |                       | interface if you      |
-|                       |                       | create 2 flow logs    |
-|                       |                       | for the subnet, and 2 |
-|                       |                       | flow logs for the VPC |
-|                       |                       | in which your network |
-|                       |                       | interface resides.    |
-+-----------------------+-----------------------+-----------------------+
-| NAT gateways per      | 5                     | A NAT gateway in the  |
-| Availability Zone     |                       | `pending`{.code},     |
-|                       |                       | `active`{.code}, or   |
-|                       |                       | `deleting`{.code}     |
-|                       |                       | state counts against  |
-|                       |                       | your limit.           |
-+-----------------------+-----------------------+-----------------------+
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                                                                         | Default limit      | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
++==================================================================================+====================+======================================================================================================================================================================================================================================================================================================================================================================================================================================================================================+
+| VPCs per region                                                                  | 5                  | Increasing this limit increases the limit on Internet gateways per region by the same amount. The multiple of the number of VPCs in the region and the number of security groups per VPC cannot exceed 5000.                                                                                                                                                                                                                                                                         |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Subnets per VPC                                                                  | 200                | \-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IPv4 CIDR blocks per VPC                                                         | 5                  | This limit is made up of the primary CIDR block plus 4 secondary CIDR blocks.                                                                                                                                                                                                                                                                                                                                                                                                        |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IPv6 CIDR blocks per VPC                                                         | 1                  | This limit cannot be increased.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Internet gateways per region                                                     | 5                  | This limit is directly correlated with the limit on VPCs per region. To increase this limit, increase the limit on VPCs per region. Only one Internet gateway can be attached to a VPC at a time.                                                                                                                                                                                                                                                                                    |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Egress-only Internet gateways per region                                         | 5                  | This limit is directly correlated with the limit on VPCs per region. To increase this limit, increase the limit on VPCs per region. Only one egress-only Internet gateway can be attached to a VPC at a time.                                                                                                                                                                                                                                                                        |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Virtual private gateways per region                                              | 5                  | Only one virtual private gateway can be attached to a VPC at a time.                                                                                                                                                                                                                                                                                                                                                                                                                 |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Customer gateways per region                                                     | 50                 | To increase this limit, contact AWS Support.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| VPN connections per region                                                       | 50                 | \-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| VPN connections per VPC (per virtual private gateway)                            | 10                 | \-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Route tables per VPC                                                             | 200                | This limit includes the main route table.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Routes per route table (non-propagated routes)                                   | 50                 | You can increase this limit up to a maximum of 100; however, network performance may be impacted. This limit is enforced separately for IPv4 routes and IPv6 routes (50 each, and a maximum of 100 each).                                                                                                                                                                                                                                                                            |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| BGP advertised routes per route table (propagated routes)                        | 100                | This limit cannot be increased. If you require more than 100 prefixes, advertise a default route.                                                                                                                                                                                                                                                                                                                                                                                    |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Elastic IP addresses per region for EC2-VPC                                      | 5                  | This is the limit for the number of Elastic IP addresses for use in EC2-VPC. For Elastic IP addresses for EC2-Classic, see [Amazon Elastic Compute Cloud (Amazon EC2) Limits](aws_service_limits.html#limits_ec2).                                                                                                                                                                                                                                                                   |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Security groups per VPC                                                          | 500                | The multiple of the number of VPCs in the region and the number of security groups per VPC cannot exceed 5000.                                                                                                                                                                                                                                                                                                                                                                       |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Inbound or outbound rules per security group                                     | 50                 | You can have 50 inbound and 50 outbound rules per security group (giving a total of 100 rules). To change this limit, contact AWS Support â€" a limit change applies to both inbound and outbound rules. The multiple of the limit for inbound or outbound rules per security group and the limit for security groups per network interface cannot exceed 250. For example, if you increase the limit to 100, we decrease your number of security groups per network interface to 2. |
+|                                                                                  |                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                                                                                  |                    | This limit is enforced separately for IPv4 rules and IPv6 rules. A rule that references a security group counts as one rule for IPv4 and one rule for IPv6.                                                                                                                                                                                                                                                                                                                          |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Security groups per network interface                                            | 5                  | To increase or decrease this limit, contact AWS Support. The maximum is 16. The multiple of the limit for security groups per network interface and the limit for rules per security group cannot exceed 250. For example, if you increase the limit to 10, we decrease your number of rules per security group to 25.                                                                                                                                                               |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Network interfaces per instance                                                  | \-                 | This limit varies by instance type. For more information, see [IP Addresses Per ENI Per Instance Type](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI).                                                                                                                                                                                                                                                                                         |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Network interfaces per region                                                    | 350                | This limit is the greater of either the default limit (350) or your On-Demand Instance limit multiplied by 5. The default limit for On-Demand Instances is 20. If your On-Demand Instance limit is below 70, the default limit of 350 applies. To increase this limit, submit a request or increase your On-Demand Instance limit.                                                                                                                                                   |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Network ACLs per VPC                                                             | 200                | You can associate one network ACL to one or more subnets in a VPC. This limit is not the same as the number of rules per network ACL.                                                                                                                                                                                                                                                                                                                                                |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Rules per network ACL                                                            | 20                 | This is the one-way limit for a single network ACL, where the limit for ingress rules is 20, and the limit for egress rules is 20. This limit includes both IPv4 and IPv6 rules, and includes the default deny rules (rule number 32767 for IPv4 and 32768 for IPv6, or an asterisk \* in the Amazon VPC console).                                                                                                                                                                   |
+|                                                                                  |                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                                                                                  |                    | This limit can be increased up to a maximum if 40; however, network performance may be impacted.                                                                                                                                                                                                                                                                                                                                                                                     |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Active VPC peering connections per VPC                                           | 50                 | The maximum limit is 125 peering connections per VPC. The number of entries per route table should be increased accordingly; however, network performance may be impacted.                                                                                                                                                                                                                                                                                                           |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Outstanding VPC peering connection requests                                      | 25                 | This is the limit for the number of outstanding VPC peering connection requests that you\'ve requested from your account. To increase this limit, contact AWS Support.                                                                                                                                                                                                                                                                                                               |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Expiry time for an unaccepted VPC peering connection request                     | 1 week (168 hours) | To increase this limit, contact AWS Support.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| VPC endpoints per region                                                         | 20                 | You can have 20 interface endpoints and 20 gateway endpoints. The maximum limit for gateway endpoints is 255 endpoints per VPC, regardless of your endpoint limit per region.                                                                                                                                                                                                                                                                                                        |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Flow logs per single network interface, single subnet, or single VPC in a region | 2                  | This limit cannot be increased. You can effectively have 6 flow logs per network interface if you create 2 flow logs for the subnet, and 2 flow logs for the VPC in which your network interface resides.                                                                                                                                                                                                                                                                            |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NAT gateways per Availability Zone                                               | 5                  | A NAT gateway in the `pending`{.code}, `active`{.code}, or `deleting`{.code} state counts against your limit.                                                                                                                                                                                                                                                                                                                                                                        |
++----------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -3888,20 +2825,17 @@ AWS WAF has default limits on the number of entities per account. You can [reque
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Web ACLs per AWS account          | 50                                |
-+-----------------------------------+-----------------------------------+
-| Rules per AWS account             | 100                               |
-+-----------------------------------+-----------------------------------+
-| Conditions per AWS account        | 100 of each condition type (For   |
-|                                   | example: 100 Size constraint      |
-|                                   | conditions, 100 IP match          |
-|                                   | conditions, etc.)                 |
-+-----------------------------------+-----------------------------------+
-| Requests per Second               | 10,000 per web ACL\*              |
-+-----------------------------------+-----------------------------------+
++----------------------------+---------------------------------------------------------------------------------------------------------+
+| Resource                   | Default Limit                                                                                           |
++============================+=========================================================================================================+
+| Web ACLs per AWS account   | 50                                                                                                      |
++----------------------------+---------------------------------------------------------------------------------------------------------+
+| Rules per AWS account      | 100                                                                                                     |
++----------------------------+---------------------------------------------------------------------------------------------------------+
+| Conditions per AWS account | 100 of each condition type (For example: 100 Size constraint conditions, 100 IP match conditions, etc.) |
++----------------------------+---------------------------------------------------------------------------------------------------------+
+| Requests per Second        | 10,000 per web ACL\*                                                                                    |
++----------------------------+---------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -3912,45 +2846,29 @@ The following limits on AWS WAF entities can\'t be changed.
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Limit                             |
-+===================================+===================================+
-| Rules per web ACL                 | 10                                |
-+-----------------------------------+-----------------------------------+
-| Conditions per rule               | 10                                |
-+-----------------------------------+-----------------------------------+
-| IP address ranges (in CIDR        | 10,000                            |
-| notation) per IP match condition  |                                   |
-+-----------------------------------+-----------------------------------+
-| Filters per cross-site scripting  | 10                                |
-| match condition                   |                                   |
-+-----------------------------------+-----------------------------------+
-| Filters per size constraint       | 10                                |
-| condition                         |                                   |
-+-----------------------------------+-----------------------------------+
-| Filters per SQL injection match   | 10                                |
-| condition                         |                                   |
-+-----------------------------------+-----------------------------------+
-| Filters per string match          | 10                                |
-| condition                         |                                   |
-+-----------------------------------+-----------------------------------+
-| In string match conditions, the   | 40                                |
-| number of characters in HTTP      |                                   |
-| header names, when you\'ve        |                                   |
-| configured AWS WAF to inspect the |                                   |
-| headers in web requests for a     |                                   |
-| specified value                   |                                   |
-+-----------------------------------+-----------------------------------+
-| In string match conditions, the   | 50                                |
-| number of characters in the value |                                   |
-| that you want AWS WAF to search   |                                   |
-| for                               |                                   |
-+-----------------------------------+-----------------------------------+
-| In regex match conditions, the    | 70                                |
-| number of characters in the       |                                   |
-| pattern that you want AWS WAF to  |                                   |
-| search for                        |                                   |
-+-----------------------------------+-----------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| Resource                                                                                                                                                                | Limit  |
++=========================================================================================================================================================================+========+
+| Rules per web ACL                                                                                                                                                       | 10     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| Conditions per rule                                                                                                                                                     | 10     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| IP address ranges (in CIDR notation) per IP match condition                                                                                                             | 10,000 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| Filters per cross-site scripting match condition                                                                                                                        | 10     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| Filters per size constraint condition                                                                                                                                   | 10     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| Filters per SQL injection match condition                                                                                                                               | 10     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| Filters per string match condition                                                                                                                                      | 10     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| In string match conditions, the number of characters in HTTP header names, when you\'ve configured AWS WAF to inspect the headers in web requests for a specified value | 40     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| In string match conditions, the number of characters in the value that you want AWS WAF to search for                                                                   | 50     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| In regex match conditions, the number of characters in the pattern that you want AWS WAF to search for                                                                  | 70     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
 :::
 :::
 
@@ -3981,15 +2899,15 @@ AWS X-Ray Limits {#limits_xray}
 ::: {.table}
 
 ::: {.table-contents}
-+-----------------------------------+-----------------------------------+
-| Resource                          | Default Limit                     |
-+===================================+===================================+
-| Trace and service graph retention | 30 days                           |
-+-----------------------------------+-----------------------------------+
-| Segment document size             | 64kB                              |
-+-----------------------------------+-----------------------------------+
-| Indexed annotations per trace     | 50                                |
-+-----------------------------------+-----------------------------------+
++-----------------------------------+---------------+
+| Resource                          | Default Limit |
++===================================+===============+
+| Trace and service graph retention | 30 days       |
++-----------------------------------+---------------+
+| Segment document size             | 64kB          |
++-----------------------------------+---------------+
+| Indexed annotations per trace     | 50            |
++-----------------------------------+---------------+
 :::
 :::
 :::
