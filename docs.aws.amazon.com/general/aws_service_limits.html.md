@@ -758,13 +758,13 @@ AWS Directory Service Limits {#limits_ds}
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                                                                                Default Limit
-  --------------------------------------------------------------------------------------- --------------------
-  AD Connector directories                                                                10
-  AWS Directory Service for Microsoft Active Directory (Enterprise Edition) directories   10
-  Simple AD directories                                                                   10
-  Manual snapshots                                                                        5 per Microsoft AD
-  Manual snapshots                                                                        5 per Simple AD
+  Resource                                                           Default Limit
+  ------------------------------------------------------------------ --------------------------------
+  AD Connector directories                                           10
+  AWS Directory Service for Microsoft Active Directory directories   10
+  Simple AD directories                                              10
+  Manual snapshots                                                   5 per AWS Managed Microsoft AD
+  Manual snapshots                                                   5 per Simple AD
 :::
 :::
 
