@@ -2729,7 +2729,7 @@ Amazon Translate Limits {#limits_amazon_translate}
 ::: {.table-contents}
   Resource                                         Default Limit
   ------------------------------------------------ ---------------
-  Characters per 10 seconds                        5,000
+  Bytes per 10 seconds                             5,000
   Transactions per second for all language pairs   10
 :::
 :::
