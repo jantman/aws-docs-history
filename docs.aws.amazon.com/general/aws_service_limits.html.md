@@ -1088,13 +1088,11 @@ AWS Firewall Manager has default limits on the number of entities per account. Y
 +------------------------------------------------------------------+---------------+
 | Resource                                                         | Default Limit |
 +==================================================================+===============+
-| Firewall Manager policies per AWS account                        | 20            |
+| Accounts per organization in AWS Organizations                   | 2500          |
 +------------------------------------------------------------------+---------------+
-| Rule groups per Firewall Manager policy                          | 1             |
+| Firewall Manager policies per organization in AWS Organizations  | 20            |
 +------------------------------------------------------------------+---------------+
 | Tags to specified include or exclude per Firewall Manager policy | 8             |
-+------------------------------------------------------------------+---------------+
-| Rule groups per AWS Firewall Manager administrator account       | 3             |
 +------------------------------------------------------------------+---------------+
 :::
 :::
@@ -1103,13 +1101,15 @@ The following limits related to Firewall Manager can\'t be changed.
 
 ::: {.table}
 ::: {.table-contents}
-+-------------------------------+-------+
-| Resource                      | Limit |
-+===============================+=======+
-| Accounts per AWS Organization | 2500  |
-+-------------------------------+-------+
-| Rules per rule group          | 10    |
-+-------------------------------+-------+
++------------------------------------------------------------+-------+
+| Resource                                                   | Limit |
++============================================================+=======+
+| Rule groups per AWS Firewall Manager administrator account | 3     |
++------------------------------------------------------------+-------+
+| Rule groups per Firewall Manager policy                    | 1     |
++------------------------------------------------------------+-------+
+| Rules per rule group                                       | 10    |
++------------------------------------------------------------+-------+
 :::
 :::
 
