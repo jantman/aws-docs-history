@@ -1593,6 +1593,37 @@ AWS IoT Limits {#limits_iot}
 :::
 :::
 
+AWS IoT Analytics Limits {#limits_iot_analytics}
+------------------------
+
+::: {.table}
+
+::: {.table-contents}
+  API                             Limit Description                                                     Adjustable?
+  ------------------------------- --------------------------------------------------------------------- --------------
+  `SampleChannelData`{.code}      1 transaction per second per channel                                  yes
+  `CreateDatasetContent`{.code}   1 transaction per second per data set                                 yes
+  `RunPipelineActivity`{.code}    1 transaction per second                                              yes
+  other management APIs           20 transactions per second                                            yes
+  `BatchPutMessage`{.code}        1000 messages per second; 100 messages per batch; 128Kb per message   yes; yes; no
+:::
+:::
+
+::: {.table}
+
+::: {.table-contents}
+  Resource                                 Limit Description            Adjustable?
+  ---------------------------------------- ---------------------------- -------------
+  channel                                  50 per account               yes
+  data store                               25 per account               yes
+  pipeline                                 100 per account              yes
+  activities                               25 per pipeline              no
+  data set                                 100 per account              yes
+  minimum data set refresh interval        1 hour                       yes
+  concurrent data set content generation   2 data sets simultaneously   no
+:::
+:::
+
 AWS Key Management Service (AWS KMS) Limits {#limits_kms}
 -------------------------------------------
 
@@ -2597,6 +2628,32 @@ AWS Storage Gateway Limits {#limits-storage-gateway}
 --------------------------
 
 For more information about these limits, see [AWS Storage Gateway Limits](http://docs.aws.amazon.com/storagegateway/latest/userguide/resource-gateway-limits.html) in the *AWS Storage Gateway User Guide*.
+
+Amazon Sumerian Limits {#limits_sumerian}
+----------------------
+
+::: {.table}
+
+::: {.table-contents}
++-------------------+---------------+
+| Resource          | Default Limit |
++===================+===============+
+| Projects          | 1,000         |
++-------------------+---------------+
+| Scenes            | 10,000        |
++-------------------+---------------+
+| Texture file size | 10 MB         |
++-------------------+---------------+
+| Sound file size   | 10 MB         |
++-------------------+---------------+
+| Model file size   | 50 MB         |
++-------------------+---------------+
+| Script file size  | 1 MB          |
++-------------------+---------------+
+| ZIP file size     | 200 MB        |
++-------------------+---------------+
+:::
+:::
 
 AWS Systems Manager Limits {#limits_ssm}
 --------------------------

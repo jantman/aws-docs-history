@@ -6475,13 +6475,179 @@
                      
                      
                      
-                     <h2 id="limits_kms">AWS Key Management Service (AWS KMS) Limits</h2>
+                     <h2 id="limits_iot_analytics">AWS IoT Analytics Limits</h2>
                      
                      
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
                            <table id="w116aac15d125b3">
+                              
+                              <tr>
+                                 
+                                 <th>API</th>
+                                 
+                                 <th>Limit Description</th>
+                                 
+                                 <th>Adjustable?</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td><code class="code">SampleChannelData</code></td>
+                                 
+                                 <td>1 transaction per second per channel</td>
+                                 
+                                 <td>yes</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td><code class="code">CreateDatasetContent</code></td>
+                                 
+                                 <td>1 transaction per second per data set</td>
+                                 
+                                 <td>yes</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td><code class="code">RunPipelineActivity</code></td>
+                                 
+                                 <td>1 transaction per second</td>
+                                 
+                                 <td>yes</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>other management APIs</td>
+                                 
+                                 <td>20 transactions per second</td>
+                                 
+                                 <td>yes</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td><code class="code">BatchPutMessage</code></td>
+                                 
+                                 <td>1000 messages per second; 100 messages per batch; 128Kb per message</td>
+                                 
+                                 <td>yes; yes; no</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w116aac15d125b5">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Limit Description</th>
+                                 
+                                 <th>Adjustable?</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>channel</td>
+                                 
+                                 <td>50 per account</td>
+                                 
+                                 <td>yes</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>data store</td>
+                                 
+                                 <td>25 per account</td>
+                                 
+                                 <td>yes</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>pipeline</td>
+                                 
+                                 <td>100 per account</td>
+                                 
+                                 <td>yes</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>activities</td>
+                                 
+                                 <td>25 per pipeline</td>
+                                 
+                                 <td>no</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>data set</td>
+                                 
+                                 <td>100 per account</td>
+                                 
+                                 <td>yes</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>minimum data set refresh interval</td>
+                                 
+                                 <td>1 hour</td>
+                                 
+                                 <td>yes</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>concurrent data set content generation</td>
+                                 
+                                 <td>2 data sets simultaneously</td>
+                                 
+                                 <td>no</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     
+                     <h2 id="limits_kms">AWS Key Management Service (AWS KMS) Limits</h2>
+                     
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w116aac15d127b3">
                               
                               <tr>
                                  
@@ -6549,7 +6715,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d127b3">
+                           <table id="w116aac15d129b3">
                               
                               <tr>
                                  
@@ -6627,7 +6793,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d129b3">
+                           <table id="w116aac15d131b3">
                               
                               <tr>
                                  
@@ -6670,7 +6836,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d131b3">
+                           <table id="w116aac15d133b3">
                               
                               <tr>
                                  
@@ -6754,7 +6920,7 @@
                      <div class="table">
                         <p class="title"><b>Control Plane API limits</b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d133b5b9">
+                           <table id="w116aac15d135b5b9">
                               
                               <tr>
                                  
@@ -6923,7 +7089,7 @@
                      <div class="table">
                         <p class="title"><b>Data Plane API limits</b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d133b7c13">
+                           <table id="w116aac15d135b7c13">
                               
                               <tr>
                                  
@@ -7066,7 +7232,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d135b3">
+                           <table id="w116aac15d137b3">
                               
                               <tr>
                                  
@@ -7110,7 +7276,7 @@
                      
                      <div class="table">
                         <div class="table-contents">
-                           <table id="w116aac15d135c11">
+                           <table id="w116aac15d137c11">
                               
                               <tr>
                                  
@@ -7269,7 +7435,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d137b3">
+                           <table id="w116aac15d139b3">
                               
                               <tr>
                                  
@@ -7333,7 +7499,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d139b3">
+                           <table id="w116aac15d141b3">
                               
                               <tr>
                                  
@@ -7383,7 +7549,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d141b3">
+                           <table id="w116aac15d143b3">
                               
                               <tr>
                                  
@@ -7517,7 +7683,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d143b3">
+                           <table id="w116aac15d145b3">
                               
                               <tr>
                                  
@@ -7622,7 +7788,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d145b3">
+                           <table id="w116aac15d147b3">
                               
                               <tr>
                                  
@@ -7668,7 +7834,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d147b3">
+                           <table id="w116aac15d149b3">
                               
                               <tr>
                                  
@@ -7705,7 +7871,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d149b3">
+                           <table id="w116aac15d151b3">
                               
                               <tr>
                                  
@@ -7742,7 +7908,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d151b3">
+                           <table id="w116aac15d153b3">
                               
                               <tr>
                                  
@@ -7798,7 +7964,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d155b3">
+                           <table id="w116aac15d157b3">
                               
                               <tr>
                                  
@@ -7834,7 +8000,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d157b3">
+                           <table id="w116aac15d159b3">
                               
                               <tr>
                                  
@@ -7880,7 +8046,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d159b3">
+                           <table id="w116aac15d161b3">
                               
                               <tr>
                                  
@@ -7934,7 +8100,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d161b3">
+                           <table id="w116aac15d163b3">
                               
                               <tr>
                                  
@@ -7976,7 +8142,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d163b3">
+                           <table id="w116aac15d165b3">
                               
                               <tr>
                                  
@@ -8117,7 +8283,7 @@
                               <div class="table">
                                  <p class="title"><b>Throttle Rate per Operation</b></p>
                                  <div class="table-contents">
-                                    <table id="w116aac15d165b3b3b3">
+                                    <table id="w116aac15d167b3b3b3">
                                        
                                        <tr>
                                           
@@ -8235,7 +8401,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d167b3">
+                           <table id="w116aac15d169b3">
                               
                               <tr>
                                  
@@ -8339,7 +8505,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d169b7">
+                           <table id="w116aac15d171b7">
                               
                               <tr>
                                  
@@ -8699,7 +8865,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d171b3">
+                           <table id="w116aac15d173b3">
                               
                               <tr>
                                  
@@ -8847,7 +9013,7 @@
                      
                      <div class="table">
                         <div class="table-contents">
-                           <table id="w116aac15d173b3">
+                           <table id="w116aac15d175b3">
                               
                               <tr>
                                  
@@ -8877,7 +9043,7 @@
                      <div class="table">
                         <p class="title"><b>DNS and Domain Registration</b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d175b3">
+                           <table id="w116aac15d177b3">
                               
                               <tr>
                                  
@@ -8968,7 +9134,7 @@
                      <div class="table">
                         <p class="title"><b>Auto Naming</b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d175b5">
+                           <table id="w116aac15d177b5">
                               
                               <tr>
                                  
@@ -9025,7 +9191,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d177b7">
+                           <table id="w116aac15d179b7">
                               
                               <tr>
                                  
@@ -9183,7 +9349,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d177c11">
+                           <table id="w116aac15d179c11">
                               
                               <tr>
                                  
@@ -9445,7 +9611,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d177c15">
+                           <table id="w116aac15d179c15">
                               
                               <tr>
                                  
@@ -9756,7 +9922,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d179b3">
+                           <table id="w116aac15d181b3">
                               
                               <tr>
                                  
@@ -9801,7 +9967,7 @@
                      <div class="table">
                         <p class="title"><b>Limits Per Account Per Region</b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d181b3">
+                           <table id="w116aac15d183b3">
                               
                               <tr>
                                  
@@ -9843,7 +10009,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d183b3">
+                           <table id="w116aac15d185b3">
                               
                               <tr>
                                  
@@ -9934,7 +10100,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d187b5">
+                           <table id="w116aac15d189b5">
                               
                               <tr>
                                  
@@ -9989,7 +10155,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d189b3">
+                           <table id="w116aac15d191b3">
                               
                               <tr>
                                  
@@ -10070,7 +10236,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d189b7b3">
+                           <table id="w116aac15d191b7b3">
                               
                               <tr>
                                  
@@ -10160,7 +10326,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d193b3">
+                           <table id="w116aac15d195b3">
                               
                               <tr>
                                  
@@ -10202,7 +10368,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d197b3">
+                           <table id="w116aac15d199b3">
                               
                               <tr>
                                  
@@ -10244,13 +10410,122 @@
                      </p>
                      
                      
+                     <h2 id="limits_sumerian">Amazon Sumerian Limits</h2>
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w116aac15d205b3">
+                              
+                              <tr>
+                                 
+                                 <th>
+                                    <p>Resource</p>
+                                 </th>
+                                 
+                                 <th>
+                                    <p>Default Limit</p>
+                                 </th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Projects</p>
+                                 </td>
+                                 
+                                 <td>
+                                    <p>1,000</p>
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Scenes</p>
+                                 </td>
+                                 
+                                 <td>
+                                    <p>10,000</p>
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Texture file size</p>
+                                 </td>
+                                 
+                                 <td>
+                                    <p>10 MB</p>
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Sound file size</p>
+                                 </td>
+                                 
+                                 <td>
+                                    <p>10 MB</p>
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Model file size</p>
+                                 </td>
+                                 
+                                 <td>
+                                    <p>50 MB</p>
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>Script file size</p>
+                                 </td>
+                                 
+                                 <td>
+                                    <p>1 MB</p>
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    <p>ZIP file size</p>
+                                 </td>
+                                 
+                                 <td>
+                                    <p>200 MB</p>
+                                 </td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
                      <h2 id="limits_ssm">AWS Systems Manager Limits</h2>
                      
                      
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d203b3">
+                           <table id="w116aac15d207b3">
                               
                               <tr>
                                  
@@ -10779,7 +11054,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d205b3">
+                           <table id="w116aac15d209b3">
                               
                               <tr>
                                  
@@ -10832,7 +11107,7 @@
                      
                      <div class="table">
                         <div class="table-contents">
-                           <table id="w116aac15d207b3">
+                           <table id="w116aac15d211b3">
                               
                               <tr>
                                  
@@ -10883,7 +11158,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d209b5">
+                           <table id="w116aac15d213b5">
                               
                               <tr>
                                  
@@ -11557,7 +11832,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d213b5">
+                           <table id="w116aac15d217b5">
                               
                               <tr>
                                  
@@ -11631,7 +11906,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d213c11">
+                           <table id="w116aac15d217c11">
                               
                               <tr>
                                  
@@ -11801,7 +12076,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d217b3">
+                           <table id="w116aac15d221b3">
                               
                               <tr>
                                  
@@ -11846,7 +12121,7 @@
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w116aac15d219b3">
+                           <table id="w116aac15d223b3">
                               
                               <tr>
                                  
