@@ -2458,6 +2458,22 @@ Amazon SageMaker Hosting
 :::
 :::
 
+AWS Secrets Manager Limits {#limits_secrets-manager}
+--------------------------
+
+::: {.table}
+
+::: {.table-contents}
+  Resource                                                             Default Limit
+  -------------------------------------------------------------------- -------------------
+  Max number of secrets in an AWS account                              40,000
+  Max number of versions in a secret                                   Approximately 100
+  Max number of labels you can attach to a version                     20
+  Max number of versions a label can be attached to at the same time   1
+  Maximum length of a secret                                           4096 characters
+:::
+:::
+
 AWS Server Migration Service Limits {#limits_server_migration}
 -----------------------------------
 
