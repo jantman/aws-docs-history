@@ -1178,7 +1178,7 @@ AWS Glue Limits {#limits_glue}
   Number of table versions per table                        100,000
   Number of tables per account                              1,000,000
   Number of partitions per account                          10,000,000
-  Number of table verions per account                       1,000,000
+  Number of table versions per account                      1,000,000
   Number of connections per account                         1,000
   Number of crawlers per account                            25
   Number of jobs per account                                25
