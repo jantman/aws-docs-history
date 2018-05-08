@@ -113,7 +113,7 @@ AWS AppSync Limits {#limits_appsync}
   ------------------------------------------------------------------------------------ ----------------
   Maximum number of APIs per region                                                    25 per account
   Maximum number of API keys                                                           50 per API
-  Maximum schema document size                                                         5 MB
+  Maximum schema document size                                                         1 MB
   Maximum GraphQL query execution time                                                 10 seconds
   Maximum request/response mapping template size                                       64 KB
   Maximum subscription payload size                                                    128 KB
@@ -674,7 +674,7 @@ Amazon Connect Limits {#limits_amazon_connect}
 +--------------------------------------+---------------+
 | Scheduled reports per instance       | 50            |
 +--------------------------------------+---------------+
-| Concurrent active calls per instance | 10            |
+| Concurrent active calls per instance | 100           |
 +--------------------------------------+---------------+
 :::
 :::
@@ -1842,12 +1842,16 @@ Amazon Lightsail Limits {#limits_lightsail}
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                             Default Limit                                Comment
-  ------------------------------------ -------------------------------------------- ---------------------------------
-  Number of instances                  20 per account                               This limit cannot be increased.
-  Number of Elastic IP addresses       5 per account                                This limit cannot be increased.
-  Number of parallel SSH connections   3 x the number of instances in the account   This limit cannot be increased.
-  Number of hosted zones               3 per account                                This limit cannot be increased.
+  Resource                                                  Default Limit                                         Comment
+  --------------------------------------------------------- ----------------------------------------------------- ---------------------------------
+  Number of instances                                       20 per account                                        This limit cannot be increased.
+  Number of static IP addresses                             5 per account                                         This limit cannot be increased.
+  Number of parallel SSH connections                        5 concurrent SSH connections per region per account   This limit cannot be increased.
+  Number of parallel RDP connections using the web client   1 per account                                         This limit cannot be increased.
+  Number of DNS zones                                       3 per account                                         This limit cannot be increased.
+  Number of load balancers                                  5 per account                                         This limit cannot be increased.
+  Amount of attached block storage disk space               20 TB per account                                     This limit cannot be increased.
+  Number of certificates (last 365 days)                    20 per account                                        This limit cannot be increased.
 :::
 :::
 
