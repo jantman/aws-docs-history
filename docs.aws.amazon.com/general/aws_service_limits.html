@@ -5711,7 +5711,6 @@
                      
                      
                      <div class="table">
-                        <p class="title"><b></b></p>
                         <div class="table-contents">
                            <table id="w115aac15d123c13b3">
                               
@@ -5727,6 +5726,14 @@
                               <tr>
                                  
                                  <td>AcceptCertificateTransfer</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>AssociateTargetsWithJob</td>
                                  
                                  <td>10</td>
                                  
@@ -5758,9 +5765,25 @@
                               
                               <tr>
                                  
+                                 <td>CancelJob</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
                                  <td>CreateCertificateFromCsr</td>
                                  
                                  <td>15</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>CreateJob</td>
+                                 
+                                 <td>10</td>
                                  
                               </tr>
                               
@@ -5870,6 +5893,23 @@
                               
                               <tr>
                                  
+                                 <td>DescribeJob</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td><a href="http://docs.aws.amazon.com/iot/latest/apireference/API_DescribeJobExecution.html" target="_blank">DescribeJobExecution</a></td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
                                  <td>DescribeThing</td>
                                  
                                  <td>10</td>
@@ -5907,6 +5947,15 @@
                                  <td>10</td>
                                  
                               </tr>
+                              
+                              <tr>
+                                 
+                                 <td>GetJobDocument</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
                               
                               <tr>
                                  
@@ -5951,6 +6000,30 @@
                               <tr>
                                  
                                  <td>ListCertificatesByCA</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>ListJobExecutionsForJob</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>ListJobExecutionsForThing</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>ListJobs</td>
                                  
                                  <td>10</td>
                                  
@@ -6060,6 +6133,7 @@
                                  
                               </tr>
                               
+                              
                               <tr>
                                  
                                  <td>TransferCertificate</td>
@@ -6084,6 +6158,7 @@
                                  
                               </tr>
                               
+                              
                               <tr>
                                  
                                  <td>UpdateThing</td>
@@ -6096,6 +6171,7 @@
                            </table>
                         </div>
                      </div>
+                     
                      
                      
                      
@@ -6332,11 +6408,24 @@
                                  
                                  <td>N/A</td>
                                  
-                                 <td>90 days</td>
+                                 <td>365 days</td>
                                  
-                                 <td> Job data and job execution data will be purged after 90 days.
+                                 <td> Job data and job execution data will be purged after 365 days.
                                     
                                  </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td><code class="code">StatusDetail</code> map key:value pairs 
+                                 </td>
+                                 
+                                 <td>1 key:value pair</td>
+                                 
+                                 <td>10 key:value pairs</td>
+                                 
+                                 <td></td>
                                  
                               </tr>
                               
@@ -6366,33 +6455,6 @@
                                  
                               </tr>
                               
-                              <tr>
-                                 
-                                 <td>Job management APIs</td>
-                                 
-                                 <td>N/A</td>
-                                 
-                                 <td>30 TPS</td>
-                                 
-                                 <td>The AWS IoT <a href="http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html#jobs-http-api" target="_blank">Job Management and Control APIs</a> have a maximum of 30
-                                    transactions per second (TPS).
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
-                                 <td>Job messaging APIs</td>
-                                 
-                                 <td>N/A</td>
-                                 
-                                 <td>200 MPS</td>
-                                 
-                                 <td>The AWS IoT <a href="http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html#jobs-mqtt-api" target="_blank">Jobs Device MQTT and HTTPS APIs</a> have a maximum of 200
-                                    messages per second (MPS).
-                                 </td>
-                                 
-                              </tr>
                               
                            </table>
                         </div>

@@ -1468,56 +1468,64 @@ AWS IoT Limits {#limits_iot}
 ### Throttling Limits
 
 ::: {.table}
-
 ::: {.table-contents}
-  API                         Transaction per Second
-  --------------------------- ------------------------
-  AcceptCertificateTransfer   10
-  AttachPrincipalPolicy       15
-  AttachThingPrincipal        15
-  CancelCertificateTransfer   10
-  CreateCertificateFromCsr    15
-  CreatePolicy                10
-  CreatePolicyVersion         10
-  CreateThing                 15
-  CreateThingType             15
-  DeleteCertificate           10
-  DeleteCACertificate         10
-  DeletePolicy                10
-  DeletePolicyVersion         10
-  DeleteThing                 15
-  DeleteThingType             15
-  DeprecateThingType          15
-  DescribeCertificate         10
-  DescribeCACertificate       10
-  DescribeThing               10
-  DescribeThingType           10
-  DetachThingPrincipal        15
-  DetachPrincipalPolicy       15
-  DeleteRegistrationCode      10
-  GetPolicy                   10
-  GetPolicyVersion            15
-  GetRegistrationCode         10
-  ListCACertificates          10
-  ListCertificates            10
-  ListCertificatesByCA        10
-  ListOutgoingCertificates    10
-  ListPolicies                10
-  ListPolicyPrincipals        10
-  ListPolicyVersions          10
-  ListPrincipalPolicies       15
-  ListPrincipalThings         10
-  ListThings                  10
-  ListThingPrincipals         10
-  ListThingTypes              10
-  RegisterCertificate         10
-  RegisterCACertificate       10
-  RejectCertificateTransfer   10
-  SetDefaultPolicyVersion     10
-  TransferCertificate         10
-  UpdateCertificate           10
-  UpdateCACertificate         10
-  UpdateThing                 10
+  API                                                                                                        Transaction per Second
+  ---------------------------------------------------------------------------------------------------------- ------------------------
+  AcceptCertificateTransfer                                                                                  10
+  AssociateTargetsWithJob                                                                                    10
+  AttachPrincipalPolicy                                                                                      15
+  AttachThingPrincipal                                                                                       15
+  CancelCertificateTransfer                                                                                  10
+  CancelJob                                                                                                  10
+  CreateCertificateFromCsr                                                                                   15
+  CreateJob                                                                                                  10
+  CreatePolicy                                                                                               10
+  CreatePolicyVersion                                                                                        10
+  CreateThing                                                                                                15
+  CreateThingType                                                                                            15
+  DeleteCertificate                                                                                          10
+  DeleteCACertificate                                                                                        10
+  DeletePolicy                                                                                               10
+  DeletePolicyVersion                                                                                        10
+  DeleteThing                                                                                                15
+  DeleteThingType                                                                                            15
+  DeprecateThingType                                                                                         15
+  DescribeCertificate                                                                                        10
+  DescribeCACertificate                                                                                      10
+  DescribeJob                                                                                                10
+  [DescribeJobExecution](http://docs.aws.amazon.com/iot/latest/apireference/API_DescribeJobExecution.html)   10
+  DescribeThing                                                                                              10
+  DescribeThingType                                                                                          10
+  DetachThingPrincipal                                                                                       15
+  DetachPrincipalPolicy                                                                                      15
+  DeleteRegistrationCode                                                                                     10
+  GetJobDocument                                                                                             10
+  GetPolicy                                                                                                  10
+  GetPolicyVersion                                                                                           15
+  GetRegistrationCode                                                                                        10
+  ListCACertificates                                                                                         10
+  ListCertificates                                                                                           10
+  ListCertificatesByCA                                                                                       10
+  ListJobExecutionsForJob                                                                                    10
+  ListJobExecutionsForThing                                                                                  10
+  ListJobs                                                                                                   10
+  ListOutgoingCertificates                                                                                   10
+  ListPolicies                                                                                               10
+  ListPolicyPrincipals                                                                                       10
+  ListPolicyVersions                                                                                         10
+  ListPrincipalPolicies                                                                                      15
+  ListPrincipalThings                                                                                        10
+  ListThings                                                                                                 10
+  ListThingPrincipals                                                                                        10
+  ListThingTypes                                                                                             10
+  RegisterCertificate                                                                                        10
+  RegisterCACertificate                                                                                      10
+  RejectCertificateTransfer                                                                                  10
+  SetDefaultPolicyVersion                                                                                    10
+  TransferCertificate                                                                                        10
+  UpdateCertificate                                                                                          10
+  UpdateCACertificate                                                                                        10
+  UpdateThing                                                                                                10
 :::
 :::
 
@@ -1539,43 +1547,41 @@ AWS IoT Limits {#limits_iot}
 ::: {.table}
 
 ::: {.table-contents}
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Resource                               | Min         | Max             | Note                                                                                                                                                                                |
-+========================================+=============+=================+=====================================================================================================================================================================================+
-| `JobId`{.code}                         | 1 character | 64 characters   | The `JobId`{.code} length must not exceed 64 characters.                                                                                                                            |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `Document`{.code}                      | N/A         | 32768 bytes     | The maximum size of a document that can be sent to an AWS IoT device is 32 KB.                                                                                                      |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `DocumentSource`{.code}                | N/A         | 1350 characters | The maximum job document source size is 1350 characters.                                                                                                                            |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `Description`{.code}                   | N/A         | 2028 characters | The maximum job description size is 2028 characters.                                                                                                                                |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `Targets`{.code}                       | 1           | 100             | The number of targets a job can have.                                                                                                                                               |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `ExpiresInSec`{.code}                  | 60 seconds  | 3600 seconds    | The lifetime of pre-signed URLs must be configured greater than 60 seconds and less than 1 hour.                                                                                    |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `Comment`{.code}                       | N/A         | 2028 characters | The maximum comment size is 2028 characters.                                                                                                                                        |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `MaxResults`{.code}                    | 1           | 250             | The maximum list result per page is 250.                                                                                                                                            |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `MaximumJobExecutionsPerMinute`{.code} | 1           | 1000            | Configures the rollout speed for a job.                                                                                                                                             |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Active snapshot jobs                   | 0           | 100             | The maximum number of active snapshot jobs is 100 (irrespective of the number of active continuous jobs).                                                                           |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Active continuous jobs                 | 0           | 100             | The maximum number of active continuous jobs is 100 (irrespective of the number of active snapshot jobs).                                                                           |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Job document variable substitution     | 0           | 10              | Up to 10 variables substitutions, including the presign URL, are allowed in a job document.                                                                                         |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Data retention                         | N/A         | 90 days         | Job data and job execution data will be purged after 90 days.                                                                                                                       |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `StatusDetail`{.code} map key size     | 1 character | 128 characters  |                                                                                                                                                                                     |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `StatusDetail`{.code} map value size   | 1 character | 128 characters  |                                                                                                                                                                                     |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Job management APIs                    | N/A         | 30 TPS          | The AWS IoT [Job Management and Control APIs](http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html#jobs-http-api) have a maximum of 30 transactions per second (TPS). |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Job messaging APIs                     | N/A         | 200 MPS         | The AWS IoT [Jobs Device MQTT and HTTPS APIs](http://docs.aws.amazon.com/iot/latest/developerguide/jobs-api.html#jobs-mqtt-api) have a maximum of 200 messages per second (MPS).    |
-+----------------------------------------+-------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| Resource                                  | Min              | Max                | Note                                                                                                      |
++===========================================+==================+====================+===========================================================================================================+
+| `JobId`{.code}                            | 1 character      | 64 characters      | The `JobId`{.code} length must not exceed 64 characters.                                                  |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| `Document`{.code}                         | N/A              | 32768 bytes        | The maximum size of a document that can be sent to an AWS IoT device is 32 KB.                            |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| `DocumentSource`{.code}                   | N/A              | 1350 characters    | The maximum job document source size is 1350 characters.                                                  |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| `Description`{.code}                      | N/A              | 2028 characters    | The maximum job description size is 2028 characters.                                                      |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| `Targets`{.code}                          | 1                | 100                | The number of targets a job can have.                                                                     |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| `ExpiresInSec`{.code}                     | 60 seconds       | 3600 seconds       | The lifetime of pre-signed URLs must be configured greater than 60 seconds and less than 1 hour.          |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| `Comment`{.code}                          | N/A              | 2028 characters    | The maximum comment size is 2028 characters.                                                              |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| `MaxResults`{.code}                       | 1                | 250                | The maximum list result per page is 250.                                                                  |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| `MaximumJobExecutionsPerMinute`{.code}    | 1                | 1000               | Configures the rollout speed for a job.                                                                   |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| Active snapshot jobs                      | 0                | 100                | The maximum number of active snapshot jobs is 100 (irrespective of the number of active continuous jobs). |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| Active continuous jobs                    | 0                | 100                | The maximum number of active continuous jobs is 100 (irrespective of the number of active snapshot jobs). |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| Job document variable substitution        | 0                | 10                 | Up to 10 variables substitutions, including the presign URL, are allowed in a job document.               |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| Data retention                            | N/A              | 365 days           | Job data and job execution data will be purged after 365 days.                                            |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| `StatusDetail`{.code} map key:value pairs | 1 key:value pair | 10 key:value pairs |                                                                                                           |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| `StatusDetail`{.code} map key size        | 1 character      | 128 characters     |                                                                                                           |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+| `StatusDetail`{.code} map value size      | 1 character      | 128 characters     |                                                                                                           |
++-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
 :::
 :::
 
