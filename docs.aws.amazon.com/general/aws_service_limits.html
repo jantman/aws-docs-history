@@ -466,9 +466,9 @@
                               
                               <tr>
                                  
-                                 <td>Number of concurrent queries</td>
+                                 <td>Number of concurrent queries of the same type (DDL or SELECT)</td>
                                  
-                                 <td>5</td>
+                                 <td>20</td>
                                  
                               </tr>
                               
@@ -6463,12 +6463,183 @@
                      
                      
                      
-                     <h3 id="bulk-thing-reg-limits">AWS IoT Bulk Thing Registration Limits</h3>
+                     <h3 id="fleet-indexing-limits">AWS IoT Fleet Indexing Limits</h3>
                      
                      <div class="table">
                         <p class="title"><b></b></p>
                         <div class="table-contents">
                            <table id="w115aac15d123c21b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Limit</th>
+                                 
+                                 <th>Note</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of query terms per query</td>
+                                 
+                                 <td>5</td>
+                                 
+                                 <td>You can have up to 5 terms per query.</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum query length</td>
+                                 
+                                 <td>1000</td>
+                                 
+                                 <td>Your queries can be up to 1000 bytes of UTF-8 encoded characters
+                                    long.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of query results</td>
+                                 
+                                 <td>500</td>
+                                 
+                                 <td>Fleet indexing service will return up to 500 results per
+                                    query.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of <code class="code">*</code> wild card operators per query term
+                                 </td>
+                                 
+                                 <td>2</td>
+                                 
+                                 <td>Each query term can have up to 2 multi-character wildcards
+                                    (<code class="code">*</code>).
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of <code class="code">?</code> wild card operators per query term
+                                 </td>
+                                 
+                                 <td>5</td>
+                                 
+                                 <td>Each query term can have up to 5 single-character wildcards
+                                    (<code class="code">?</code>).
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of queries per second</td>
+                                 
+                                 <td>15</td>
+                                 
+                                 <td>You can execute up to 15 search queries per second.</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>Maximum number of things in the fleet index</td>
+                                 
+                                 <td>Unlimited</td>
+                                 
+                                 <td>There is no limit to the number of things that can be
+                                    indexed.
+                                 </td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     <h4 id="fleet-indexing-throttling-limits">
+                        AWS IoT Throttling Limits
+                        
+                     </h4>
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w115aac15d123c21b5b3">
+                              
+                              <tr>
+                                 
+                                 <th>API</th>
+                                 
+                                 <th>Max Calls Per Second</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>UpdateIndexingConfiguration</td>
+                                 
+                                 <td>1</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>GetIndexingConfiguration</td>
+                                 
+                                 <td>20</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>DescribeIndex</td>
+                                 
+                                 <td>10</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>ListIndices</td>
+                                 
+                                 <td>5</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>SearchIndex</td>
+                                 
+                                 <td>15</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     
+                     
+                     <h3 id="bulk-thing-reg-limits">AWS IoT Bulk Thing Registration Limits</h3>
+                     
+                     <div class="table">
+                        <p class="title"><b></b></p>
+                        <div class="table-contents">
+                           <table id="w115aac15d123c23b3">
                               
                               <tr>
                                  

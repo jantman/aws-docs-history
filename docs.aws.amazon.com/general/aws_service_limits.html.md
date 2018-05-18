@@ -127,10 +127,10 @@ Amazon Athena Limits
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                       Default Limit
-  ------------------------------ ---------------
-  Number of concurrent queries   5
-  Query timeout                  30 minutes
+  Resource                                                        Default Limit
+  --------------------------------------------------------------- ---------------
+  Number of concurrent queries of the same type (DDL or SELECT)   20
+  Query timeout                                                   30 minutes
 :::
 :::
 
@@ -1582,6 +1582,38 @@ AWS IoT Limits {#limits_iot}
 +-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
 | `StatusDetail`{.code} map value size      | 1 character      | 128 characters     |                                                                                                           |
 +-------------------------------------------+------------------+--------------------+-----------------------------------------------------------------------------------------------------------+
+:::
+:::
+
+### AWS IoT Fleet Indexing Limits {#fleet-indexing-limits}
+
+::: {.table}
+
+::: {.table-contents}
+  Resource                                                          Limit       Note
+  ----------------------------------------------------------------- ----------- ---------------------------------------------------------------------------
+  Maximum number of query terms per query                           5           You can have up to 5 terms per query.
+  Maximum query length                                              1000        Your queries can be up to 1000 bytes of UTF-8 encoded characters long.
+  Maximum number of query results                                   500         Fleet indexing service will return up to 500 results per query.
+  Maximum number of `*`{.code} wild card operators per query term   2           Each query term can have up to 2 multi-character wildcards (`*`{.code}).
+  Maximum number of `?`{.code} wild card operators per query term   5           Each query term can have up to 5 single-character wildcards (`?`{.code}).
+  Maximum number of queries per second                              15          You can execute up to 15 search queries per second.
+  Maximum number of things in the fleet index                       Unlimited   There is no limit to the number of things that can be indexed.
+:::
+:::
+
+#### AWS IoT Throttling Limits {#fleet-indexing-throttling-limits}
+
+::: {.table}
+
+::: {.table-contents}
+  API                           Max Calls Per Second
+  ----------------------------- ----------------------
+  UpdateIndexingConfiguration   1
+  GetIndexingConfiguration      20
+  DescribeIndex                 10
+  ListIndices                   5
+  SearchIndex                   15
 :::
 :::
 
