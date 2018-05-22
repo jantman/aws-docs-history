@@ -5707,7 +5707,7 @@
                      
                      
                      
-                     <h3 id="throttling-limits">Throttling Limits</h3>
+                     <h3 id="throttling-limits">AWS IoT Throttling Limits</h3>
                      
                      
                      <div class="table">
@@ -5718,7 +5718,7 @@
                                  
                                  <th>API</th>
                                  
-                                 <th>Transaction per Second</th>
+                                 <th>Transactions per Second</th>
                                  
                               </tr>
                               
@@ -6174,7 +6174,6 @@
                      
                      
                      
-                     
                      <h3 id="rules-limits">AWS IoT Rules Engine Limits</h3>
                      
                      
@@ -6455,10 +6454,51 @@
                                  
                               </tr>
                               
+                              <tr>
+                                 
+                                 <td><a href="http://docs.aws.amazon.com/iot/latest/apireference/API_iot-jobs-data_DescribeJobExecution.html" target="_blank"><code class="code">DescribeJobExecution</code></a> and <a href="http://docs.aws.amazon.com/iot/latest/apireference/API_iot-jobs-data_GetPendingJobExecutions.html" target="_blank"><code class="code">GetPendingJobExectuions</code></a></td>
+                                 
+                                 <td>N/A</td>
+                                 
+                                 <td>200 TPS per account</td>
+                                 
+                                 <td>If invoking one or more of these "read" APIs in the data
+                                    plane<sup>â </sup> causes the associated
+                                    AWS account to exceed 200 read transactions per second (TPS) in
+                                    total, then the offending API invocation(s) will be throttled to
+                                    maintain the maximum allowed 200 read TPS per AWS account. Be aware
+                                    that in the control plane<sup>â </sup>, <a href="http://docs.aws.amazon.com/iot/latest/apireference/API_DescribeJobExecution.html" target="_blank">DescribeJobExecution</a> is limited to 10 TPS per
+                                    invocation.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td><a href="http://docs.aws.amazon.com/iot/latest/apireference/API_iot-jobs-data_StartNextPendingJobExecution.html" target="_blank"><code class="code">StartNextPendingJobExecution</code></a> and
+                                    <a href="http://docs.aws.amazon.com/iot/latest/apireference/API_iot-jobs-data_UpdateJobExecution.html" target="_blank"><code class="code">UpdateJobExecution</code></a></td>
+                                 
+                                 <td>N/A</td>
+                                 
+                                 <td>200 TPS per account</td>
+                                 
+                                 <td>If invoking one or more of these "write" APIs in the data
+                                    plane<sup>â </sup> causes the associated
+                                    AWS account to exceed 200 write transactions per second (TPS) in
+                                    total, then the offending API invocation(s) will be throttled to
+                                    maintain the maximum allowed 200 write TPS per AWS account.
+                                 </td>
+                                 
+                              </tr>
+                              
                               
                            </table>
                         </div>
                      </div>
+                     
+                     <p><sup>â </sup> For definitions of "data plane" and "control
+                        plane", see <a href="https://aws.amazon.com/iot-core/faqs/" target="_blank">What are the ways for
+                           accessing AWS IoT Core?</a></p>
                      
                      
                      
