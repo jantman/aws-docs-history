@@ -566,8 +566,8 @@ Amazon Cognito User Pools Limits {#limits_cognito_user_pools}
   Maximum number of user pools per account             60
   Maximum number of user import jobs per user pool     50
   Maximum number of identity providers per user pool   25
-  Maximum number of resource servers per user pool     20
-  Maximum number of scopes per user pool               20
+  Maximum number of resource servers per user pool     25
+  Maximum number of scopes per resource server         25
 :::
 :::
 
