@@ -567,7 +567,7 @@ Amazon Cognito User Pools Limits {#limits_cognito_user_pools}
   Maximum number of user import jobs per user pool     50
   Maximum number of identity providers per user pool   25
   Maximum number of resource servers per user pool     25
-  Maximum number of scopes per resource server         25
+  Maximum number of scopes per resource server         60
 :::
 :::
 
@@ -1085,15 +1085,15 @@ AWS Firewall Manager has default limits on the number of entities per account. Y
 
 ::: {.table}
 ::: {.table-contents}
-+------------------------------------------------------------------+---------------+
-| Resource                                                         | Default Limit |
-+==================================================================+===============+
-| Accounts per organization in AWS Organizations                   | 2500          |
-+------------------------------------------------------------------+---------------+
-| Firewall Manager policies per organization in AWS Organizations  | 20            |
-+------------------------------------------------------------------+---------------+
-| Tags to specified include or exclude per Firewall Manager policy | 8             |
-+------------------------------------------------------------------+---------------+
++------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource                                                         | Default Limit                                                                                                                                                                                    |
++==================================================================+==================================================================================================================================================================================================+
+| Accounts per organization in AWS Organizations                   | Varies. An invitation sent to an account counts against this limit. The count is returned if the invited account declines, the master account cancels the invitation, or the invitation expires. |
++------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Firewall Manager policies per organization in AWS Organizations  | 20                                                                                                                                                                                               |
++------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Tags to specified include or exclude per Firewall Manager policy | 8                                                                                                                                                                                                |
++------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
