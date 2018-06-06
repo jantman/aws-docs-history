@@ -9,7 +9,7 @@
 AWS Service Limits {#aws_service_limits .topictitle}
 ==================
 
-The following tables provide the default limits for AWS services for an AWS account. Unless otherwise noted, each limit is region-specific. Many services contain limits that cannot be changed. For more information about the limits for a specific service, see the documentation for that service.
+http://docs.aws.amazon.com/AmazonECS/latest/developerguide/The following tables provide the default limits for AWS services for an AWS account. Unless otherwise noted, each limit is region-specific. Many services contain limits that cannot be changed. For more information about the limits for a specific service, see the documentation for that service.
 
 [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/trustedadvisor/) offers a Service Limits check (in the Performance category) that displays your usage and limits for some aspects of some services. For more information, see [Service Limits Check Questions](https://aws.amazon.com/premiumsupport/ta-faqs/#service-limits-check-questions) in the Trusted Advisor FAQs.
 
@@ -908,6 +908,19 @@ Amazon Elastic Container Service (Amazon ECS) Limits {#limits_ecs}
 :::
 
 For information about additional documented limits, see [Amazon ECS Service Limits](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_limits.html) in the *Amazon Elastic Container Service Developer Guide*.
+
+Amazon Elastic Container Service for Kubernetes (Amazon EKS) Limits {#limits_eks}
+-------------------------------------------------------------------
+
+::: {.table}
+::: {.table-contents}
+  Resource                                Default Limit
+  --------------------------------------- ---------------
+  Maximum number of Amazon EKS clusters   3
+:::
+:::
+
+For information about additional documented limits, see [Amazon EKS Service Limits](http://docs.aws.amazon.com/eks/latest/userguide/service_limits.html) in the **Amazon EKS User Guide**.
 
 Amazon Elastic File System Limits {#limits_elasticfilesystem}
 ---------------------------------
@@ -2848,10 +2861,10 @@ Amazon Translate Limits {#limits_amazon_translate}
 
 ::: {.table}
 ::: {.table-contents}
-  Resource                                         Default Limit
-  ------------------------------------------------ ---------------
-  Bytes per 10 seconds                             5,000
-  Transactions per second for all language pairs   10
+  Resource                                    Default Limit
+  ------------------------------------------- ---------------
+  Bytes per 10 seconds per language pair      10,000
+  Transactions per second per language pair   20
 :::
 :::
 
