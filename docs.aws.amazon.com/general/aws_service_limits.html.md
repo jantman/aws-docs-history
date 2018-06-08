@@ -2435,6 +2435,21 @@ Amazon SageMaker Notebooks
 :::
 :::
 
+Amazon SageMaker Automatic Model Tuning
+
+::: {.table}
+
+::: {.table-contents}
+  Resource                                                                                                                          Default Limit
+  --------------------------------------------------------------------------------------------------------------------------------- ---------------
+  Number of concurrent hyperparameter tuning jobs                                                                                   100
+  Number of hyperparameters that can be searched (every possible value in a categorical hyperparameter counts against this limit)   20
+  Number of metrics defined per hyperparameter tuning job                                                                           20
+  Number of parallel training jobs per hyperparameter tuning job                                                                    10
+  Number of training jobs per hyperparameter tuning job                                                                             500
+:::
+:::
+
 Amazon SageMaker Training
 
 ::: {.table}
