@@ -1489,6 +1489,7 @@ AWS IoT Limits {#limits_iot}
   AcceptCertificateTransfer                                                                                  10
   AssociateTargetsWithJob                                                                                    10
   AttachPrincipalPolicy                                                                                      15
+  AttachPolicy                                                                                               15
   AttachThingPrincipal                                                                                       15
   CancelCertificateTransfer                                                                                  10
   CancelJob                                                                                                  10
