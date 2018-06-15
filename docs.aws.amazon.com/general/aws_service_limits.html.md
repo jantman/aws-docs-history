@@ -174,17 +174,7 @@ For more information about these limits, see [Amazon EC2 Auto Scaling Limits](ht
 AWS Batch Limits {#limits_batch}
 ----------------
 
-::: {.table}
-
-::: {.table-contents}
-  Item                                                   Default Limit
-  ------------------------------------------------------ ---------------
-  Maximum number of job queues                           20
-  Maximum number of compute environments per job queue   3
-:::
-:::
-
-For more information about these limits, see [Service Limits](http://docs.aws.amazon.com/batch/latest/userguide/service_limits.html) in the *AWS Batch User Guide*.
+AWS Batch does not have any default service limits that you can increase. For more information about service limits for AWS Batch, see [Service Limits](http://docs.aws.amazon.com/batch/latest/userguide/service_limits.html) in the *AWS Batch User Guide*.
 
 AWS Certificate Manager (ACM) Limits {#limits_acm}
 ------------------------------------
