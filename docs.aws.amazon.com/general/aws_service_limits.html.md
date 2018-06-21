@@ -9,7 +9,7 @@
 AWS Service Limits {#aws_service_limits .topictitle}
 ==================
 
-http://docs.aws.amazon.com/AmazonECS/latest/developerguide/The following tables provide the default limits for AWS services for an AWS account. Unless otherwise noted, each limit is region-specific. Many services contain limits that cannot be changed. For more information about the limits for a specific service, see the documentation for that service.
+The following tables provide the default limits for AWS services for an AWS account. Unless otherwise noted, each limit is region-specific. Many services contain limits that cannot be changed. For more information about the limits for a specific service, see the documentation for that service.
 
 [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/trustedadvisor/) offers a Service Limits check (in the Performance category) that displays your usage and limits for some aspects of some services. For more information, see [Service Limits Check Questions](https://aws.amazon.com/premiumsupport/ta-faqs/#service-limits-check-questions) in the Trusted Advisor FAQs.
 
@@ -1420,38 +1420,36 @@ AWS IoT Limits {#limits_iot}
 ::: {.table}
 
 ::: {.table-contents}
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Maximum depth of JSON device state documents                   | The maximum number of levels in the `desired`{.code} or `reported`{.code} section of the JSON device state document is 5. For example:                                                       |
-|                                                                |                                                                                                                                                                                              |
-|                                                                | ``` {.programlisting}                                                                                                                                                                        |
-|                                                                | "desired": {                                                                                                                                                                                 |
-|                                                                |     "one": {                                                                                                                                                                                 |
-|                                                                |         "two": {                                                                                                                                                                             |
-|                                                                |             "three": {                                                                                                                                                                       |
-|                                                                |                 "four": {                                                                                                                                                                    |
-|                                                                |                     "five":{                                                                                                                                                                 |
-|                                                                |                     }                                                                                                                                                                        |
-|                                                                |                  }                                                                                                                                                                           |
-|                                                                |              }                                                                                                                                                                               |
-|                                                                |         }                                                                                                                                                                                    |
-|                                                                |     }                                                                                                                                                                                        |
-|                                                                | }                                                                                                                                                                                            |
-|                                                                | ```                                                                                                                                                                                          |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Maximum number of in-flight, unacknowledged messages per thing | The Thing Shadows service supports up to 10 in-flight unacknowledged messages per thing. When this limit is reached, all new shadow requests are rejected with a 429 error code.             |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Maximum number of JSON objects per AWS account                 | There is no limit on the number of JSON objects per AWS account.                                                                                                                             |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Maximum size of a JSON state document                          | 8 KB.                                                                                                                                                                                        |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Maximum size of a thing name                                   | 128 bytes of UTF-8 encoded characters.                                                                                                                                                       |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Shadow lifetime                                                | A thing shadow is deleted by AWS IoT up to six months after the creating account is deleted or per customer request. For operational purposes, AWS IoT service backups are kept for 6 months |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Maximum number of shadows in an AWS account                    | Unlimited                                                                                                                                                                                    |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Requests per second per thing                                  | The Thing Shadows service supports up to 20 requests per second per thing. Note that this limit is per thing and not per API.                                                                |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum depth of JSON device state documents                   | The maximum number of levels in the `desired`{.code} or `reported`{.code} section of the JSON device state document is 5. For example:                                           |
+|                                                                |                                                                                                                                                                                  |
+|                                                                | ``` {.programlisting}                                                                                                                                                            |
+|                                                                | "desired": {                                                                                                                                                                     |
+|                                                                |     "one": {                                                                                                                                                                     |
+|                                                                |         "two": {                                                                                                                                                                 |
+|                                                                |             "three": {                                                                                                                                                           |
+|                                                                |                 "four": {                                                                                                                                                        |
+|                                                                |                     "five":{                                                                                                                                                     |
+|                                                                |                     }                                                                                                                                                            |
+|                                                                |                  }                                                                                                                                                               |
+|                                                                |              }                                                                                                                                                                   |
+|                                                                |         }                                                                                                                                                                        |
+|                                                                |     }                                                                                                                                                                            |
+|                                                                | }                                                                                                                                                                                |
+|                                                                | ```                                                                                                                                                                              |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum number of in-flight, unacknowledged messages per thing | The Thing Shadows service supports up to 10 in-flight unacknowledged messages per thing. When this limit is reached, all new shadow requests are rejected with a 429 error code. |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum number of JSON objects per AWS account                 | There is no limit on the number of JSON objects per AWS account.                                                                                                                 |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum size of a JSON state document                          | 8 KB.                                                                                                                                                                            |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum size of a thing name                                   | 128 bytes of UTF-8 encoded characters.                                                                                                                                           |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Maximum number of shadows in an AWS account                    | Unlimited                                                                                                                                                                        |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Requests per second per thing                                  | The Thing Shadows service supports up to 20 requests per second per thing. Note that this limit is per thing and not per API.                                                    |
++----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
@@ -2630,8 +2628,13 @@ For more information about these limits, see [Limits in Amazon SES](http://docs.
 Amazon Simple Notification Service (Amazon SNS) Limits {#limits_sns}
 ------------------------------------------------------
 
-::: {.table}
+The following limits determine how many Amazon SNS resources you can create in your AWS account, and they determine the rate at which you can issue Amazon SNS API requests.
 
+### Amazon SNS Resource Limits {#limits_sns_resource}
+
+To increase any of the following limits, submit an [SNS Limit Increase case](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-sns).
+
+::: {.table}
 ::: {.table-contents}
   Resource                                       Default Limit
   ---------------------------------------------- ------------------------
@@ -2639,18 +2642,22 @@ Amazon Simple Notification Service (Amazon SNS) Limits {#limits_sns}
   Subscriptions                                  12,500,000 per topic
   Pending subscriptions                          5,000 per account
   Account spend threshold for SMS                1.00 USD per account
+  Delivery rate for email messages               10 messages per second
   Delivery rate for promotional SMS messages     20 messages per second
   Delivery rate for transactional SMS messages   20 messages per second
-  Message filter policies                        100 per account
+  Subscription filter policies                   200 per account
 :::
 :::
-
-To increase any of the limits above, submit an [SNS Limit Increase case](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-sns).
 
 ### Amazon SNS API Throttling Limits {#limits_sns_api_throttles}
 
-::: {.table}
+The following limits throttle the rate at which you can issue Amazon SNS API requests.
 
+#### Hard Limits {#limits_sns_api_throttles_hard}
+
+The following limits cannot be increased.
+
+::: {.table}
 ::: {.table-contents}
   API                                  Transactions per Second
   ------------------------------------ -------------------------
@@ -2664,7 +2671,165 @@ To increase any of the limits above, submit an [SNS Limit Increase case](https:/
 :::
 :::
 
-The Amazon SNS API throttling limits cannot be increased.
+#### Soft Limits {#limits_sns_api_throttles_soft}
+
+The following limits vary by AWS Region. To increase any of these limits, submit an [SNS Limit Increase case](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-sns).
+
+::: {.table}
+**Publish API Throttling Limits**
+
+::: {.table-contents}
+API
+:::
+:::
+:::
+:::
+
+AWS Regions
+
+Transactions per Second
+
+Publish
+
+US East (N. Virginia) Region
+
+30,000
+
+EU (Ireland) Region
+
+US West (Oregon) Region
+
+9,000
+
+Asia Pacific (Singapore) Region
+
+Asia Pacific (Sydney) Region
+
+Asia Pacific (Tokyo) Region
+
+EU (Frankfurt) Region
+
+US West (N. California) Region
+
+1,500
+
+Asia Pacific (Mumbai) Region
+
+Asia Pacific (Osaka-Local) Region
+
+Asia Pacific (Seoul) Region
+
+Canada (Central) Region
+
+China (Beijing) Region
+
+China (Ningxia) Region
+
+EU (London) Region
+
+EU (Paris) Region
+
+South America (SÃ£o Paulo) Region
+
+US East (Ohio) Region
+
+300
+
+::: {.table}
+**Other API Throttling Limits**
+
+::: {.table-contents}
+APIs
+:::
+:::
+
+AWS Regions
+
+Transactions per Second
+
+CheckIfPhoneNumberIsOptedOut
+
+ConfirmSubscription
+
+CreatePlatformApplication
+
+CreatePlatformEndpoint
+
+CreateTopic
+
+DeleteEndpoint
+
+DeletePlatformApplication
+
+DeleteTopic
+
+GetEndpointAttributes
+
+GetPlatformApplicationAttributes
+
+GetSMSAttributes
+
+GetSubscriptionAttributes
+
+GetTopicAttributes
+
+ListPhoneNumbersOptedOut
+
+OptInPhoneNumber
+
+SetEndpointAttributes
+
+SetPlatformApplicationAttributes
+
+SetSMSAttributes
+
+SetSubscriptionAttributes
+
+SetTopicAttributes
+
+US East (N. Virginia) Region
+
+3,000
+
+EU (Ireland) Region
+
+US West (Oregon) Region
+
+900
+
+Asia Pacific (Singapore) Region
+
+Asia Pacific (Sydney) Region
+
+Asia Pacific (Tokyo) Region
+
+EU (Frankfurt) Region
+
+US West (N. California) Region
+
+150
+
+Asia Pacific (Mumbai) Region
+
+Asia Pacific (Osaka-Local) Region
+
+Asia Pacific (Seoul) Region
+
+Canada (Central) Region
+
+China (Beijing) Region
+
+China (Ningxia) Region
+
+EU (London) Region
+
+EU (Paris) Region
+
+South America (SÃ£o Paulo) Region
+
+US East (Ohio) Region
+
+30
 
 Amazon Simple Queue Service (Amazon SQS) {#limits_sqs}
 ----------------------------------------
@@ -3052,7 +3217,6 @@ AWS X-Ray Limits {#limits_xray}
 +-----------------------------------+---------------+
 :::
 :::
-:::
 
 ::: {#js_error_message}
 ![Warning](https://d1ge0kk1l5kms0.cloudfront.net/images/G/01/webservices/console/warning.png) **Javascript is disabled or is unavailable in your browser.**
@@ -3071,6 +3235,5 @@ To use the AWS Documentation, Javascript must be enabled. Please refer to your b
 
 ::: {#copyright-main-footer}
 Â© 2018, Amazon Web Services, Inc. or its affiliates. All rights reserved.
-:::
 :::
 :::

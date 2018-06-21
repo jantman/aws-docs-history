@@ -9,13 +9,12 @@
                      </table>
                      <div></div>
                      <h1 class="topictitle" id="aws_service_limits">AWS Service Limits</h1>
-                     <p>http://docs.aws.amazon.com/AmazonECS/latest/developerguide/The following tables provide
-                        the default limits for AWS services for an
-                        AWS account. Unless otherwise noted, each limit is region-specific. Many services
-                        contain
-                        limits that cannot be changed. For more information about the limits for a specific
-                        service,
-                        see the documentation for that service.
+                     <p>The following tables provide the default limits for AWS services for an AWS account.
+                        Unless otherwise noted, each limit is region-specific. Many services contain limits
+                        that
+                        cannot be changed. For more information about the limits for a specific service, see
+                        the
+                        documentation for that service.
                      </p>
                      <p><a href="https://aws.amazon.com/premiumsupport/trustedadvisor/" target="_blank">AWS Trusted Advisor</a> offers a Service Limits check (in
                         the Performance category) that displays your usage and limits for some aspects of
@@ -5625,17 +5624,6 @@
                               
                               <tr>
                                  
-                                 <td>Shadow lifetime</td>
-                                 
-                                 <td>A thing shadow is deleted by AWS IoT up to six months after the
-                                    creating account is deleted or per customer request. For operational
-                                    purposes, AWS IoT service backups are kept for 6 months
-                                 </td>
-                                 
-                              </tr>
-                              
-                              <tr>
-                                 
                                  <td>Maximum number of shadows in an AWS account</td>
                                  
                                  <td>Unlimited</td>
@@ -10609,10 +10597,20 @@
                      
                      <h2 id="limits_sns">Amazon Simple Notification Service (Amazon SNS) Limits</h2>
                      
+                     <p>The following limits determine how many Amazon SNS resources you can create in your
+                        AWS
+                        account, and they determine the rate at which you can issue Amazon SNS API requests.
+                     </p>
+                     
+                     
+                     <h3 id="limits_sns_resource">Amazon SNS Resource Limits</h3>
+                     
+                     <p>To increase any of the following limits, submit an <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-sns" target="_blank">SNS Limit Increase case</a>.
+                     </p>
+                     
                      <div class="table">
-                        <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w117aac15d195b3">
+                           <table id="w117aac15d195b5b5">
                               
                               <tr>
                                  
@@ -10657,6 +10655,14 @@
                               
                               <tr>
                                  
+                                 <td>Delivery rate for email messages</td>
+                                 
+                                 <td>10 messages per second</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
                                  <td>Delivery rate for promotional SMS messages</td>
                                  
                                  <td>20 messages per second</td>
@@ -10673,9 +10679,9 @@
                               
                               <tr>
                                  
-                                 <td>Message filter policies</td>
+                                 <td>Subscription filter policies</td>
                                  
-                                 <td>100 per account</td>
+                                 <td>200 per account</td>
                                  
                               </tr>
                               
@@ -10683,17 +10689,22 @@
                         </div>
                      </div>
                      
-                     <p>To increase any of the limits above, submit an <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-sns" target="_blank">SNS Limit
-                           Increase case</a>.
-                     </p>
                      
                      
                      <h3 id="limits_sns_api_throttles">Amazon SNS API Throttling Limits</h3>
                      
+                     <p>The following limits throttle the rate at which you can issue Amazon SNS API
+                        requests.
+                     </p>
+                     
+                     
+                     <h4 id="limits_sns_api_throttles_hard">Hard Limits</h4>
+                     
+                     <p>The following limits cannot be increased.</p>
+                     
                      <div class="table">
-                        <p class="title"><b></b></p>
                         <div class="table-contents">
-                           <table id="w117aac15d195b7b3">
+                           <table id="w117aac15d195b7b5b5">
                               
                               <tr>
                                  
@@ -10764,7 +10775,256 @@
                         </div>
                      </div>
                      
-                     <p>The Amazon SNS API throttling limits cannot be increased.</p>
+                     
+                     
+                     <h4 id="limits_sns_api_throttles_soft">Soft Limits</h4>
+                     
+                     <p>The following limits vary by AWS Region. To increase any of these limits,
+                        submit an <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-sns" target="_blank">SNS Limit Increase case</a>.
+                     </p>
+                     
+                     <div class="table">
+                        <p class="title"><b>Publish API Throttling Limits</b></p>
+                        <div class="table-contents">
+                           <table id="w117aac15d195b7b7b5">
+                              
+                              <tr>
+                                 
+                                 <th>API</th>
+                                 
+                                 <th>AWS Regions</th>
+                                 
+                                 <th>Transactions per Second</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td rowspan="4">
+                                    
+                                    <p>Publish</p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>US East (N. Virginia) Region</p>
+                                    
+                                 </td>
+                                 
+                                 <td>30,000</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p>EU (Ireland) Region</p>
+                                    
+                                    <p>US West (Oregon) Region</p>
+                                    
+                                 </td>
+                                 
+                                 <td>9,000</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p>Asia Pacific (Singapore) Region</p>
+                                    
+                                    <p>Asia Pacific (Sydney) Region</p>
+                                    
+                                    <p>Asia Pacific (Tokyo) Region</p>
+                                    
+                                    <p>EU (Frankfurt) Region</p>
+                                    
+                                    <p>US West (N. California) Region</p>
+                                    
+                                 </td>
+                                 
+                                 <td>1,500</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p>Asia Pacific (Mumbai) Region</p>
+                                    
+                                    <p>Asia Pacific (Osaka-Local) Region</p>
+                                    
+                                    <p>Asia Pacific (Seoul) Region</p>
+                                    
+                                    <p>Canada (Central) Region</p>
+                                    
+                                    <p>China (Beijing) Region</p>
+                                    
+                                    <p>China (Ningxia) Region</p>
+                                    
+                                    <p>EU (London) Region</p>
+                                    
+                                    <p>EU (Paris) Region</p>
+                                    
+                                    <p>South America (SÃ£o Paulo) Region</p>
+                                    
+                                    <p>US East (Ohio) Region</p>
+                                    
+                                 </td>
+                                 
+                                 <td>300</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     <div class="table">
+                        <p class="title"><b>Other API Throttling Limits</b></p>
+                        <div class="table-contents">
+                           <table id="w117aac15d195b7b7b7">
+                              
+                              <tr>
+                                 
+                                 <th>APIs</th>
+                                 
+                                 <th>AWS Regions</th>
+                                 
+                                 <th>Transactions per Second</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td rowspan="4">
+                                    
+                                    <p>CheckIfPhoneNumberIsOptedOut</p>
+                                    
+                                    <p>ConfirmSubscription</p>
+                                    
+                                    <p>CreatePlatformApplication</p>
+                                    
+                                    <p>CreatePlatformEndpoint</p>
+                                    
+                                    <p>CreateTopic</p>
+                                    
+                                    <p>DeleteEndpoint</p>
+                                    
+                                    <p>DeletePlatformApplication</p>
+                                    
+                                    <p>DeleteTopic</p>
+                                    
+                                    <p>GetEndpointAttributes</p>
+                                    
+                                    <p>GetPlatformApplicationAttributes</p>
+                                    
+                                    <p>GetSMSAttributes</p>
+                                    
+                                    <p>GetSubscriptionAttributes</p>
+                                    
+                                    <p>GetTopicAttributes</p>
+                                    
+                                    <p>ListPhoneNumbersOptedOut</p>
+                                    
+                                    <p>OptInPhoneNumber</p>
+                                    
+                                    <p>SetEndpointAttributes</p>
+                                    
+                                    <p>SetPlatformApplicationAttributes</p>
+                                    
+                                    <p>SetSMSAttributes</p>
+                                    
+                                    <p>SetSubscriptionAttributes</p>
+                                    
+                                    <p>SetTopicAttributes</p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>US East (N. Virginia) Region</p>
+                                    
+                                 </td>
+                                 
+                                 <td>3,000</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p>EU (Ireland) Region</p>
+                                    
+                                    <p>US West (Oregon) Region</p>
+                                    
+                                 </td>
+                                 
+                                 <td>900</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p>Asia Pacific (Singapore) Region</p>
+                                    
+                                    <p>Asia Pacific (Sydney) Region</p>
+                                    
+                                    <p>Asia Pacific (Tokyo) Region</p>
+                                    
+                                    <p>EU (Frankfurt) Region</p>
+                                    
+                                    <p>US West (N. California) Region</p>
+                                    
+                                 </td>
+                                 
+                                 <td>150</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p>Asia Pacific (Mumbai) Region</p>
+                                    
+                                    <p>Asia Pacific (Osaka-Local) Region</p>
+                                    
+                                    <p>Asia Pacific (Seoul) Region</p>
+                                    
+                                    <p>Canada (Central) Region</p>
+                                    
+                                    <p>China (Beijing) Region</p>
+                                    
+                                    <p>China (Ningxia) Region</p>
+                                    
+                                    <p>EU (London) Region</p>
+                                    
+                                    <p>EU (Paris) Region</p>
+                                    
+                                    <p>South America (SÃ£o Paulo) Region</p>
+                                    
+                                    <p>US East (Ohio) Region</p>
+                                    
+                                 </td>
+                                 
+                                 <td>30</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
                      
                      
                      
