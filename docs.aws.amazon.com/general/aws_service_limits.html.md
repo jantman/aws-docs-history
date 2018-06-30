@@ -2116,6 +2116,22 @@ AWS Organizations Limits
 
 For more information about these limits, see [Limits of AWS Organizations](http://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html) in the *AWS Organizations User Guide*.
 
+OTA Update Manager Limits {#limits-ota-manager}
+-------------------------
+
+::: {.table}
+**OTA Update Manager API Limits**
+
+::: {.table-contents}
+  API               TPS
+  ----------------- --------
+  CreateOTAUpdate   15 TPS
+  GetOTAUpdate      15 TPS
+  DeleteOTAUpdate   15 TPS
+  ListOTAUpdate     15 TPS
+:::
+:::
+
 Amazon Pinpoint Limits {#limits_pinpoint}
 ----------------------
 
@@ -2830,6 +2846,36 @@ South America (SÃ£o Paulo) Region
 US East (Ohio) Region
 
 30
+
+AWS Streaming Service Limits {#limits-streaming-service}
+----------------------------
+
+::: {.table}
+**Streaming Limits**
+
+::: {.table-contents}
+  Resource                             Limit
+  ------------------------------------ -----------
+  Maximum number of streams            1000
+  Maximum number of files per stream   10
+  Minimum file block size              256 bytes
+  Maximum file block size              128 KB
+:::
+:::
+
+::: {.table}
+**Streaming API Limits**
+
+::: {.table-contents}
+  API              TPS
+  ---------------- --------
+  CreateStream     15 TPS
+  UpdateStream     15 TPS
+  ListStreams      15 TPS
+  DeleteStream     15 TPS
+  DescribeStream   15 TPS
+:::
+:::
 
 Amazon Simple Queue Service (Amazon SQS) {#limits_sqs}
 ----------------------------------------
