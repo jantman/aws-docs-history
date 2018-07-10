@@ -1481,6 +1481,7 @@ AWS IoT Limits {#limits_iot}
   AttachThingPrincipal                                                                                       15
   CancelCertificateTransfer                                                                                  10
   CancelJob                                                                                                  10
+  CancelJobExecution                                                                                         10
   CreateCertificateFromCsr                                                                                   15
   CreateJob                                                                                                  10
   CreatePolicy                                                                                               10
