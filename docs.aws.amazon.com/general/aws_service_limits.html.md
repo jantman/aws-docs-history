@@ -847,19 +847,17 @@ Amazon Elastic Compute Cloud (Amazon EC2) Limits {#limits_ec2}
 
 ::: {.table-contents}
   Resource                                                               Default Limit
-  ---------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Instances                                                              Limits vary depending on instance type and purchasing option. For more information, see [How many instances can I run in Amazon EC2](https://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2).
   Elastic IP addresses for EC2-Classic                                   5
   Security groups for EC2-Classic per instance                           500
   Rules per security group for EC2-Classic                               100
   Key pairs                                                              5,000
+  Launch Templates                                                       Up to 1,000 launch templates per region and 10,000 versions per launch template.
+  Dedicated Hosts                                                        Up to two Dedicated Hosts per instance family, per region.
   Placement groups                                                       500
+  Concurrent AMI copies                                                  Destination regions are limited to 50 concurrent AMI copies at a time, with no more than 25 of those coming from a single source region.
   Throttle on the emails that can be sent from your Amazon EC2 account   Throttle applied
-  On-Demand Instances                                                    Limits vary depending on instance type. For more information, see [How many instances can I run in Amazon EC2](https://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2).
-  Spot Instances                                                         Limits vary depending on instance type, region, and account. For more information, see [Spot Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html).
-  Reserved Instances                                                     20 Reserved Instances per Availability Zone, per month, plus 20 regional Reserved Instances. For more information, see [Reserved Instance Limits](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html#ri-limits).
-  Dedicated Hosts                                                        Up to two Dedicated Hosts per instance family, per region can be allocated.
-  AMI Copies                                                             Destination regions are limited to 50 concurrent AMI copies at a time, with no more than 25 of those coming from a single source region.
-  Launch Templates                                                       1,000 launch templates per region and 10,000 versions per launch template.
 :::
 :::
 
