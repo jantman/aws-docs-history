@@ -84,17 +84,16 @@
                                  						
                                  <td>10000 request per second (rps) with an additional burst capacity provided by the <a href="https://en.wikipedia.org/wiki/Token_bucket" target="_blank">token bucket algorithm</a>, using a
                                     							maximum bucket capacity of 5000 requests.
+                                    							
+                                    <div class="aws-note">
+                                       <p class="aws-note">Note</p>
+                                       <p>The burst limit is determined by the API Gateway service team based on
+                                          									the overall RPS limits for the account. It is not a limit that a customer
+                                          									can control or request changes to.
+                                       </p>
+                                    </div>
+                                    						
                                  </td>
-                                 					
-                              </tr>
-                              					
-                              <tr>
-                                 						
-                                 <td>APIs (or RestApis) per
-                                    							account per region
-                                 </td>
-                                 						
-                                 <td>60</td>
                                  					
                               </tr>
                               					
@@ -108,7 +107,7 @@
                               					
                               <tr>
                                  						
-                                 <td>Custom authorizers per API</td>
+                                 <td>Lambda authorizers per API</td>
                                  						
                                  <td>10</td>
                                  					
@@ -176,7 +175,7 @@
                      		
                      <p>All of the per API limits can only be increased on specific APIs.</p>
                      		
-                     <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html" target="_blank">Limits in
+                     <p>For more information about these and other limits, see <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html" target="_blank">Limits in
                            				Amazon API Gateway</a> in the <em>API Gateway Developer Guide</em>.
                      </p>
                      	
@@ -2339,7 +2338,7 @@
                                  						
                                  <td>
                                     							
-                                    <p>Amazon Connect instances per account</p>
+                                    <p>Amazon Connect instances per account in each Region</p>
                                     						
                                  </td>
                                  						
@@ -2590,28 +2589,163 @@
                                  </td>
                                  					
                               </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    <p>Phone Number Porting</p>
+                                 </td>
+                                 						
+                                 <td>
+                                    <p>You can port your US phone numbers from your current carrier to
+                                       							Amazon Connect. For information about how to port your phone number, see
+                                       							<a href="http://docs.aws.amazon.com/connect/latest/adminguide/gettingstarted.html#numberporting" target="_blank">Port Your Current Phone Number</a>.
+                                       						
+                                       						
+                                       						
+                                    </p>
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              					
+                              <tr>
+                                 						
+                                 <td>Country Whitelisting for Outbound Calls</td>
+                                 						
+                                 <td>You can place calls to the following countries when you create a new
+                                    							instance: 
+                                    <div class="itemizedlist">
+                                       								
+                                       								
+                                       								
+                                       								
+                                       								
+                                       								
+                                       								
+                                       								
+                                       								
+                                       								
+                                       								
+                                       								
+                                       								
+                                       							
+                                       <ul class="itemizedlist" type="disc">
+                                          <li class="listitem">
+                                             									
+                                             <p>Australia</p>
+                                             								
+                                          </li>
+                                          <li class="listitem">
+                                             									
+                                             <p>Canada</p>
+                                             								
+                                          </li>
+                                          <li class="listitem">
+                                             									
+                                             <p>China</p>
+                                             								
+                                          </li>
+                                          <li class="listitem">
+                                             									
+                                             <p>Germany</p>
+                                             								
+                                          </li>
+                                          <li class="listitem">
+                                             									
+                                             <p>Hong Kong</p>
+                                             								
+                                          </li>
+                                          <li class="listitem">
+                                             									
+                                             <p>Israel</p>
+                                             								
+                                          </li>
+                                          <li class="listitem">
+                                             									
+                                             <p>Japan</p>
+                                             								
+                                          </li>
+                                          <li class="listitem">
+                                             									
+                                             <p>Mexico</p>
+                                             								
+                                          </li>
+                                          <li class="listitem">
+                                             									
+                                             <p>Singapore</p>
+                                             								
+                                          </li>
+                                          <li class="listitem">
+                                             									
+                                             <p>Sweden</p>
+                                             								
+                                          </li>
+                                          <li class="listitem">
+                                             									
+                                             <p>United States</p>
+                                             								
+                                          </li>
+                                          <li class="listitem">
+                                             									
+                                             <p>United Kingdom</p>
+                                             								
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    						
+                                 </td>
+                                 						
+                                 						
+                                 					
+                              </tr>
                               				
                            </table>
                         </div>
                      </div>
                      		
                      <p>The table provides the default limits for new Amazon Connect instances. Because the
-                        limits have been adjusted over
-                        			time, the limits in place for your account may be different than the limits described
-                        here. For example, if
-                        			you created an instance during the period when the default limit for concurrent
-                        active calls was set to 10,
-                        			your instance is limited to 10 concurrent active calls. If you create a new instance
-                        today, the limit for
-                        			the instance is 100 concurrent active calls.
+                        			limits have been adjusted over time, the limits in place for your account may be
+                        			different than the limits described here. There may even be differences between
+                        the
+                        			instances created for your account. For example, if you created an instance during
+                        the
+                        			period when the default limit for concurrent active calls was set to 10, your instance
+                        			is limited to 10 concurrent active calls. If you create a new instance today, the
+                        limit
+                        			for the instance is 100 concurrent active calls.
                      </p>
                      		
-                     <p>You can create five instances per AWS account to start, but if you need more instances
-                        it is easy to
-                        			request an increase. You can also request an increase for any of the limits using
-                        the <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-connect" target="_blank">Amazon Connect service limits increase form</a>. You
-                        			must be signed in to your AWS account to access the form.
+                     <p>To start, you can create five instances per AWS account in each of AWS Regions where
+                        			Amazon Connect is available. If you need more instances, or an increase (or decrease)
+                        to any of
+                        			the service limits, it is easy to request an change using the <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-connect" target="_blank">Amazon Connect service limits
+                           				increase form</a>. You must be signed in to your AWS account to access the
+                        			form.
                      </p>
+                     				
+                     		
+                     <p>There is also a service limit for the countries to which you can place outbound calls
+                        			from your instance. If you already have an instance, the countries that you are
+                        allowed
+                        			to call may be different that those listed in the following table because we have
+                        			changed the service limits over time. You can submit a service limit increase request
+                        to
+                        			allow calling to additional countries, or to limit the countries that you can call
+                        from
+                        			your instance.
+                     </p>
+                     		
+                     		
+                     <div class="aws-note">
+                        <p class="aws-note">Note</p>
+                        <p>Amazon Connect is not available to customers in India using Amazon Web Services through
+                           Amazon
+                           				Internet Services Pvt. Ltd (AISPL). You will receive an error message if you try
+                           to
+                           				create an instance in Amazon Connect.
+                        </p>
+                     </div>
                      	
                      		
                      <h2 id="limits_datapipeline">AWS Data Pipeline Limits</h2>

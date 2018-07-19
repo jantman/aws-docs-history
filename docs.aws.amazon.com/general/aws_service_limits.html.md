@@ -33,25 +33,41 @@ The following limits apply to configuring and running an API in Amazon API Gatew
 ::: {.table}
 
 ::: {.table-contents}
-  Resource or Operation                        Default Limit
-  -------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Throttle rate per account per region         10000 request per second (rps) with an additional burst capacity provided by the [token bucket algorithm](https://en.wikipedia.org/wiki/Token_bucket), using a maximum bucket capacity of 5000 requests.
-  APIs (or RestApis) per account per region    60
-  API keys per account per region              500
-  Custom authorizers per API                   10
-  Client certificates per account per region   60
-  Documentation parts per API                  2000
-  Resources per API                            300
-  Stages per API                               10
-  Usage plans per account per region           300
-  Usage plans per API key                      10
-  VPC links per account per region             5
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resource or Operation                      | Default Limit                                                                                                                                                                                            |
++============================================+==========================================================================================================================================================================================================+
+| Throttle rate per account per region       | 10000 request per second (rps) with an additional burst capacity provided by the [token bucket algorithm](https://en.wikipedia.org/wiki/Token_bucket), using a maximum bucket capacity of 5000 requests. |
+|                                            |                                                                                                                                                                                                          |
+|                                            | ::: {.aws-note}                                                                                                                                                                                          |
+|                                            | Note                                                                                                                                                                                                     |
+|                                            |                                                                                                                                                                                                          |
+|                                            | The burst limit is determined by the API Gateway service team based on the overall RPS limits for the account. It is not a limit that a customer can control or request changes to.                      |
+|                                            | :::                                                                                                                                                                                                      |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| API keys per account per region            | 500                                                                                                                                                                                                      |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Lambda authorizers per API                 | 10                                                                                                                                                                                                       |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Client certificates per account per region | 60                                                                                                                                                                                                       |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Documentation parts per API                | 2000                                                                                                                                                                                                     |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Resources per API                          | 300                                                                                                                                                                                                      |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Stages per API                             | 10                                                                                                                                                                                                       |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Usage plans per account per region         | 300                                                                                                                                                                                                      |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Usage plans per API key                    | 10                                                                                                                                                                                                       |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| VPC links per account per region           | 5                                                                                                                                                                                                        |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
 All of the per API limits can only be increased on specific APIs.
 
-For more information about these limits, see [Limits in Amazon API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html) in the *API Gateway Developer Guide*.
+For more information about these and other limits, see [Limits in Amazon API Gateway](http://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html) in the *API Gateway Developer Guide*.
 
 Application Auto Scaling Limits {#limits_as-app}
 -------------------------------
@@ -631,47 +647,85 @@ Amazon Connect Limits {#limits_amazon_connect}
 
 ::: {.table}
 ::: {.table-contents}
-+--------------------------------------+---------------+
-| Item                                 | Default limit |
-+======================================+===============+
-| Amazon Connect instances per account | 5             |
-+--------------------------------------+---------------+
-| Users per instance                   | 500           |
-+--------------------------------------+---------------+
-| Phone numbers per instance           | 10            |
-+--------------------------------------+---------------+
-| Queues per instance                  | 50            |
-+--------------------------------------+---------------+
-| Queues per routing profile           | 50            |
-+--------------------------------------+---------------+
-| Routing profiles per instance        | 100           |
-+--------------------------------------+---------------+
-| Hours of operation per instance      | 100           |
-+--------------------------------------+---------------+
-| Quick connects per instance          | 100           |
-+--------------------------------------+---------------+
-| Prompts per instance                 | 500           |
-+--------------------------------------+---------------+
-| Agent status per instance            | 50            |
-+--------------------------------------+---------------+
-| Security profiles per instance       | 100           |
-+--------------------------------------+---------------+
-| Contact flows per instance           | 100           |
-+--------------------------------------+---------------+
-| Groups per level                     | 50            |
-+--------------------------------------+---------------+
-| Reports per instance                 | 500           |
-+--------------------------------------+---------------+
-| Scheduled reports per instance       | 50            |
-+--------------------------------------+---------------+
-| Concurrent active calls per instance | 100           |
-+--------------------------------------+---------------+
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Item                                                | Default limit                                                                                                                                                                                                                                                      |
++=====================================================+====================================================================================================================================================================================================================================================================+
+| Amazon Connect instances per account in each Region | 5                                                                                                                                                                                                                                                                  |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Users per instance                                  | 500                                                                                                                                                                                                                                                                |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Phone numbers per instance                          | 10                                                                                                                                                                                                                                                                 |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Queues per instance                                 | 50                                                                                                                                                                                                                                                                 |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Queues per routing profile                          | 50                                                                                                                                                                                                                                                                 |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Routing profiles per instance                       | 100                                                                                                                                                                                                                                                                |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Hours of operation per instance                     | 100                                                                                                                                                                                                                                                                |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Quick connects per instance                         | 100                                                                                                                                                                                                                                                                |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Prompts per instance                                | 500                                                                                                                                                                                                                                                                |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Agent status per instance                           | 50                                                                                                                                                                                                                                                                 |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Security profiles per instance                      | 100                                                                                                                                                                                                                                                                |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Contact flows per instance                          | 100                                                                                                                                                                                                                                                                |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Groups per level                                    | 50                                                                                                                                                                                                                                                                 |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Reports per instance                                | 500                                                                                                                                                                                                                                                                |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Scheduled reports per instance                      | 50                                                                                                                                                                                                                                                                 |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Concurrent active calls per instance                | 100                                                                                                                                                                                                                                                                |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Phone Number Porting                                | You can port your US phone numbers from your current carrier to Amazon Connect. For information about how to port your phone number, see [Port Your Current Phone Number](http://docs.aws.amazon.com/connect/latest/adminguide/gettingstarted.html#numberporting). |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Country Whitelisting for Outbound Calls             | You can place calls to the following countries when you create a new instance:                                                                                                                                                                                     |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | ::: {.itemizedlist}                                                                                                                                                                                                                                                |
+|                                                     | -   Australia                                                                                                                                                                                                                                                      |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | -   Canada                                                                                                                                                                                                                                                         |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | -   China                                                                                                                                                                                                                                                          |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | -   Germany                                                                                                                                                                                                                                                        |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | -   Hong Kong                                                                                                                                                                                                                                                      |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | -   Israel                                                                                                                                                                                                                                                         |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | -   Japan                                                                                                                                                                                                                                                          |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | -   Mexico                                                                                                                                                                                                                                                         |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | -   Singapore                                                                                                                                                                                                                                                      |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | -   Sweden                                                                                                                                                                                                                                                         |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | -   United States                                                                                                                                                                                                                                                  |
+|                                                     |                                                                                                                                                                                                                                                                    |
+|                                                     | -   United Kingdom                                                                                                                                                                                                                                                 |
+|                                                     | :::                                                                                                                                                                                                                                                                |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 :::
 
-The table provides the default limits for new Amazon Connect instances. Because the limits have been adjusted over time, the limits in place for your account may be different than the limits described here. For example, if you created an instance during the period when the default limit for concurrent active calls was set to 10, your instance is limited to 10 concurrent active calls. If you create a new instance today, the limit for the instance is 100 concurrent active calls.
+The table provides the default limits for new Amazon Connect instances. Because the limits have been adjusted over time, the limits in place for your account may be different than the limits described here. There may even be differences between the instances created for your account. For example, if you created an instance during the period when the default limit for concurrent active calls was set to 10, your instance is limited to 10 concurrent active calls. If you create a new instance today, the limit for the instance is 100 concurrent active calls.
 
-You can create five instances per AWS account to start, but if you need more instances it is easy to request an increase. You can also request an increase for any of the limits using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect). You must be signed in to your AWS account to access the form.
+To start, you can create five instances per AWS account in each of AWS Regions where Amazon Connect is available. If you need more instances, or an increase (or decrease) to any of the service limits, it is easy to request an change using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect). You must be signed in to your AWS account to access the form.
+
+There is also a service limit for the countries to which you can place outbound calls from your instance. If you already have an instance, the countries that you are allowed to call may be different that those listed in the following table because we have changed the service limits over time. You can submit a service limit increase request to allow calling to additional countries, or to limit the countries that you can call from your instance.
+
+::: {.aws-note}
+Note
+
+Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt. Ltd (AISPL). You will receive an error message if you try to create an instance in Amazon Connect.
+:::
 
 AWS Data Pipeline Limits {#limits_datapipeline}
 ------------------------
