@@ -3159,11 +3159,15 @@ Amazon Transcribe Limits {#limits-amazon-transcribe}
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                                   Default Limit
-  ------------------------------------------ ---------------
-  Number of concurrent transcription jobs    10
-  Total number of vocabularies per account   100
-  Number of pending vocabularies             10
+  Resource                                                                                                                  Default Limit
+  ------------------------------------------------------------------------------------------------------------------------- ---------------
+  Number of concurrent transcription jobs                                                                                   10
+  Total number of vocabularies per account                                                                                  100
+  Number of pending vocabularies                                                                                            2
+  Transactions per second, `StartTranscriptionJob`{.code} operation                                                         1
+  Transactions per second, `GetTranscriptionJob`{.code} and `ListTranscriptionJobs`{.code} operations                       3
+  Transactions per second, `CreateVocabulary`{.code}, `DeleteVocabulary`{.code}, and `UpdateVocabulary`{.code} operations   1
+  Transactions per second, `GetVocabulary`{.code} and `ListVocabularies`{.code} operations                                  3
 :::
 :::
 
