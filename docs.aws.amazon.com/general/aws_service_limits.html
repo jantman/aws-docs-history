@@ -30,7 +30,7 @@
                         <li>
                            			
                            <p>Open the <a href="https://console.aws.amazon.com/support/home#/" target="_blank">AWS Support Center</a> page, sign in if
-                              				necessary, and choose <b>Create Case</b>.
+                              				necessary, and choose <b>Create case</b>.
                            </p>
                            		
                         </li>
@@ -42,8 +42,7 @@
                         </li>
                         <li>
                            			
-                           <p>Complete <b>Limit Type</b>, <b>Use Case Description</b>, and
-                              					<b>Contact method</b>. If this request is urgent, choose <b>Phone</b> as
+                           <p>Complete the form. If this request is urgent, choose <b>Phone</b> as
                               				the method of contact instead of <b>Web</b>.
                            </p>
                            		
@@ -1920,7 +1919,27 @@
                                  						
                                  <td>
                                     							
-                                    <p>Maximum number of pipelines per region in an AWS account</p>
+                                    <p>Maximum number of total pipelines per region in an AWS
+                                       								account
+                                    </p>
+                                    						
+                                 </td>
+                                 						
+                                 <td>
+                                    							
+                                    <p>300</p>
+                                    						
+                                 </td>
+                                 					
+                              </tr>
+                              					
+                              <tr>
+                                 						
+                                 <td>
+                                    							
+                                    <p>Maximum number of pipelines per region with change detection set
+                                       								to periodically checking for source changes
+                                    </p>
                                     						
                                  </td>
                                  						
@@ -1933,6 +1952,16 @@
                                     <p>EU (Ireland) (eu-west-1): 60</p>
                                     							
                                     <p>All other supported regions: 20</p>
+                                    							
+                                    <div class="aws-note">
+                                       <p class="aws-note">Note</p>
+                                       <p>Instead of using periodic checks, configure your pipeline to
+                                          									use the recommended change-detection method for your source
+                                          									type. For example, configure your AWS CodeCommit pipeline to use
+                                          									Amazon CloudWatch Events for change detection. See <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/pipelines-about-starting.html#change-detection-methods" target="_blank">Change-detection Methods</a> for instructions specific
+                                          									to your source type.
+                                       </p>
+                                    </div>
                                     						
                                  </td>
                                  					
@@ -12480,9 +12509,8 @@
                                  <td>
                                     							
                                     <p>Increasing this limit increases the limit on Internet gateways per region by the same
-                                       								amount. The multiple of the number of VPCs in the region and the number of
-                                       security
-                                       								groups per VPC cannot exceed 5000.
+                                       								amount. The multiple of the number of VPCs in the region and the
+                                       								number of security groups per VPC cannot exceed 10000.
                                     </p>
                                     						
                                  </td>
@@ -13101,7 +13129,7 @@
                         </div>
                      </div>
                      		
-                     <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html" target="_blank">Amazon VPC
+                     <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/amazon-vpc-limits.html" target="_blank">Amazon VPC
                            				Limits</a> in the <em>Amazon VPC User Guide</em>.
                      </p>
                      	
