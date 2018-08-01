@@ -678,7 +678,7 @@
                               					
                               <tr>
                                  						
-                                 <td>Number of imported certificates per year (lsat 365 days)</td>
+                                 <td>Number of imported certificates per year (last 365 days)</td>
                                  						
                                  <td>Twice your account limit</td>
                                  					
@@ -2375,7 +2375,7 @@
                                  						
                                  <td>
                                     							
-                                    <p>Amazon Connect instances per account in each Region</p>
+                                    <p>Amazon Connect instances</p>
                                     						
                                  </td>
                                  						
@@ -2742,35 +2742,39 @@
                      </div>
                      		
                      <p>The table provides the default limits for new Amazon Connect instances. Because the
-                        			limits have been adjusted over time, the limits in place for your account may be
-                        			different than the limits described here. There may even be differences between
+                        limits have been
+                        			adjusted over time, the limits in place for your account may be different than
                         the
-                        			instances created for your account. For example, if you created an instance during
-                        the
-                        			period when the default limit for concurrent active calls was set to 10, your instance
-                        			is limited to 10 concurrent active calls. If you create a new instance today, the
-                        limit
-                        			for the instance is 100 concurrent active calls.
+                        			limits described here. There might be differences between the instances created
+                        for your
+                        			account. For example, if you created an instance during the period when the default
+                        			limit for concurrent active calls was set to 10, your instance is limited to 10
+                        			concurrent active calls. If you create a new instance today, the limit for the
+                        instance
+                        			is 100 concurrent active calls.
                      </p>
                      		
                      <p>To start, you can create five instances per AWS account in each of AWS Regions where
-                        			Amazon Connect is available. If you need more instances, or an increase (or decrease)
-                        to any of
-                        			the service limits, it is easy to request an change using the <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-connect" target="_blank">Amazon Connect service limits
+                        Amazon Connect
+                        			is available. If you need more instances, or an increase (or decrease) to any of
+                        the
+                        			service limits, you can request an change using the <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-connect" target="_blank">Amazon Connect service limits
                            				increase form</a>. You must be signed in to your AWS account to access the
                         			form.
                      </p>
                      				
                      		
                      <p>There is also a service limit for the countries to which you can place outbound calls
-                        			from your instance. If you already have an instance, the countries that you are
-                        allowed
-                        			to call may be different that those listed in the following table because we have
-                        			changed the service limits over time. You can submit a service limit increase request
-                        to
-                        			allow calling to additional countries, or to limit the countries that you can call
                         from
-                        			your instance.
+                        			your instance. If you already have an instance, the countries that you are allowed
+                        to
+                        			call might be different that those listed in the following table because we have
+                        changed
+                        			the service limits over time. You can submit a service limit increase request to
+                        allow
+                        			calling to additional countries, or to limit the countries that you can call from
+                        your
+                        			instance.
                      </p>
                      		
                      		
@@ -5942,6 +5946,22 @@
                               						
                               <tr>
                                  							
+                                 <td>DeleteJob</td>
+                                 							
+                                 <td>10</td>
+                                 						
+                              </tr>
+                              						
+                              <tr>
+                                 							
+                                 <td>DeleteJobExecution</td>
+                                 							
+                                 <td>10</td>
+                                 						
+                              </tr>
+                              						
+                              <tr>
+                                 							
                                  <td>DeletePolicy</td>
                                  							
                                  <td>10</td>
@@ -6823,6 +6843,104 @@
                         </div>
                      </div>
                      		
+                     
+                     
+                     <h3 id="limits_iot_device_defender">AWS IoT Device Defender Limits</h3>
+                     
+                     <div class="table">
+                        <p class="title"><b>Audit Limits</b></p>
+                        <div class="table-contents">
+                           <table id="w117aac16d125c25b3">
+                              
+                              <tr>
+                                 
+                                 <th>Resource</th>
+                                 
+                                 <th>Limit</th>
+                                 
+                                 <th>Description</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>scheduled audits</td>
+                                 
+                                 <td>5 max.</td>
+                                 
+                                 <td>You can create up to 5 scheduled audits before a 
+                                    <code class="code">LimitExceeded</code> Exception occurs.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>simultaneous in progress "on-demand" audits</td>
+                                 
+                                 <td>10 max.</td>
+                                 
+                                 <td>You can create up to 10 "on-demand" audits before a 
+                                    <code class="code">LimitExceeded</code> Exception occurs.
+                                 </td>
+                                 
+                              </tr>
+                              
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     <div class="itemizedlist">
+                        
+                        <p class="title"><b>Detect Limits</b></p>
+                        
+                        
+                        
+                        
+                        
+                        
+                        <ul class="itemizedlist" type="disc">
+                           <li class="listitem">
+                              
+                              <p>The maximum number of security profiles per target (thing group or user account) is
+                                 5.
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>The maximum number of behaviors per security profile is 100.</p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>The maximum number of <code class="code">value</code> elements (counts, IP addresses,
+                                 ports) per security profile is 1000. 
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>Device metric reporting is throttled to one metric per 5 minutes per device
+                                 (a device may not report more than one metric every 5 minutes).
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>Device Defender Detect violations are stored for 90 days
+                                 after they have been generated.
+                              </p>
+                              
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     
+                     
                      		
                      	
                      		
@@ -6889,7 +7007,7 @@
                                  						
                                  <td><code class="code">BatchPutMessage</code></td>
                                  						
-                                 <td>1000 messages per second; 100 messages per batch; 128Kb per message</td>
+                                 <td>1000 messages per second per channel; 100 messages per batch; 128Kb per message</td>
                                  						
                                  <td>yes; yes; no</td>
                                  					
@@ -8992,7 +9110,7 @@
                                           </li>
                                           <li class="listitem">
                                              									
-                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_DetectLabelshtml" target="_blank">DetectLabels</a></p>
+                                             <p><a href="http://docs.aws.amazon.com/rekognition/latest/dg/API_DetectLabels.html" target="_blank">DetectLabels</a></p>
                                              								
                                           </li>
                                           <li class="listitem">
