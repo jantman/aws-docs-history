@@ -2639,37 +2639,37 @@ Amazon SageMaker Batch Transform
 ::: {.table}
 
 ::: {.table-contents}
-  Resource                                   Default Limit
-  ------------------------------------------ ---------------
-  ml.m4.xlarge instances                     20
-  ml.m4.2xlarge instances                    20
-  ml.m4.4xlarge instances                    10
-  ml.m4.10xlarge instances                   5
-  ml.m4.16xlarge instances                   5
-  ml.m5.large instances                      20
-  ml.m5.xlarge instances                     20
-  ml.m5.2xlarge instances                    20
-  ml.m5.4xlarge instances                    10
-  ml.m5.12xlarge instances                   3
-  ml.m5.24xlarge instances                   2
-  ml.c4.xlarge instances                     20
-  ml.c4.2xlarge instances                    20
-  ml.c4.4xlarge instances                    20
-  ml.c4.8xlarge instances                    20
-  ml.c5.xlarge instances                     20
-  ml.c5.2xlarge instances                    20
-  ml.c5.4xlarge instances                    5
-  ml.c5.9xlarge instances                    5
-  ml.c5.18xlarge instances                   5
-  ml.p2.xlarge instances                     1
-  ml.p2.8xlarge instances                    1
-  ml.p2.16xlarge instances                   1
-  ml.p3.2xlarge instances                    2
-  ml.p3.8xlarge instances                    2
-  ml.p3.16xlarge instances                   2
-  Longest run time for a training job        5 days
-  Number of instances across training jobs   20
-  Number of instances for a training job     20
+  Resource                                    Default Limit
+  ------------------------------------------- ---------------
+  ml.m4.xlarge instances                      20
+  ml.m4.2xlarge instances                     20
+  ml.m4.4xlarge instances                     10
+  ml.m4.10xlarge instances                    5
+  ml.m4.16xlarge instances                    5
+  ml.m5.large instances                       20
+  ml.m5.xlarge instances                      20
+  ml.m5.2xlarge instances                     20
+  ml.m5.4xlarge instances                     10
+  ml.m5.12xlarge instances                    3
+  ml.m5.24xlarge instances                    2
+  ml.c4.xlarge instances                      20
+  ml.c4.2xlarge instances                     20
+  ml.c4.4xlarge instances                     20
+  ml.c4.8xlarge instances                     20
+  ml.c5.xlarge instances                      20
+  ml.c5.2xlarge instances                     20
+  ml.c5.4xlarge instances                     5
+  ml.c5.9xlarge instances                     5
+  ml.c5.18xlarge instances                    5
+  ml.p2.xlarge instances                      1
+  ml.p2.8xlarge instances                     1
+  ml.p2.16xlarge instances                    1
+  ml.p3.2xlarge instances                     2
+  ml.p3.8xlarge instances                     2
+  ml.p3.16xlarge instances                    2
+  Longest run time for a transform job        5 days
+  Number of instances across transform jobs   20
+  Number of instances for a transform job     20
 :::
 :::
 
@@ -3208,6 +3208,7 @@ Amazon Transcribe Limits {#limits-amazon-transcribe}
   Transactions per second, `GetTranscriptionJob`{.code} and `ListTranscriptionJobs`{.code} operations                       3
   Transactions per second, `CreateVocabulary`{.code}, `DeleteVocabulary`{.code}, and `UpdateVocabulary`{.code} operations   1
   Transactions per second, `GetVocabulary`{.code} and `ListVocabularies`{.code} operations                                  3
+  Number of channels for channel identification                                                                             2
 :::
 :::
 
