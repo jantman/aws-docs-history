@@ -9796,25 +9796,25 @@
                               					
                               <tr>
                                  						
-                                 <td>Namespaces per AWS account</td>
+                                 <td>Namespaces</td>
                                  						
-                                 <td>50 per region</td>
+                                 <td>50 per region *</td>
                                  					
                               </tr>
                               					
                               <tr>
                                  						
-                                 <td>Instances per namespace</td>
+                                 <td>Instances</td>
                                  						
-                                 <td>2,000 per region</td>
+                                 <td>2,000 per namespace</td>
                                  					
                               </tr>
                               					
                               <tr>
                                  						
-                                 <td>Instances per service</td>
+                                 <td>Instances</td>
                                  						
-                                 <td>100 per region</td>
+                                 <td>1000 per service</td>
                                  					
                               </tr>
                               				
@@ -9823,8 +9823,14 @@
                      </div>
                      
                      		
-                     <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html" target="_blank">RouteÂ 53
-                           				Limits</a> in the <em>Amazon RouteÂ 53 Developer Guide</em>.
+                     <p>* When you create a namespace, we automatically create a RouteÂ 53 hosted zone. This
+                        hosted zone counts against the limit 
+                        			on the number of hosted zones that you can create with an AWS account. 
+                     </p>
+                     		
+                     		
+                     <p>For more information about these limits, see <a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html" target="_blank">RouteÂ 53 Limits</a> in the 
+                        			<em>Amazon RouteÂ 53 Developer Guide</em>.
                      </p>
                      
                      	

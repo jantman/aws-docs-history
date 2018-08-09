@@ -2491,13 +2491,15 @@ Amazon RouteÂ 53 Limits {#limits_route53}
 **Auto Naming**
 
 ::: {.table-contents}
-  Resource                     Default Limit
-  ---------------------------- ------------------
-  Namespaces per AWS account   50 per region
-  Instances per namespace      2,000 per region
-  Instances per service        100 per region
+  Resource     Default Limit
+  ------------ ---------------------
+  Namespaces   50 per region \*
+  Instances    2,000 per namespace
+  Instances    1000 per service
 :::
 :::
+
+\* When you create a namespace, we automatically create a RouteÂ 53 hosted zone. This hosted zone counts against the limit on the number of hosted zones that you can create with an AWS account.
 
 For more information about these limits, see [RouteÂ 53 Limits](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html) in the *Amazon RouteÂ 53 Developer Guide*.
 
