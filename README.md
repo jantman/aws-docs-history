@@ -1,8 +1,8 @@
-# aws-docs-history
+# ABANDONED - aws-docs-history
 
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![Project Status: Abandoned – Initial development has started, but there has not yet been a stable, usable release; the project has been abandoned and the author(s) do not intend on continuing development.](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
 
-Historical versions of AWS documentation and information
+**ABANDONED as of 2018** - Historical versions of AWS documentation and information
 
 Let's admit it out loud - AWS's release notes are a joke, and finding out when
 AWS-y things change, especially minor API changes and [service limit](http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)
